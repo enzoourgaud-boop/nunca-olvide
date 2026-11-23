@@ -89,6 +89,13 @@ L'évaluation donne la traduction de *la guerra, un bando, huir, fusilar, enterr
 | ☐ | épilogue | La ficha de identidad : *julio de 1936 · tres años · 1939 · los republicanos y los militares sublevados · Franco*. | Mêmes réponses déduites que la partie 1 de ce fichier. |
 | ☐ | événements `mapa` et `mision` | Deux scènes de plus (la carte de la abuela ; la misión secreta avec des lettres jaunes). | Histoire inventée avec tes mots ; aucun fait nouveau. |
 
+## 5 bis. Audio de la compréhension orale (étape 5)
+
+| ✔ | Quoi | À vérifier |
+|---|---|---|
+| ☐ | Les 36 questions d'écoute (`eco-*`) ont chacune un fichier audio normal et un fichier lent, générés avec la voix de synthèse **espeak-ng** (espagnol d'Espagne). | **Je n'ai pas pu écouter ces fichiers.** J'ai vérifié qu'ils se lisent dans un navigateur et, par analyse du signal, que l'accent tonique tombe au bon endroit (*habló* ≠ *hablo*). La voix reste de type « robot » : à toi de juger si elle convient, ou de la remplacer par ta voix. |
+| ☐ | Les années sont lues en toutes lettres (« mil novecientos treinta y seis »). | Vérifie une phrase avec une date. |
+
 ## 6. Sources
 
 | ✔ | Point | À confirmer |

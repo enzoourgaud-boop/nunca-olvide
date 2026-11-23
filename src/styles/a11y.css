@@ -20,7 +20,8 @@ html.dys .enun, html.dys .relato { line-height: 1.5; }
 html.dys .dialogo { font-size: 1rem; }
 
 /* animations réduites choisies dans les options (en plus du réglage du système) */
-html.reduit *, html.reduit *::before, html.reduit *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; }
+html.reduit *, html.reduit *::before, html.reduit *::after { animation-duration: .001s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; transition-delay: 0s !important; }
+html.reduit .proyectil-enemigo, html.reduit .impacto, html.reduit .proyectil { display: none; }
 html.reduit .transicion, html.reduit .cortina, html.reduit .petalos { display: none; }
 
 /* pétales en arrière-plan */

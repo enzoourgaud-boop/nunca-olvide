@@ -58,6 +58,7 @@
 .pv-barra.bajo i { background: var(--rosa); animation: alerta .6s steps(2) infinite; }
 .pv-barra.tarde-ok i { transition-delay: .6s; }
 .pv-barra.tarde-ko i { transition-delay: .4s; }
+.pv-barra.tarde-riposte i { transition-delay: 1.7s; }
 @keyframes alerta { 50% { opacity: .45; } }
 .marco-estado { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; font-size: .78rem; font-weight: 700; }
 .marco-estado .pv-num { margin-left: auto; font-family: var(--pixel); font-size: .6rem; }
@@ -105,9 +106,20 @@
 /* --- animations de mouvement --- */
 .lanza { animation: lanza .4s steps(4); }
 @keyframes lanza { 40% { transform: translate(18%, -10%); } }
-.ataca { animation: embiste .45s steps(5); }
+/* recul : le joueur encaisse la riposte, l'ombre encaisse le coup de l'élève */
+.retrocede { animation: retrocede .4s calc(var(--t0, 0s) + .4s) steps(4); }
+@keyframes retrocede { 35% { transform: translate(-16%, 6%) rotate(-5deg); } }
+.lanza.retrocede { animation: lanza .4s steps(4), retrocede .4s calc(var(--t0, 0s) + .4s) steps(4); }
+.salta.retrocede { animation: salta .4s steps(4), retrocede .4s calc(var(--t0, 0s) + .4s) steps(4); }
+.empujado { animation: empujon .35s .6s steps(3); }
+@keyframes empujon { 40% { transform: translate(14%, -8%) rotate(4deg); } }
+.empujado.ataca { animation: empujon .35s .6s steps(3), embiste .45s var(--t0, 0s) steps(5); }
+.ataca { animation: embiste .45s var(--t0, 0s) steps(5); }
 @keyframes embiste { 45% { transform: translate(-38%, 22%) scale(1.08); } }
 .critico { animation: sacude .35s .55s steps(6); }
+.critico.ataca { animation: sacude .35s .55s steps(6), embiste .45s var(--t0, 0s) steps(5); }
+.esquiva.ataca { animation: esquiva .5s .5s steps(4), embiste .45s var(--t0, 0s) steps(5); }
+.duda.ataca { animation: duda .6s steps(4), embiste .45s var(--t0, 0s) steps(5); }
 @keyframes sacude { 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
 .esquiva { animation: esquiva .5s .5s steps(4); }
 @keyframes esquiva { 50% { transform: translateX(30%); opacity: .35; } }
@@ -117,12 +129,12 @@
 @keyframes salta { 50% { transform: translateY(-14%); } }
 .lado-enemigo .cae { animation: cae-e .7s 1.15s steps(7) forwards; }
 .lado-enemigo .critico.cae { animation: sacude .35s .55s steps(6), cae-e .7s 1.15s steps(7) forwards; }
-.lado-jugador .cae { animation: cae-e .7s .9s steps(7) forwards; }
+.lado-jugador .cae { animation: cae-e .7s calc(var(--t0, 0s) + .9s) steps(7) forwards; }
 @keyframes cae-e { to { transform: translateY(70%); opacity: 0; clip-path: inset(0 0 70% 0); } }
 
 /* --- clignotements --- */
 .golpeado { animation: parpadeo .14s .6s steps(1) 4; }
-.herido { animation: parpadeo .14s .4s steps(1) 4; }
+.herido { animation: parpadeo .14s calc(var(--t0, 0s) + .4s) steps(1) 4; }
 @keyframes parpadeo { 0% { opacity: 0; } 50% { opacity: 1; } }
 .fase { animation: fase 1.2s steps(6); }
 @keyframes fase { 30% { filter: hue-rotate(160deg) brightness(1.6); } 60% { filter: invert(1); } }
@@ -130,30 +142,36 @@
 @keyframes revive { 50% { filter: brightness(2.2) sepia(1); } }
 
 /* --- secousses et flash de la scène --- */
-.temblor { animation: temblor .35s .35s steps(5); }
+.temblor { animation: temblor .35s calc(var(--t0, 0s) + .35s) steps(5); }
 @keyframes temblor { 25% { transform: translate(-6px, 2px); } 50% { transform: translate(5px, -2px); } 75% { transform: translate(-3px, 1px); } }
 .temblor-suave { animation: temblor .3s .55s steps(4); }
 .escenario::after { content: ''; position: absolute; inset: 0; z-index: 7; background: #fff; opacity: 0; pointer-events: none; }
-.flash::after { animation: flash .3s .3s steps(2); }
+.flash::after { animation: flash .3s calc(var(--t0, 0s) + .3s) steps(2); }
 .flash-fuerte::after { animation: flash .9s .2s steps(6); background: #e3c16f; }
 @keyframes flash { 0%, 100% { opacity: 0; } 30% { opacity: .85; } }
 
 /* --- nombres, étiquettes, effets --- */
 .numero { position: absolute; z-index: 6; top: 18%; left: 50%; font-family: var(--pixel); font-size: clamp(.9rem, 2.6vw, 1.3rem); color: #f1e6cf; text-shadow: 3px 3px 0 var(--cadre), -2px -2px 0 var(--rosa); animation: numero 1s .6s steps(8) both; }
-.numero.contra { top: 10%; animation-delay: .4s; }
+.numero.contra { top: 10%; animation-delay: calc(var(--t0, 0s) + .4s); }
 .numero.cero { color: var(--texto-2); }
 @keyframes numero { 0% { opacity: 0; transform: translate(-50%, 10px) scale(1.6); } 15% { opacity: 1; transform: translate(-50%, 0) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -26px); } }
 .etiqueta { position: absolute; z-index: 6; font-family: var(--pixel); font-size: .7rem; color: var(--tinta); background: var(--amarillo); border: 3px solid var(--cadre); padding: 4px 6px; animation: pop .25s .6s steps(3) both; }
 .critico-txt { top: 4%; right: 0; }
 .casi-txt { top: 6%; right: 18%; font-size: 1rem; animation-delay: .1s; }
-.bloqueo { top: 26%; right: 4%; font-size: 1.4rem; background: transparent; border: 0; animation-delay: .35s; }
+.bloqueo { top: 26%; right: 4%; font-size: 1.4rem; background: transparent; border: 0; animation-delay: calc(var(--t0, 0s) + .35s); }
 @keyframes pop { from { transform: scale(0); } to { transform: none; } }
 .burbuja { position: absolute; inset: -8%; border: 3px dashed #e3c16f; border-radius: 50%; animation: gira 3s linear infinite; pointer-events: none; }
 @keyframes gira { to { transform: rotate(360deg); } }
 .proyectil { position: absolute; z-index: 5; font-size: 1.8rem; left: 22%; top: 60%; animation: proyectil .45s steps(9) both; pointer-events: none; }
 .proyectil.grande { font-size: 2.4rem; }
+/* riposte : une tache d'encre vole de l'ombre vers l'élève, puis un impact */
+.proyectil-enemigo { position: absolute; z-index: 5; font-size: 2.1rem; left: 66%; top: 28%; opacity: 0; animation: proyectil-enemigo .5s var(--t0, 0s) steps(8) both; pointer-events: none; filter: drop-shadow(0 0 4px #1c1612); }
+@keyframes proyectil-enemigo { 0% { left: 66%; top: 28%; opacity: 0; } 10% { opacity: 1; } 55% { top: 52%; } 90% { opacity: 1; } 100% { left: 22%; top: 62%; opacity: 0; transform: rotate(-360deg) scale(1.5); } }
+.impacto { position: absolute; z-index: 6; font-size: 2.8rem; left: 17%; top: 52%; opacity: 0; animation: impacto .5s calc(var(--t0, 0s) + .4s) steps(5) both; pointer-events: none; }
+.impacto.bloqueado { left: 20%; }
+@keyframes impacto { 0% { opacity: 0; transform: scale(.3) rotate(-20deg); } 30% { opacity: 1; transform: scale(1.3) rotate(10deg); } 70% { opacity: 1; transform: scale(1) rotate(0); } 100% { opacity: 0; transform: scale(1.5); } }
 @keyframes proyectil { 0% { left: 24%; top: 60%; opacity: 0; } 10% { opacity: 1; } 50% { top: 18%; } 85% { opacity: 1; } 100% { left: 70%; top: 30%; opacity: 0; transform: rotate(360deg) scale(1.6); } }
-.vuela-monedas { position: absolute; z-index: 5; font-size: 1.4rem; animation: monedas .6s .4s steps(8) both; pointer-events: none; }
+.vuela-monedas { position: absolute; z-index: 5; font-size: 1.4rem; animation: monedas .6s calc(var(--t0, 0s) + .4s) steps(8) both; pointer-events: none; }
 @keyframes monedas { 0% { left: 24%; top: 60%; opacity: 0; } 15% { opacity: 1; } 50% { top: 22%; } 100% { left: 72%; top: 34%; opacity: 0; } }
 .humo { position: absolute; z-index: 5; top: 20%; left: 40%; font-size: 2.4rem; animation: humo 1s .2s steps(6) both; }
 @keyframes humo { from { opacity: 0; transform: scale(.4); } 40% { opacity: 1; } to { opacity: 0; transform: scale(1.6) translateY(-20px); } }
@@ -161,7 +179,7 @@
   box-shadow: -30px 0 #8fbf6a, 26px -8px #8fbf6a, -14px -20px #d5e8c4, 18px -30px #8fbf6a, -26px -38px #d5e8c4, 6px -46px #8fbf6a; }
 .lado-jugador .destellos { animation-delay: .5s; }
 @keyframes sube-brillo { from { opacity: 0; transform: translateY(10px); } 30% { opacity: 1; } to { opacity: 0; transform: translateY(-40px); } }
-.burbujas-veneno { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 7px; height: 7px; border-radius: 50%; background: #a283b5; animation: sube-brillo 1s .45s steps(6) both;
+.burbujas-veneno { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 7px; height: 7px; border-radius: 50%; background: #a283b5; animation: sube-brillo 1s calc(var(--t0, 0s) + .45s) steps(6) both;
   box-shadow: -24px -6px #a283b5, 20px -14px #c8b49a, -10px -28px #a283b5, 14px -36px #c8b49a; }
 .bruma { position: absolute; inset: 30% -20% 0; z-index: 4; pointer-events: none; background: repeating-radial-gradient(ellipse at 20% 60%, #e7ddf233 0 30px, transparent 30px 70px); animation: bruma 6s linear infinite; }
 @keyframes bruma { to { transform: translateX(14%); } }
@@ -190,6 +208,7 @@
   .sprite.jugador { width: 92px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .proyectil-enemigo, .impacto { display: none; }
   .flota, .respira, .burbuja, .bruma, .estrellas::before, .pv-barra.bajo i { animation: none !important; }
   .cortina { display: none; }
   .pv-barra i { transition: none; }

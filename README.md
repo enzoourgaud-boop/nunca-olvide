@@ -11,7 +11,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 - Il n'y a **ni serveur, ni compte élève, ni publicité**. Aucune donnée ne quitte l'appareil.
 - Une fois chargé, il fonctionne **sans connexion**.
 
-> **Où en est le projet ?** Les étapes 1 à 3 sont en ligne sur `main`. L'étape 4 (espace professeur : acte de la partie courte, lecture des codes élèves ; accessibilité ; README final) est sur la branche `etape-4-classe` : ce qu'il te reste à tester est dans [`docs/etape-4/A_TESTER.md`](docs/etape-4/A_TESTER.md), avec les captures dans `docs/etape-4/`. La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
+> **Où en est le projet ?** Les étapes 1 à 4 sont sur `main`. L'étape 5 (animations d'attaque et de riposte, **fichiers audio** pour la compréhension orale) est sur la branche `etape-5-animations-audio` : ce qu'il te reste à tester est dans [`docs/etape-5/A_TESTER.md`](docs/etape-5/A_TESTER.md), avec les captures dans `docs/etape-5/`. La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
 
 ---
 
@@ -20,7 +20,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 1. [Comment on joue](#1-comment-on-joue)
 2. [Utiliser le jeu en classe](#2-utiliser-le-jeu-en-classe) (dont une séance type de 15 minutes)
 3. [L'espace professeur](#3-lespace-professeur)
-4. [Modifier ou ajouter des questions](#4-modifier-ou-ajouter-des-questions)
+4. [Modifier ou ajouter des questions](#4-modifier-ou-ajouter-des-questions) (et [l'audio de l'écoute](#4-bis-laudio-de-la-compréhension-orale))
 5. [Ajouter un nouveau document de la séquence](#5-ajouter-un-nouveau-document-de-la-séquence)
 6. [Mettre le jeu en ligne](#6-mettre-le-jeu-en-ligne)
 7. [Confidentialité et RGPD](#7-confidentialité-et-rgpd)
@@ -38,13 +38,13 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 2. Une question s'affiche. **Bonne réponse : l'élève frappe.** Mauvaise réponse : son coup rate, et la **correction expliquée** s'affiche avec le document d'où vient la question.
 3. L'ombre frappe à son tour, **à chaque tour**, que la réponse soit juste ou non.
 
-Une réponse **écrite** frappe plus fort qu'un QCM, et une **série** de bonnes réponses aussi. Un accent oublié donne « ¡Casi! » : pas de dégât, mais la série continue.
+Le coup de l'élève part d'abord (étincelle, l'ombre clignote et recule, « −1 »), puis la **riposte** de l'ombre (une tache d'encre vole vers l'élève, impact, recul, « −1 »). Une erreur fait partir la riposte tout de suite. Une réponse **écrite** frappe plus fort qu'un QCM, et une **série** de bonnes réponses aussi. Un accent oublié donne « ¡Casi! » : pas de dégât, mais la série continue.
 
 **Chaque ombre a sa façon de poser les questions :**
 
 | Ombre | Ce qu'elle demande |
 |---|---|
-| Las Sirenas (jefe de l'acte 1) | écouter : les questions sont lues à voix haute |
+| Las Sirenas (jefe de l'acte 1), El Eco | écouter : un **fichier audio** lit la phrase (boutons « Écouter » et « Plus lentement ») |
 | La Leyenda | vrai ou faux sur tes documents |
 | El Remolino de Fechas | remettre les phrases et les dates dans l'ordre, placer les événements sur la frise 1928-1939 |
 | El Héroe de Tebeo | ¿ser o ir? |
@@ -157,6 +157,16 @@ Tout ce qui ne vient pas directement de tes documents est listé dans [`docs/A_V
 
 ---
 
+## 4 bis. L'audio de la compréhension orale
+
+Chaque question d'écoute (`"type": "ecoute"`) a deux fichiers dans `public/audio/` : `<identifiant>.mp3` (débit normal) et `<identifiant>-lento.mp3` (bouton « Plus lentement »). Exemple : `eco-sirenas.mp3`.
+
+- **Remplacer une voix de synthèse par ta voix** : enregistre la phrase (téléphone, Audacity…), exporte en **mp3**, nomme le fichier avec l'identifiant de la question et dépose-le dans `public/audio/` sur GitHub (**Add file → Upload files**). Le jeu lit toujours ce fichier en premier. Sans fichier `-lento`, « Plus lentement » ralentit simplement le fichier normal.
+- **Ajouter une question d'écoute** : écris-la dans un fichier de `questions/` (champ `say` = la phrase lue), puis demande-moi de générer l'audio (ou lance `scripts/generar-audio.py`, expliqué dans le fichier). `npm run valider` signale (⚠️) toute question d'écoute sans fichier audio.
+- **Hors ligne** : les fichiers sont mis en cache avec le jeu.
+
+---
+
 ## 5. Ajouter un nouveau document de la séquence
 
 Quand tu avances dans la séquence, envoie-moi le nouveau document. Je :
@@ -201,7 +211,7 @@ Le jeu et *El Camino de Cempasúchil* peuvent être en ligne à la même adresse
 - La progression (profil, álbum, carnet) est enregistrée **uniquement dans le navigateur** de l'appareil. Un bouton permet de supprimer un profil.
 - Si le navigateur bloque le stockage (navigation privée…), le jeu fonctionne quand même et prévient que la progression ne sera pas gardée.
 - Le **code de fin de partie** ne contient que le résultat, la date et les notions ratées : ni pseudo, ni identifiant.
-- La voix de l'écoute est celle du navigateur (`speechSynthesis`), sans envoi de données. Sans voix installée, le texte s'affiche brièvement.
+- **L'audio de l'écoute** vient de fichiers `.mp3` livrés avec le jeu (`public/audio/`) : rien n'est envoyé, rien n'est demandé au navigateur. Si un fichier manque (une question créée dans l'espace professeur, par exemple), le jeu essaie la voix espagnole de l'appareil, puis affiche la phrase 5 secondes.
 
 ---
 
@@ -256,4 +266,5 @@ Puis ouvre l'adresse affichée (en général <http://localhost:5173>).
 - **Polices** : Special Elite (Apache 2.0), Atkinson Hyperlegible, Pixelify Sans, Press Start 2P et OpenDyslexic (SIL OFL), intégrées au jeu.
 - **Bibliothèques** : Preact (MIT), zod (MIT), qrcode-generator (MIT), Workbox (MIT).
 - **Visuels** : originaux (pixel art, CSS, SVG) ou emoji du système. Aucun personnage, logo ou symbole politique existant.
-- **Sons et musique** : générés par le navigateur (Web Audio) ; mélodie originale composée pour le jeu. Aucun fichier audio.
+- **Sons et musique** : générés par le navigateur (Web Audio) ; mélodie originale composée pour le jeu.
+- **Voix de la compréhension orale** : voix de synthèse espagnole générée avec espeak-ng (logiciel libre, GPL ; les fichiers produits sont libres de droits). Elle est volontairement un peu lente. Tu peux la remplacer par ta voix (partie 4 bis).

@@ -128,7 +128,7 @@ La légende du combat est elle-même au passé : *El Miedo atacó. Perdiste 3 PV
 
 Les autres ennemis posent des questions mélangées, selon les réglages du professeur.
 
-La voix de l'écoute est celle du navigateur, si elle est installée. Sans voix ou son coupé, le texte s'affiche une seconde (« lecture éclair »), comme dans le jeu actuel. Le professeur peut désactiver l'écoute.
+L'audio de l'écoute vient de **fichiers mp3 livrés avec le jeu** (voix de synthèse espeak-ng, remplaçable par une vraie voix : voir le README). Sans fichier, le jeu essaie la voix du navigateur, puis affiche le texte 5 secondes. Le professeur peut désactiver l'écoute en retirant le type « Compréhension orale ».
 
 ### 3.3 Hors des combats
 

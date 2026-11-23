@@ -98,3 +98,9 @@ button.celda:hover, .celda.sobre { border-color: var(--turquesa); background: rg
 .decor-mapa .celda::after { content: attr(aria-label); display: none; }
 .decor-mapa button.celda { border-color: rgba(36, 28, 21, .3); }
 .decor-mapa .celda .obj { font-size: clamp(1.4rem, 4.5vw, 2.2rem); }
+
+/* écoute : les deux boutons tiennent sur une ligne, même sur un téléphone */
+@media (max-width: 640px) {
+  .escucha { gap: 8px; flex-wrap: nowrap; }
+  .escucha .btn { padding: 8px 14px; font-size: .95rem; white-space: nowrap; }
+}

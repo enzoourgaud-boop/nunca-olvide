@@ -352,3 +352,73 @@ test('une réponse corrigée porte un symbole ✓ / ✗, pas seulement une coule
   expect(await mark('.combate .op.bad')).toContain('✗');
   await expect(page.locator('.combate .fb')).toContainText('Bonne réponse');
 });
+
+/* ======================= Étape 5 : audio et animations ======================= */
+
+test('compréhension orale : les fichiers audio sont chargés (même sans voix espagnole sur l’appareil)', async ({ page }) => {
+  // le professeur ne garde que l'écoute : la première question est une question d'écoute
+  await page.evaluate(() => localStorage.setItem('nunca:settings', JSON.stringify({ types: ['ecoute'] })));
+  await page.reload();
+  const audio: string[] = [];
+  page.on('response', r => r.url().includes('/audio/') && audio.push(`${r.status()} ${r.url().split('/audio/')[1]}`));
+  await startRun(page, 'ECOUTE-5');
+  await page.locator('.sala.puede').first().click();
+  const bar = page.locator('.combate .escucha');
+  await expect(bar.getByRole('button', { name: /Écouter/ })).toBeVisible();
+  await expect(page.locator('.combate .sin-voz')).toHaveCount(0); // plus de « pas de voix espagnole »
+  const id = (await page.locator('.combate .qa').getAttribute('data-qid'))!;
+  expect(audio).toContain(`200 ${id}.mp3`);
+  await bar.getByRole('button', { name: /lentement/ }).click();
+  await expect.poll(() => audio.includes(`200 ${id}-lento.mp3`)).toBe(true);
+  // la phrase écrite n'est pas affichée avant la réponse
+  await expect(page.locator('.combate .flash-texto')).toHaveCount(0);
+});
+
+test('les fichiers audio sont dans le cache hors ligne', async ({ page, browserName }) => {
+  test.skip(browserName !== 'chromium', 'service worker testé sous Chromium');
+  await page.goto('./');
+  await page.evaluate(() => navigator.serviceWorker.ready);
+  await page.reload();
+  const n = await page.evaluate(async () => {
+    let total = 0;
+    for (const k of await caches.keys()) total += (await (await caches.open(k)).keys()).filter(r => r.url.includes('.mp3')).length;
+    return total;
+  });
+  expect(n).toBeGreaterThanOrEqual(60);
+});
+
+test('chacun attaque à son tour : mon coup, puis la riposte de l’ombre (animations)', async ({ page }) => {
+  // animations normales (pas « réduites ») : les classes d'animation sont posées par la scène de combat
+  await page.evaluate(() => localStorage.setItem('nunca:prefs', JSON.stringify({ sound: false, petals: false, motion: 'auto' })));
+  await page.evaluate(() => localStorage.setItem('nunca:settings', JSON.stringify({ types: ['qcm'] })));
+  await page.reload();
+  await startRun(page, 'ANIM-5');
+  await page.locator('.sala.puede').first().click();
+  const stage = page.locator('.combate .escenario');
+  const enemy = page.locator('.combate .lado-enemigo .spr-wrap');
+  const me = page.locator('.combate .lado-jugador');
+  // bonne réponse : l'élève frappe (projectile), l'ombre encaisse puis riposte (tache d'encre, impact, recul)
+  await answerCurrent(page, data);
+  await expect(page.locator('.combate .fb')).toBeVisible();
+  await expect(page.locator('.combate .proyectil')).toHaveCount(1);
+  await expect(enemy).toHaveClass(/ataca/);
+  await expect(page.locator('.combate .proyectil-enemigo')).toHaveCount(1);
+  await expect(page.locator('.combate .impacto')).toHaveCount(1);
+  await expect(me.locator('.capa')).toHaveClass(/herido/);
+  await expect(me.locator('.spr-wrap')).toHaveClass(/retrocede/);
+  await expect(stage).toHaveClass(/temblor/);
+  // la riposte part après le coup de l'élève (≈ 1,25 s), pas en même temps
+  expect(await stage.evaluate(e => getComputedStyle(e).getPropertyValue('--t0').trim())).toBe('1.25s');
+  await page.locator('.combate .fb .btn').click();
+  // mauvaise réponse : pas de coup de l'élève, la riposte part tout de suite
+  await answerCurrent(page, data, true);
+  await expect(page.locator('.combate .proyectil')).toHaveCount(0);
+  await expect(enemy).toHaveClass(/ataca/);
+  expect(await stage.evaluate(e => getComputedStyle(e).getPropertyValue('--t0').trim())).toBe('0s');
+  // « réduire les animations » : aucune tache volante ni impact
+  await page.locator('.combate .fb .btn').click();
+  await page.evaluate(() => document.documentElement.classList.add('reduit'));
+  await answerCurrent(page, data, true);
+  await expect(page.locator('.combate .proyectil-enemigo')).toBeHidden();
+  await expect(page.locator('.combate .impacto')).toBeHidden();
+});

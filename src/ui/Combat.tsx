@@ -61,15 +61,22 @@ export function Combat({ game, paused = false }: { game: Game; paused?: boolean 
       return;
     }
     const fx = fb.fx;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    // chaque son part avec son geste : le coup de l'élève, puis la riposte de l'ombre (1,25 s plus tard)
+    const at = (ms: number, s: Parameters<typeof play>[0]) => (ms ? timers.push(setTimeout(() => play(s), ms)) : play(s));
+    const win = fb.outcome === 'ok' || fb.outcome === 'oracle';
+    const strike = win ? 1650 : fb.outcome === 'casi' ? 1100 : 400; // l'impact sur l'élève
     if (fb.outcome === 'casi') play('casi');
-    else if (fb.outcome === 'ok' || fb.outcome === 'oracle') play(fx.includes('crit') || fx.includes('combo') ? 'crit' : 'ok');
+    else if (win) play(fx.includes('crit') || fx.includes('combo') ? 'crit' : 'ok');
     else play('ko');
-    if (fx.includes('enemyHit') || fx.includes('reflect')) play('hit');
-    if (fx.includes('playerHit')) play('hurt');
-    if (fx.includes('blocked') || fx.includes('mask') || fx.includes('shieldHit')) play('shield');
-    if (fx.includes('heal') || fx.includes('playerHeal') || fx.includes('revive')) play('heal');
-    if (fx.includes('steal')) play('coin');
+    if (fx.includes('enemyHit') || fx.includes('reflect')) at(600, 'hit');
+    if (fx.includes('playerHit')) at(strike, 'hurt');
+    if (fx.includes('blocked') || fx.includes('mask')) at(strike, 'shield');
+    if (fx.includes('shieldHit')) at(600, 'shield');
+    if (fx.includes('heal') || fx.includes('playerHeal') || fx.includes('revive')) at(win ? 900 : 0, 'heal');
+    if (fx.includes('steal')) at(strike, 'coin');
     if (fx.includes('phase')) play('phase');
+    return () => timers.forEach(clearTimeout);
   }, [qKey, !!fb]);
 
   // questions « hautes » (plateaux, image à lire) : sur petit écran, la boîte de dialogue leur laisse la place

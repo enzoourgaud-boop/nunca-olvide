@@ -83,24 +83,27 @@ export function BattleScene({ game }: { game: Game }) {
   const phase = game.phase;
   const turnKey = `${e.id}-${c.turn}-${fb ? 'fb' : 'q'}`;
   const ok = fb && (fb.outcome === 'ok' || fb.outcome === 'oracle');
-  const ko = fb && (fb.outcome === 'ko' || fb.outcome === 'timeout');
 
   // animations déclenchées par le retour
   const join = (...c: unknown[]) => c.filter(Boolean).join(' ');
+  // chacun attaque à son tour : le coup de l'élève (s'il réussit), puis la riposte de l'ombre
+  const struck = !!fb && has(fx, 'playerHit', 'blocked', 'mask');
+  const t0 = fb ? (ok ? '1.25s' : fb.outcome === 'casi' ? '.7s' : '0s') : '0s'; // début de la riposte
   // mouvement (déplacement du sprite)
   const enemyMove = join(
     ok && has(fx, 'crit', 'combo') && has(fx, 'enemyHit') && 'critico',
     ok && has(fx, 'vanish') && 'esquiva',
-    ko && !has(fx, 'canceled') && 'ataca',
+    struck && 'ataca',
     has(fx, 'enemyDown') && 'cae',
     fb?.outcome === 'casi' && 'duda',
+    ok && has(fx, 'enemyHit') && !has(fx, 'crit', 'combo', 'enemyDown', 'vanish') && 'empujado',
   );
   // clignotement / couleur
   const enemyBlink = join(
     ((ok && has(fx, 'enemyHit', 'shieldHit', 'abanico')) || has(fx, 'reflect')) && 'golpeado',
     has(fx, 'phase') && 'fase',
   );
-  const playerMove = join(ok && 'lanza', has(fx, 'playerDown') && 'cae', fb?.outcome === 'casi' && 'salta');
+  const playerMove = join(ok && 'lanza', has(fx, 'playerDown') && 'cae', fb?.outcome === 'casi' && 'salta', struck && !has(fx, 'blocked', 'mask') && 'retrocede');
   const playerBlink = join((has(fx, 'playerHit') || (has(fx, 'poison') && fb && fb.dmgToPlayer > 0)) && 'herido', has(fx, 'revive') && 'revive');
   const stageCls = [
     has(fx, 'playerHit') && 'temblor flash',
@@ -124,7 +127,7 @@ export function BattleScene({ game }: { game: Game }) {
 
   return (
     <div class="batalla">
-      <div class={`escenario fondo-${act.id} ${stageCls}`} style={{ '--c': act.color }}>
+      <div class={`escenario fondo-${act.id} ${stageCls}`} style={{ '--c': act.color, '--t0': t0 }}>
         <div class="estrellas" aria-hidden="true" />
         <div class="horizonte" aria-hidden="true" />
         {c.turn === 1 && !fb && <div class="cortina" key={`intro-${e.id}`} aria-hidden="true" />}
@@ -214,6 +217,17 @@ export function BattleScene({ game }: { game: Game }) {
             {has(fx, 'crit') ? '✒️' : '✨'}
           </span>
         ))}
+        {/* riposte de l'ombre : une tache d'encre vole vers l'élève, puis l'impact */}
+        {struck && !has(fx, 'blocked', 'mask') && (
+          <span class="proyectil-enemigo" key={`pe-${turnKey}`} aria-hidden="true">
+            ⚫
+          </span>
+        )}
+        {struck && (
+          <span class={`impacto ${has(fx, 'blocked', 'mask') ? 'bloqueado' : ''}`} key={`im-${turnKey}`} aria-hidden="true">
+            {has(fx, 'blocked', 'mask') ? '🛡️' : '💥'}
+          </span>
+        )}
         {has(fx, 'steal') && (
           <span class="vuela-monedas" key={`m-${turnKey}`} aria-hidden="true">
             🪙🪙
@@ -232,7 +246,7 @@ export function BattleScene({ game }: { game: Game }) {
             <b>{ch?.name ?? 'Tú'}</b>
             <span class="nv">{s.ascension ? `🌫️${s.ascension}` : `Acte ${s.act + 1}`}</span>
           </div>
-          <HpBar hp={s.hp} max={s.maxHp} late={fb && !ok ? 'tarde-ko' : ''} label={`Tes points de vie : ${s.hp} sur ${s.maxHp}`} />
+          <HpBar hp={s.hp} max={s.maxHp} late={struck ? (ok ? 'tarde-riposte' : 'tarde-ko') : ''} label={`Tes points de vie : ${s.hp} sur ${s.maxHp}`} />
           <div class="marco-estado">
             {s.poison > 0 && <span title="Poison">☠️{s.poison}</span>}
             <span class="pv-num">
