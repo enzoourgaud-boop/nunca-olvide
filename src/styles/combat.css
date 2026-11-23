@@ -7,7 +7,7 @@
 
 /* --- guirlande réduite et page plus large pendant le combat --- */
 html.en-combate .picado { height: 26px; margin-bottom: 8px; padding-top: 2px; }
-html.en-combate .picado svg { width: 22px; height: 24px; }
+html.en-combate .picado { font-size: .8rem; }
 html.en-combate #app { max-width: min(1320px, 100%); gap: 10px; }
 html.en-combate body { padding-bottom: 14px; }
 .combate { gap: 12px; }

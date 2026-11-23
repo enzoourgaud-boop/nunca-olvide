@@ -4,8 +4,8 @@
 html.taille-grand { font-size: 118%; }
 html.taille-proj { font-size: 138%; }
 html.taille-proj #app { max-width: 1180px; }
-html.taille-proj { --texto-2: #ddd0ea; }
-html.taille-proj .muted { color: #e2d6ee; }
+html.taille-proj { --texto-2: #ddd2c0; }
+html.taille-proj .muted { color: #e6dccb; }
 html.taille-proj .escenario { max-height: 40vh; min-height: 220px; }
 html.taille-proj .sprite { width: clamp(96px, 14vh, 170px); height: clamp(96px, 14vh, 170px); }
 html.taille-proj .sprite.jugador { width: clamp(100px, 15vh, 170px); height: auto; }

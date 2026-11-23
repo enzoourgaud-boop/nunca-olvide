@@ -36,9 +36,13 @@ function Crono({ game, paused }: { game: Game; paused: boolean }) {
   );
 }
 
+/** Nom d'une aide de la séquence, d'après son effet (« Pregúntale a la abuela » pour translate…). */
+const aideName = (game: Game, effect: string) => game.content.items.find(i => i.effect === effect)?.name ?? effect;
+
 export function Combat({ game, paused = false }: { game: Game; paused?: boolean }) {
   const s = game.state, c = s.combat!, q = game.question!, e = game.enemy!;
   const fb = c.fb;
+  const aide = (effect: string) => aideName(game, effect);
   const contRef = useRef<HTMLButtonElement>(null);
   const qKey = `${c.turn}:${c.q.id}`;
   const dead = c.hp <= 0;
@@ -91,8 +95,8 @@ export function Combat({ game, paused = false }: { game: Game; paused?: boolean 
             {c.q.mode === 'write' ? " · à l'écrit" : ''}
           </span>
           {c.q.again && (
-            <span class="alma-chip" title="Tu avais raté cette question. Réussis-la pour libérer cette âme : +1 PV.">
-              <span aria-hidden="true">👻</span> Alma pendiente
+            <span class="alma-chip" title="Tu avais raté cette question. Réussis-la pour sauver ce mot : +1 PV.">
+              <span aria-hidden="true">💭</span> Palabra pendiente
             </span>
           )}
         </div>
@@ -100,17 +104,17 @@ export function Combat({ game, paused = false }: { game: Game; paused?: boolean 
         <Prompt q={q} revealed={!!fb} />
         {c.used.translate && (
           <div class="pista">
-            <b>Traductor</b> {game.translationText()}
+            <b>{aide('translate')}</b> {game.translationText()}
           </div>
         )}
         {c.used.hint && (
           <div class="pista">
-            <b>Chuleta</b> {game.hintText()}
+            <b>{aide('hint')}</b> {game.hintText()}
           </div>
         )}
         {c.mask && (
           <div class="pista">
-            <b>Tijeras</b> <span class="mask">{c.mask}</span>
+            <b>{aide('scissors')}</b> <span class="mask">{c.mask}</span>
           </div>
         )}
         <AnswerArea

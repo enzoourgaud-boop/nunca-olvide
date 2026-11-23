@@ -14,7 +14,14 @@
       }
     ],
     "taunt": "Yo borro las palabras…",
-    "phrase": "La sombra borró una carta."
+    "phrase": "La sombra borró una carta.",
+    "types": [
+      "qcm",
+      "qcm",
+      "vrai-faux",
+      "ordre",
+      "association"
+    ]
   },
   {
     "id": "miedo",
@@ -92,7 +99,7 @@
     "emoji": "🌀",
     "card": 5,
     "kind": "elite",
-    "hp": 9,
+    "hp": 8,
     "attack": 2,
     "pattern": "cycle",
     "intents": [
@@ -116,7 +123,7 @@
     "emoji": "🚨",
     "card": 6,
     "kind": "jefe",
-    "hp": 13,
+    "hp": 11,
     "attack": 2,
     "pattern": "cycle",
     "intents": [

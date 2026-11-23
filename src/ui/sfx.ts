@@ -101,3 +101,34 @@ export function play(s: Sfx) {
       }, 0);
   }
 }
+
+/* ---------- Musique de fond : mélodie originale composée pour le jeu (ré mineur, valse lente) ---------- */
+const D = { D3: 147, A2: 110, F3: 175, G3: 196, C3: 131, Bb2: 117, D4: 294, E4: 330, F4: 349, G4: 392, A4: 440, Bb4: 466, C5: 523, D5: 587 };
+const BEAT = 0.62;
+/** [note de la mélodie, durée en temps] — huit mesures à trois temps. */
+const MELODY: [number, number][] = [
+  [D.A4, 2], [D.F4, 1], [D.G4, 2], [D.E4, 1], [D.F4, 1], [D.G4, 1], [D.A4, 1], [D.D4, 3],
+  [D.A4, 2], [D.C5, 1], [D.Bb4, 2], [D.G4, 1], [D.A4, 1], [D.G4, 1], [D.F4, 1], [D.E4, 3],
+  [D.F4, 2], [D.A4, 1], [D.D5, 2], [D.C5, 1], [D.Bb4, 1], [D.A4, 1], [D.G4, 1], [D.A4, 3],
+  [D.G4, 2], [D.F4, 1], [D.E4, 2], [D.G4, 1], [D.F4, 1], [D.E4, 1], [D.C5, 1], [D.D4, 3],
+];
+/** Basse : une note par mesure. */
+const BASS = [D.D3, D.C3, D.D3, D.A2, D.F3, D.G3, D.Bb2, D.A2, D.D3, D.F3, D.G3, D.A2, D.Bb2, D.C3, D.A2, D.D3];
+let musicTimer: ReturnType<typeof setTimeout> | null = null;
+
+function playLoop() {
+  let t = 0;
+  for (const [f, b] of MELODY) {
+    tone(f, t, b * BEAT * 0.95, 'triangle', 0.22);
+    t += b * BEAT;
+  }
+  BASS.forEach((f, i) => tone(f, i * 3 * BEAT * (MELODY.reduce((n, m) => n + m[1], 0) / (BASS.length * 3)), 3 * BEAT * 0.9, 'sine', 0.18));
+  musicTimer = setTimeout(playLoop, t * 1000);
+}
+
+/** Lance ou coupe la musique de fond (après une interaction : règle des navigateurs). */
+export function setMusic(on: boolean) {
+  if (musicTimer) clearTimeout(musicTimer);
+  musicTimer = null;
+  if (on && loadPrefs().sound && audio()) playLoop();
+}

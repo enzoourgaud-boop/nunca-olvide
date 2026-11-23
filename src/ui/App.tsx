@@ -10,14 +10,14 @@ import { randomSeed } from '../engine/rng';
 import { profiles, type Profile } from '../profiles';
 import { storage } from '../storage';
 import { Combat } from './Combat';
-import { PapelPicado, useGame } from './components';
+import { Frise, useGame } from './components';
 import { AchievementsScreen, CarnetScreen, CollectionScreen, Over, ProfileScreen, Title } from './Menu';
 import { ChestScreen, EventScreen, MapScreen, RestScreen, WarmupScreen } from './Rooms';
 import { Reward, Shop } from './screens';
 import { Transition } from './Transition';
 import { OptionsPanel } from './Options';
 import { Petals } from './Petals';
-import { play } from './sfx';
+import { play, setMusic } from './sfx';
 import { loadPrefs, type Prefs, savePrefs } from '../prefs';
 import type { ComponentType } from 'preact';
 
@@ -106,6 +106,17 @@ function Main({ content, fromPack, reload }: { content: Content; fromPack: boole
     setPrefsState(p);
     savePrefs(p);
   };
+  // musique de fond : elle ne peut démarrer qu'après une première interaction (règle des navigateurs)
+  useEffect(() => {
+    if (!prefs.music) return;
+    const go = () => setMusic(true);
+    window.addEventListener('pointerdown', go, { once: true });
+    window.addEventListener('keydown', go, { once: true });
+    return () => {
+      window.removeEventListener('pointerdown', go);
+      window.removeEventListener('keydown', go);
+    };
+  }, []);
   const initialSeed = useMemo(() => urlSeed() || fromLink?.seed || classe?.seed || '', []);
   useGame(game);
   const gameRef = useRef<Game | null>(null);
@@ -262,7 +273,7 @@ function Main({ content, fromPack, reload }: { content: Content; fromPack: boole
   if (menu === 'prof') {
     return (
       <>
-        <PapelPicado />
+        <Frise />
         <main id="app">
           {!Teacher ? <p class="muted">Chargement de l’espace professeur…</p> : <Teacher
             content={content}
@@ -289,7 +300,7 @@ function Main({ content, fromPack, reload }: { content: Content; fromPack: boole
   if (!profile || !meta || menu === 'profiles') {
     return (
       <>
-        <PapelPicado />
+        <Frise />
         <main id="app">
           <ProfileScreen
             list={list}
@@ -316,7 +327,7 @@ function Main({ content, fromPack, reload }: { content: Content; fromPack: boole
   return (
     <>
       {petals && <Petals key={screen === 'over' ? 'fin' : 'calme'} burst={screen === 'over' && game?.state.result === 'win'} />}
-      <PapelPicado />
+      <Frise />
       <button class="btn-opciones" onClick={() => setOptionsOpen(true)} aria-label="Options : son, taille du texte, police, animations" title="Options">
         ⚙️
       </button>

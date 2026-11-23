@@ -147,7 +147,7 @@ describe('almas pendientes : les erreurs reviennent', () => {
     expect(g.state.stats.freed).toBe(1);
     expect(g.state.hp).toBe(6 - fb.dmgToPlayer); // +1 PV, puis l'ennemi riposte
     expect(fb.fx).toContain('alma');
-    expect(fb.lines.join(' ')).toMatch(/Alma liberada/);
+    expect(fb.lines.join(' ')).toMatch(/Palabra recuperada/);
   });
   it('une question en attente n’est jamais reposée si elle ne convient pas à l’ennemi (écrit obligatoire)', () => {
     const notWritable = ids(3, q => q.type === 'vrai-faux');

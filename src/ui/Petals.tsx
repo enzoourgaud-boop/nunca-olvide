@@ -1,4 +1,4 @@
-/** Pétales de cempasúchil qui tombent doucement (décor). Coupés si les animations sont réduites. */
+/** Poussière de papier qui flotte doucement (décor). Coupée si les animations sont réduites. */
 import { useEffect, useRef } from 'preact/hooks';
 import { motionReduced } from '../prefs';
 
@@ -21,8 +21,8 @@ export function Petals({ burst = false }: { burst?: boolean }) {
     const n = burst ? 46 : Math.min(22, Math.round(w / 60));
     const mk = (top: boolean): P => ({
       x: Math.random() * w, y: top ? -20 - Math.random() * h * (burst ? 0.4 : 1) : Math.random() * h,
-      r: 5 + Math.random() * 7, vy: 18 + Math.random() * 30, vx: -8 + Math.random() * 16, a: Math.random() * 6, va: -1 + Math.random() * 2,
-      hue: 28 + Math.random() * 14,
+      r: 1.5 + Math.random() * 3.5, vy: 18 + Math.random() * 30, vx: -8 + Math.random() * 16, a: Math.random() * 6, va: -1 + Math.random() * 2,
+      hue: 32 + Math.random() * 10,
     });
     const ps = Array.from({ length: n }, () => mk(burst));
     const draw = (now: number) => {
@@ -37,9 +37,9 @@ export function Petals({ burst = false }: { burst?: boolean }) {
         ctx.save();
         ctx.translate(p.x, p.y);
         ctx.rotate(p.a);
-        ctx.fillStyle = `hsla(${p.hue}, 100%, 55%, .75)`;
+        ctx.fillStyle = `hsla(${p.hue}, 35%, 82%, .45)`;
         ctx.beginPath();
-        ctx.ellipse(0, 0, p.r, p.r * 0.55, 0, 0, Math.PI * 2);
+        ctx.rect(-p.r, -p.r * 0.7, p.r * 2, p.r * 1.4);
         ctx.fill();
         ctx.restore();
       }

@@ -6,7 +6,7 @@ import { pointerDrag } from './drag';
 import { canSpeak, speak, stopSpeaking, voicesReady } from './speech';
 
 const FR_POS: Record<string, string> = {
-  arriba: 'en haut', abajo: 'en bas', fondo: 'au fond', segundo: 'au second plan', primero: 'au premier plan',
+  linea: 'sur la frise', arriba: 'en haut', abajo: 'en bas', fondo: 'au fond', segundo: 'au second plan', primero: 'au premier plan',
   izquierda: 'à gauche', centro: 'au centre', derecha: 'à droite',
 };
 
@@ -137,7 +137,7 @@ export function OrderBoard({ asked, done, onSubmit }: { asked: Asked; done: bool
 
 /* ======================= Associer mot et image ======================= */
 
-const COLORS = ['#ff9f1c', '#22d1c6', '#ff3d8b', '#9b6cff', '#3ddc84'];
+const COLORS = ['#d9973a', '#7fb3c9', '#c0574a', '#a283b5', '#8fbf6a'];
 
 export function MatchBoard({ q, asked, done, onSubmit }: { q: Extract<Question, { type: 'association' }>; asked: Asked; done: boolean; onSubmit: (v: string) => void }) {
   const words = q.pairs.map(p => p[0]);
@@ -225,7 +225,7 @@ export function MatchBoard({ q, asked, done, onSubmit }: { q: Extract<Question, 
 
 /* ======================= Scènes ======================= */
 
-/** Dessin d'une scène (ofrenda ou cimetière) avec ses cases. */
+/** Dessin d'une scène (ici : la frise chronologique) avec ses cases. */
 export function SceneView({ scenes, decorId, placed, onCell, cellsInteractive, highlight }: {
   scenes: Scenes; decorId: string; placed: Record<string, string>; onCell?: (cell: string) => void; cellsInteractive?: boolean;
   highlight?: Record<string, 'good' | 'bad'>;
@@ -245,11 +245,11 @@ export function SceneView({ scenes, decorId, placed, onCell, cellsInteractive, h
             const label = `${FR_POS[r] ?? r}, ${FR_POS[c] ?? c}${obj ? ` : ${obj.fr}` : ''}`;
             const style = { '--escala': d.scale?.[ri] ?? 1 };
             return cellsInteractive ? (
-              <button key={cell} type="button" class={`celda ${obj ? 'llena' : ''} ${highlight?.[o ?? ''] ?? ''}`} data-drop="celda" data-cell={cell} style={style} onClick={() => onCell?.(cell)} aria-label={label}>
+              <button key={cell} type="button" class={`celda ${obj ? 'llena' : ''} ${highlight?.[o ?? ''] ?? ''}`} data-drop="celda" data-cell={cell} data-col={c} style={style} onClick={() => onCell?.(cell)} aria-label={label}>
                 {obj && <span class="obj" aria-hidden="true">{obj.emoji}</span>}
               </button>
             ) : (
-              <div key={cell} class={`celda ${highlight?.[o ?? ''] ?? ''}`} style={style} aria-label={obj ? label : undefined}>
+              <div key={cell} class={`celda ${highlight?.[o ?? ''] ?? ''}`} data-col={c} style={style} aria-label={obj ? label : undefined}>
                 {obj && <span class="obj" aria-hidden="true">{obj.emoji}</span>}
               </div>
             );

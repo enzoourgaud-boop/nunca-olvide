@@ -2166,7 +2166,7 @@
     ],
     "level": 3,
     "label": "Complète au pretérito indefinido",
-    "prompt": "Carmen nunca ___ dónde estaba su padre. (saber)",
+    "prompt": "Carmen no ___ leer la carta de su padre. (saber)",
     "answer": "supo",
     "accept": [],
     "distractors": [
@@ -2175,7 +2175,7 @@
       "supe"
     ],
     "writable": true,
-    "translation": "Carmen ne sut jamais où était son père.",
+    "translation": "Carmen ne sut pas lire la lettre de son père.",
     "explanation": "saber, él → supo (radical sup-).",
     "source": "gramatica-preterito"
   },

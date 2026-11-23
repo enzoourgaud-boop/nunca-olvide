@@ -5,34 +5,43 @@
 :root {
   --pixel: 'Press Start 2P', ui-monospace, monospace;
   --retro: 'Pixelify Sans', 'Atkinson Hyperlegible', sans-serif;
-  --cadre: #1a0f2b;
-  --cadre-2: #6a5878;
+  --cadre: #1c1612;
+  --cadre-2: #6f604e;
 }
 .batalla { display: flex; flex-direction: column; gap: 0; }
 .escenario {
   position: relative; overflow: hidden; width: 100%; aspect-ratio: 16 / 8; min-height: 230px; max-height: min(380px, 50vh);
   border: 4px solid var(--cadre); border-bottom: 0; border-radius: 10px 10px 0 0;
-  background: linear-gradient(#170c27 0 30%, #2b1846 30% 55%, #3a2058 55% 62%, var(--sol, #4a2a5e) 62%);
+  background: linear-gradient(#18130f 0 30%, #2c241c 30% 55%, #3b3024 55% 62%, var(--sol, #4a3a2c) 62%);
   image-rendering: pixelated;
 }
-.fondo-mercado { --sol: #5c3352; }
+.fondo-mercado { --sol: #5a3f34; }
 .fondo-panteon { --sol: #234a52; background: linear-gradient(#0f1626 0 30%, #17283a 30% 55%, #1d3445 55% 62%, var(--sol) 62%); }
-.fondo-mictlan { --sol: #3b2366; background: linear-gradient(#12081f 0 30%, #24113f 30% 55%, #301a52 55% 62%, var(--sol) 62%); }
+.fondo-mictlan { --sol: #3d3125; background: linear-gradient(#12081f 0 30%, #251e17 30% 55%, #33291f 55% 62%, var(--sol) 62%); }
 .estrellas { position: absolute; inset: 0; pointer-events: none; }
+/* décors des actes : une cuisine de 1936 au crépuscule, une chambre pleine de souvenirs, un chemin de montagne vers la frontière */
+.fondo-pueblo { --sol: #5a4532; background: linear-gradient(#2a2119 0 30%, #3b2f24 30% 55%, #4a3b2c 55% 62%, var(--sol) 62%); }
+.fondo-recuerdos { --sol: #4a3a44; background: linear-gradient(#1e1a22 0 30%, #2e2833 30% 55%, #3a3240 55% 62%, var(--sol) 62%); }
+.fondo-frontera { --sol: #3e4a4f; background: linear-gradient(#1a2226 0 30%, #26323a 30% 55%, #34424b 55% 62%, var(--sol) 62%); }
+.fondo-pueblo .horizonte { background: repeating-linear-gradient(90deg, transparent 0 40px, #e3c16f33 40px 70px, transparent 70px 120px); clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%); top: 22%; }
+.fondo-recuerdos .horizonte { background: repeating-linear-gradient(90deg, transparent 0 60px, #f1e6cf22 60px 96px, transparent 96px 150px); top: 20%; height: 22%; }
+.fondo-frontera .horizonte { background: linear-gradient(135deg, transparent 45%, #5e6e7633 45% 55%, transparent 55%) 0 0 / 120px 100%; }
+/* les ombres de l'oubli sont des souvenirs délavés : en sépia */
+.escenario .sprite:not(.jugador), .carta .fig, .carta-spr { filter: sepia(.9) saturate(.75) contrast(1.05); }
 .estrellas::before {
-  content: ''; position: absolute; width: 3px; height: 3px; background: #fff1dc; top: 8%; left: 12%;
-  box-shadow: 120px 18px #fff1dc, 240px 6px #ffd23f, 330px 40px #fff1dc, 470px 14px #fff1dc, 560px 30px #ffd23f, 650px 8px #fff1dc, 60px 52px #ffd23f, 410px 60px #fff1dc, 720px 46px #fff1dc;
+  content: ''; position: absolute; width: 3px; height: 3px; background: #f1e6cf; top: 8%; left: 12%;
+  box-shadow: 120px 18px #f1e6cf, 240px 6px #e3c16f, 330px 40px #f1e6cf, 470px 14px #f1e6cf, 560px 30px #e3c16f, 650px 8px #f1e6cf, 60px 52px #e3c16f, 410px 60px #f1e6cf, 720px 46px #f1e6cf;
   animation: titila 2.4s steps(2) infinite;
 }
 @keyframes titila { 50% { opacity: .4; } }
 .horizonte { position: absolute; left: 0; right: 0; top: 50%; height: 14%; pointer-events: none; }
-.fondo-mercado .horizonte { background: repeating-linear-gradient(90deg, transparent 0 18px, #ff3d8b55 18px 30px, transparent 30px 44px, #ff9f1c55 44px 56px, transparent 56px 70px, #22d1c655 70px 82px); clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%); top: 34%; }
+.fondo-mercado .horizonte { background: repeating-linear-gradient(90deg, transparent 0 18px, #c0574a55 18px 30px, transparent 30px 44px, #d9973a55 44px 56px, transparent 56px 70px, #7fb3c955 70px 82px); clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%); top: 34%; }
 .fondo-panteon .horizonte { background: repeating-linear-gradient(90deg, transparent 0 26px, #0b1420 26px 44px, transparent 44px 70px, #0b1420 70px 80px, transparent 80px 110px); }
-.fondo-mictlan .horizonte { background: radial-gradient(ellipse at 30% 100%, #9b6cff44, transparent 60%), radial-gradient(ellipse at 80% 100%, #ff3d8b33, transparent 55%); }
+.fondo-mictlan .horizonte { background: radial-gradient(ellipse at 30% 100%, #a283b544, transparent 60%), radial-gradient(ellipse at 80% 100%, #c0574a33, transparent 55%); }
 
 /* --- cadres (nom + PV) --- */
 .marco {
-  position: absolute; z-index: 3; width: min(46%, 300px); background: #fff1dc; color: var(--tinta);
+  position: absolute; z-index: 3; width: min(46%, 300px); background: #f1e6cf; color: var(--tinta);
   border: 3px solid var(--cadre); box-shadow: inset 0 0 0 2px var(--cadre-2), 4px 4px 0 rgba(0, 0, 0, .35);
   padding: 6px 10px 6px; border-radius: 4px; display: flex; flex-direction: column; gap: 3px;
 }
@@ -42,7 +51,7 @@
 .marco-titulo b { font-family: var(--retro); font-weight: 600; font-size: clamp(.95rem, 2.4vw, 1.2rem); line-height: 1.1; overflow-wrap: anywhere; }
 .marco .nv { font-family: var(--pixel); font-size: .55rem; white-space: nowrap; }
 .pv { display: flex; align-items: center; gap: 6px; }
-.pv-lbl { font-family: var(--pixel); font-size: .55rem; color: #ff9f1c; background: var(--cadre); padding: 2px 4px; border-radius: 2px; }
+.pv-lbl { font-family: var(--pixel); font-size: .55rem; color: #d9973a; background: var(--cadre); padding: 2px 4px; border-radius: 2px; }
 .pv-barra { flex: 1; height: 10px; background: var(--cadre); border: 2px solid var(--cadre); border-radius: 2px; overflow: hidden; }
 .pv-barra i { display: block; height: 100%; background: var(--turquesa); transition: width .9s steps(18); }
 .pv-barra.medio i { background: var(--amarillo); }
@@ -59,7 +68,7 @@
 .lado { position: absolute; z-index: 2; display: flex; align-items: flex-end; justify-content: center; }
 .lado-enemigo { right: 5%; top: 6%; width: 36%; height: 58%; }
 .lado-jugador { left: 5%; bottom: 0; width: 36%; height: 56%; }
-.plataforma { position: absolute; bottom: 4%; left: 8%; right: 8%; height: 22%; border-radius: 50%; background: radial-gradient(ellipse at 50% 40%, #ffffff22, transparent 70%), color-mix(in srgb, var(--c) 35%, #1a0f2b); box-shadow: inset 0 -6px 0 #00000055; }
+.plataforma { position: absolute; bottom: 4%; left: 8%; right: 8%; height: 22%; border-radius: 50%; background: radial-gradient(ellipse at 50% 40%, #ffffff22, transparent 70%), color-mix(in srgb, var(--c) 35%, #1c1612); box-shadow: inset 0 -6px 0 #00000055; }
 .lado-jugador .plataforma { bottom: -6%; height: 26%; }
 .spr-wrap, .capa, .flota, .respira, .entra-enemigo, .entra-jugador { position: relative; }
 .lado .entra-enemigo, .lado .entra-jugador { margin-bottom: 9%; }
@@ -72,7 +81,7 @@
 @keyframes respira { 50% { transform: scaleY(.97); } }
 
 /* --- entrée en scène --- */
-.cortina { position: absolute; inset: 0; z-index: 8; background: repeating-linear-gradient(#1a0f2b 0 12px, #000 12px 24px); animation: cortina .7s steps(7) forwards; }
+.cortina { position: absolute; inset: 0; z-index: 8; background: repeating-linear-gradient(#1c1612 0 12px, #000 12px 24px); animation: cortina .7s steps(7) forwards; }
 @keyframes cortina { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 100% 0); } }
 .primera .entra-enemigo { animation: aparece .7s .35s cubic-bezier(.3, 1.6, .5, 1) both; }
 .primera .entra-jugador { animation: desliza .55s .45s steps(6) both; }
@@ -87,7 +96,7 @@
 .bocadillo {
   position: absolute; z-index: 4; left: -18%; top: 0; max-width: 70%;
   font-family: var(--retro); font-weight: 600; font-size: .9rem; line-height: 1.15;
-  background: #fff1dc; color: var(--tinta); border: 3px solid var(--cadre); border-radius: 4px; padding: 4px 8px;
+  background: #f1e6cf; color: var(--tinta); border: 3px solid var(--cadre); border-radius: 4px; padding: 4px 8px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, .35); animation: pop .3s steps(3) .2s both;
 }
 .bocadillo::after { content: ''; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); border: 7px solid transparent; border-left-color: var(--cadre); }
@@ -126,11 +135,11 @@
 .temblor-suave { animation: temblor .3s .55s steps(4); }
 .escenario::after { content: ''; position: absolute; inset: 0; z-index: 7; background: #fff; opacity: 0; pointer-events: none; }
 .flash::after { animation: flash .3s .3s steps(2); }
-.flash-fuerte::after { animation: flash .9s .2s steps(6); background: #ffd23f; }
+.flash-fuerte::after { animation: flash .9s .2s steps(6); background: #e3c16f; }
 @keyframes flash { 0%, 100% { opacity: 0; } 30% { opacity: .85; } }
 
 /* --- nombres, étiquettes, effets --- */
-.numero { position: absolute; z-index: 6; top: 18%; left: 50%; font-family: var(--pixel); font-size: clamp(.9rem, 2.6vw, 1.3rem); color: #fff1dc; text-shadow: 3px 3px 0 var(--cadre), -2px -2px 0 var(--rosa); animation: numero 1s .6s steps(8) both; }
+.numero { position: absolute; z-index: 6; top: 18%; left: 50%; font-family: var(--pixel); font-size: clamp(.9rem, 2.6vw, 1.3rem); color: #f1e6cf; text-shadow: 3px 3px 0 var(--cadre), -2px -2px 0 var(--rosa); animation: numero 1s .6s steps(8) both; }
 .numero.contra { top: 10%; animation-delay: .4s; }
 .numero.cero { color: var(--texto-2); }
 @keyframes numero { 0% { opacity: 0; transform: translate(-50%, 10px) scale(1.6); } 15% { opacity: 1; transform: translate(-50%, 0) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -26px); } }
@@ -139,7 +148,7 @@
 .casi-txt { top: 6%; right: 18%; font-size: 1rem; animation-delay: .1s; }
 .bloqueo { top: 26%; right: 4%; font-size: 1.4rem; background: transparent; border: 0; animation-delay: .35s; }
 @keyframes pop { from { transform: scale(0); } to { transform: none; } }
-.burbuja { position: absolute; inset: -8%; border: 3px dashed #ffd23f; border-radius: 50%; animation: gira 3s linear infinite; pointer-events: none; }
+.burbuja { position: absolute; inset: -8%; border: 3px dashed #e3c16f; border-radius: 50%; animation: gira 3s linear infinite; pointer-events: none; }
 @keyframes gira { to { transform: rotate(360deg); } }
 .proyectil { position: absolute; z-index: 5; font-size: 1.8rem; left: 22%; top: 60%; animation: proyectil .45s steps(9) both; pointer-events: none; }
 .proyectil.grande { font-size: 2.4rem; }
@@ -148,18 +157,18 @@
 @keyframes monedas { 0% { left: 24%; top: 60%; opacity: 0; } 15% { opacity: 1; } 50% { top: 22%; } 100% { left: 72%; top: 34%; opacity: 0; } }
 .humo { position: absolute; z-index: 5; top: 20%; left: 40%; font-size: 2.4rem; animation: humo 1s .2s steps(6) both; }
 @keyframes humo { from { opacity: 0; transform: scale(.4); } 40% { opacity: 1; } to { opacity: 0; transform: scale(1.6) translateY(-20px); } }
-.destellos { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 5px; height: 5px; background: #3ddc84; animation: sube-brillo 1s 1s steps(6) both;
-  box-shadow: -30px 0 #3ddc84, 26px -8px #3ddc84, -14px -20px #b6ffd0, 18px -30px #3ddc84, -26px -38px #b6ffd0, 6px -46px #3ddc84; }
+.destellos { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 5px; height: 5px; background: #8fbf6a; animation: sube-brillo 1s 1s steps(6) both;
+  box-shadow: -30px 0 #8fbf6a, 26px -8px #8fbf6a, -14px -20px #d5e8c4, 18px -30px #8fbf6a, -26px -38px #d5e8c4, 6px -46px #8fbf6a; }
 .lado-jugador .destellos { animation-delay: .5s; }
 @keyframes sube-brillo { from { opacity: 0; transform: translateY(10px); } 30% { opacity: 1; } to { opacity: 0; transform: translateY(-40px); } }
-.burbujas-veneno { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 7px; height: 7px; border-radius: 50%; background: #9b6cff; animation: sube-brillo 1s .45s steps(6) both;
-  box-shadow: -24px -6px #9b6cff, 20px -14px #c9a8ff, -10px -28px #9b6cff, 14px -36px #c9a8ff; }
+.burbujas-veneno { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 7px; height: 7px; border-radius: 50%; background: #a283b5; animation: sube-brillo 1s .45s steps(6) both;
+  box-shadow: -24px -6px #a283b5, 20px -14px #c8b49a, -10px -28px #a283b5, 14px -36px #c8b49a; }
 .bruma { position: absolute; inset: 30% -20% 0; z-index: 4; pointer-events: none; background: repeating-radial-gradient(ellipse at 20% 60%, #e7ddf233 0 30px, transparent 30px 70px); animation: bruma 6s linear infinite; }
 @keyframes bruma { to { transform: translateX(14%); } }
 
 /* --- boîte de dialogue --- */
 .dialogo {
-  position: relative; min-height: 5.6em; background: #fff1dc; color: var(--tinta); cursor: pointer;
+  position: relative; min-height: 5.6em; background: #f1e6cf; color: var(--tinta); cursor: pointer;
   border: 4px solid var(--cadre); box-shadow: inset 0 0 0 3px var(--cadre-2); border-radius: 0 0 10px 10px;
   padding: 10px 40px 10px 16px; font-family: var(--retro); font-size: clamp(1.02rem, 2.6vw, 1.2rem); line-height: 1.35;
 }

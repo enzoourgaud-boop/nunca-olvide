@@ -40,7 +40,7 @@ describe('générateur à graine', () => {
     for (let i = 0; i < 200; i++) expect(r.weighted(['a', 'b'], x => (x === 'a' ? 0 : 1))).toBe('b');
   });
   it('graine lisible', () => {
-    expect(randomSeed(() => 0)).toBe('CALAVERA-10');
+    expect(randomSeed(() => 0)).toBe('CARTA-10');
     expect(cleanSeed(' mi graine ! ')).toBe('MI-GRAINE');
   });
 });

@@ -1,8 +1,8 @@
-/** Panneau d'options de confort : son, taille du texte, police dyslexie, animations, pétales, chrono. */
+/** Panneau d'options de confort : son, taille du texte, police dyslexie, animations, poussière de papier, chrono. */
 import { useEffect, useRef } from 'preact/hooks';
 import type { Settings } from '../engine/game';
 import type { Prefs, TextSize } from '../prefs';
-import { play } from './sfx';
+import { play, setMusic } from './sfx';
 
 export function OptionsPanel({ prefs, onPrefs, settings, onSettings, onClose }: {
   prefs: Prefs; onPrefs: (p: Prefs) => void; settings: Settings; onSettings: (s: Settings) => void; onClose: () => void;
@@ -41,13 +41,17 @@ export function OptionsPanel({ prefs, onPrefs, settings, onSettings, onClose }: 
         <fieldset>
           <legend>Son</legend>
           <label class="check">
-            <input type="checkbox" checked={prefs.sound} onChange={e => { set({ sound: (e.target as HTMLInputElement).checked }); setTimeout(() => play('ok'), 50); }} />
+            <input type="checkbox" checked={prefs.sound} onChange={e => { const on = (e.target as HTMLInputElement).checked; set({ sound: on }); setTimeout(() => (play('ok'), setMusic(on && prefs.music)), 50); }} />
             Effets sonores
           </label>
           <label class="check">
             Volume
             <input type="range" min={0.1} max={1} step={0.1} value={prefs.volume} disabled={!prefs.sound}
               onChange={e => { set({ volume: Number((e.target as HTMLInputElement).value) }); setTimeout(() => play('coin'), 50); }} />
+          </label>
+          <label class="check">
+            <input type="checkbox" checked={prefs.music} disabled={!prefs.sound} onChange={e => { const on = (e.target as HTMLInputElement).checked; set({ music: on }); setTimeout(() => setMusic(on), 50); }} />
+            Musique (mélodie originale)
           </label>
         </fieldset>
         <fieldset>
@@ -71,7 +75,7 @@ export function OptionsPanel({ prefs, onPrefs, settings, onSettings, onClose }: 
           </label>
           <label class="check">
             <input type="checkbox" checked={prefs.petals} onChange={e => set({ petals: (e.target as HTMLInputElement).checked })} />
-            Pétales qui tombent
+            Poussière de papier
           </label>
         </fieldset>
         <fieldset>

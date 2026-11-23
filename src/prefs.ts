@@ -1,6 +1,6 @@
 /**
  * Préférences de confort de l'appareil (pas du profil) : son, taille du texte, police dyslexie,
- * animations, pétales. Elles s'appliquent par des classes sur <html>.
+ * animations, poussière de papier, musique. Elles s'appliquent par des classes sur <html>.
  */
 import { storage } from './storage';
 
@@ -14,9 +14,11 @@ export interface Prefs {
   /** auto = suit le réglage du système ; reduced = toujours réduites. */
   motion: 'auto' | 'reduced';
   petals: boolean;
+  /** Mélodie originale de fond (coupée par défaut : en classe, chacun choisit). */
+  music: boolean;
 }
 
-export const DEFAULT_PREFS: Prefs = { sound: true, volume: 0.6, size: 'normal', dyslexia: false, motion: 'auto', petals: true };
+export const DEFAULT_PREFS: Prefs = { sound: true, volume: 0.6, size: 'normal', dyslexia: false, motion: 'auto', petals: true, music: false };
 
 export function loadPrefs(): Prefs {
   return { ...DEFAULT_PREFS, ...storage.get<Partial<Prefs>>('prefs', {}) };

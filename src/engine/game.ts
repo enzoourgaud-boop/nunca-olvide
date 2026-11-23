@@ -221,7 +221,7 @@ export const ASCENSION_RULES: string[] = [
   'Une aide de départ en moins.',
   'Les élites ont 2 PV et 1 attaque de plus.',
   'Les combats rapportent moins de monedas.',
-  "La Ofrenda soigne moins (−10 points).",
+  "Le refugio soigne moins (−10 points).",
   'Les jefes ont 3 PV de plus.',
   'Davantage de questions à écrire.',
   '3 PV de moins au départ.',
@@ -972,14 +972,14 @@ export class Game {
           s.hp += h;
           if (h && !fb.fx.includes('playerHeal')) fb.fx.push('playerHeal');
           fb.fx.push('alma');
-          fb.lines.push(`Alma liberada : tu avais raté cette question, tu la réussis.${h ? ' +1 PV.' : ''}`);
+          fb.lines.push(`Palabra recuperada : tu avais raté cette question, tu la réussis.${h ? ' +1 PV.' : ''}`);
         }
         if (this.relicCount('luckyCards') && how !== 'oracle') {
           s.luckyCount++;
           const every = this.relicValue('luckyCards', 4) / this.relicCount('luckyCards');
           if (s.luckyCount % every === 0) {
             const id = this.gainRandom('aide');
-            if (id) fb.lines.push(`Lotería ! Tu gagnes : ${this.itemById.get(id)!.name}.`);
+            if (id) fb.lines.push(`¡Qué suerte! Tu gagnes : ${this.itemById.get(id)!.name}.`);
           }
         }
       }
@@ -994,11 +994,11 @@ export class Game {
           const a = Math.min(c.abanico, dmg);
           c.abanico -= a;
           dmg -= a;
-          fb.lines.push(c.abanico > 0 ? `L'abanico se déchire (${c.abanico} restant).` : "L'abanico est brisé !");
+          fb.lines.push(c.abanico > 0 ? `Le voile se déchire (${c.abanico} restant).` : 'Le voile est déchiré !');
         } else {
           dmg = 0;
           fb.fx.push('abanico');
-          fb.lines.push("L'abanico bloque les réponses en QCM : écris pour le briser !");
+          fb.lines.push('Le voile bloque les réponses en QCM : écris pour le déchirer !');
         }
       }
       if (dmg > 0 && c.shield > 0) {
@@ -1087,14 +1087,14 @@ export class Game {
     s.reviveUsed = true;
     s.hp = Math.ceil(s.maxHp / 2);
     fb.fx?.push('revive');
-    fb.alert = `La Calavera de la suerte te ramène sur le chemin avec ${s.hp} PV !`;
+    fb.alert = `${this.itemById.get(this.idByEffect('revive') ?? '')?.name ?? 'Un souvenir'} te ramène sur le chemin avec ${s.hp} PV !`;
   }
 
   private enemyStrikes(fb: Feedback) {
     const s = this.state, c = s.combat!, e = this.enemy!, it = c.intent;
     if (c.canceled) {
       fb.fx.push('canceled');
-      fb.lines.push(`L'encens apaise ${e.name} : il ne fait rien ce tour-ci.`);
+      fb.lines.push(`${e.name} est apaisé : il ne fait rien ce tour-ci.`);
       return;
     }
     const a = s.ascension;
@@ -1118,7 +1118,7 @@ export class Game {
     } else if (this.relicCount('firstErrorShield') && !c.firstErrorUsed) {
       c.firstErrorUsed = true;
       fb.fx.push('mask');
-      fb.lines.push('Ta Máscara encaisse la première erreur du combat : aucun dégât.');
+      fb.lines.push('Ta protection encaisse le premier coup du combat : aucun dégât.');
     } else {
       s.hp = Math.max(0, s.hp - dmg);
       fb.dmgToPlayer += dmg;
@@ -1308,7 +1308,7 @@ export class Game {
     if (s.screen !== 'rest' || !s.rest || s.rest.result) return;
     const before = s.hp;
     s.hp = Math.min(s.maxHp, s.hp + this.restHealAmount());
-    s.rest.result = { text: 'Tu te reposes près de la ofrenda.', lines: [`+${s.hp - before} PV`] };
+    s.rest.result = { text: 'Tu te reposes à l’abri.', lines: [`+${s.hp - before} PV`] };
     this.commit();
   }
 
@@ -1317,7 +1317,7 @@ export class Game {
     if (s.screen !== 'rest' || !s.rest || s.rest.result || !this.upgradable().includes(id)) return;
     s.upgrades[id] = true;
     const it = this.itemById.get(id)!;
-    s.rest.result = { text: `Tu déposes ton ${it.name} sur la ofrenda. Il brille…`, lines: [it.upgrade ?? `${it.name} amélioré`] };
+    s.rest.result = { text: `Tu prépares ton aide « ${it.name} » à l’abri.`, lines: [it.upgrade ?? `${it.name} amélioré`] };
     this.commit();
   }
 
@@ -1327,7 +1327,7 @@ export class Game {
     const s = this.state, ch = s.chest;
     if (s.screen !== 'chest' || !ch || ch.result || ch.quiz) return;
     if (ch.locked) ch.quiz = this.makeQuiz({ write: true });
-    else ch.result = { text: 'Le coffre s\'ouvre.', lines: this.loot(false) };
+    else ch.result = { text: 'La boîte s\'ouvre.', lines: this.loot(false) };
     this.commit();
   }
 
@@ -1338,7 +1338,7 @@ export class Game {
     if (!v) return;
     ch.result = v === 'ko'
       ? { text: 'Le cadenas résiste. Tu récupères quelques monedas tombées par terre.', lines: this.applyEffects([{ type: 'gold', value: 2 }]) }
-      : { text: 'Le cadenas s\'ouvre ! Ce coffre cachait un trésor.', lines: this.loot(true) };
+      : { text: 'Le cadenas s\'ouvre ! Cette boîte cachait un souvenir précieux.', lines: this.loot(true) };
     this.commit();
   }
 

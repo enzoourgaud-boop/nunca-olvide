@@ -16,7 +16,7 @@
 }
 .prof textarea { width: 100%; font-family: ui-monospace, Consolas, monospace; font-size: .92rem; }
 .error { color: var(--rosa); font-weight: 700; }
-.problemas { margin: 0; padding: 10px 10px 10px 30px; background: rgba(255, 61, 139, .12); border-left: 4px solid var(--rosa); border-radius: 8px; font-size: .92rem; }
+.problemas { margin: 0; padding: 10px 10px 10px 30px; background: rgba(192, 87, 74, .12); border-left: 4px solid var(--rosa); border-radius: 8px; font-size: .92rem; }
 .informe { background: var(--noche-2); border-radius: var(--r); padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
 .copiar { display: flex; flex-direction: column; gap: 6px; }
 .file-btn { position: relative; cursor: pointer; }

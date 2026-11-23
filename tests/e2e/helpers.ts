@@ -92,7 +92,7 @@ export async function playToEnd(page: Page, data: ReturnType<typeof loadBank>, w
       await choice.first().click();
       continue;
     }
-    const open = page.locator('button:has-text("Ouvrir le coffre"), button:has-text("Essayer d’ouvrir")');
+    const open = page.locator('button:has-text("Ouvrir la boîte"), button:has-text("Essayer d’ouvrir")');
     if (await open.count()) {
       await open.first().click();
       continue;

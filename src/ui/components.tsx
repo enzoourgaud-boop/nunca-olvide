@@ -11,46 +11,26 @@ export function useGame(game: Game | null) {
   useEffect(() => (game ? game.subscribe(force) : undefined), [game]);
 }
 
-/* ---------- papel picado ---------- */
-const COLS = ['#ff3d8b', '#ff9f1c', '#22d1c6', '#9b6cff', '#ffd23f', '#3ddc84'];
-const circ = (cx: number, cy: number, r: number) => `M${cx - r},${cy}a${r},${r} 0 1,0 ${r * 2},0a${r},${r} 0 1,0 ${-r * 2},0Z`;
-const dia = (cx: number, cy: number, s: number) => `M${cx},${cy - s}L${cx + s},${cy}L${cx},${cy + s}L${cx - s},${cy}Z`;
-const OUTER = 'M0,0H52V50L47.7,56L43.3,50L39,56L34.7,50L30.3,56L26,50L21.7,56L17.3,50L13,56L8.7,50L4.3,56L0,50Z';
-const HOLES = (() => {
-  let h = circ(26, 24, 5);
-  for (let i = 0; i < 8; i++) {
-    const a = (i * Math.PI) / 4;
-    h += circ(26 + 11 * Math.cos(a), 24 + 11 * Math.sin(a), 2.6);
-  }
-  return h + dia(8, 9, 3.5) + dia(44, 9, 3.5) + dia(8, 41, 3.5) + dia(44, 41, 3.5);
-})();
+/* ---------- frise de dates (en-tête) ---------- */
+const DATES = ['1928', '1936', '1938', '1939'];
 
-export function PapelPicado() {
+/** En-tête : une bande de papier avec les dates de la guerre, comme une frise chronologique. */
+export function Frise() {
   return (
-    <div class="picado" aria-hidden="true">
-      {Array.from({ length: 26 }, (_, i) => (
-        <svg viewBox="0 0 52 58" key={i}>
-          <path fill={COLS[i % COLS.length]} fill-rule="evenodd" d={OUTER + HOLES} />
-        </svg>
+    <div class="picado frise-cabecera" aria-hidden="true">
+      {DATES.map(d => (
+        <span key={d}>{d}</span>
       ))}
     </div>
   );
 }
 
-/** Icônes dessinées (quand aucun emoji ne convient). Dans le JSON : "emoji": "svg:papel-picado". */
+/** Figure d'une carte : l'emoji de l'ennemi ou de l'objet. */
 export function Figure({ emoji }: { emoji: string }) {
-  if (emoji === 'svg:papel-picado') {
-    return (
-      <svg viewBox="-6 -4 64 66" width="1em" height="1em" style={{ verticalAlign: '-.1em' }}>
-        <path d="M-4,0H56" stroke="#6a5878" stroke-width="3" />
-        <path fill="#ff3d8b" fill-rule="evenodd" d={OUTER + HOLES} />
-      </svg>
-    );
-  }
   return <>{emoji}</>;
 }
 
-/* ---------- carte de lotería ---------- */
+/* ---------- carte de l'álbum ---------- */
 export function Carta({ enemy, color, cls = '', children }: { enemy: Pick<Enemy, 'name' | 'emoji' | 'top' | 'card'> & { kind?: Enemy['kind'] }; color: string; cls?: string; children?: ComponentChildren }) {
   return (
     <div class={`carta ${enemy.kind ?? ''} ${cls}`} style={{ '--c': color }} role="img" aria-label={`Carte n° ${enemy.card} : ${enemy.name}`}>
@@ -90,7 +70,7 @@ export function intentInfo(game: Game, it: Intent): { ico: string; text: string;
 export const MODIFIERS: Record<string, { ico: string; label: string; desc: string }> = {
   soloEscrito: { ico: '✍️', label: 'Solo escrito', desc: 'Toutes les réponses sont à écrire.' },
   prisa: { ico: '⚡', label: 'Prisa', desc: 'Le chrono est divisé par deux.' },
-  niebla: { ico: '🌫️', label: 'Niebla', desc: 'Traductor et Chuleta sont inutilisables.' },
+  niebla: { ico: '🌫️', label: 'Niebla', desc: 'Les aides de traduction et d’indice sont inutilisables.' },
 };
 
 /* ---------- objets ---------- */
@@ -195,8 +175,8 @@ export function Hud({ game, hit, noHp }: { game: Game; hit?: boolean; noHp?: boo
       <span class="chip" title="Monedas">🪙 {s.gold}</span>
       {s.poison > 0 && <span class="chip veneno" title="Poison : −1 PV par question">☠️ {s.poison}</span>}
       {game.pendingCount > 0 && (
-        <span class="chip almas" title="Almas pendientes : des questions ratées qui reviendront. Réussis-les pour les libérer (+1 PV chacune)." aria-label={`${game.pendingCount} almas pendientes`}>
-          👻 {game.pendingCount}
+        <span class="chip almas" title="Palabras pendientes : des questions ratées qui reviendront. Réussis-les pour sauver ces mots (+1 PV chacun)." aria-label={`${game.pendingCount} palabras pendientes`}>
+          💭 {game.pendingCount}
         </span>
       )}
       {act && (

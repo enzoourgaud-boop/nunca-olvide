@@ -122,7 +122,7 @@
     "distractors": [
       "Carmen",
       "Bielsa",
-      "Pepita"
+      "Huesca"
     ],
     "writable": true,
     "translation": "Qui fut le chef des militaires soulevés ?",
@@ -224,7 +224,7 @@
     "distractors": [
       "A Alemania",
       "A Italia",
-      "A Barcelona"
+      "A Portugal"
     ],
     "writable": true,
     "translation": "Où beaucoup de républicains sont-ils partis en exil ?",
@@ -325,7 +325,7 @@
       "en Francia"
     ],
     "distractors": [
-      "A Barcelona",
+      "A Portugal",
       "A Italia",
       "Al refugio"
     ],
@@ -353,9 +353,9 @@
       "Bielsa"
     ],
     "distractors": [
-      "En Cádiz",
+      "En Madrid",
       "En Francia",
-      "En Barcelona"
+      "En Italia"
     ],
     "writable": false,
     "translation": "Où la Division 43 a-t-elle été assiégée en 1938 ?",

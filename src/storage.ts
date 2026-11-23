@@ -5,7 +5,7 @@
  * Aucune donnée ne quitte l'appareil.
  */
 
-const PREFIX = 'camino:';
+const PREFIX = 'nunca:'; // distinct du jeu Cempasúchil : les deux jeux partagent l'origine *.github.io
 const memory = new Map<string, string>();
 
 function probe(): boolean {

@@ -1,4 +1,4 @@
-/** Carte à embranchements et salles hors combat : événement, Ofrenda (repos), coffre. */
+/** Carte à embranchements et salles hors combat : événement, refugio (repos), boîte oubliée. */
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Game, RoomResult } from '../engine/game';
 import type { MapNode } from '../engine/map';
@@ -187,7 +187,7 @@ export function EventScreen({ game }: { game: Game }) {
   );
 }
 
-/* ======================= Ofrenda (repos) ======================= */
+/* ======================= Refugio (repos) ======================= */
 
 export function RestScreen({ game }: { game: Game }) {
   const s = game.state, info = game.content.sequence.rooms.rest;
@@ -201,9 +201,9 @@ export function RestScreen({ game }: { game: Game }) {
           <span class="v1">🕯️</span>
           <span class="v2">🕯️</span>
           <span class="f">🖼️</span>
-          <span class="fl1">🌼</span>
-          <span class="fl2">🌼</span>
-          <span class="pan">🍞</span>
+          <span class="fl1">✉️</span>
+          <span class="fl2">📓</span>
+          <span class="pan">🥣</span>
         </div>
         <div class="relato-box">
           <h2>{info?.name}</h2>
@@ -226,7 +226,7 @@ export function RestScreen({ game }: { game: Game }) {
       )}
       {!s.rest!.result && choosing && (
         <>
-          <h3>Quelle aide déposer sur la ofrenda ?</h3>
+          <h3>Quelle aide préparer ?</h3>
           <div class="elige">
             {up.map(id => {
               const it = game.item(id)!;
@@ -252,7 +252,7 @@ export function RestScreen({ game }: { game: Game }) {
   );
 }
 
-/* ======================= Coffre ======================= */
+/* ======================= Boîte oubliée (coffre) ======================= */
 
 export function ChestScreen({ game }: { game: Game }) {
   const s = game.state, ch = s.chest!, info = game.content.sequence.rooms.chest;
@@ -260,7 +260,7 @@ export function ChestScreen({ game }: { game: Game }) {
   const ref = useRef<HTMLButtonElement>(null);
   useEffect(() => ref.current?.focus({ preventScroll: true }), []);
   return (
-    <section class="screen" aria-label={info?.name ?? 'Coffre'}>
+    <section class="screen" aria-label={info?.name ?? 'Boîte'}>
       <Hud game={game} />
       <div class="escena">
         <div class={`cofre ${ch.result ? 'abierto' : ''}`} aria-hidden="true">
@@ -269,13 +269,13 @@ export function ChestScreen({ game }: { game: Game }) {
         </div>
         <div class="relato-box">
           <h2>{info?.name}</h2>
-          <p>{ch.locked ? 'Un coffre fermé par un cadenas. Pour l’ouvrir, il faut répondre à une question (à l’écrit si possible). Une bonne réponse révèle un trésor rare.' : 'Un coffre posé au bord du chemin.'}</p>
+          <p>{ch.locked ? 'Une boîte fermée par un cadenas. Pour l’ouvrir, il faut répondre à une question (à l’écrit si possible). Une bonne réponse révèle un souvenir précieux.' : 'Une vieille boîte oubliée au bord du chemin.'}</p>
         </div>
       </div>
       {!ch.quiz && !ch.result && (
         <div>
           <button class="btn" ref={ref} onClick={() => game.chestOpen()}>
-            {ch.locked ? 'Essayer d’ouvrir le cadenas' : 'Ouvrir le coffre'}
+            {ch.locked ? 'Essayer d’ouvrir le cadenas' : 'Ouvrir la boîte'}
           </button>
         </div>
       )}
@@ -286,7 +286,7 @@ export function ChestScreen({ game }: { game: Game }) {
   );
 }
 
-/* ======================= Échauffement : almas pendientes ======================= */
+/* ======================= Échauffement : palabras pendientes ======================= */
 
 /** Début de partie : les questions ratées aux parties précédentes. Chaque âme libérée donne +1 PV. */
 export function WarmupScreen({ game }: { game: Game }) {
@@ -308,28 +308,28 @@ export function WarmupScreen({ game }: { game: Game }) {
         <div class="almas-dibujo" aria-hidden="true">
           {w.ids.map((id, i) => (
             <span key={id} class={i < w.i || (i === w.i && fb) ? (i === w.i ? (fb!.verdict === 'ok' ? 'libre' : 'queda') : 'pasada') : i === w.i ? 'actual' : ''}>
-              👻
+              💭
             </span>
           ))}
         </div>
         <div class="relato-box">
           <span class="lbl">Avant de partir</span>
-          <h2>Tus almas pendientes</h2>
+          <h2>Tus palabras pendientes</h2>
           <p>
-            {w.ids.length > 1 ? `Ces ${w.ids.length} questions t'ont échappé la dernière fois.` : "Cette question t'a échappé la dernière fois."} Chaque bonne réponse libère une âme et te donne{' '}
+            {w.ids.length > 1 ? `Ces ${w.ids.length} questions t'ont échappé la dernière fois.` : "Cette question t'a échappé la dernière fois."} Chaque bonne réponse sauve un mot et te donne{' '}
             <b>+1 PV</b> pour cette partie. Pas de chrono, pas de risque.
           </p>
           <p class="muted" role="status">
-            Question {w.i + 1} sur {w.ids.length} · {w.freed} âme{w.freed > 1 ? 's' : ''} libérée{w.freed > 1 ? 's' : ''} · {s.hp} PV
+            Question {w.i + 1} sur {w.ids.length} · {w.freed} mot{w.freed > 1 ? 's' : ''} sauvé{w.freed > 1 ? 's' : ''} · {s.hp} PV
           </p>
         </div>
       </div>
       <QuizView q={q} asked={w.quiz.q} fb={fb} onAnswer={v => game.warmupAnswer(v)} scenes={game.content.scenes} voices={game.content.sequence.voices}>
-        {fb && <p class="alerta">{fb.verdict === 'ok' ? '👻 Alma liberada : +1 PV.' : fb.verdict === 'casi' ? "Presque : il manque un accent. L'âme reviendra." : "L'âme reste avec toi : elle reviendra pendant la partie."}</p>}
+        {fb && <p class="alerta">{fb.verdict === 'ok' ? '💭 Palabra recuperada : +1 PV.' : fb.verdict === 'casi' ? 'Presque : il manque un accent. Le mot reviendra.' : 'Le mot reste avec toi : il reviendra pendant la partie.'}</p>}
         {fb && (
           <div>
             <button class="btn" ref={ref} onClick={() => game.warmupNext()}>
-              {last ? 'Commencer le chemin' : 'Âme suivante'}
+              {last ? 'Commencer le chemin' : 'Mot suivant'}
             </button>
           </div>
         )}

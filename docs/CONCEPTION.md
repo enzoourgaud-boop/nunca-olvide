@@ -1,6 +1,6 @@
 # « Nunca olvidé » : document de conception
 
-*Étape 1 — proposition à valider, version 2 : combat simplifié, chacun attaque à son tour. Séquence « La guerra civil española », 3e (A2 vers B1).*
+*Validé (étape 1) ; mis à jour à l'étape 2. Combat simplifié : chacun attaque à son tour. Pas de questions sur Pepe et sa famille. Séquence « La guerra civil española », 3e (A2 vers B1).*
 *Titre provisoire, tiré de la dernière phrase de la abuela Carmen : « Nunca olvidé esos años ».*
 
 ## En une page
@@ -15,7 +15,7 @@
 
 Pas de cartes, pas de défense à choisir, pas de cible à viser.
 
-**Où est l'espagnol dans le jeu.** Chaque ennemi a **sa façon de poser les questions** : las Sirenas ne parlent qu'à l'oral, la Leyenda n'affirme que des vrais/faux, el Remolino de Fechas mélange la chronologie. Une réponse écrite frappe plus fort qu'un QCM. Hors des combats, l'espagnol décide aussi : lettres à lire pour choisir, objets à ranger sur la frise 1926 → 1939, villes à placer sur la carte, mot mystère.
+**Où est l'espagnol dans le jeu.** Chaque ennemi a **sa façon de poser les questions** : las Sirenas ne parlent qu'à l'oral, la Leyenda n'affirme que des vrais/faux, el Remolino de Fechas mélange la chronologie. Une réponse écrite frappe plus fort qu'un QCM. Hors des combats, l'espagnol décide aussi : lettres à lire pour choisir, événements à placer sur la frise 1928 → 1939 ; à l'étape 3 : objets à ranger sur la frise, villes à placer sur la carte, mot mystère.
 
 **Le respect du sujet.** On ne combat **jamais** des Espagnols, des soldats ou un camp. On combat l'oubli. Aucune arme, aucun drapeau, aucun uniforme de camp, aucune violence montrée. Les faits historiques viennent uniquement de tes documents.
 
@@ -32,7 +32,7 @@ Pas de cartes, pas de défense à choisir, pas de cible à viser.
 | `gramatica-preterito` | Fiche « El pretérito indefinido » | Réguliers (bailar, comer, vivir), irrégularités vocaliques (pedir, dormir, gruñir, creer, producir), prétérits forts (andar, caber, conducir, decir, estar, haber, hacer, poder, poner, querer, saber, tener, venir, traer), la règle des accents |
 | `mision-secreta` | Misión secreta (la abuela Carmen) | 11 phrases au passé (llegar, luchar, tener, esperar, correr, bombardear, abandonar, cruzar, vivir, volver, olvidar), dates 1936-1939, définition de « guerra civil », cambiar / salir / ser-ir, le mot mystère |
 | `tio-pepe-1` | BD, planche 1 | ausente, con frecuencia, leyenda, esperanza, recuerdo, pesadilla, hambre, tebeo, « desapareció 21 años antes de nacer yo » |
-| `tio-pepe-2` | BD, planche 2 | 1926 Cádiz → Barcelona, la famille (José Luis, Lola, Pepe, Aurora, Rosendo, Lolita, Pepita), rebelde, Juventudes Socialistas, fútbol, el Español, la quinta, uniforme de segunda mano, el frente, División 43, Bielsa (Huesca), abril-junio 1938 |
+| `tio-pepe-2` | BD, planche 2 | seulement ce qui concerne la guerre : División 43, Bielsa (Huesca), abril-junio 1938 (« la Bolsa de Bielsa »). **La famille de Pepe n'est pas utilisée** (décision du professeur). |
 | `ce-mi-tio` | Questionnaire de CE | ateo, socialista, cristiana, rebelde, madrastra et leurs définitions ; situer les villes sur la carte |
 | `evaluacion` | Évaluation Etapa 1 | luchar, vencer, sufrir ; ser / ir ; julio 1936, sublevarse, Franco, ayuda de la Alemania nazi y de la Italia fascista, sangrienta, exilio, campo de refugiados ; la ficha de identidad ; le lexique (guerra, bando, huir, fusilar, enterrar, sublevarse, exilio, gobierno) |
 
@@ -78,7 +78,7 @@ Après une bonne réponse, pas de bouton « Continuer » : l'attaque se joue et 
 ```
 Prologue (30 s) : la caja de los recuerdos
   → ACTO 1  1936 · El pueblo de Carmen        (Misión secreta, verbes réguliers)
-  → ACTO 2  Barcelona · Mi tío Pepe            (la BD, irréguliers vocaliques)
+  → ACTO 2  La guerra en los recuerdos        (la BD : la guerre vécue, irréguliers)
   → ACTO 3  1939 · La frontera                 (l'évaluation, prétérits forts, ser / ir)
   → Épilogue : la ficha de identidad complète, « Nunca olvidé esos años »
 ```
@@ -121,9 +121,9 @@ La légende du combat est elle-même au passé : *El Miedo atacó. Perdiste 3 PV
 |---|---|---|
 | **Las Sirenas** | écoute : la phrase est lue à voix haute (*¡Los aviones bombardearon la ciudad!*), il faut comprendre ou reconnaître la forme (*habló* ou *hablo* ?) | `mision-secreta` n° 5 |
 | **La Leyenda** | vrai / faux sur tes documents (*Los republicanos ganaron la guerra*) | `tio-pepe-1`, `evaluacion` ex. 6 |
-| **El Remolino de Fechas** | remettre des événements dans l'ordre (1926 → 1936 → 1938 → 1939) | `mision-secreta`, `tio-pepe-2` |
+| **El Remolino de Fechas** | remettre des événements dans l'ordre, frise (1928 → 1936 → 1938 → 1939) | `mision-secreta`, `tio-pepe-2` |
 | **El Héroe de Tebeo** | ¿ser o ir? (*La guerra fue fratricida* → ser) | `evaluacion` ex. 4 |
-| **La Ausencia** | compréhension de la BD (qui est Pepe ? qui est Lola ?) | `tio-pepe-1`, `tio-pepe-2` |
+| **La Ausencia** | disparaît au premier coup ; questions mélangées | `tio-pepe-1` |
 | **El Olvido** (jefe final) | réponses écrites uniquement, puis la phrase finale *Nunca olvidé esos años* | `mision-secreta` |
 
 Les autres ennemis posent des questions mélangées, selon les réglages du professeur.
@@ -133,8 +133,8 @@ La voix de l'écoute est celle du navigateur, si elle est installée. Sans voix 
 ### 3.3 Hors des combats
 
 - **Las cartas (événements)** : lettres et scènes en espagnol, **sans traduction**. Pas de bonne ou de mauvaise réponse : l'élève obtient ce qu'il a choisi. Celui qui comprend obtient ce qu'il veut (exemples en 5.6). L'élève peut demander à la abuela de traduire, trois fois par partie.
-- **La frise (caja de los recuerdos)** : chaque objet retrouvé se range sur une année (1926 · 1936 · 1938 · 1939). Bien placé, il donne son bonus complet ; mal placé, la moitié (`mision-secreta`, `tio-pepe-2`).
-- **La carte de l'Espagne** : « Sitúa las ciudades en el mapa de España » (`ce-mi-tio`). Avant certaines salles, placer Cádiz, Barcelona ou Huesca ouvre un raccourci. Échouer ne coûte rien. *(Mots de position : voir D6.)*
+- **La frise (caja de los recuerdos)** : chaque objet retrouvé se range sur une année (1928 · 1936 · 1938 · 1939) — *étape 3*. Bien placé, il donne son bonus complet ; mal placé, la moitié (`mision-secreta`, `tio-pepe-2`).
+- **La carte de l'Espagne** : « Sitúa las ciudades en el mapa de España » (`ce-mi-tio`). Avant certaines salles, placer Huesca (Bielsa) ou la frontière avec la France ouvre un raccourci. Échouer ne coûte rien. Les mots de position (*en el norte, en el sur…*) sont connus des élèves (D6). *Étape 3.*
 - **La palabra misteriosa** (`mision-secreta`) : chaque réponse écrite juste révèle une lettre du mot mystère de l'acte. Mot complet avant le jefe → tu connais son thème faible. *(D7.)*
 
 ---
@@ -145,7 +145,7 @@ La voix de l'écoute est celle du navigateur, si elle est installée. Sans voix 
 
 **Prologue.** Aujourd'hui. Chez la abuela Carmen, née en 1928. Elle te montre une boîte : *« Aquí están mis recuerdos. »* Quand tu l'ouvres, les photos pâlissent, les mots des lettres s'effacent. Les sombras del olvido sont là. Carmen te prend la main : *« Cuéntamelo en pasado y no se borrará. »* Te voilà dans ses souvenirs, aux côtés de **Carmen enfant**.
 
-**Les trois actes.** Chacun correspond à un document : le souvenir de Carmen (1936), la légende de Tío Pepe (BD), l'exil (évaluation). Le jeu **n'invente aucun fait** : il ne dit pas ce qui est arrivé à Pepe, puisque ta BD ne le dit pas.
+**Les trois actes.** Chacun correspond à un document : le souvenir de Carmen (1936), la guerre vécue racontée par la BD, l'exil (évaluation). Le jeu **n'invente aucun fait**, et ne parle pas de Pepe ni de sa famille.
 
 **Épilogue.** La ficha de identidad de la guerra se remplit sous les yeux de l'élève (fecha de inicio, duración, año del final, los dos bandos, jefe de los militares). Carmen : *« Nunca olvidé esos años. »*
 
@@ -155,7 +155,6 @@ La voix de l'écoute est celle du navigateur, si elle est installée. Sans voix 
 |---|---|---|
 | **La abuela Carmen** | guide, voix du jeu, traductrice | `mision-secreta` |
 | **Carmen niña** | t'accompagne dans les souvenirs (décor, dialogues) | `mision-secreta` (« Carmen nació en 1928 ») |
-| **Tío Pepe** | sujet de l'acte 2, présent par ses objets (photo, balón, uniforme). **Jamais dessiné en soldat, jamais jouable.** | `tio-pepe-1`, `tio-pepe-2` |
 | Le joueur : **nieta** ou **nieto** | avatar au choix, sans prénom imposé | invention |
 
 Le jeu actuel a 3 personnages à débloquer avec un petit bonus chacun ; je les garde, renommés (la cronista, el archivero, la oyente).
@@ -180,91 +179,100 @@ Les élèves sont mineurs et le sujet est grave (une guerre fratricide, l'exil, 
 
 ---
 
-## 5. Listes
+## 5. Listes (contenu de l'étape 2)
 
-Les nombres sont des points de départ ; la simulation les réglera. Colonne « Source » : document d'où vient le nom. ⚠ = mot ou idée hors de tes documents, repris dans `A_VERIFIER.md`.
+Valeurs réglées par simulation. Tout est modifiable dans `content/sequences/guerra-civil/` (fichiers `enemies.json`, `items.json`, `events.json`). ⚠ et noms hors documents : voir `A_VERIFIER.md`.
 
 ### 5.1 Salles de la carte
 
-| Salle (moteur actuel) | Nouveau nom | Rôle |
+| Salle (moteur) | Nom dans le jeu | Rôle |
 |---|---|---|
-| Combate | **Una sombra** | un ennemi de l'acte |
-| Élite | **Una sombra fuerte** | ennemi coriace, récompense : un objet |
-| Evento | **Una carta** | lettre ou scène à lire, choix (3.7) |
-| Tianguis | **El rastro** ⚠ (« de segunda mano », `tio-pepe-2`) | acheter des objets et des aides |
-| Ofrenda (repos) | **El refugio** (`mision-secreta`) | se soigner ou améliorer une aide |
-| Cofre | **Una caja olvidada** | un objet |
-| Jefe | **El jefe del acto** | voir 5.3 |
+| Combate | **Una sombra** 🌑 | un ennemi de l'acte |
+| Élite | **Una sombra fuerte** 🌘 | ennemi coriace, récompense : un souvenir |
+| Evento | **Una carta** ✉️ | lettre ou scène à lire, choix |
+| Tienda | **El rastro** 🧺 | acheter des aides et des souvenirs |
+| Repos | **El refugio** 🏚️ | se soigner ou améliorer une aide |
+| Coffre | **Una caja olvidada** 📦 | un souvenir |
+| Jefe | 👁️ | voir 5.2 |
 
-### 5.2 Ennemis ordinaires et élites
+### 5.2 Ennemis
 
-| Ennemi | Acte | PV / attaque (départ) | Particularité | Source |
-|---|---|---|---|---|
-| **La Sombra** ⚠ | 1-3 | 3 / 1 | aucune : ennemi d'apprentissage | ⚠ (*sombra*) |
-| **El Miedo** | 1 | 4 / 2 | conjugaison | `mision-secreta` (« viví tres años con miedo ») |
-| **El Hambre** | 1-2 | 4 / 2 | se soigne de 1 PV quand tu te trompes | `tio-pepe-1` |
-| **El Remolino de Fechas** ⚠ | 1 (élite) | 6 / 2 | phrases et dates à remettre dans l'ordre | ⚠ (*remolino*) |
-| **La Leyenda** | 2 | 5 / 2 | vrai / faux | `tio-pepe-1` |
-| **La Ausencia** | 2 | 5 / 2 | compréhension de la BD | `tio-pepe-1` (« mi tío ausente ») |
-| **El Héroe de Tebeo** | 2 (élite) | 7 / 3 | ¿ser o ir? | `tio-pepe-1` |
-| **Las Cartas Perdidas** | 3 | 5 / 3 | lexique | `mision-secreta` (« esperamos sus cartas ») |
-| **La Frontera** | 3 (élite) | 8 / 3 | prétérits forts, à l'écrit | `mision-secreta`, `evaluacion` |
+PV / attaque : valeurs de départ. **Chaque ennemi attaque à chaque tour.** Colonne « geste » : les questions qu'il pose.
 
-### 5.3 Jefes
+| Ennemi | Acte | Type | PV / attaque | Geste | Phrase de l'álbum |
+|---|---|---|---|---|---|
+| 🌑 **La Sombra** | 1 | ombre | 5 / 1 | QCM, vrai/faux, ordre, association | « La sombra borró una carta. » |
+| 😨 **El Miedo** | 1 | ombre | 6 / 1 | QCM, écrit | « Viví tres años con miedo. » |
+| 🥣 **El Hambre** | 1 | ombre | 6 / 1 | questions mélangées ; se soigne | « Y hablando de hambre, ellos sabían muy bien lo que decían. » |
+| 🔉 **El Eco** | 1 | ombre | 6 / 1 | écoute, QCM | « ¿Habló o hablo? » |
+| 🌀 **El Remolino de Fechas** | 1 | élite | 8 / 2 | ordre, frise | « La guerra empezó en 1936 y terminó en 1939. » |
+| 🚨 **Las Sirenas** | 1 | jefe | 11 / 2 | Las sirenas suenan : écoute → Los aviones : memoria, regulares | « Cuando sonaron las sirenas, corrí con mi madre al refugio. » |
+| 📜 **La Leyenda** | 2 | ombre | 8 / 2 | vrai/faux | « Una especie de leyenda familiar. » |
+| 🫥 **La Ausencia** | 2 | ombre | 8 / 2 | questions mélangées ; disparaît au premier coup | « Mi tío ausente. » |
+| 🍽️ **El Hambre Negra** | 2 | ombre | 9 / 2 | questions mélangées ; se soigne | « «A ti lo que hace falta es una buena guerra». » |
+| 🤐 **El Silencio** | 2 | ombre | 8 / 2 | écoute, QCM ; brouillard (aides bloquées) | « Nadie habló de la guerra. » |
+| 🦸 **El Héroe de Tebeo** | 2 | élite | 12 / 2 | Hazañas heroicas : ser-ir, memoria | « No era una guerra como las de los tebeos. » |
+| 🌘 **La Pesadilla** | 2 | jefe | 17 / 2 | Cotidiana : memoria, historia → Adherida a los recuerdos : irregulares, ser-ir | « La guerra había sido su pesadilla cotidiana. » |
+| ✉️ **Las Cartas Perdidas** | 3 | ombre | 9 / 2 | association, QCM ; vole une aide | « Mi madre y yo esperamos sus cartas cada semana. » |
+| 🏚️ **La Casa Vacía** | 3 | ombre | 10 / 2 | questions mélangées | « Muchas familias abandonaron sus casas. » |
+| 😱 **El Gran Miedo** | 3 | ombre | 10 / 2 | écrit, QCM | « Muchas familias no pudieron volver a España. » |
+| 🔇 **El Silencio Largo** | 3 | ombre | 10 / 2 | écoute, vrai/faux ; brouillard (aides bloquées) | « Durante muchos años, nadie habló. » |
+| 🚧 **La Frontera** | 3 | élite | 13 / 3 | tout à l’écrit | « Mi tío cruzó la frontera con Francia. » |
+| 🌫️ **El Olvido** | 3 | jefe final | 23 / 2 | El Olvido borra : regulares, irregulares, ser-ir → El Olvido mezcla : ordre, frise, vrai/faux → La última palabra : écrit niveau jefe | « Nunca olvidé esos años. » |
 
-Même combat, plus de PV, et un changement de geste à mi-vie (le moteur sait déjà le faire).
+### 5.3 Aides (à usage unique)
 
-| Jefe | Première moitié | Seconde moitié |
+| Aide | Effet |
+|---|---|
+| 👵 Pregúntale a la abuela | Carmen traduit la question en français. S'il n'y a rien à traduire, elle donne la première lettre de la réponse. |
+| 📓 El bloc de notas | Ton bloc de notas : montre la règle de conjugaison, ou la première lettre et la longueur du mot. |
+| ✏️ El lápiz | Barre deux mauvaises réponses. À l’écrit, dévoile une lettre sur deux. |
+| 💭 La memoria | Le souvenir revient : donne la bonne réponse (et frappe l’ombre). |
+| 📄 Otra página | Change de question sans pénalité. |
+| ⏳ El reloj | Ajoute 15 secondes au chrono de la question. |
+| 🥣 Pan y sopa | Un bol de soupe et du pain : rend 6 points de vie. |
+
+### 5.4 Souvenirs (objets permanents)
+
+| Souvenir | Effet | Phrase de l'álbum |
 |---|---|---|
-| **Las Sirenas** (acte 1) | questions à l'oral | attaque plus forte, questions sur le récit de Carmen |
-| **La Pesadilla** (acte 2) | compréhension de la BD | « cotidiana » : elle repose les questions que tu as ratées |
-| **El Olvido** (final) | réponses écrites uniquement | dernier coup : écrire *Nunca olvidé esos años* |
+| 🌱 La esperanza | +1 dégât à chaque bonne réponse. | « Mi familia conservó la esperanza. » |
+| ✉️ Las cartas de cada semana | Les réponses écrites font +1 dégât de plus. | « Esperamos sus cartas cada semana. » |
+| 📰 El tebeo | Le bonus de série démarre dès 2 bonnes réponses et vaut +2. | « No era una guerra como las de los tebeos. » |
+| 🖼️ La foto | +4 points de vie maximum. | « Su recuerdo estuvo siempre presente en mi casa. » |
+| 🪙 Las monedas de la abuela | +1 moneda par bonne réponse. | « La abuela me dio sus monedas. » |
+| 🗝️ La llave del refugio | +2 points de vie après chaque combat. | « Corrí con mi madre al refugio. » |
+| ✨ Tilde amable | Un accent oublié à l’écrit est pardonné. | « «Luchó» lleva tilde. » |
+| 🪑 La mesa de la cocina | +3 points de vie maximum. | « Mis padres hablaban de la guerra en la mesa. » |
+| 📜 La leyenda familiar | Le bonus de série fait +1 dégât de plus. | « Una especie de leyenda familiar. » |
+| 📕 El diccionario | Une question traduite gratuitement à chaque combat. | « Busqué las palabras en el diccionario. » |
+| 🗺️ El mapa de España | Un choix de plus dans chaque récompense. | « Sitúa las ciudades en el mapa de España. » |
+| 📔 El cuaderno de Carmen | Règle modifiée : toutes les questions possibles passent à l’écrit, mais chaque réponse écrite fait +2 dégâts. | « Escribí todo en mi cuaderno. » |
+| 🕰️ El reloj de pared | Règle modifiée : +10 secondes au chrono, mais les ombres frappent +1. | « El reloj de la pared no paró. » |
+| 🕯️ El recuerdo | Une fois par partie, à 0 PV, tu reviens avec la moitié de ta vie. | « Su recuerdo estuvo siempre presente. » |
+| 🔤 La palabra misteriosa | Toutes les 4 bonnes réponses, une aide gratuite au hasard. | « ¿Cuál es el tema? La guerra civil. » |
 
-La partie courte se termine par une version courte du jefe de l'acte choisi.
+Ensembles :
+- **La caja de los recuerdos** : La foto + Las cartas + El recuerdo : +1 PV à chaque bonne réponse.
+- **El tebeo y la leyenda** : El tebeo + La leyenda familiar : le bonus de série est doublé.
+- **Papel y tinta** : Las cartas + El diccionario : +1 moneda par réponse écrite juste.
 
-### 5.4 Objets de la caja de los recuerdos
+*La frise des objets (ranger chaque souvenir sur son année) est prévue à l'étape 3.*
 
-| Objet | Année sur la frise | Bonus bien placé | Source |
-|---|---|---|---|
-| 📷 La foto de familia | 1926 | +4 PV max | `tio-pepe-2` |
-| ⚽ El balón de fútbol | 1926 | +1 dégât sur les questions de lexique | `tio-pepe-2` (« entusiasta del fútbol ») |
-| 🗺 El mapa de España | 1926 | montre toute la carte de l'acte | `ce-mi-tio` |
-| 🧥 El uniforme de segunda mano | 1936 | +3 PV max | `tio-pepe-2` |
-| ✉ Las cartas de cada semana | 1936 | +1 moneda par bonne réponse | `mision-secreta` |
-| 🥣 El plato de sopa | 1936 | +2 PV après chaque combat | `tio-pepe-1` |
-| 📰 El tebeo | 1938 | +1 dégât sur les réponses écrites | `tio-pepe-1` |
-| 🏔 La carta de Bielsa ⚠ | 1938 | les verbes forts font +1 | `tio-pepe-2` (lieu et date ; la lettre est inventée) |
-| 🚪 La llave de casa ⚠ | 1939 | +1 dégât à chaque bonne réponse | ⚠ (*llave*) ; idée tirée de « volvió a casa en 1939 » |
-| 🕯 La esperanza | — (légendaire) | une seule fois : revenir à 5 PV au lieu de perdre | `tio-pepe-1` (« conservó la esperanza ») |
+### 5.5 Événements
 
-**Recuerdos completos** (ensembles) : *La familia de Pepe* (foto + balón + uniforme : +1 PV à chaque bonne réponse) ; *La casa de Carmen* (cartas + sopa + llave : séries doublées).
-
-### 5.5 Aides (consommables, effets du moteur actuel)
-
-| Aide | Effet | Ancien nom |
+| Événement | Texte | Choix |
 |---|---|---|
-| 📓 **El bloc de notas** | affiche le rappel de conjugaison de ta fiche (« Rappel : le pretérito indefinido ») | chuleta (`ce-mi-tio` : « apúntalos en tu bloc de notas ») |
-| 👵 **Pregúntale a la abuela** | traduit l'énoncé | traductor |
-| ✏ **El lápiz** | barre deux mauvaises propositions | tijeras |
-
-### 5.6 Événements (cartas)
-
-Une dizaine au départ, toutes écrites avec les phrases et le vocabulaire de tes documents. Exemples :
-
-| Événement | Situation | Choix |
-|---|---|---|
-| **Suenan las sirenas** | « ¡Las sirenas! ¿Qué hiciste? » | *Corrí al refugio* (+3 PV) / *Esperé a mi madre* (+2 monedas) / *No hice nada* (rien) |
-| **El rastro** | 3.7 | voir plus haut |
-| **La foto de familia** | une photo, 7 personnes, des étiquettes : *ateo, muy cristiana, rebelde…* | association : qui est qui (José Luis, Lola, Pepe) → réussi : objet « la foto » |
-| **El partido** | Pepe juega al fútbol | lire pour choisir : récompense différente |
-| **La quinta** | « Al comenzar la guerra, fue movilizado con su quinta. » ¿Fue = ser o ir? | identification ser / ir (3.2) |
-| **El tebeo** | « No era una guerra como las de los tebeos. » | V / F sur la planche 1 |
-| **Una carta del frente** ⚠ | Carmen lit une lettre (texte inventé avec les mots de la BD, sans fait nouveau) | réponse au passé à composer |
-| **El mapa** | « Sitúa Cádiz y Barcelona. » | placement (3.6) → raccourci |
-| **La misión secreta** | une ligne de cases et une lettre jaune | conjuguer → une lettre du mot mystère |
-| **La frontera** | « Mi tío cruzó la frontera con Francia. » | *Crucé la frontera* / *Volví a casa* : deux suites différentes |
-
----
+| 🚨 Suenan las sirenas | ¡Las sirenas! Carmen niña te coge de la mano. —¿Qué hacemos? | *Corrimos al refugio.* / *Esperamos a su madre.* |
+| 🧺 El rastro | —Estas cosas son de segunda mano. Son baratas. ¿Qué quieres? | *Compré una foto vieja.* / *No compré nada.* |
+| ✉️ Una carta del padre | Carmen niña tiene una carta de su padre. —No sé leer bien. ¿Me ayudas? | *Sí, leímos la carta juntas.* / *No, tengo prisa.* |
+| 🔤 La misión secreta | En la caja hay una hoja con casillas y una letra amarilla. —Si conjugas bien, descubres el secreto. | *Conjugué el verbo.* / *Cerré la caja.* |
+| 📰 Un tebeo viejo | Encuentras un tebeo viejo: «¡Grandes batallas! ¡Hazañas heroicas!». La abuela dice: —No era una guerra como las de los tebeos. | *Le pregunté a la abuela cómo fue la guerra.* / *Leí el tebeo.* |
+| 🍲 La comida | Tu primo no quiere comer la sopa. Su padre dice: «A ti lo que hace falta es una buena guerra». | *Comí toda la sopa.* / *Pregunté por qué.* |
+| 🚧 La frontera | Un camino de montaña. A lo lejos, la frontera con Francia. Hace frío. | *Crucé la frontera.* / *Volví al pueblo.* |
+| ⛺ El campo de refugiados | En Francia, un campo de refugiados. Una mujer te pregunta: —¿Cuándo saliste de España? | *Le contesté en español.* / *No dije nada.* |
+| 📜 Una leyenda familiar | Tu tía dice: —Mi abuelo luchó en todas las batallas y nunca tuvo miedo. La abuela Carmen sonríe: —Eso es una leyenda. | *Busqué la verdad.* / *Creí la leyenda.* |
+| 🌑 Una sombra en el camino | Una sombra te cierra el paso. —Si quieres pasar, lucha conmigo. | *Luché contra la sombra.* / *Busqué otro camino.* |
 
 ## 6. Pédagogie
 
@@ -283,20 +291,18 @@ Comme dans le jeu actuel : les questions deviennent plus difficiles d'acte en ac
 
 ### 6.3 Banque de questions
 
-Environ **260 questions** au départ, toutes avec correction expliquée en français et document source :
+**388 questions** (étape 2), toutes avec une correction expliquée en français et le document source :
 
 | Thème | Notions | Nb | Types |
 |---|---|---|---|
-| **Pretérito : regulares** | -ar, -er/-ir, accents | ~70 | QCM, écrit, écoute (habló / hablo), ordre, tuiles |
-| **Pretérito : irregulares** | vocaliques (e→i, o→u, i→y, j), prétérits forts | ~70 | QCM, écrit, tuiles, vrai/faux (« *dijieron* est correct ») |
-| **¿Ser o ir?** | identifier, conjuguer | ~15 | QCM, vrai/faux |
-| **Historia** | dates, bandos, Franco, aide extérieure, exil, ficha | ~35 | QCM, écrit, vrai/faux, frise (placement), ordre |
-| **Mi tío Pepe / Carmen** | compréhension des deux récits | ~40 | QCM, vrai/faux, association (qui est qui), placement (carte) |
-| **Léxico** | lexique de la guerre, de la mémoire, de la famille | ~30 | association mot/traduction, mot/définition, mot/image, écrit |
+| **Pretérito : verbes réguliers** | -ar, -er/-ir, accents | 115 | QCM, écrit, écoute (*habló* / *hablo*), ordre, vrai/faux |
+| **Pretérito : verbes irréguliers** | vocaliques (e→i, o→u, i→y, j), prétérits forts | 105 | QCM, écrit, écoute, ordre, vrai/faux (« *dijieron* est correct ») |
+| **¿Ser o ir?** | identifier, conjuguer | 36 | QCM, vrai/faux, ordre |
+| **Historia de la guerra** | dates, camps, Franco, aide étrangère, exil, Bielsa | 42 | QCM, écrit, vrai/faux, frise, ordre chronologique, écoute |
+| **Los recuerdos** | le récit de Carmen, la guerre vécue (BD) | 28 | QCM, vrai/faux, écoute, ordre |
+| **Léxico** | lexique de la guerre et du souvenir | 62 | QCM, association mot/traduction et mot/image |
 
-Les 7 types du moteur sont utilisés : **QCM, réponse écrite, vrai/faux, phrase à remettre dans l'ordre, association mot/image, placement sur une scène** (frise chronologique et carte), **écoute**.
-
-Les phrases de l'évaluation : voir **D3**.
+Les 7 types du moteur sont utilisés : QCM (270), réponse écrite (9 questions « écrit seulement », et la plupart des QCM peuvent aussi être posés à l'écrit), vrai/faux (36), phrase à remettre dans l'ordre (17), association (10), placement sur la frise (10), écoute (36).
 
 ### 6.4 Bilan de fin de partie
 
@@ -379,11 +385,11 @@ Une branche par étape. **Rien n'est fusionné dans `main` sans ta validation.**
 | | Question | Ma proposition |
 |---|---|---|
 | **D1** | Titre et univers : « Nunca olvidé », la caja de los recuerdos, combattre l'oubli (jamais un camp) | oui |
-| **D2** | Combat : chacun attaque à son tour, l'ennemi frappe à chaque tour (section 2.1) | ✅ validé par toi |
-| **D3** | **L'évaluation** : ses phrases exactes (ex. 3, 4, 6, 8) sont-elles reprises telles quelles dans le jeu, ou seulement ses notions avec d'autres phrases (pour ne pas donner les réponses d'un futur contrôle) ? | notions seulement, phrases reformulées ; les phrases de la Misión secreta et de la BD restent telles quelles |
+| **D2** | Combat : chacun attaque à son tour, l'ennemi frappe à chaque tour (section 2.1) | ✅ validé |
+| **D3** | **L'évaluation** : ses phrases exactes (ex. 3, 4, 6, 8) sont-elles reprises telles quelles dans le jeu, ou seulement ses notions avec d'autres phrases (pour ne pas donner les réponses d'un futur contrôle) ? | ✅ pas obligé de reformuler : les phrases de l'évaluation sont reprises telles quelles |
 | **D4** | Accents : accent oublié = « ¡Casi! » ; accent oublié qui donne une autre forme (*lucho* pour *luchó*) = faux ; accent ajouté sur un prétérit fort (*tuvó*) = faux | oui |
 | **D5** | Réponses déduites (ficha de identidad, V/F « gobierno elegido democráticamente », « los republicanos ganaron » = falso, âge du narrateur) : voir `A_VERIFIER.md` | à cocher dans ce fichier |
-| **D6** | Mots de position (en el norte / sur / este / oeste…) pour placer les villes sur la carte : tes élèves les connaissent-ils ? Sinon, la carte se joue en cliquant sur la ville nommée | à toi de dire |
+| **D6** | Mots de position (en el norte / sur / este / oeste…) pour placer les villes sur la carte : tes élèves les connaissent-ils ? | ✅ oui (étape 3) |
 | **D7** | Mots mystères des actes : *GUERRA CIVIL*, *ESPERANZA*, *EXILIO* | oui |
-| **D8** | **Nom du nouveau dépôt** : je ne peux pas créer de dépôt GitHub moi-même. Proposition : `nunca-olvide`, public (obligatoire pour GitHub Pages gratuit) | crée-le vide, je l'y envoie |
+| **D8** | **Nom du nouveau dépôt** : je ne peux pas créer de dépôt GitHub moi-même. Proposition : `nunca-olvide`, public (obligatoire pour GitHub Pages gratuit) | en attente : tu crées le dépôt plus tard |
 | **D9** | Mots ou noms hors de tes documents (La Sombra, El Remolino de Fechas, el rastro, la llave…) : listés dans `A_VERIFIER.md` | à cocher |

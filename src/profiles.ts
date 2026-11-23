@@ -18,7 +18,7 @@ interface Index {
   current: string | null;
 }
 
-export const AVATARS = ['🌼', '💀', '🕯️', '🦋', '🐉', '🎺', '🎸', '👒', '🦉', '🐕', '🍞', '🪅', '🌙', '⭐', '🌵', '🐆'];
+export const AVATARS = ['📷', '✉️', '📓', '✏️', '🗺️', '📦', '🕰️', '🌱', '⭐', '🌙', '🦉', '🐕', '🐈', '⚽', '🎒', '🧭'];
 
 const k = (id: string, what: string) => `p:${id}:${what}`;
 
@@ -29,7 +29,7 @@ function readIndex(): Index {
   const oldMeta = storage.get<{ bestWon?: number; wins?: number; runs?: number } | null>('meta', null);
   const oldRun = storage.get<RunState | null>('run', null);
   if (!oldMeta && !oldRun) return { list: [], current: null };
-  const p: Profile = { id: newId(), name: 'Joueur 1', avatar: '🌼', created: Date.now() };
+  const p: Profile = { id: newId(), name: 'Joueur 1', avatar: '📷', created: Date.now() };
   const meta = { ...emptyMeta(), runs: oldMeta?.runs ?? 0, wins: oldMeta?.wins ?? 0, bestWon: oldMeta?.bestWon ?? 0 };
   storage.set(k(p.id, 'meta'), meta);
   storage.remove('meta');
