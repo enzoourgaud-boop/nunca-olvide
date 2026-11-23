@@ -21,8 +21,8 @@ test('une partie entière, du profil jusqu’au code de fin', async ({ page }) =
   const modes = await playToEnd(page, data);
   await expect(page.locator('h1')).toHaveText('¡Nunca olvidé!');
   // la ficha de identidad de la guerre (épilogue) est remplie
-  await expect(page.locator('.ficha')).toContainText('Franco');
-  await expect(page.locator('.ficha')).toContainText('Nunca olvidé esos años');
+  await expect(page.locator('.ficha-guerra')).toContainText('Franco');
+  await expect(page.locator('.ficha-guerra')).toContainText('Nunca olvidé esos años');
   // au moins un souvenir daté a été rangé sur la frise
   expect(modes.caja ?? 0).toBeGreaterThanOrEqual(1);
   // le code de fin est affiché, avec son QR
@@ -44,15 +44,18 @@ test('espace professeur : code de classe appliqué côté élève', async ({ pag
   await page.click('text=Entrer');
   await page.locator('label.check:has-text("Léxico") input').click();
   await page.locator('label.check:has-text("Imposer la partie courte") input').click();
+  // le professeur choisit l'acte de la partie courte : l'acte 2
+  await page.locator('label.check:has-text("Acte joué") select').selectOption('2');
   const code = (await page.locator('.codigo').textContent())!.trim();
   const eleve = await context.newPage();
   await eleve.goto(`./#classe-${code}`);
   await eleve.fill('#pseudo', 'Élève');
   await eleve.click('text=Créer et jouer');
-  await expect(eleve.locator('.clase')).toContainText('Partie courte');
+  await expect(eleve.locator('.clase')).toContainText('Partie courte (acte 2');
   // partie courte imposée : seul le bouton « Partie courte » est proposé
   await expect(eleve.getByRole('button', { name: /Partie complète/ })).toHaveCount(0);
   await eleve.getByRole('button', { name: /Partie courte/ }).click();
+  await expect(eleve.locator('.hud .ruta')).toContainText('Acte 2');
   await eleve.locator('.sala.puede').first().click();
   await expect(eleve.locator('.qa .tag')).not.toHaveText('Léxico');
   // chrono désactivé par défaut
@@ -262,4 +265,90 @@ test('le mot mystère se dévoile au fil des bonnes réponses', async ({ page })
   await expect(chip).toHaveAttribute('aria-label', /0 lettres trouvées/);
   await answerCurrent(page, data);
   await expect(chip).toHaveAttribute('aria-label', /[12] lettres? trouvées?/);
+});
+
+test('le professeur lit le code de fin de partie d’un élève (partie courte)', async ({ page, context }) => {
+  await page.fill('#pseudo', 'Bot');
+  await page.click('text=Créer et jouer');
+  await page.getByRole('button', { name: /Partie courte/ }).click();
+  await playToEnd(page, data, 5);
+  const code = (await page.locator('.codigo').textContent())!.trim();
+  expect(code).toMatch(/^[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{4}$/);
+  // le professeur, sur un autre appareil, colle le code (avec un prénom devant)
+  const prof = await context.newPage();
+  await prof.goto('./#prof');
+  await prof.fill('#prof-code', 'profe2026');
+  await prof.click('text=Entrer');
+  await prof.getByRole('tab', { name: 'Codes élèves' }).click();
+  await prof.getByLabel('Codes des élèves').fill(`Lupita : ${code}\nMateo : ABCDE-ABCDE-ABCDE-ABCD`);
+  const row = prof.locator('table.tabla tbody tr').first();
+  await expect(row).toContainText('Lupita');
+  await expect(row).toContainText('partie courte');
+  await expect(row).toContainText('Alba');
+  await expect(row).toContainText(/\d+\/\d+ \(\d+ %\)/);
+  // un code mal recopié est signalé, sans empêcher de lire les autres
+  await expect(prof.locator('table.tabla tbody tr.off')).toContainText('faute de recopie');
+});
+
+/* ======================= Étape 4 ======================= */
+
+test('tout se joue au clavier : QCM (1 à 4), vrai/faux (V / F), réponse écrite, Entrée pour continuer', async ({ page }) => {
+  await startRun(page, 'CLAVIER-4');
+  const seen = new Set<string>();
+  for (let step = 0; step < 600 && seen.size < 3; step++) {
+    if (await handleCaja(page)) continue;
+    if (await page.locator('.stats').count()) break;
+    if (await page.locator('.mapa').count()) {
+      const f = page.locator('.sala.puede.combat, .sala.puede.elite, .sala.puede.boss');
+      await ((await f.count()) ? f.first() : page.locator('.sala.puede').first()).focus();
+      await page.keyboard.press('Enter');
+      continue;
+    }
+    const qa = page.locator('.combate .qa[data-qid]:not(:has(.fb))');
+    if (await qa.count()) {
+      const id = (await qa.getAttribute('data-qid'))!;
+      const mode = (await qa.getAttribute('data-mode'))!;
+      const q = data.bank[id];
+      if (mode === 'qcm') {
+        const labels = (await qa.locator('.op').allTextContents()).map(t => t.slice(1));
+        await page.keyboard.press(String(labels.indexOf(q.answer!) + 1));
+      } else if (mode === 'tf') {
+        await page.keyboard.press(q.answer === 'verdadero' ? 'v' : 'f');
+      } else if (mode === 'write') {
+        await page.locator('.escr input').focus();
+        await page.keyboard.type(q.answer!);
+        await page.keyboard.press('Enter');
+      } else {
+        await answerCurrent(page, data); // plateaux : souris (ils se jouent aussi à Tab + Entrée)
+        await page.locator('.combate .fb .btn').click();
+        continue;
+      }
+      seen.add(mode);
+      await expect(page.locator('.combate .fb')).toBeVisible();
+      await expect(page.locator('.combate .fb .btn')).toBeFocused(); // le focus est déjà sur « Continuer »
+      await page.keyboard.press('Enter');
+      continue;
+    }
+    const next = page.locator('.fb .btn, .resultado .btn, .elige .item:not([disabled]), .eleccion:not([disabled]), button:has-text("Reprendre le chemin")');
+    if (await next.count()) await next.first().click();
+    else await page.waitForTimeout(40);
+  }
+  expect([...seen].sort()).toEqual(expect.arrayContaining(['qcm']));
+  expect(seen.size).toBeGreaterThanOrEqual(2);
+});
+
+test('une réponse corrigée porte un symbole ✓ / ✗, pas seulement une couleur', async ({ page }) => {
+  await startRun(page, 'SYMBOLE-4');
+  await page.locator('.sala.puede').first().click();
+  for (let i = 0; i < 40; i++) {
+    const qa = page.locator('.combate .qa[data-qid]:not(:has(.fb))');
+    if (await qa.count() && (await qa.getAttribute('data-mode')) === 'qcm') break;
+    await answerCurrent(page, data);
+    await page.locator('.combate .fb .btn').click();
+  }
+  await answerCurrent(page, data, true);
+  const mark = (sel: string) => page.locator(sel).first().evaluate(e => getComputedStyle(e, '::after').content);
+  expect(await mark('.combate .op.good')).toContain('✓');
+  expect(await mark('.combate .op.bad')).toContain('✗');
+  await expect(page.locator('.combate .fb')).toContainText('Bonne réponse');
 });

@@ -24,6 +24,8 @@ export interface CodeData {
   date: Date;
   /** Indices des notions ratées dans sequence.notions. */
   missed: number[];
+  /** Partie courte (un seul acte : `act` est alors l'acte joué, même en cas de victoire). */
+  short?: boolean;
 }
 
 // [nom du champ, nombre de bits]
@@ -50,7 +52,7 @@ export function encodeCode(d: CodeData, sequenceId: string): string {
   const day = Math.max(0, Math.floor((d.date.getTime() - EPOCH) / DAY)) % 4096;
   const missed = d.missed.filter(i => i < 24).reduce((m, i) => m | (1 << i), 0);
   const vals: Record<string, number> = {
-    version: 1, win: d.win ? 1 : 0, character: Math.min(3, d.character), act: Math.min(3, d.act), ascension: Math.min(15, d.ascension),
+    version: d.short ? 2 : 1, win: d.win ? 1 : 0, character: Math.min(3, d.character), act: Math.min(3, d.act), ascension: Math.min(15, d.ascension),
     ok: Math.min(255, d.ok), total: Math.min(255, d.total), won: Math.min(63, d.won), minutes: Math.min(63, Math.round(d.minutes)),
     day, missed, seq: seqTag(sequenceId),
   };
@@ -84,7 +86,7 @@ export function decodeCode(code: string, sequenceId: string): DecodeResult {
     vals[k] = Number((data >> shift) & ((1n << BigInt(b)) - 1n));
     shift += BigInt(b);
   }
-  if (vals.version !== 1) return { ok: false, error: 'Version de code inconnue.' };
+  if (vals.version !== 1 && vals.version !== 2) return { ok: false, error: 'Version de code inconnue.' };
   if (vals.seq !== seqTag(sequenceId)) return { ok: false, error: 'Ce code vient d’une autre séquence.' };
   const missed: number[] = [];
   for (let i = 0; i < 24; i++) if (vals.missed & (1 << i)) missed.push(i);
@@ -92,7 +94,7 @@ export function decodeCode(code: string, sequenceId: string): DecodeResult {
     ok: true,
     data: {
       win: vals.win === 1, character: vals.character, act: vals.act, ascension: vals.ascension, ok: vals.ok, total: vals.total,
-      won: vals.won, minutes: vals.minutes, date: new Date(EPOCH + vals.day * DAY), missed,
+      won: vals.won, minutes: vals.minutes, date: new Date(EPOCH + vals.day * DAY), missed, short: vals.version === 2,
     },
   };
 }
@@ -109,7 +111,7 @@ export function codeDataFromRun(content: Content, r: RunState): CodeData {
   return {
     win: r.result === 'win',
     character: Math.max(0, content.sequence.characters.findIndex(c => c.id === r.character)),
-    act: r.result === 'win' ? content.sequence.acts.length : r.act + 1,
+    act: r.result === 'win' && !r.short ? content.sequence.acts.length : r.act + 1,
     ascension: r.ascension,
     ok: r.stats.ok,
     total: r.stats.ok + r.stats.ko + r.stats.casi,
@@ -117,5 +119,6 @@ export function codeDataFromRun(content: Content, r: RunState): CodeData {
     minutes: (r.stats.endedAt - r.stats.startedAt) / 60000,
     date: new Date(r.stats.endedAt || Date.now()),
     missed: [...missed].sort((a, b) => a - b),
+    short: !!r.short,
   };
 }

@@ -53,3 +53,13 @@ html.reduit .transicion, html.reduit .cortina, html.reduit .petalos { display: n
 .caja-frise { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; position: relative; }
 .caja-frise .op { justify-content: center; font-family: var(--display); font-size: 1.2rem; }
 @media (max-width: 420px) { .caja-frise { grid-template-columns: repeat(2, 1fr); } }
+
+/* La couleur n'est jamais seule : une réponse corrigée porte aussi un symbole (✓ juste, ✗ fausse) */
+.op.good::after, .op.bad::after { margin-left: auto; padding-left: 10px; font-weight: 900; font-size: 1.2em; }
+.op.good::after { content: '✓'; }
+.op.bad::after { content: '✗'; }
+.palabra.good::after, .imagen.good::after { content: ' ✓'; font-weight: 900; }
+.palabra.bad::after, .imagen.bad::after { content: ' ✗'; font-weight: 900; }
+.celda.good::before, .celda.bad::before { position: absolute; top: 2px; right: 6px; font-weight: 900; font-size: 1.1rem; color: var(--tinta); background: var(--papel); border-radius: 50%; width: 1.4em; height: 1.4em; display: grid; place-items: center; z-index: 2; }
+.celda.good::before { content: '✓'; }
+.celda.bad::before { content: '✗'; }

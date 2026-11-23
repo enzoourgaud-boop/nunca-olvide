@@ -382,7 +382,7 @@ Une branche par étape. **Rien n'est fusionné dans `main` sans ta validation.**
 | 1 | `etape-1-conception` | ce document, la transcription, `A_VERIFIER.md` | valider |
 | 2 | `etape-2-contenu` | nouveau thème : banque de ~260 questions, ennemis, objets, événements, décors, sprites, musique, textes ; ancien contenu retiré ; l'ennemi attaque à chaque tour ; durées réglées par simulation ; README | **première version en ligne, jouable en classe** |
 | 3 | `etape-3-gestes` | frise des souvenirs (caja de los recuerdos), carte de l'Espagne, mot mystère, épilogue (ficha de identidad) ; règle des accents faite à l'étape 2 | la version complète |
-| 4 | `etape-4-classe` | espace professeur adapté (partie courte imposée, acte), README final | utilisation en classe |
+| 4 | `etape-4-classe` | espace professeur : acte de la partie courte (code de classe), partie courte lisible dans le code de fin ; symboles ✓/✗ ; test au clavier ; README final avec séance type | utilisation en classe |
 
 ---
 

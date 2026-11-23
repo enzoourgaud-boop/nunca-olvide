@@ -446,7 +446,7 @@ export function Over({ game, unlocks, onMenu, onReplay }: { game: Game; unlocks:
         {win ? seq.victory : `${enemy?.name ?? 'Le chemin'} t'a arrêté à l'acte ${s.act + 1}. Relis ton carnet d'erreurs, puis reprends le chemin.`}
       </p>
       {win && seq.epilogue && !s.short && (
-        <div class="ficha" role="region" aria-label={seq.epilogue.title}>
+        <div class="ficha-guerra" role="region" aria-label={seq.epilogue.title}>
           <h2>{seq.epilogue.title}</h2>
           <p lang="es">{seq.epilogue.intro}</p>
           <dl>

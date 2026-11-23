@@ -155,6 +155,13 @@ function ClassTab({ content, settings, onApply }: { content: Content; settings: 
           <input type="checkbox" checked={!!s.short} onChange={e => setS({ ...s, short: (e.target as HTMLInputElement).checked })} />
           Imposer la partie courte (un acte, 8 à 10 minutes)
         </label>
+        <label class="check">
+          Acte joué
+          <select disabled={!s.short} value={s.shortAct ?? 0} onChange={e => setS({ ...s, shortAct: Number((e.target as HTMLSelectElement).value) })}>
+            <option value={0}>au hasard</option>
+            {seq.acts.slice(0, 3).map((a, i) => <option key={a.id} value={i + 1}>Acte {i + 1} · {a.name}</option>)}
+          </select>
+        </label>
       </fieldset>
       <fieldset>
         <legend>Chrono</legend>
@@ -640,7 +647,7 @@ function CodesTab({ content }: { content: Content }) {
                   x.r.ok ? (
                     <tr key={i}>
                       <td>{x.name || '—'}</td>
-                      <td>{x.r.data.win ? '🏆 victoire' : `acte ${x.r.data.act}`}{x.r.data.ascension ? ` · 🌫️${x.r.data.ascension}` : ''}<br /><small class="muted">{seq.characters[x.r.data.character]?.name}</small></td>
+                      <td>{x.r.data.win ? '🏆 victoire' : `acte ${x.r.data.act}`}{x.r.data.short ? ` · partie courte${x.r.data.win ? ` (acte ${x.r.data.act})` : ''}` : ''}{x.r.data.ascension ? <span title={`Nivel de Olvido ${x.r.data.ascension}`}> · 🌫️{x.r.data.ascension}</span> : null}<br /><small class="muted">{seq.characters[x.r.data.character]?.name}</small></td>
                       <td>{x.r.data.ok}/{x.r.data.total} ({x.r.data.total ? Math.round((100 * x.r.data.ok) / x.r.data.total) : 0} %)</td>
                       <td>{x.r.data.won}</td>
                       <td>{x.r.data.minutes} min</td>

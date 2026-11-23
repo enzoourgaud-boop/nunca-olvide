@@ -147,7 +147,21 @@ describe('code de fin de partie', () => {
     expect(code).toMatch(/^[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{4}$/);
     const r = decodeCode(code, 'guerra-civil');
     expect(r.ok).toBe(true);
-    if (r.ok) expect(r.data).toEqual(d);
+    if (r.ok) expect(r.data).toEqual({ ...d, short: false });
+  });
+  it('la partie courte se lit dans le code : acte joué, même en cas de victoire', () => {
+    const c = content();
+    const g = Game.newRun(c, { ...S, short: true, shortAct: 2 }, 'CODE-SHORT', 0);
+    expect(g.state.act).toBe(1);
+    const done = playOut(g);
+    expect(done.state.result).toBe('win');
+    const d = codeDataFromRun(c, done.state);
+    expect(d).toMatchObject({ short: true, act: 2, win: true });
+    const r = decodeCode(encodeCode(d, 'guerra-civil'), 'guerra-civil');
+    expect(r.ok && r.data.short).toBe(true);
+    expect(r.ok && r.data.act).toBe(2);
+    // une partie complète gagnée compte tous les actes
+    expect(codeDataFromRun(c, { ...done.state, short: false }).act).toBe(c.sequence.acts.length);
   });
   it('tolère minuscules, espaces et confusions O/0, I/1', () => {
     const d = { win: false, character: 0, act: 2, ascension: 0, ok: 30, total: 41, won: 5, minutes: 12, date: new Date(Date.UTC(2026, 0, 3)), missed: [3] };

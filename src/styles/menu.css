@@ -80,10 +80,10 @@ button.mini-carta:hover { transform: translateY(-4px) rotate(-2deg); }
 }
 
 /* Épilogue : la ficha de identidad de la guerra */
-.ficha { background: var(--papel); color: var(--tinta); border-radius: var(--r); padding: 16px 20px; border: 4px solid var(--cempa-sombra); box-shadow: 0 6px 0 rgba(0, 0, 0, .35); display: flex; flex-direction: column; gap: 10px; }
-.ficha h2 { color: var(--tinta); font-size: 1.3rem; }
-.ficha dl { margin: 0; display: grid; gap: 6px; }
-.ficha dl > div { display: grid; grid-template-columns: minmax(9em, 1fr) 2fr; gap: 10px; border-bottom: 2px dotted #b9a582; padding-bottom: 4px; }
-.ficha dt { font-weight: 700; } .ficha dd { margin: 0; }
+.ficha-guerra { background: var(--papel); color: var(--tinta); border-radius: var(--r); padding: 16px 20px; border: 4px solid var(--cempa-sombra); box-shadow: 0 6px 0 rgba(0, 0, 0, .35); display: flex; flex-direction: column; gap: 10px; }
+.ficha-guerra h2 { color: var(--tinta); font-size: 1.3rem; }
+.ficha-guerra dl { margin: 0; display: grid; gap: 6px; }
+.ficha-guerra dl > div { display: grid; grid-template-columns: minmax(9em, 1fr) 2fr; gap: 10px; border-bottom: 2px dotted #b9a582; padding-bottom: 4px; }
+.ficha-guerra dt { font-weight: 700; } .ficha-guerra dd { margin: 0; }
 .ficha-cita { font-style: italic; color: var(--tinta-2); }
-@media (max-width: 520px) { .ficha dl > div { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .ficha-guerra dl > div { grid-template-columns: 1fr; } }

@@ -11,14 +11,14 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 - Il n'y a **ni serveur, ni compte élève, ni publicité**. Aucune donnée ne quitte l'appareil.
 - Une fois chargé, il fonctionne **sans connexion**.
 
-> **Où en est le projet ?** L'étape 2 (première version jouable) est en ligne sur `main`. L'étape 3 (frise des souvenirs, carte de l'Espagne, mot mystère, épilogue) est sur la branche `etape-3-gestes` : ce qu'il te reste à tester est dans [`docs/etape-3/A_TESTER.md`](docs/etape-3/A_TESTER.md), avec les captures d'écran dans `docs/etape-3/`. La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
+> **Où en est le projet ?** Les étapes 1 à 3 sont en ligne sur `main`. L'étape 4 (espace professeur : acte de la partie courte, lecture des codes élèves ; accessibilité ; README final) est sur la branche `etape-4-classe` : ce qu'il te reste à tester est dans [`docs/etape-4/A_TESTER.md`](docs/etape-4/A_TESTER.md), avec les captures dans `docs/etape-4/`. La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
 
 ---
 
 ## Sommaire
 
 1. [Comment on joue](#1-comment-on-joue)
-2. [Utiliser le jeu en classe](#2-utiliser-le-jeu-en-classe)
+2. [Utiliser le jeu en classe](#2-utiliser-le-jeu-en-classe) (dont une séance type de 15 minutes)
 3. [L'espace professeur](#3-lespace-professeur)
 4. [Modifier ou ajouter des questions](#4-modifier-ou-ajouter-des-questions)
 5. [Ajouter un nouveau document de la séquence](#5-ajouter-un-nouveau-document-de-la-séquence)
@@ -79,6 +79,14 @@ Une réponse **écrite** frappe plus fort qu'un QCM, et une **série** de bonnes
 - **Sans connexion** : une fois le jeu ouvert avec Internet, il fonctionne hors ligne. Il peut s'installer comme une application (icône ⊕ dans la barre d'adresse de Chrome ou Edge ; « Sur l'écran d'accueil » sur iPad).
 - **Au vidéoprojecteur** : bouton ⚙️ en haut à droite → **Taille du texte → Vidéoprojecteur**.
 
+### Une séance type (15 à 20 minutes)
+
+1. **Avant le cours** : dans l'espace professeur, choisis les thèmes à réviser (ex. seulement « verbes irréguliers » et « ¿ser o ir? »), coche **Imposer la partie courte**, choisis l'**acte** : l'acte 1 pose surtout des questions de niveau 1 (le plus facile), l'acte 2 de niveau 2, l'acte 3 de niveau 3 avec plus de réponses écrites ; chaque acte a ses ombres et son jefe. Le thème des questions, lui, ne dépend pas de l'acte : tu le règles avec les cases « Thèmes ». Note le **code de classe** ou projette le **QR code**.
+2. **Au début** : les élèves ouvrent le jeu, tapent le code de classe (une seule fois par appareil) et lancent la partie courte. Aucun chrono, aucun compte.
+3. **Pendant** : l'élève joue seul, en silence. Les corrections expliquées s'affichent à chaque erreur, avec le document d'où vient la question.
+4. **À la fin** (8 à 10 minutes) : chaque élève te montre ou t'envoie son **code de fin de partie**. Colle-les dans l'onglet « Codes élèves » : tu vois le résultat de chacun et **les notions les plus ratées de la classe** pour la séance suivante.
+5. **Les erreurs reviennent toutes seules** : au début de la prochaine partie, chaque élève retrouve les questions qu'il a ratées.
+
 ---
 
 ## 3. L'espace professeur
@@ -89,10 +97,10 @@ Pour y accéder : en bas de l'écran d'accueil, clique sur **« Espace professeu
 
 | Onglet | Ce qu'on y fait |
 |---|---|
-| **Réglages de classe** | Thèmes (verbes réguliers, irréguliers, ser/ir, histoire, souvenirs, lexique), types de questions, **partie courte imposée**, chrono (désactivé par défaut), **part de réponses écrites**, accents. Le jeu donne un **code de classe**, un lien et un **QR code**. |
+| **Réglages de classe** | Thèmes (verbes réguliers, irréguliers, ser/ir, histoire, souvenirs, lexique), types de questions, **partie courte imposée et acte joué** (au hasard, ou acte 1, 2 ou 3), chrono (désactivé par défaut), **part de réponses écrites**, accents. Le jeu donne un **code de classe**, un lien et un **QR code**. |
 | **Questions** | Rechercher, filtrer, activer ou désactiver une question d'un clic, la modifier ou en créer une. |
 | **Import / export** | Exporter la banque en CSV (Excel, LibreOffice) ou en JSON, la réimporter. |
-| **Codes élèves** | Coller les codes de fin de partie (un par ligne, un prénom devant si tu veux). Le jeu affiche le résultat de chacun et les notions les plus ratées de la classe. |
+| **Codes élèves** | Coller les codes de fin de partie (un par ligne, un prénom devant si tu veux). Le jeu affiche le résultat de chacun (victoire, acte, partie courte, durée, date) et les notions les plus ratées de la classe. Un code mal recopié est signalé sans bloquer les autres. |
 | **Séquence** | Exporter ou importer une séquence complète. |
 
 ⚠️ Les modifications faites dans l'espace professeur restent **sur l'appareil où tu les fais**. Pour que tous les élèves en profitent, envoie-les sur GitHub (partie 4, méthode 1).
@@ -208,9 +216,9 @@ Le bouton ⚙️ en haut à droite propose :
 - **Effets sonores**, volume, et **musique** (mélodie originale, coupée par défaut) ;
 - **Chrono** : désactivé par défaut.
 
-On joue entièrement **au clavier** : **Tab** pour passer d'un élément à l'autre, **Entrée** pour valider, touches **1 à 4** pour les QCM, **V / F** pour le vrai/faux, **flèches** pour les phrases à remettre dans l'ordre.
+On joue entièrement **au clavier** : **Tab** pour passer d'un élément à l'autre, **Entrée** pour valider, touches **1 à 4** pour les QCM, **V / F** pour le vrai/faux, **flèches** pour les phrases à remettre dans l'ordre ; **Entrée** continue après une correction (le focus y est déjà) ; les plateaux (association, frise, carte) se jouent à **Tab** et **Entrée**.
 
-Aucune information n'est donnée seulement par la couleur : chaque thème a un nom, chaque réponse corrigée est écrite en toutes lettres (« Bonne réponse : … »).
+Aucune information n'est donnée seulement par la couleur : chaque thème a un nom, chaque attaque a une icône et une phrase, chaque réponse corrigée porte un symbole **✓** (juste) ou **✗** (fausse) et la bonne réponse est écrite en toutes lettres (« Bonne réponse : … »).
 
 ---
 
@@ -237,7 +245,7 @@ Puis ouvre l'adresse affichée (en général <http://localhost:5173>).
 | `npm run equilibrage` | simule des centaines de parties : taux de victoire et durée selon le niveau des élèves |
 | `npm run build` | construit le site dans le dossier `dist/` |
 
-**Résultats de la simulation (étape 2)**, partie complète : un élève qui répond juste à 90 % gagne 9 fois sur 10 en 16 à 17 minutes ; à 75 %, un peu plus d'une fois sur deux en 19 minutes ; au hasard, jamais. Partie courte : 8 à 10 minutes en moyenne.
+**Résultats de la simulation**, partie complète : un élève qui répond juste à 90 % gagne 96 fois sur 100 en 16 minutes ; à 75 %, 76 fois sur 100 en 19 minutes ; à 60 %, environ 1 fois sur 3 ; au hasard, moins de 2 fois sur 100. Partie courte : 8 à 10 minutes en moyenne.
 
 ---
 

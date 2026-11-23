@@ -28,6 +28,8 @@ export interface Settings {
   accents: AccentPolicy;
   /** Le professeur impose la partie courte (un seul acte). */
   short?: boolean;
+  /** Acte de la partie courte, de 1 à 3 (0 ou absent = au hasard). */
+  shortAct?: number;
 }
 
 /** Partie courte : un seul acte, tiré par la graine, sur une carte plus petite (8 à 10 minutes). */
@@ -336,7 +338,9 @@ export class Game {
     const hp = Math.max(5, p.hp + (ch?.bonus.hp ?? 0) - (asc >= 9 ? 3 : 0));
     const short = !!(opts.short || settings.short);
     const mapCfg = content.sequence.map;
-    const act = short ? rng.int(content.sequence.acts.length) : 0;
+    const nActs = content.sequence.acts.length;
+    const randomAct = short ? rng.int(nActs) : 0;
+    const act = short && settings.shortAct ? Math.min(settings.shortAct, nActs) - 1 : randomAct;
     const state: RunState = {
       v: 3, short, seed, rng: rng.state, screen: 'map', hp, maxHp: hp, gold: 0, act,
       character: ch?.id ?? '', ascension: asc, bonus: { writeShare: ch?.bonus.writeShare ?? 0, restHeal: ch?.bonus.restHeal ?? 0.3 },

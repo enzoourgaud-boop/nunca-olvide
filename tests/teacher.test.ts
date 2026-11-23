@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { applyOverlay, emptyOverlay } from '../src/content/teacher';
-import { decodeClass, describeSettings, encodeClass, parseClassLink } from '../src/engine/classCode';
+import { CLASS_CODE_THEMES, decodeClass, describeSettings, encodeClass, parseClassLink } from '../src/engine/classCode';
 import { parseContent } from '../src/engine/content';
 import { fromCsv, parseCsv, toCsv } from '../src/engine/csv';
 import { DEFAULT_SETTINGS } from '../src/engine/game';
@@ -13,14 +13,31 @@ describe('code de classe', () => {
     const s = { ...DEFAULT_SETTINGS, themes: ['ser-ir', 'historia'], types: ['qcm', 'vrai-faux'], chrono: false, chronoFactor: 1.5, writeFactor: 0, accents: 'strict' as const };
     const code = encodeClass(s, seq);
     expect(code).toMatch(/^[0-9A-Z]{6}$/);
-    expect(decodeClass(code, seq)).toEqual({ themes: s.themes, types: s.types, chrono: false, chronoFactor: 1.5, writeFactor: 0, accents: 'strict', short: false });
+    expect(decodeClass(code, seq)).toEqual({ themes: s.themes, types: s.types, chrono: false, chronoFactor: 1.5, writeFactor: 0, accents: 'strict', short: false, shortAct: 0 });
   });
   it('le code de classe peut imposer la partie courte', () => {
     const seq = content().sequence;
     const d = decodeClass(encodeClass({ ...DEFAULT_SETTINGS, short: true, chrono: true }, seq), seq)!;
     expect(d.short).toBe(true);
     expect(d.chrono).toBe(true);
+    expect(d.shortAct).toBe(0);
     expect(describeSettings(d, seq)).toEqual(['Chrono', 'Partie courte (un acte)']);
+  });
+  it('le professeur peut imposer l’acte de la partie courte, sans toucher aux thèmes', () => {
+    const seq = content().sequence;
+    for (const act of [1, 2, 3]) {
+      const s = { ...DEFAULT_SETTINGS, short: true, shortAct: act, themes: ['regulares', 'historia'], types: ['qcm', 'ecoute'] };
+      const d = decodeClass(encodeClass(s, seq), seq)!;
+      expect(d).toMatchObject({ short: true, shortAct: act, themes: ['regulares', 'historia'], types: ['qcm', 'ecoute'] });
+      expect(describeSettings(d, seq).join(' ')).toContain(`acte ${act} : ${seq.acts[act - 1].name}`);
+    }
+    // l'acte n'est pas retenu si la partie courte n'est pas imposée
+    expect(decodeClass(encodeClass({ ...DEFAULT_SETTINGS, shortAct: 3 }, seq), seq)!.shortAct).toBe(0);
+    // un ancien code (sans acte) reste lisible : au hasard
+    expect(decodeClass(encodeClass({ ...DEFAULT_SETTINGS, short: true }, seq), seq)!.shortAct).toBe(0);
+  });
+  it('le code de classe a de la place pour les thèmes de la séquence (6 au plus, avec l’acte)', () => {
+    expect(content().sequence.themes.length).toBeLessThanOrEqual(CLASS_CODE_THEMES);
   });
   it('les réglages par défaut donnent « tous les thèmes, tous les types »', () => {
     const seq = content().sequence;

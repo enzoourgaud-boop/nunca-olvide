@@ -146,6 +146,12 @@ describe('moteur de partie', () => {
     autoplay(g);
     expect(g.state.result).toBe('win');
     expect(g.state.act).toBe(act);
+    // le professeur choisit l'acte : la partie courte s'y déroule, avec les souvenirs des actes précédents
+    for (const a of [1, 2, 3]) {
+      const x = Game.newRun(content(), { ...S, short: true, shortAct: a }, `ACTE-${a}`);
+      expect(x.state.act).toBe(a - 1);
+      expect(x.state.maxHp).toBeGreaterThanOrEqual(content().sequence.player.hp + (a - 1) * 8);
+    }
     // le professeur peut l'imposer
     expect(Game.newRun(content(), { ...S, short: true }, 'SHORT-2').state.short).toBe(true);
   });
