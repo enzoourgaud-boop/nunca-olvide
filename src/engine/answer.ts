@@ -14,9 +14,26 @@ export interface CheckOptions {
   optionalSubject: boolean;
   /** casi : « ¡Casi! » sans pénalité · accept : compté juste · strict : compté faux */
   accents: AccentPolicy;
+  /** Pretérito : un accent qui change la forme (habló → hablo, tuvo → tuvó) est une vraie erreur. */
+  accentChangesForm?: boolean;
 }
 
 export const DEFAULT_CHECK: CheckOptions = { ignoreArticles: false, optionalSubject: true, accents: 'casi' };
+
+/**
+ * L'accent oublié ou ajouté change-t-il la forme du verbe ?
+ * - accent final -ó / -é oublié : habló → hablo (présent), luché → luche (subjonctif) ;
+ * - accent ajouté là où la réponse n'en a pas : tuvo → tuvó (les prétérits forts n'ont aucun accent).
+ */
+export function accentChangesForm(input: string, expected: string): boolean {
+  const goods = new Map(normalize(expected).split(' ').map(w => [stripAccents(w), w]));
+  return normalize(input).split(' ').some(w => {
+    const g = goods.get(stripAccents(w));
+    if (!g || g === w) return false;
+    if (/[óé]$/.test(g) && /[oe]$/.test(w)) return true;
+    return [...w].some((ch, i) => ch !== g[i] && stripAccents(ch) !== ch && stripAccents(g[i] ?? '') === g[i]);
+  });
+}
 
 const PUNCT = /[¿?¡!.,;:«»"“”‘()[\]{}/\\…–—-]/g;
 
@@ -61,6 +78,7 @@ export function checkAnswer(input: string, expected: string[], opts: Partial<Che
   const mineBare = variants(stripAccents(n), o, true);
   const goodsBare = expected.flatMap(e => variants(stripAccents(normalize(e)), o, true));
   if (mineBare.some(m => goodsBare.includes(m))) {
+    if (o.accents === 'casi' && o.accentChangesForm && expected.some(e => accentChangesForm(input, e))) return 'ko';
     return o.accents === 'accept' ? 'ok' : o.accents === 'strict' ? 'ko' : 'casi';
   }
   return 'ko';

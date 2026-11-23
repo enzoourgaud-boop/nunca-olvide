@@ -1,0 +1,447 @@
+[
+  {
+    "id": "ord-olvide",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Je n'ai jamais oublié ces années.",
+    "promptLang": "fr",
+    "answer": "Nunca olvidé esos años",
+    "tokens": [
+      "Nunca",
+      "olvidé",
+      "esos",
+      "años"
+    ],
+    "extra": [
+      "olvidó"
+    ],
+    "explanation": "« Nunca olvidé esos años. » Piège : « olvidó » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-volvio",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Mon père revint à la maison en 1939.",
+    "promptLang": "fr",
+    "answer": "Mi padre volvió a casa en 1939",
+    "tokens": [
+      "Mi",
+      "padre",
+      "volvió",
+      "a",
+      "casa",
+      "en",
+      "1939"
+    ],
+    "extra": [
+      "volvo"
+    ],
+    "explanation": "« Mi padre volvió a casa en 1939. » Piège : « volvo » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-exilio",
+    "type": "ordre",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Beaucoup de républicains partirent en exil en France.",
+    "promptLang": "fr",
+    "answer": "Muchos republicanos fueron al exilio en Francia",
+    "tokens": [
+      "Muchos",
+      "republicanos",
+      "fueron",
+      "al",
+      "exilio",
+      "en",
+      "Francia"
+    ],
+    "extra": [
+      "iban"
+    ],
+    "explanation": "« Muchos republicanos fueron al exilio en Francia. » Piège : « iban » n'est pas la bonne forme.",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "ord-aviones",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Les avions bombardèrent la ville.",
+    "promptLang": "fr",
+    "answer": "Los aviones bombardearon la ciudad",
+    "tokens": [
+      "Los",
+      "aviones",
+      "bombardearon",
+      "la",
+      "ciudad"
+    ],
+    "extra": [
+      "bombardeó"
+    ],
+    "explanation": "« Los aviones bombardearon la ciudad. » Piège : « bombardeó » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-frontera",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Mon oncle traversa la frontière avec la France.",
+    "promptLang": "fr",
+    "answer": "Mi tío cruzó la frontera con Francia",
+    "tokens": [
+      "Mi",
+      "tío",
+      "cruzó",
+      "la",
+      "frontera",
+      "con",
+      "Francia"
+    ],
+    "extra": [
+      "cruzo"
+    ],
+    "explanation": "« Mi tío cruzó la frontera con Francia. » Piège : « cruzo » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-familias",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Beaucoup de familles abandonnèrent leurs maisons.",
+    "promptLang": "fr",
+    "answer": "Muchas familias abandonaron sus casas",
+    "tokens": [
+      "Muchas",
+      "familias",
+      "abandonaron",
+      "sus",
+      "casas"
+    ],
+    "extra": [],
+    "explanation": "« Muchas familias abandonaron sus casas. »",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-miedo",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Je vécus trois ans dans la peur.",
+    "promptLang": "fr",
+    "answer": "Viví tres años con miedo",
+    "tokens": [
+      "Viví",
+      "tres",
+      "años",
+      "con",
+      "miedo"
+    ],
+    "extra": [
+      "Vivió"
+    ],
+    "explanation": "« Viví tres años con miedo. » Piège : « Vivió » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-franco",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Franco eut l'aide de l'Allemagne nazie.",
+    "promptLang": "fr",
+    "answer": "Franco tuvo la ayuda de la Alemania nazi",
+    "tokens": [
+      "Franco",
+      "tuvo",
+      "la",
+      "ayuda",
+      "de",
+      "la",
+      "Alemania",
+      "nazi"
+    ],
+    "extra": [
+      "tuvó"
+    ],
+    "explanation": "« Franco tuvo la ayuda de la Alemania nazi. » Piège : « tuvó » n'est pas la bonne forme.",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "ord-sangrienta",
+    "type": "ordre",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "La guerre fut très sanglante.",
+    "promptLang": "fr",
+    "answer": "La guerra fue muy sangrienta",
+    "tokens": [
+      "La",
+      "guerra",
+      "fue",
+      "muy",
+      "sangrienta"
+    ],
+    "extra": [],
+    "explanation": "« La guerra fue muy sangrienta. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "ord-refugio",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Je courus avec ma mère jusqu'à l'abri.",
+    "promptLang": "fr",
+    "answer": "Corrí con mi madre al refugio",
+    "tokens": [
+      "Corrí",
+      "con",
+      "mi",
+      "madre",
+      "al",
+      "refugio"
+    ],
+    "extra": [
+      "Corrió"
+    ],
+    "explanation": "« Corrí con mi madre al refugio. » Piège : « Corrió » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-volver",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Beaucoup de familles ne purent pas revenir en Espagne.",
+    "promptLang": "fr",
+    "answer": "Muchas familias no pudieron volver a España",
+    "tokens": [
+      "Muchas",
+      "familias",
+      "no",
+      "pudieron",
+      "volver",
+      "a",
+      "España"
+    ],
+    "extra": [
+      "podieron"
+    ],
+    "explanation": "« Muchas familias no pudieron volver a España. » Piège : « podieron » n'est pas la bonne forme.",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "ord-sublevaron",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Des généraux se soulevèrent contre la République.",
+    "promptLang": "fr",
+    "answer": "Unos generales se sublevaron contra la República",
+    "tokens": [
+      "Unos",
+      "generales",
+      "se",
+      "sublevaron",
+      "contra",
+      "la",
+      "República"
+    ],
+    "extra": [],
+    "explanation": "« Unos generales se sublevaron contra la República. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "ord-tebeos",
+    "type": "ordre",
+    "theme": "memoria",
+    "notions": [
+      "memoria-tebeo"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Ce n'était pas une guerre comme celles des BD.",
+    "promptLang": "fr",
+    "answer": "No era una guerra como las de los tebeos",
+    "tokens": [
+      "No",
+      "era",
+      "una",
+      "guerra",
+      "como",
+      "las",
+      "de",
+      "los",
+      "tebeos"
+    ],
+    "extra": [],
+    "explanation": "« No era una guerra como las de los tebeos. »",
+    "source": "tio-pepe-1",
+    "translation": ""
+  },
+  {
+    "id": "ord-cartas",
+    "type": "ordre",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Ma mère et moi attendîmes ses lettres.",
+    "promptLang": "fr",
+    "answer": "Mi madre y yo esperamos sus cartas",
+    "tokens": [
+      "Mi",
+      "madre",
+      "y",
+      "yo",
+      "esperamos",
+      "sus",
+      "cartas"
+    ],
+    "extra": [
+      "esperaron"
+    ],
+    "explanation": "« Mi madre y yo esperamos sus cartas. » Piège : « esperaron » n'est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "ord-crono-1",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "Remets les événements dans l’ordre chronologique",
+    "prompt": "Du plus ancien au plus récent (3 événements, série 1).",
+    "promptLang": "fr",
+    "answer": "Carmen nació unos militares llegaron el padre volvió",
+    "tokens": [
+      "Carmen nació",
+      "unos militares llegaron",
+      "el padre volvió"
+    ],
+    "extra": [],
+    "translation": "Carmen naquit (1928) · des militaires arrivèrent (1936) · le père revint (1939)",
+    "explanation": "Dans l’ordre : Carmen nació → unos militares llegaron → el padre volvió (Carmen naquit (1928) · des militaires arrivèrent (1936) · le père revint (1939)).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "ord-crono-2",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 2,
+    "label": "Remets les événements dans l’ordre chronologique",
+    "prompt": "Du plus ancien au plus récent (3 événements, série 2).",
+    "promptLang": "fr",
+    "answer": "la guerra empezó la División 43 estuvo sitiada en Bielsa la guerra terminó",
+    "tokens": [
+      "la guerra empezó",
+      "la División 43 estuvo sitiada en Bielsa",
+      "la guerra terminó"
+    ],
+    "extra": [],
+    "translation": "la guerre commença (1936) · Bielsa (1938) · la guerre se termina (1939)",
+    "explanation": "Dans l’ordre : la guerra empezó → la División 43 estuvo sitiada en Bielsa → la guerra terminó (la guerre commença (1936) · Bielsa (1938) · la guerre se termina (1939)).",
+    "source": "tio-pepe-2"
+  },
+  {
+    "id": "ord-crono-3",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 3,
+    "label": "Remets les événements dans l’ordre chronologique",
+    "prompt": "Du plus ancien au plus récent (4 événements, série 3).",
+    "promptLang": "fr",
+    "answer": "Carmen nació los generales se sublevaron la División 43 estuvo sitiada en Bielsa el padre volvió a casa",
+    "tokens": [
+      "Carmen nació",
+      "los generales se sublevaron",
+      "la División 43 estuvo sitiada en Bielsa",
+      "el padre volvió a casa"
+    ],
+    "extra": [],
+    "translation": "1928 · 1936 · 1938 · 1939",
+    "explanation": "Dans l’ordre : Carmen nació → los generales se sublevaron → la División 43 estuvo sitiada en Bielsa → el padre volvió a casa (1928 · 1936 · 1938 · 1939).",
+    "source": "mision-secreta"
+  }
+]

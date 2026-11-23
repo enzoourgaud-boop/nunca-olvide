@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { canonicalValue, wrongValue } from '../src/engine/questions';
-import { DEFAULT_SETTINGS, Game } from '../src/engine/game';
-import { content } from './helpers';
+import { DEFAULT_SETTINGS, Game, SHORT_FLOORS } from '../src/engine/game';
+import { content, contentWithDisabled } from './helpers';
 import { simulate } from './sim';
 
-const S = { ...DEFAULT_SETTINGS };
+const S = { ...DEFAULT_SETTINGS, chrono: true };
 
 /** Partie démarrée directement sur un combat (contre l'ennemi donné, sinon le premier de la carte). */
 function fight(seed: string, settings = S, enemy?: string): Game {
@@ -94,17 +94,72 @@ describe('moteur de partie', () => {
     expect(g.state.errors).toHaveLength(1);
   });
 
-  it('un accent oublié ne blesse personne', () => {
-    // cherche une partie dont une question écrite contient un accent
+  it('chacun attaque à son tour : l’ennemi frappe aussi après une bonne réponse', () => {
+    const g = fight('TOUR-1', S, 'sombra');
+    g.state.combat!.hp = 50;
+    const hp = g.state.hp;
+    const fb = g.answer(canonicalValue(g.question!))!;
+    expect(fb.outcome).toBe('ok');
+    expect(fb.dmgToEnemy).toBeGreaterThan(0);
+    expect(fb.dmgToPlayer).toBe(1);
+    expect(g.state.hp).toBe(hp - 1);
+  });
+
+  it('l’ennemi vaincu ne riposte pas', () => {
+    const g = fight('TOUR-2', S, 'sombra');
+    g.state.combat!.hp = 1;
+    const hp = g.state.hp;
+    const fb = g.answer(canonicalValue(g.question!))!;
+    expect(g.state.combat!.hp).toBe(0);
+    expect(fb.dmgToPlayer).toBe(0);
+    expect(g.state.hp).toBe(hp);
+  });
+
+  it('le chrono est désactivé par défaut', () => {
+    expect(DEFAULT_SETTINGS.chrono).toBe(false);
+    const g = fight('TOUR-3', { ...DEFAULT_SETTINGS });
+    expect(g.state.combat!.timeMax).toBe(0);
+  });
+
+  it('chaque ennemi pose ses types de questions (la Leyenda : vrai/faux, las Sirenas : écoute)', () => {
+    for (const [enemy, type] of [['leyenda', 'vrai-faux'], ['sirenas', 'ecoute']] as const) {
+      let n = 0, hits = 0;
+      for (let i = 0; i < 20; i++) {
+        const g = fight(`TYPE-${enemy}-${i}`, S, enemy);
+        n++;
+        if (g.question!.type === type) hits++;
+      }
+      expect(hits / n, enemy).toBeGreaterThan(0.6);
+    }
+    // si le professeur coupe ce type, l'ennemi pose autre chose
+    const g = fight('TYPE-OFF', { ...S, types: ['qcm'] }, 'leyenda');
+    expect(g.question!.type).toBe('qcm');
+  });
+
+  it('partie courte : un seul acte, finie au jefe de cet acte', () => {
+    const g = Game.newRun(content(), S, 'SHORT-1', 0, { short: true });
+    expect(g.state.short).toBe(true);
+    expect(g.state.map.floors).toBe(SHORT_FLOORS);
+    const act = g.state.act;
+    autoplay(g);
+    expect(g.state.result).toBe('win');
+    expect(g.state.act).toBe(act);
+    // le professeur peut l'imposer
+    expect(Game.newRun(content(), { ...S, short: true }, 'SHORT-2').state.short).toBe(true);
+  });
+
+  it('un accent oublié (« ¡Casi! ») ne blesse pas l’ennemi, qui riposte quand même', () => {
+    // cherche une partie dont une question écrite contient un accent (thèmes sans règle « l'accent change la forme »)
     for (let i = 0; i < 400; i++) {
-      const g = fight(`CASI-${i}`, { ...S, writeFactor: 10, types: ["qcm", "ecrit"] });
+      const g = fight(`CASI-${i}`, { ...S, writeFactor: 10, types: ['qcm', 'ecrit'], themes: ['regulares'] });
       const q = g.question!;
-      if (g.state.combat!.q.mode !== 'write' || !/[áéíóú]/.test(canonicalValue(q))) continue;
+      // « viví » → « vivi » : presque. (« luchó » → « lucho » est une autre forme : faux, testé dans answer.test.ts)
+      if (g.state.combat!.q.mode !== 'write' || !/í/.test(canonicalValue(q)) || /[óé]/.test(canonicalValue(q))) continue;
       const hp = g.state.hp, ehp = g.state.combat!.hp;
-      g.answer(canonicalValue(q).normalize('NFD').replace(/[̀-ͯ]/g, ''));
-      expect(g.state.combat!.fb!.outcome).toBe('casi');
-      expect(g.state.hp).toBe(hp);
+      const fb = g.answer(canonicalValue(q).normalize('NFD').replace(/[̀-ͯ]/g, ''))!;
+      expect(fb.outcome).toBe('casi');
       expect(g.state.combat!.hp).toBe(ehp);
+      expect(g.state.hp).toBe(hp - fb.dmgToPlayer);
       return;
     }
     throw new Error('aucune question écrite accentuée trouvée');
@@ -131,31 +186,32 @@ describe('moteur de partie', () => {
   });
 
   it('les thèmes désactivés ne sont jamais posés', () => {
-    const g = Game.newRun(content(), { ...S, themes: ['cultura'] }, 'THEME-1');
-    autoplay(g, 600, () => false, () => expect(g.question!.theme).toBe('cultura'));
+    const g = Game.newRun(content(), { ...S, themes: ['historia'] }, 'THEME-1');
+    autoplay(g, 600, () => false, () => expect(g.question!.theme).toBe('historia'));
   });
 
   it('les questions désactivées ne sont jamais posées', () => {
-    const disabled = new Set(content().questions.filter(q => q.disabled).map(q => q.id));
+    const c = contentWithDisabled();
+    const disabled = new Set(c.questions.filter(q => q.disabled).map(q => q.id));
     expect(disabled.size).toBeGreaterThan(0);
     for (let i = 0; i < 30; i++) {
-      const g = Game.newRun(content(), { ...S, themes: ['cultura'] }, `DIS-${i}`);
+      const g = Game.newRun(c, { ...S, themes: ['historia'] }, `DIS-${i}`);
       autoplay(g, 200, k => k % 3 === 0, () => expect(disabled.has(g.question!.id)).toBe(false));
     }
   });
 
   it('l’Oráculo donne la réponse et blesse l’ennemi', () => {
     const g = fight('ORA-1');
-    g.state.inv.oraculo = 1;
-    expect(g.usePower('oraculo')).toBe(true);
+    g.state.inv.memoria = 1;
+    expect(g.usePower('memoria')).toBe(true);
     expect(g.state.combat!.fb!.outcome).toBe('oracle');
-    expect(g.state.inv.oraculo).toBe(0);
+    expect(g.state.inv.memoria).toBe(0);
   });
 
   it('Tijeras retire deux mauvaises réponses en QCM', () => {
     for (let i = 0; i < 50; i++) {
       const g = fight(`TIJ-${i}`, { ...S, writeFactor: 0, types: ['qcm'] });
-      expect(g.usePower('tijeras')).toBe(true);
+      expect(g.usePower('lapiz')).toBe(true);
       const c = g.state.combat!;
       expect(c.hidden).toHaveLength(2);
       expect(c.hidden).not.toContain(canonicalValue(g.question!));
@@ -163,17 +219,8 @@ describe('moteur de partie', () => {
     }
   });
 
-  it('l’Escudo bloque une attaque automatiquement', () => {
-    const g = fight('ESC-1');
-    g.state.inv.escudo = 1;
-    const hp = g.state.hp;
-    g.answer(wrongOf(g));
-    expect(g.state.inv.escudo).toBe(0);
-    expect(g.state.hp).toBeGreaterThanOrEqual(hp - 1); // seul un éventuel poison passe
-  });
-
   it('un élite « Solo escrito » ne pose que des questions écrites', () => {
-    const g = fight('ELITE-1', S, 'pinata-furiosa');
+    const g = fight('ELITE-1', S, 'frontera');
     for (let i = 0; i < 15 && g.state.screen === 'combat'; i++) {
       if (g.state.combat!.fb) {
         g.proceed();
@@ -184,8 +231,9 @@ describe('moteur de partie', () => {
     }
   });
 
-  it('la Catrina change de phase quand ses PV baissent', () => {
-    const g = fight('CAT-1', { ...S, writeFactor: 10 }, 'catrina');
+  it('el Olvido change de phase quand ses PV baissent', () => {
+    const g = fight('CAT-1', { ...S, writeFactor: 10 }, 'olvido');
+    g.state.hp = g.state.maxHp = 99; // on teste les phases, pas la survie
     const seen = new Set<number>();
     for (let i = 0; i < 80 && g.state.screen === 'combat'; i++) {
       seen.add(g.state.combat!.phase);
@@ -196,8 +244,8 @@ describe('moteur de partie', () => {
     expect(g.state.result).toBe('win');
   });
 
-  it('l’abanico de la Catrina bloque les QCM', () => {
-    const g = fight('ABA-1', { ...S, writeFactor: 0.0001 }, 'catrina');
+  it('l’abanico de el Olvido bloque les QCM', () => {
+    const g = fight('ABA-1', { ...S, writeFactor: 0.0001 }, 'olvido');
     const c = g.state.combat!;
     expect(c.abanico).toBeGreaterThan(0);
     if (c.q.mode === 'qcm') {
@@ -209,9 +257,9 @@ describe('moteur de partie', () => {
 
   it('le pouvoir Cambio change la question sans pénalité', () => {
     const g = fight('CAM-1');
-    g.state.inv.cambio = 1;
+    g.state.inv.pagina = 1;
     const id = g.state.combat!.q.id, hp = g.state.hp;
-    g.usePower('cambio');
+    g.usePower('pagina');
     expect(g.state.combat!.q.id).not.toBe(id);
     expect(g.state.hp).toBe(hp);
     expect(g.state.combat!.fb).toBeNull();

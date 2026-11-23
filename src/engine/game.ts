@@ -26,10 +26,17 @@ export interface Settings {
   /** Multiplie la part de réponses écrites (0 = jamais d'écrit, 1 = normal, 2 = double). */
   writeFactor: number;
   accents: AccentPolicy;
+  /** Le professeur impose la partie courte (un seul acte). */
+  short?: boolean;
 }
 
+/** Partie courte : un seul acte, tiré par la graine, sur une carte plus petite (8 à 10 minutes). */
+export const SHORT_FLOORS = 8;
+const SHORT_RELICS_PER_ACT = 2;
+const SHORT_HP_PER_ACT = 8;
+
 export const DEFAULT_SETTINGS: Settings = {
-  themes: null, types: null, chrono: true, chronoFactor: 1, writeFactor: 1, accents: 'casi',
+  themes: null, types: null, chrono: false, chronoFactor: 1, writeFactor: 1, accents: 'casi',
 };
 
 export type { Mode } from './questions';
@@ -148,6 +155,8 @@ export type Screen = 'warmup' | 'map' | 'combat' | 'reward' | 'shop' | 'rest' | 
 
 export interface RunState {
   v: 3;
+  /** Partie courte : un seul acte, finie au jefe de cet acte. */
+  short?: boolean;
   /** Personnage choisi et niveau de difficulté (« Nivel de Calavera », 0 à 10). */
   character: string;
   ascension: number;
@@ -297,7 +306,7 @@ export class Game {
   }
 
   /** Démarre une nouvelle partie à partir d'une graine. */
-  static newRun(content: Content, settings: Settings, seed: string, now = Date.now(), opts: { character?: string; ascension?: number; pending?: string[] } = {}): Game {
+  static newRun(content: Content, settings: Settings, seed: string, now = Date.now(), opts: { character?: string; ascension?: number; pending?: string[]; short?: boolean } = {}): Game {
     const rng = new Rng(seed);
     const p = content.sequence.player;
     const chars = content.sequence.characters;
@@ -312,17 +321,24 @@ export class Game {
     for (const [id, n] of Object.entries(ch?.bonus.items ?? {})) inv[id] = (inv[id] ?? 0) + n;
     const relics: Record<string, number> = { ...(ch?.bonus.relics ?? {}) };
     const hp = Math.max(5, p.hp + (ch?.bonus.hp ?? 0) - (asc >= 9 ? 3 : 0));
+    const short = !!(opts.short || settings.short);
+    const mapCfg = content.sequence.map;
+    const act = short ? rng.int(content.sequence.acts.length) : 0;
     const state: RunState = {
-      v: 3, seed, rng: rng.state, screen: 'map', hp, maxHp: hp, gold: 0, act: 0,
+      v: 3, short, seed, rng: rng.state, screen: 'map', hp, maxHp: hp, gold: 0, act,
       character: ch?.id ?? '', ascension: asc, bonus: { writeShare: ch?.bonus.writeShare ?? 0, restHeal: ch?.bonus.restHeal ?? 0.3 },
       defeated: [], obtained: Object.keys(relics),
-      map: generateMap(rng, content.sequence.map), node: null, path: [],
+      map: generateMap(rng, short ? { ...mapCfg, floors: SHORT_FLOORS, restFloor: SHORT_FLOORS - 2 } : mapCfg), node: null, path: [],
       inv, relics, upgrades: {}, streak: 0, poison: 0, reviveUsed: false, luckyCount: 0,
       stats: { ok: 0, ko: 0, casi: 0, won: 0, written: 0, turns: 0, rooms: 0, startedAt: now, endedAt: 0, maxStreak: 0, perfectFights: 0, powersUsed: 0 },
       seen: {}, retry: [], errors: [], metEnemies: [], seenEvents: [],
       combat: null, offer: null, offerKind: null, event: null, chest: null, rest: null, result: null,
     };
     const g = new Game(content, settings, state);
+    // partie courte dans un acte avancé : les souvenirs et la vie qu'on aurait gagnés aux actes précédents
+    for (let i = 0; i < act * SHORT_RELICS_PER_ACT; i++) g.gainRandom('reliquia');
+    state.maxHp += act * SHORT_HP_PER_ACT;
+    state.hp = state.maxHp;
     g.startWarmup(opts.pending ?? []);
     g.commit();
     return g;
@@ -634,6 +650,8 @@ export class Game {
       const other = this.rng.shuffle(withPool).map(x => refine(x.pool)).find(x => x.far.length);
       if (other) ({ base, far } = other);
     }
+    // le type imposé par l'ennemi n'offre que des questions trop proches des dernières : la variété passe avant
+    if (!far.length && o.onlyType) return this.pick({ ...o, onlyType: undefined });
     const pool = far.length ? far : base;
     return this.rng.weighted(pool, q => this.weightOf(q) * (TYPE_WEIGHT[q.type] ?? 1));
   }
@@ -707,6 +725,7 @@ export class Game {
       ignoreArticles: q.check?.ignoreArticles ?? theme?.check?.ignoreArticles ?? false,
       optionalSubject: q.check?.optionalSubject ?? theme?.check?.optionalSubject ?? true,
       accents: this.relicCount('accentForgive') ? ('accept' as const) : this.settings.accents,
+      accentChangesForm: q.check?.accentChangesForm ?? theme?.check?.accentChangesForm ?? false,
     };
   }
 
@@ -814,7 +833,10 @@ export class Game {
     let level = this.targetLevel();
     if (easier && level > 1) level = (level - 1) as 1 | 2 | 3;
     const listen = c.intent.kind === 'listen' && !c.canceled;
-    return { themes, level, needWrite: this.writableOnly(), weakTheme: c.weakTheme, onlyType: listen ? 'ecoute' : undefined };
+    // chaque ennemi a sa façon de poser les questions (types filtrés par les réglages du professeur)
+    const types = (ph?.types ?? e.types ?? []).filter(t => !this.settings.types || this.settings.types.includes(t));
+    const onlyType = listen ? 'ecoute' : types.length ? this.rng.pick(types) : undefined;
+    return { themes, level, needWrite: this.writableOnly(), weakTheme: c.weakTheme, onlyType };
   }
 
   private modeFor(q: Question): Mode {
@@ -1004,12 +1026,14 @@ export class Game {
       c.rowCorrect = 0;
       fb.title = how === 'timeout' ? seq.feedback.timeout : this.rng.pick(seq.feedback.ko);
       if (how === 'timeout') fb.lines.push('Le temps est écoulé : cela compte comme une erreur.');
-      this.enemyStrikes(fb);
       if (tr.has('vanidad') && c.hp > 0) {
         c.hp = Math.min(c.maxHp, c.hp + 1);
         fb.lines.push(`${e.name} admire son reflet et récupère 1 PV.`);
       }
     }
+
+    // chacun attaque à son tour : l'ennemi encore debout riposte, quelle que soit la réponse
+    if (c.hp > 0) this.enemyStrikes(fb);
 
     // fin de tour
     if (c.hp > 0) {
@@ -1154,7 +1178,7 @@ export class Game {
     const h = this.relicValue('healAfterFight', 2);
     if (h) s.hp = Math.min(s.maxHp, s.hp + h);
     s.poison = 0;
-    if (e.kind === 'final') return this.end(true);
+    if (e.kind === 'final' || (s.short && e.kind === 'jefe')) return this.end(true);
     if (e.kind === 'jefe') {
       s.hp = Math.min(s.maxHp, s.hp + Math.ceil(s.maxHp * 0.25));
       s.offer = this.rollOffer('jefe');

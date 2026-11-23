@@ -31,6 +31,22 @@ describe('correction tolérante', () => {
     expect(checkAnswer('esta', ['está'], { accents: 'accept' })).toBe('ok');
     expect(checkAnswer('esta', ['está'], { accents: 'strict' })).toBe('ko');
   });
+  it('pretérito : un accent qui change la forme est une erreur (habló/hablo, tuvo/tuvó)', () => {
+    const o = { accentChangesForm: true };
+    expect(checkAnswer('lucho', ['luchó'], o)).toBe('ko'); // présent, pas passé
+    expect(checkAnswer('luche', ['luché'], o)).toBe('ko');
+    expect(checkAnswer('Mi padre volvio a casa', ['Mi padre volvió a casa'], o)).toBe('ko');
+    expect(checkAnswer('tuvó', ['tuvo'], o)).toBe('ko'); // prétérit fort : aucun accent
+    expect(checkAnswer('hizó', ['hizo'], o)).toBe('ko');
+    expect(checkAnswer('vivi', ['viví'], o)).toBe('casi'); // pas une autre forme : presque
+    expect(checkAnswer('corri al refugio', ['corrí al refugio'], o)).toBe('casi');
+    expect(checkAnswer('luchó', ['luchó'], o)).toBe('ok');
+    expect(checkAnswer('él luchó', ['luchó'], o)).toBe('ok');
+    // sans l'option (autres thèmes), l'accent oublié reste « casi »
+    expect(checkAnswer('lucho', ['luchó'])).toBe('casi');
+    // le professeur peut accepter tous les accents oubliés
+    expect(checkAnswer('lucho', ['luchó'], { ...o, accents: 'accept' })).toBe('ok');
+  });
   it('une vraie erreur reste une erreur', () => {
     expect(checkAnswer('leiendo', ['leyendo'])).toBe('ko');
     expect(checkAnswer('somos bailando', ['estamos bailando'])).toBe('ko');

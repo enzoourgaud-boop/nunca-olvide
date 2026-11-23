@@ -150,6 +150,13 @@ function ClassTab({ content, settings, onApply }: { content: Content; settings: 
         ))}
       </fieldset>
       <fieldset>
+        <legend>Durée de la partie</legend>
+        <label class="check">
+          <input type="checkbox" checked={!!s.short} onChange={e => setS({ ...s, short: (e.target as HTMLInputElement).checked })} />
+          Imposer la partie courte (un acte, 8 à 10 minutes)
+        </label>
+      </fieldset>
+      <fieldset>
         <legend>Chrono</legend>
         <label class="check">
           <input type="checkbox" checked={s.chrono} onChange={e => setS({ ...s, chrono: (e.target as HTMLInputElement).checked })} />

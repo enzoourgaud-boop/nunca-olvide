@@ -1,0 +1,378 @@
+{
+  "id": "guerra-civil",
+  "title": "Nunca olvidé",
+  "tagline": "Roguelike d'espagnol · séquence La guerra civil española",
+  "intro": "Chez ta grand-mère Carmen, née en 1928, tu ouvres la caja de los recuerdos. Mais les souvenirs s'effacent : les sombras del olvido en rongent les mots. Réponds en espagnol pour les sauver. Chacun attaque à son tour : une bonne réponse, et c'est toi qui frappes.",
+  "victory": "El Olvido se disipa. Les souvenirs de Carmen ont retrouvé leurs couleurs. « Nunca olvidé esos años. »",
+  "victoryTitle": "¡Nunca olvidé!",
+  "defeatTitle": "Los recuerdos se borran…",
+  "voices": [
+    "es-ES",
+    "es"
+  ],
+  "themes": [
+    {
+      "id": "regulares",
+      "label": "Pretérito : verbes réguliers",
+      "color": "#c9822b",
+      "check": {
+        "optionalSubject": true,
+        "accentChangesForm": true
+      }
+    },
+    {
+      "id": "irregulares",
+      "label": "Pretérito : verbes irréguliers",
+      "color": "#b0413e",
+      "check": {
+        "optionalSubject": true,
+        "accentChangesForm": true
+      }
+    },
+    {
+      "id": "ser-ir",
+      "label": "¿Ser o ir?",
+      "color": "#6b8e4e",
+      "check": {
+        "optionalSubject": true,
+        "accentChangesForm": true
+      }
+    },
+    {
+      "id": "historia",
+      "label": "Historia de la guerra",
+      "color": "#3f6e8c",
+      "check": {
+        "ignoreArticles": true
+      }
+    },
+    {
+      "id": "memoria",
+      "label": "Los recuerdos (Carmen, el tebeo)",
+      "color": "#8a5a9b",
+      "check": {
+        "ignoreArticles": true
+      }
+    },
+    {
+      "id": "lexico",
+      "label": "Léxico",
+      "color": "#2f8f83",
+      "translationOptional": true,
+      "check": {
+        "ignoreArticles": true
+      }
+    }
+  ],
+  "notions": [
+    {
+      "id": "reg-ar",
+      "label": "Pretérito régulier en -AR"
+    },
+    {
+      "id": "reg-er-ir",
+      "label": "Pretérito régulier en -ER / -IR"
+    },
+    {
+      "id": "acentos",
+      "label": "Les accents du pretérito (é, ó, í)"
+    },
+    {
+      "id": "irr-vocal",
+      "label": "Irrégularité vocalique (pidió, durmió, creyó, produjo)"
+    },
+    {
+      "id": "irr-fuerte",
+      "label": "Prétérits forts (tuve, estuve, hice, dije…)"
+    },
+    {
+      "id": "ser-ir",
+      "label": "SER et IR au pretérito (fui, fue, fueron)"
+    },
+    {
+      "id": "hist-fechas",
+      "label": "Histoire : les dates (1936-1939)"
+    },
+    {
+      "id": "hist-guerra",
+      "label": "Histoire : qu’est-ce qu’une guerre civile"
+    },
+    {
+      "id": "hist-bandos",
+      "label": "Histoire : les deux camps, Franco, l’aide étrangère"
+    },
+    {
+      "id": "hist-exilio",
+      "label": "Histoire : l’exil et les réfugiés"
+    },
+    {
+      "id": "memoria-carmen",
+      "label": "Le souvenir de Carmen (Misión secreta)"
+    },
+    {
+      "id": "memoria-tebeo",
+      "label": "La guerre vécue (la BD)"
+    },
+    {
+      "id": "lex-guerra",
+      "label": "Lexique de la guerre"
+    },
+    {
+      "id": "lex-memoria",
+      "label": "Lexique du souvenir"
+    }
+  ],
+  "sources": [
+    {
+      "id": "gramatica-preterito",
+      "title": "El pretérito indefinido : le passé simple (fiche de grammaire)",
+      "file": "sources/contenu-sequence.md#gramatica-preterito"
+    },
+    {
+      "id": "mision-secreta",
+      "title": "Misión secreta : el secreto de la abuela Carmen",
+      "file": "sources/contenu-sequence.md#mision-secreta"
+    },
+    {
+      "id": "tio-pepe-1",
+      "title": "BD « Mi tío que estuvo en el infierno », planche 1",
+      "file": "sources/contenu-sequence.md#tio-pepe-1"
+    },
+    {
+      "id": "tio-pepe-2",
+      "title": "BD « Mi tío que estuvo en el infierno », planche 2",
+      "file": "sources/contenu-sequence.md#tio-pepe-2"
+    },
+    {
+      "id": "ce-mi-tio",
+      "title": "CE - Mi tío que estuvo en el infierno (questionnaire)",
+      "file": "sources/contenu-sequence.md#ce-mi-tio"
+    },
+    {
+      "id": "evaluacion",
+      "title": "Evaluación – La guerra civil española (Etapa 1)",
+      "file": "sources/contenu-sequence.md#evaluacion"
+    }
+  ],
+  "player": {
+    "hp": 28,
+    "startItems": {
+      "abuela": 1,
+      "lapiz": 1,
+      "bloc": 1
+    }
+  },
+  "acts": [
+    {
+      "id": "pueblo",
+      "name": "1936 · El pueblo de Carmen",
+      "color": "#c9822b",
+      "level": 1,
+      "chrono": 30,
+      "writeShare": 0.15,
+      "enemies": [
+        "sombra",
+        "miedo",
+        "hambre",
+        "eco"
+      ],
+      "elites": [
+        "remolino"
+      ],
+      "boss": "sirenas"
+    },
+    {
+      "id": "recuerdos",
+      "name": "La guerra en los recuerdos",
+      "color": "#8a5a9b",
+      "level": 2,
+      "chrono": 25,
+      "writeShare": 0.3,
+      "enemies": [
+        "leyenda",
+        "ausencia",
+        "hambre-grande",
+        "silencio"
+      ],
+      "elites": [
+        "heroe-tebeo"
+      ],
+      "boss": "pesadilla"
+    },
+    {
+      "id": "frontera",
+      "name": "1939 · La frontera",
+      "color": "#3f6e8c",
+      "level": 3,
+      "chrono": 20,
+      "writeShare": 0.45,
+      "enemies": [
+        "cartas-perdidas",
+        "casa-vacia",
+        "miedo-grande",
+        "silencio-grande"
+      ],
+      "elites": [
+        "frontera"
+      ],
+      "boss": "olvido"
+    }
+  ],
+  "feedback": {
+    "ok": [
+      "¡Muy bien!",
+      "¡Perfecto!",
+      "¡Eso es!",
+      "¡Exacto!",
+      "¡Bien hecho!"
+    ],
+    "ko": [
+      "¡Uy!",
+      "¡Qué pena!",
+      "¡Casi no!"
+    ],
+    "casi": "¡Casi!",
+    "timeout": "¡Se acabó el tiempo!",
+    "oracle": "El recuerdo vuelve"
+  },
+  "map": {
+    "floors": 6,
+    "width": [
+      3,
+      4
+    ],
+    "restFloor": 4,
+    "weights": {
+      "combat": 46,
+      "event": 24,
+      "elite": 10,
+      "shop": 9,
+      "chest": 8,
+      "rest": 3
+    }
+  },
+  "rooms": {
+    "combat": {
+      "name": "Una sombra",
+      "emoji": "🌑",
+      "help": "Une ombre de l'oubli. Récompense : un objet au choix."
+    },
+    "elite": {
+      "name": "Una sombra fuerte",
+      "emoji": "🌘",
+      "help": "Une ombre coriace avec une règle spéciale. Récompense : un souvenir précieux."
+    },
+    "shop": {
+      "name": "El rastro",
+      "emoji": "🧺",
+      "help": "Le marché aux objets de seconde main : achète des aides et des souvenirs avec tes monedas.",
+      "text": "Des étals d’objets de segunda mano : des lettres, des photos, des crayons. Les vendeurs acceptent tes monedas."
+    },
+    "rest": {
+      "name": "El refugio",
+      "emoji": "🏚️",
+      "help": "Un abri : repose-toi, ou améliore une aide.",
+      "text": "Un abri calme, à l’écart. Tu peux t’y reposer, ou y préparer une aide pour la rendre plus puissante."
+    },
+    "event": {
+      "name": "Una carta",
+      "emoji": "✉️",
+      "help": "Une lettre ou une scène, en espagnol. À toi de choisir."
+    },
+    "chest": {
+      "name": "Una caja olvidada",
+      "emoji": "📦",
+      "help": "Une boîte oubliée. Parfois fermée par une question."
+    },
+    "boss": {
+      "name": "Jefe",
+      "emoji": "👁️",
+      "help": "La grande ombre de l'acte."
+    }
+  },
+  "meal": {
+    "name": "Pan y sopa",
+    "emoji": "🥣",
+    "price": 4,
+    "heal": 6,
+    "description": "Rend 6 points de vie."
+  },
+  "characters": [
+    {
+      "id": "nieta",
+      "name": "Alba",
+      "title": "la nieta",
+      "emoji": "👧",
+      "description": "La petite-fille de Carmen. Commence avec un Pan y sopa en plus ; le refugio la soigne davantage (40 %).",
+      "bonus": {
+        "items": {
+          "sopa": 1
+        },
+        "restHeal": 0.4
+      },
+      "palette": {
+        "H": "#5a3a22",
+        "h": "#3a2414",
+        "b": "#c9822b",
+        "P": "#3f6e8c",
+        "p": "#28485c",
+        "T": "#e9dcc0"
+      },
+      "unlock": {
+        "type": "default"
+      }
+    },
+    {
+      "id": "nieto",
+      "name": "Nico",
+      "title": "el nieto",
+      "emoji": "👦",
+      "description": "Le petit-fils de Carmen. Commence avec le Tebeo (série dès 2 bonnes réponses) et 3 PV de plus.",
+      "bonus": {
+        "relics": {
+          "tebeo": 1
+        },
+        "hp": 3
+      },
+      "palette": {
+        "H": "#2a1c12",
+        "h": "#140c06",
+        "b": "#6b8e4e",
+        "P": "#6b8e4e",
+        "p": "#44602f",
+        "T": "#e9dcc0"
+      },
+      "unlock": {
+        "type": "boss",
+        "value": "sirenas",
+        "label": "Vaincre las Sirenas (jefe de l’acte 1)"
+      }
+    },
+    {
+      "id": "cronista",
+      "name": "Lucía",
+      "title": "la cronista",
+      "emoji": "✍️",
+      "description": "Elle écrit tout ce que Carmen raconte. Commence avec las Cartas ; davantage de questions à écrire (qui frappent plus fort).",
+      "bonus": {
+        "relics": {
+          "cartas": 1
+        },
+        "writeShare": 0.15
+      },
+      "palette": {
+        "H": "#7a4a2a",
+        "h": "#4a2a14",
+        "b": "#8a5a9b",
+        "P": "#8a5a9b",
+        "p": "#5a3a6b",
+        "T": "#e9dcc0"
+      },
+      "unlock": {
+        "type": "wins",
+        "value": 1,
+        "label": "Gagner une partie"
+      }
+    }
+  ]
+}

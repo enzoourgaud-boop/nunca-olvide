@@ -1,0 +1,194 @@
+[
+  {
+    "id": "jefe-olvide",
+    "type": "ecrit",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Escribe la frase de Carmen : «Nunca ___ esos años.» (olvidar, yo)",
+    "answer": "olvidé",
+    "accept": [],
+    "distractors": [
+      "olvido",
+      "olvidó",
+      "olvidaron"
+    ],
+    "translation": "Je n'ai jamais oublié ces années.",
+    "explanation": "olvidar, yo → olvidé.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "jefe-volvio",
+    "type": "ecrit",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Mi padre ___ a casa en 1939. (volver)",
+    "answer": "volvió",
+    "accept": [],
+    "distractors": [
+      "volvio",
+      "volví",
+      "volvieron"
+    ],
+    "translation": "Mon père revint en 1939.",
+    "explanation": "volver, él → volvió.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "jefe-pudieron",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Muchas familias no ___ volver a España. (poder)",
+    "answer": "pudieron",
+    "accept": [],
+    "distractors": [
+      "podieron",
+      "pudo",
+      "pudimos"
+    ],
+    "translation": "Beaucoup de familles ne purent pas revenir.",
+    "explanation": "poder, ellas → pudieron.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "jefe-fueron",
+    "type": "ecrit",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Muchos republicanos ___ al exilio. (ir)",
+    "answer": "fueron",
+    "accept": [],
+    "distractors": [
+      "fue",
+      "iban",
+      "fuimos"
+    ],
+    "translation": "Beaucoup de républicains partirent en exil.",
+    "explanation": "ir, ellos → fueron.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "jefe-tuvo",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Franco ___ la ayuda de la Alemania nazi. (tener)",
+    "answer": "tuvo",
+    "accept": [],
+    "distractors": [
+      "tuvó",
+      "tenió",
+      "tuve"
+    ],
+    "translation": "Franco eut l'aide de l'Allemagne nazie.",
+    "explanation": "tener, él → tuvo (sans accent).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "jefe-lucharon",
+    "type": "ecrit",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Muchos españoles ___ unos contra otros. (luchar)",
+    "answer": "lucharon",
+    "accept": [],
+    "distractors": [
+      "luchó",
+      "luchamos",
+      "luchan"
+    ],
+    "translation": "Beaucoup d'Espagnols luttèrent les uns contre les autres.",
+    "explanation": "luchar, ellos → lucharon.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "jefe-estuvo",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Mi bisabuelo ___ en un campo de refugiados. (estar)",
+    "answer": "estuvo",
+    "accept": [],
+    "distractors": [
+      "estuvó",
+      "estó",
+      "estuve"
+    ],
+    "translation": "Mon arrière-grand-père fut dans un camp de réfugiés.",
+    "explanation": "estar, él → estuvo (sans accent).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "jefe-dijeron",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Mis abuelos me ___ : «Nunca olvidamos». (decir)",
+    "answer": "dijeron",
+    "accept": [],
+    "distractors": [
+      "dijieron",
+      "decieron",
+      "dijo"
+    ],
+    "translation": "Mes grands-parents me dirent : « Nous n’avons jamais oublié ».",
+    "explanation": "decir, ellos → dijeron (-eron après j).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "jefe-frase",
+    "type": "ecrit",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Traduis la phrase de Carmen : « Je n’ai jamais oublié ces années. »",
+    "promptLang": "fr",
+    "answer": "Nunca olvidé esos años",
+    "accept": [
+      "No olvidé nunca esos años"
+    ],
+    "distractors": [
+      "Nunca olvido esos años",
+      "Nunca olvidó esos años",
+      "Siempre olvidé esos años"
+    ],
+    "translation": "",
+    "explanation": "Nunca olvidé esos años : olvidar, yo → olvidé (avec l’accent).",
+    "source": "mision-secreta"
+  }
+]

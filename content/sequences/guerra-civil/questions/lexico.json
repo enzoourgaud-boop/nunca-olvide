@@ -1,0 +1,1295 @@
+[
+  {
+    "id": "lex-guerra-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la guerre",
+    "promptLang": "fr",
+    "answer": "la guerra",
+    "accept": [],
+    "distractors": [
+      "un bando",
+      "la frontera",
+      "el pueblo"
+    ],
+    "writable": true,
+    "explanation": "la guerra = la guerre",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-guerra-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la guerra",
+    "answerLang": "fr",
+    "answer": "la guerre",
+    "accept": [],
+    "distractors": [
+      "fuir",
+      "les sirènes",
+      "absent"
+    ],
+    "writable": false,
+    "explanation": "la guerra = la guerre",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-bando-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 3,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "un camp",
+    "promptLang": "fr",
+    "answer": "un bando",
+    "accept": [],
+    "distractors": [
+      "enterrar",
+      "los aviones",
+      "el campo de refugiados"
+    ],
+    "writable": true,
+    "explanation": "un bando = un camp",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-bando-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "un bando",
+    "answerLang": "fr",
+    "answer": "un camp",
+    "accept": [],
+    "distractors": [
+      "le gouvernement",
+      "la grand-mère",
+      "le cauchemar"
+    ],
+    "writable": false,
+    "explanation": "un bando = un camp",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-huir-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "fuir",
+    "promptLang": "fr",
+    "emoji": "🏃",
+    "answer": "huir",
+    "accept": [],
+    "distractors": [
+      "el gobierno",
+      "el pueblo",
+      "la leyenda"
+    ],
+    "writable": true,
+    "explanation": "huir = fuir",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-huir-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "huir",
+    "answerLang": "fr",
+    "answer": "fuir",
+    "accept": [],
+    "distractors": [
+      "la peur",
+      "la légende",
+      "fusiller"
+    ],
+    "writable": false,
+    "explanation": "huir = fuir",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-fusilar-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 3,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "fusiller",
+    "promptLang": "fr",
+    "answer": "fusilar",
+    "accept": [],
+    "distractors": [
+      "las sirenas",
+      "el campo de refugiados",
+      "la pesadilla"
+    ],
+    "writable": true,
+    "explanation": "fusilar = fusiller",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-fusilar-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "fusilar",
+    "answerLang": "fr",
+    "answer": "fusiller",
+    "accept": [],
+    "distractors": [
+      "le camp de réfugiés",
+      "la bande dessinée",
+      "la frontière"
+    ],
+    "writable": false,
+    "explanation": "fusilar = fusiller",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-enterrar-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 3,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "enterrer",
+    "promptLang": "fr",
+    "answer": "enterrar",
+    "accept": [],
+    "distractors": [
+      "las cartas",
+      "la leyenda",
+      "la guerra"
+    ],
+    "writable": true,
+    "explanation": "enterrar = enterrer",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-enterrar-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "enterrar",
+    "answerLang": "fr",
+    "answer": "enterrer",
+    "accept": [],
+    "distractors": [
+      "le souvenir",
+      "se soulever",
+      "les lettres"
+    ],
+    "writable": false,
+    "explanation": "enterrar = enterrer",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-sublevarse-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 3,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "se soulever",
+    "promptLang": "fr",
+    "answer": "sublevarse",
+    "accept": [],
+    "distractors": [
+      "la nieta",
+      "la pesadilla",
+      "fusilar"
+    ],
+    "writable": true,
+    "explanation": "sublevarse = se soulever",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-sublevarse-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "sublevarse",
+    "answerLang": "fr",
+    "answer": "se soulever",
+    "accept": [],
+    "distractors": [
+      "un camp",
+      "les sirènes",
+      "absent"
+    ],
+    "writable": false,
+    "explanation": "sublevarse = se soulever",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-exilio-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "l'exil",
+    "promptLang": "fr",
+    "emoji": "🧳",
+    "answer": "el exilio",
+    "accept": [],
+    "distractors": [
+      "con frecuencia",
+      "la guerra",
+      "el gobierno"
+    ],
+    "writable": true,
+    "explanation": "el exilio = l'exil",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-exilio-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el exilio",
+    "answerLang": "fr",
+    "answer": "l'exil",
+    "accept": [],
+    "distractors": [
+      "le gouvernement",
+      "la grand-mère",
+      "le cauchemar"
+    ],
+    "writable": false,
+    "explanation": "el exilio = l'exil",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-gobierno-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "le gouvernement",
+    "promptLang": "fr",
+    "emoji": "🏛️",
+    "answer": "el gobierno",
+    "accept": [],
+    "distractors": [
+      "el recuerdo",
+      "fusilar",
+      "las sirenas"
+    ],
+    "writable": true,
+    "explanation": "el gobierno = le gouvernement",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-gobierno-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el gobierno",
+    "answerLang": "fr",
+    "answer": "le gouvernement",
+    "accept": [],
+    "distractors": [
+      "la peur",
+      "la légende",
+      "fuir"
+    ],
+    "writable": false,
+    "explanation": "el gobierno = le gouvernement",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-frontera-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la frontière",
+    "promptLang": "fr",
+    "emoji": "🚧",
+    "answer": "la frontera",
+    "accept": [],
+    "distractors": [
+      "el tebeo",
+      "el exilio",
+      "las cartas"
+    ],
+    "writable": true,
+    "explanation": "la frontera = la frontière",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-frontera-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la frontera",
+    "answerLang": "fr",
+    "answer": "la frontière",
+    "accept": [],
+    "distractors": [
+      "le camp de réfugiés",
+      "la bande dessinée",
+      "le gouvernement"
+    ],
+    "writable": false,
+    "explanation": "la frontera = la frontière",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-refugio-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "l'abri",
+    "promptLang": "fr",
+    "emoji": "🏚️",
+    "answer": "el refugio",
+    "accept": [],
+    "distractors": [
+      "huir",
+      "las sirenas",
+      "la nieta"
+    ],
+    "writable": true,
+    "explanation": "el refugio = l'abri",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-refugio-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el refugio",
+    "answerLang": "fr",
+    "answer": "l'abri",
+    "accept": [],
+    "distractors": [
+      "le souvenir",
+      "enterrer",
+      "les lettres"
+    ],
+    "writable": false,
+    "explanation": "el refugio = l'abri",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-sirenas-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "les sirènes",
+    "promptLang": "fr",
+    "emoji": "🚨",
+    "answer": "las sirenas",
+    "accept": [],
+    "distractors": [
+      "sublevarse",
+      "las cartas",
+      "con frecuencia"
+    ],
+    "writable": true,
+    "explanation": "las sirenas = les sirènes",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-sirenas-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "las sirenas",
+    "answerLang": "fr",
+    "answer": "les sirènes",
+    "accept": [],
+    "distractors": [
+      "un camp",
+      "l'abri",
+      "absent"
+    ],
+    "writable": false,
+    "explanation": "las sirenas = les sirènes",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-aviones-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "les avions",
+    "promptLang": "fr",
+    "emoji": "✈️",
+    "answer": "los aviones",
+    "accept": [],
+    "distractors": [
+      "la frontera",
+      "la nieta",
+      "el recuerdo"
+    ],
+    "writable": true,
+    "explanation": "los aviones = les avions",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-aviones-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "los aviones",
+    "answerLang": "fr",
+    "answer": "les avions",
+    "accept": [],
+    "distractors": [
+      "l'exil",
+      "la grand-mère",
+      "le cauchemar"
+    ],
+    "writable": false,
+    "explanation": "los aviones = les avions",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-miedo-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la peur",
+    "promptLang": "fr",
+    "emoji": "😨",
+    "answer": "el miedo",
+    "accept": [],
+    "distractors": [
+      "los aviones",
+      "con frecuencia",
+      "el tebeo"
+    ],
+    "writable": true,
+    "explanation": "el miedo = la peur",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-miedo-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el miedo",
+    "answerLang": "fr",
+    "answer": "la peur",
+    "accept": [],
+    "distractors": [
+      "les avions",
+      "la légende",
+      "fuir"
+    ],
+    "writable": false,
+    "explanation": "el miedo = la peur",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-cartas-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "les lettres",
+    "promptLang": "fr",
+    "emoji": "✉️",
+    "answer": "las cartas",
+    "accept": [],
+    "distractors": [
+      "la abuela",
+      "el recuerdo",
+      "huir"
+    ],
+    "writable": true,
+    "explanation": "las cartas = les lettres",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-cartas-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "las cartas",
+    "answerLang": "fr",
+    "answer": "les lettres",
+    "accept": [],
+    "distractors": [
+      "le camp de réfugiés",
+      "la bande dessinée",
+      "le gouvernement"
+    ],
+    "writable": false,
+    "explanation": "las cartas = les lettres",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-pueblo-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "le village",
+    "promptLang": "fr",
+    "emoji": "🏘️",
+    "answer": "el pueblo",
+    "accept": [],
+    "distractors": [
+      "ausente",
+      "el tebeo",
+      "sublevarse"
+    ],
+    "writable": true,
+    "explanation": "el pueblo = le village",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-pueblo-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el pueblo",
+    "answerLang": "fr",
+    "answer": "le village",
+    "accept": [],
+    "distractors": [
+      "le souvenir",
+      "enterrer",
+      "la peur"
+    ],
+    "writable": false,
+    "explanation": "el pueblo = le village",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-abuela-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la grand-mère",
+    "promptLang": "fr",
+    "emoji": "👵",
+    "answer": "la abuela",
+    "accept": [],
+    "distractors": [
+      "la esperanza",
+      "huir",
+      "la frontera"
+    ],
+    "writable": true,
+    "explanation": "la abuela = la grand-mère",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-abuela-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la abuela",
+    "answerLang": "fr",
+    "answer": "la grand-mère",
+    "accept": [],
+    "distractors": [
+      "un camp",
+      "l'abri",
+      "absent"
+    ],
+    "writable": false,
+    "explanation": "la abuela = la grand-mère",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-nieta-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la petite-fille",
+    "promptLang": "fr",
+    "emoji": "👧",
+    "answer": "la nieta",
+    "accept": [],
+    "distractors": [
+      "el hambre",
+      "sublevarse",
+      "los aviones"
+    ],
+    "writable": true,
+    "explanation": "la nieta = la petite-fille",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-nieta-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la nieta",
+    "answerLang": "fr",
+    "answer": "la petite-fille",
+    "accept": [],
+    "distractors": [
+      "l'exil",
+      "le village",
+      "le cauchemar"
+    ],
+    "writable": false,
+    "explanation": "la nieta = la petite-fille",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "lex-refugiados-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "le camp de réfugiés",
+    "promptLang": "fr",
+    "emoji": "⛺",
+    "answer": "el campo de refugiados",
+    "accept": [],
+    "distractors": [
+      "un bando",
+      "la frontera",
+      "el pueblo"
+    ],
+    "writable": true,
+    "explanation": "el campo de refugiados = le camp de réfugiés",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-refugiados-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el campo de refugiados",
+    "answerLang": "fr",
+    "answer": "le camp de réfugiés",
+    "accept": [],
+    "distractors": [
+      "les avions",
+      "la légende",
+      "fuir"
+    ],
+    "writable": false,
+    "explanation": "el campo de refugiados = le camp de réfugiés",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "lex-ausente-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 3,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "absent",
+    "promptLang": "fr",
+    "answer": "ausente",
+    "accept": [],
+    "distractors": [
+      "enterrar",
+      "los aviones",
+      "el campo de refugiados"
+    ],
+    "writable": true,
+    "explanation": "ausente = absent",
+    "source": "ce-mi-tio",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-ausente-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "ausente",
+    "answerLang": "fr",
+    "answer": "absent",
+    "accept": [],
+    "distractors": [
+      "la petite-fille",
+      "la bande dessinée",
+      "le gouvernement"
+    ],
+    "writable": false,
+    "explanation": "ausente = absent",
+    "source": "ce-mi-tio",
+    "translation": ""
+  },
+  {
+    "id": "lex-frecuencia-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 3,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "souvent",
+    "promptLang": "fr",
+    "answer": "con frecuencia",
+    "accept": [],
+    "distractors": [
+      "el gobierno",
+      "el pueblo",
+      "la esperanza"
+    ],
+    "writable": true,
+    "explanation": "con frecuencia = souvent",
+    "source": "ce-mi-tio",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-frecuencia-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "con frecuencia",
+    "answerLang": "fr",
+    "answer": "souvent",
+    "accept": [],
+    "distractors": [
+      "le souvenir",
+      "enterrer",
+      "la peur"
+    ],
+    "writable": false,
+    "explanation": "con frecuencia = souvent",
+    "source": "ce-mi-tio",
+    "translation": ""
+  },
+  {
+    "id": "lex-leyenda-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la légende",
+    "promptLang": "fr",
+    "emoji": "📜",
+    "answer": "la leyenda",
+    "accept": [],
+    "distractors": [
+      "las sirenas",
+      "el campo de refugiados",
+      "el hambre"
+    ],
+    "writable": true,
+    "explanation": "la leyenda = la légende",
+    "source": "ce-mi-tio",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-leyenda-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la leyenda",
+    "answerLang": "fr",
+    "answer": "la légende",
+    "accept": [],
+    "distractors": [
+      "un camp",
+      "l'abri",
+      "le camp de réfugiés"
+    ],
+    "writable": false,
+    "explanation": "la leyenda = la légende",
+    "source": "ce-mi-tio",
+    "translation": ""
+  },
+  {
+    "id": "lex-esperanza-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "l'espoir",
+    "promptLang": "fr",
+    "emoji": "🌱",
+    "answer": "la esperanza",
+    "accept": [],
+    "distractors": [
+      "las cartas",
+      "la leyenda",
+      "un bando"
+    ],
+    "writable": true,
+    "explanation": "la esperanza = l'espoir",
+    "source": "ce-mi-tio",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-esperanza-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la esperanza",
+    "answerLang": "fr",
+    "answer": "l'espoir",
+    "accept": [],
+    "distractors": [
+      "l'exil",
+      "le village",
+      "le cauchemar"
+    ],
+    "writable": false,
+    "explanation": "la esperanza = l'espoir",
+    "source": "ce-mi-tio",
+    "translation": ""
+  },
+  {
+    "id": "lex-recuerdo-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "le souvenir",
+    "promptLang": "fr",
+    "emoji": "📷",
+    "answer": "el recuerdo",
+    "accept": [],
+    "distractors": [
+      "la nieta",
+      "el hambre",
+      "enterrar"
+    ],
+    "writable": true,
+    "explanation": "el recuerdo = le souvenir",
+    "source": "ce-mi-tio",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-recuerdo-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el recuerdo",
+    "answerLang": "fr",
+    "answer": "le souvenir",
+    "accept": [],
+    "distractors": [
+      "les avions",
+      "souvent",
+      "fuir"
+    ],
+    "writable": false,
+    "explanation": "el recuerdo = le souvenir",
+    "source": "ce-mi-tio",
+    "translation": ""
+  },
+  {
+    "id": "lex-pesadilla-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "le cauchemar",
+    "promptLang": "fr",
+    "emoji": "😱",
+    "answer": "la pesadilla",
+    "accept": [],
+    "distractors": [
+      "con frecuencia",
+      "un bando",
+      "el gobierno"
+    ],
+    "writable": true,
+    "explanation": "la pesadilla = le cauchemar",
+    "source": "tio-pepe-1",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-pesadilla-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la pesadilla",
+    "answerLang": "fr",
+    "answer": "le cauchemar",
+    "accept": [],
+    "distractors": [
+      "la petite-fille",
+      "la bande dessinée",
+      "le gouvernement"
+    ],
+    "writable": false,
+    "explanation": "la pesadilla = le cauchemar",
+    "source": "tio-pepe-1",
+    "translation": ""
+  },
+  {
+    "id": "lex-hambre-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la faim",
+    "promptLang": "fr",
+    "emoji": "🥣",
+    "answer": "el hambre",
+    "accept": [],
+    "distractors": [
+      "el recuerdo",
+      "enterrar",
+      "las sirenas"
+    ],
+    "writable": true,
+    "explanation": "el hambre = la faim",
+    "source": "tio-pepe-1",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-hambre-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el hambre",
+    "answerLang": "fr",
+    "answer": "la faim",
+    "accept": [],
+    "distractors": [
+      "l'espoir",
+      "enterrer",
+      "la peur"
+    ],
+    "writable": false,
+    "explanation": "el hambre = la faim",
+    "source": "tio-pepe-1",
+    "translation": ""
+  },
+  {
+    "id": "lex-tebeo-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la bande dessinée",
+    "promptLang": "fr",
+    "emoji": "📰",
+    "answer": "el tebeo",
+    "accept": [],
+    "distractors": [
+      "la guerra",
+      "el gobierno",
+      "las cartas"
+    ],
+    "writable": true,
+    "explanation": "el tebeo = la bande dessinée",
+    "source": "tio-pepe-1",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "lex-tebeo-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el tebeo",
+    "answerLang": "fr",
+    "answer": "la bande dessinée",
+    "accept": [],
+    "distractors": [
+      "un camp",
+      "l'abri",
+      "le camp de réfugiés"
+    ],
+    "writable": false,
+    "explanation": "el tebeo = la bande dessinée",
+    "source": "tio-pepe-1",
+    "translation": ""
+  }
+]

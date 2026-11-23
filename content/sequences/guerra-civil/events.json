@@ -1,0 +1,556 @@
+[
+  {
+    "id": "sirenas",
+    "emoji": "🚨",
+    "title": "Suenan las sirenas",
+    "text": "¡Las sirenas! Carmen niña te coge de la mano. —¿Qué hacemos?",
+    "textFr": "Les sirènes ! Carmen enfant te prend la main. « Qu’est-ce qu’on fait ? »",
+    "gloss": [
+      [
+        "te coge de la mano",
+        "te prend la main"
+      ],
+      [
+        "¿Qué hacemos?",
+        "Qu’est-ce qu’on fait ?"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Corrimos al refugio.",
+        "labelFr": "Nous avons couru à l’abri.",
+        "outcome": {
+          "text": "En el refugio, una mujer os da sopa caliente.",
+          "textFr": "Dans l’abri, une femme vous donne de la soupe chaude.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "label": "Esperamos a su madre.",
+        "labelFr": "Nous avons attendu sa mère.",
+        "outcome": {
+          "text": "Su madre llega y te da unas monedas para el camino.",
+          "textFr": "Sa mère arrive et te donne quelques monedas pour la route.",
+          "effects": [
+            {
+              "type": "gold",
+              "value": 4
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "rastro",
+    "emoji": "🧺",
+    "title": "El rastro",
+    "text": "—Estas cosas son de segunda mano. Son baratas. ¿Qué quieres?",
+    "textFr": "« Ces choses sont d’occasion. Elles ne sont pas chères. Que veux-tu ? »",
+    "gloss": [
+      [
+        "de segunda mano",
+        "d’occasion"
+      ],
+      [
+        "baratas",
+        "pas chères"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Compré una foto vieja.",
+        "labelFr": "J’ai acheté une vieille photo.",
+        "outcome": {
+          "text": "La foto está un poco rota, pero es bonita.",
+          "textFr": "La photo est un peu abîmée, mais elle est belle.",
+          "effects": [
+            {
+              "type": "gold",
+              "value": -4
+            },
+            {
+              "type": "item",
+              "id": "foto"
+            }
+          ]
+        },
+        "require": {
+          "gold": 4
+        }
+      },
+      {
+        "label": "No compré nada.",
+        "labelFr": "Je n’ai rien acheté.",
+        "outcome": {
+          "text": "El vendedor sonríe. Sigues tu camino.",
+          "textFr": "Le vendeur sourit. Tu continues ton chemin.",
+          "effects": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "carta-padre",
+    "emoji": "✉️",
+    "title": "Una carta del padre",
+    "text": "Carmen niña tiene una carta de su padre. —No sé leer bien. ¿Me ayudas?",
+    "textFr": "Carmen enfant a une lettre de son père. « Je ne sais pas bien lire. Tu m’aides ? »",
+    "gloss": [
+      [
+        "No sé leer bien",
+        "je ne sais pas bien lire"
+      ],
+      [
+        "¿Me ayudas?",
+        "tu m’aides ?"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Sí, leímos la carta juntas.",
+        "labelFr": "Oui, nous avons lu la lettre ensemble.",
+        "quiz": {
+          "themes": [
+            "regulares",
+            "irregulares"
+          ]
+        },
+        "success": {
+          "text": "Carmen sonríe: «Mi padre está bien». Te da su lápiz.",
+          "textFr": "Carmen sourit : « Mon père va bien ». Elle te donne son crayon.",
+          "effects": [
+            {
+              "type": "item",
+              "id": "lapiz"
+            },
+            {
+              "type": "hp",
+              "value": 3
+            }
+          ]
+        },
+        "failure": {
+          "text": "Algunas palabras están borradas. Carmen te abraza igual.",
+          "textFr": "Certains mots sont effacés. Carmen te serre dans ses bras quand même.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "label": "No, tengo prisa.",
+        "labelFr": "Non, je suis pressé(e).",
+        "outcome": {
+          "text": "Carmen guarda la carta en su bolsillo.",
+          "textFr": "Carmen range la lettre dans sa poche.",
+          "effects": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "mision",
+    "emoji": "🔤",
+    "title": "La misión secreta",
+    "text": "En la caja hay una hoja con casillas y una letra amarilla. —Si conjugas bien, descubres el secreto.",
+    "textFr": "Dans la boîte, il y a une feuille avec des cases et une lettre jaune. « Si tu conjugues bien, tu découvres le secret. »",
+    "gloss": [
+      [
+        "casillas",
+        "cases"
+      ],
+      [
+        "descubres",
+        "tu découvres"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Conjugué el verbo.",
+        "labelFr": "J’ai conjugué le verbe.",
+        "quiz": {
+          "themes": [
+            "regulares",
+            "irregulares"
+          ],
+          "write": true
+        },
+        "success": {
+          "text": "¡La letra brilla! Encuentras un recuerdo en la caja.",
+          "textFr": "La lettre brille ! Tu trouves un souvenir dans la boîte.",
+          "effects": [
+            {
+              "type": "item",
+              "kind": "reliquia",
+              "rarity": "comun"
+            }
+          ]
+        },
+        "failure": {
+          "text": "La letra no aparece… Encuentras solo unas monedas.",
+          "textFr": "La lettre n’apparaît pas… Tu ne trouves que quelques monedas.",
+          "effects": [
+            {
+              "type": "gold",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "label": "Cerré la caja.",
+        "labelFr": "J’ai refermé la boîte.",
+        "outcome": {
+          "text": "Guardas la hoja para más tarde.",
+          "textFr": "Tu gardes la feuille pour plus tard.",
+          "effects": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "tebeo",
+    "emoji": "📰",
+    "title": "Un tebeo viejo",
+    "text": "Encuentras un tebeo viejo: «¡Grandes batallas! ¡Hazañas heroicas!». La abuela dice: —No era una guerra como las de los tebeos.",
+    "textFr": "Tu trouves une vieille BD : « Grandes batailles ! Exploits héroïques ! ». La grand-mère dit : « Ce n’était pas une guerre comme celles des BD. »",
+    "gloss": [
+      [
+        "hazañas heroicas",
+        "exploits héroïques"
+      ],
+      [
+        "No era",
+        "ce n’était pas"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Le pregunté a la abuela cómo fue la guerra.",
+        "labelFr": "J’ai demandé à la grand-mère comment fut la guerre.",
+        "quiz": {
+          "themes": [
+            "memoria",
+            "historia"
+          ]
+        },
+        "success": {
+          "text": "La abuela habla mucho tiempo. Entiendes mejor.",
+          "textFr": "La grand-mère parle longtemps. Tu comprends mieux.",
+          "effects": [
+            {
+              "type": "item",
+              "id": "tebeo"
+            }
+          ]
+        },
+        "failure": {
+          "text": "La abuela se calla. Guardas el tebeo.",
+          "textFr": "La grand-mère se tait. Tu gardes la BD.",
+          "effects": [
+            {
+              "type": "gold",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "label": "Leí el tebeo.",
+        "labelFr": "J’ai lu la BD.",
+        "outcome": {
+          "text": "Te diviertes un poco, pero no aprendes nada.",
+          "textFr": "Tu t’amuses un peu, mais tu n’apprends rien.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 3
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesa",
+    "emoji": "🍲",
+    "title": "La comida",
+    "text": "Tu primo no quiere comer la sopa. Su padre dice: «A ti lo que hace falta es una buena guerra».",
+    "textFr": "Ton cousin ne veut pas manger sa soupe. Son père dit : « Toi, ce qu’il te faudrait, c’est une bonne guerre ».",
+    "gloss": [
+      [
+        "lo que hace falta",
+        "ce qu’il faut"
+      ],
+      [
+        "tu primo",
+        "ton cousin"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Comí toda la sopa.",
+        "labelFr": "J’ai mangé toute la soupe.",
+        "outcome": {
+          "text": "Recuperas fuerzas.",
+          "textFr": "Tu reprends des forces.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 6
+            }
+          ]
+        }
+      },
+      {
+        "label": "Pregunté por qué.",
+        "labelFr": "J’ai demandé pourquoi.",
+        "outcome": {
+          "text": "—Porque ellos sabían lo que era el hambre —dice la abuela. Te da una foto.",
+          "textFr": "« Parce qu’ils savaient ce qu’était la faim », dit la grand-mère. Elle te donne une photo.",
+          "effects": [
+            {
+              "type": "item",
+              "id": "mesa"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "frontera",
+    "emoji": "🚧",
+    "title": "La frontera",
+    "text": "Un camino de montaña. A lo lejos, la frontera con Francia. Hace frío.",
+    "textFr": "Un chemin de montagne. Au loin, la frontière avec la France. Il fait froid.",
+    "acts": [
+      3
+    ],
+    "gloss": [
+      [
+        "A lo lejos",
+        "au loin"
+      ],
+      [
+        "Hace frío",
+        "il fait froid"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Crucé la frontera.",
+        "labelFr": "J’ai traversé la frontière.",
+        "outcome": {
+          "text": "Llegas cansado, pero encuentras una caja olvidada.",
+          "textFr": "Tu arrives fatigué(e), mais tu trouves une boîte oubliée.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": -3
+            },
+            {
+              "type": "item",
+              "kind": "reliquia",
+              "rarity": "rara"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Volví al pueblo.",
+        "labelFr": "Je suis retourné(e) au village.",
+        "outcome": {
+          "text": "Descansas un poco.",
+          "textFr": "Tu te reposes un peu.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 4
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "campo",
+    "emoji": "⛺",
+    "title": "El campo de refugiados",
+    "text": "En Francia, un campo de refugiados. Una mujer te pregunta: —¿Cuándo saliste de España?",
+    "textFr": "En France, un camp de réfugiés. Une femme te demande : « Quand es-tu parti(e) d’Espagne ? »",
+    "acts": [
+      3
+    ],
+    "gloss": [
+      [
+        "saliste",
+        "tu es parti(e)"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Le contesté en español.",
+        "labelFr": "Je lui ai répondu en espagnol.",
+        "quiz": {
+          "themes": [
+            "historia",
+            "irregulares"
+          ]
+        },
+        "success": {
+          "text": "La mujer sonríe y comparte su pan contigo.",
+          "textFr": "La femme sourit et partage son pain avec toi.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 6
+            },
+            {
+              "type": "gold",
+              "value": 2
+            }
+          ]
+        },
+        "failure": {
+          "text": "No te entiende bien, pero te da agua.",
+          "textFr": "Elle ne te comprend pas bien, mais elle te donne de l’eau.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "label": "No dije nada.",
+        "labelFr": "Je n’ai rien dit.",
+        "outcome": {
+          "text": "Sigues tu camino en silencio.",
+          "textFr": "Tu continues ton chemin en silence.",
+          "effects": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "leyenda",
+    "emoji": "📜",
+    "title": "Una leyenda familiar",
+    "text": "Tu tía dice: —Mi abuelo luchó en todas las batallas y nunca tuvo miedo. La abuela Carmen sonríe: —Eso es una leyenda.",
+    "textFr": "Ta tante dit : « Mon grand-père a combattu dans toutes les batailles et n’a jamais eu peur. » Carmen sourit : « Ça, c’est une légende. »",
+    "gloss": [
+      [
+        "luchó",
+        "il a combattu"
+      ],
+      [
+        "nunca tuvo miedo",
+        "il n’a jamais eu peur"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Busqué la verdad.",
+        "labelFr": "J’ai cherché la vérité.",
+        "quiz": {
+          "themes": [
+            "historia",
+            "memoria"
+          ]
+        },
+        "success": {
+          "text": "Encuentras la verdad en las cartas. ¡Un recuerdo precioso!",
+          "textFr": "Tu trouves la vérité dans les lettres. Un souvenir précieux !",
+          "effects": [
+            {
+              "type": "item",
+              "kind": "reliquia"
+            }
+          ]
+        },
+        "failure": {
+          "text": "No encuentras nada. La leyenda continúa.",
+          "textFr": "Tu ne trouves rien. La légende continue.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": -2
+            }
+          ]
+        }
+      },
+      {
+        "label": "Creí la leyenda.",
+        "labelFr": "J’ai cru la légende.",
+        "outcome": {
+          "text": "Es una historia bonita… pero no es verdad.",
+          "textFr": "C’est une belle histoire… mais ce n’est pas vrai.",
+          "effects": [
+            {
+              "type": "gold",
+              "value": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "reto",
+    "emoji": "🌑",
+    "title": "Una sombra en el camino",
+    "text": "Una sombra te cierra el paso. —Si quieres pasar, lucha conmigo.",
+    "textFr": "Une ombre te barre le chemin. « Si tu veux passer, lutte avec moi. »",
+    "gloss": [
+      [
+        "te cierra el paso",
+        "te barre le chemin"
+      ],
+      [
+        "lucha conmigo",
+        "lutte avec moi"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Luché contra la sombra.",
+        "labelFr": "J’ai lutté contre l’ombre.",
+        "outcome": {
+          "text": "¡Al ataque!",
+          "textFr": "À l’attaque !",
+          "effects": [
+            {
+              "type": "fight",
+              "kind": "elite"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Busqué otro camino.",
+        "labelFr": "J’ai cherché un autre chemin.",
+        "outcome": {
+          "text": "Das una vuelta larga y te cansas.",
+          "textFr": "Tu fais un long détour et tu te fatigues.",
+          "effects": [
+            {
+              "type": "hp",
+              "value": -3
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

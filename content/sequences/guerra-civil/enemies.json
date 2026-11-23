@@ -1,0 +1,560 @@
+[
+  {
+    "id": "sombra",
+    "name": "La Sombra",
+    "emoji": "🌑",
+    "card": 1,
+    "kind": "normal",
+    "hp": 5,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "Yo borro las palabras…",
+    "phrase": "La sombra borró una carta."
+  },
+  {
+    "id": "miedo",
+    "name": "El Miedo",
+    "emoji": "😨",
+    "card": 2,
+    "kind": "normal",
+    "hp": 6,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack",
+        "value": 2
+      }
+    ],
+    "types": [
+      "qcm",
+      "ecrit"
+    ],
+    "taunt": "¿Tienes miedo?",
+    "phrase": "Viví tres años con miedo."
+  },
+  {
+    "id": "hambre",
+    "name": "El Hambre",
+    "emoji": "🥣",
+    "card": 3,
+    "kind": "normal",
+    "hp": 6,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "heal",
+        "value": 1
+      }
+    ],
+    "taunt": "Tengo hambre…",
+    "phrase": "Y hablando de hambre, ellos sabían muy bien lo que decían."
+  },
+  {
+    "id": "eco",
+    "name": "El Eco",
+    "emoji": "🔉",
+    "card": 4,
+    "kind": "normal",
+    "hp": 6,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "listen"
+      }
+    ],
+    "types": [
+      "ecoute",
+      "qcm"
+    ],
+    "taunt": "…eco… eco…",
+    "phrase": "¿Habló o hablo?"
+  },
+  {
+    "id": "remolino",
+    "name": "El Remolino de Fechas",
+    "emoji": "🌀",
+    "card": 5,
+    "kind": "elite",
+    "hp": 9,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "types": [
+      "ordre",
+      "scene"
+    ],
+    "taunt": "¿1936? ¿1939? ¡Todo mezclado!",
+    "phrase": "La guerra empezó en 1936 y terminó en 1939."
+  },
+  {
+    "id": "sirenas",
+    "name": "Las Sirenas",
+    "emoji": "🚨",
+    "card": 6,
+    "kind": "jefe",
+    "hp": 13,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "¡Uuuuuh!",
+    "phrase": "Cuando sonaron las sirenas, corrí con mi madre al refugio.",
+    "phases": [
+      {
+        "name": "Las sirenas suenan",
+        "from": 1,
+        "types": [
+          "ecoute"
+        ],
+        "intents": [
+          {
+            "kind": "listen"
+          },
+          {
+            "kind": "attack"
+          }
+        ],
+        "message": "Les sirènes hurlent : écoute bien, les questions sont à l'oral."
+      },
+      {
+        "name": "Los aviones",
+        "from": 0.5,
+        "themes": [
+          "memoria",
+          "regulares"
+        ],
+        "attackBonus": 1,
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 3
+          }
+        ],
+        "message": "« Los aviones bombardearon la ciudad. » Les coups sont plus forts : réponds juste pour en finir."
+      }
+    ]
+  },
+  {
+    "id": "leyenda",
+    "name": "La Leyenda",
+    "emoji": "📜",
+    "card": 7,
+    "kind": "normal",
+    "hp": 8,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "types": [
+      "vrai-faux"
+    ],
+    "taunt": "Todo lo que digo es verdad… ¿o no?",
+    "phrase": "Una especie de leyenda familiar."
+  },
+  {
+    "id": "ausencia",
+    "name": "La Ausencia",
+    "emoji": "🫥",
+    "card": 8,
+    "kind": "normal",
+    "hp": 8,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "traits": [
+      "vanish"
+    ],
+    "taunt": "¿Dónde estoy?",
+    "phrase": "Mi tío ausente."
+  },
+  {
+    "id": "hambre-grande",
+    "name": "El Hambre Negra",
+    "emoji": "🍽️",
+    "card": 9,
+    "kind": "normal",
+    "hp": 9,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "heal",
+        "value": 2
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "¡Más, más!",
+    "phrase": "«A ti lo que hace falta es una buena guerra»."
+  },
+  {
+    "id": "silencio",
+    "name": "El Silencio",
+    "emoji": "🤐",
+    "card": 10,
+    "kind": "normal",
+    "hp": 8,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "fog"
+      }
+    ],
+    "types": [
+      "ecoute",
+      "qcm"
+    ],
+    "taunt": "…",
+    "phrase": "Nadie habló de la guerra."
+  },
+  {
+    "id": "heroe-tebeo",
+    "name": "El Héroe de Tebeo",
+    "emoji": "🦸",
+    "card": 11,
+    "kind": "elite",
+    "hp": 12,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack",
+        "value": 3
+      }
+    ],
+    "types": [
+      "qcm",
+      "vrai-faux"
+    ],
+    "phases": [
+      {
+        "name": "Hazañas heroicas",
+        "from": 1,
+        "themes": [
+          "ser-ir",
+          "memoria"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 3
+          }
+        ],
+        "message": "« Fue un héroe » : ser ou ir ? Et la vérité sur la guerre des BD."
+      }
+    ],
+    "taunt": "¡Grandes batallas! ¡Hazañas heroicas!",
+    "phrase": "No era una guerra como las de los tebeos."
+  },
+  {
+    "id": "pesadilla",
+    "name": "La Pesadilla",
+    "emoji": "🌘",
+    "card": 12,
+    "kind": "jefe",
+    "hp": 17,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "Vuelvo cada noche.",
+    "phrase": "La guerra había sido su pesadilla cotidiana.",
+    "phases": [
+      {
+        "name": "Cotidiana",
+        "from": 1,
+        "themes": [
+          "memoria",
+          "historia"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack"
+          }
+        ],
+        "message": "La Pesadilla revient chaque jour : questions sur la guerre vécue."
+      },
+      {
+        "name": "Adherida a los recuerdos",
+        "from": 0.5,
+        "themes": [
+          "irregulares",
+          "ser-ir"
+        ],
+        "attackBonus": 1,
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 3
+          }
+        ],
+        "message": "Elle se colle à tes souvenirs : verbes irréguliers !"
+      }
+    ]
+  },
+  {
+    "id": "cartas-perdidas",
+    "name": "Las Cartas Perdidas",
+    "emoji": "✉️",
+    "card": 13,
+    "kind": "normal",
+    "hp": 9,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "stealItem"
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "types": [
+      "association",
+      "qcm"
+    ],
+    "taunt": "¿Dónde están tus cartas?",
+    "phrase": "Mi madre y yo esperamos sus cartas cada semana."
+  },
+  {
+    "id": "casa-vacia",
+    "name": "La Casa Vacía",
+    "emoji": "🏚️",
+    "card": 14,
+    "kind": "normal",
+    "hp": 10,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack",
+        "value": 3
+      }
+    ],
+    "taunt": "Aquí ya no vive nadie.",
+    "phrase": "Muchas familias abandonaron sus casas."
+  },
+  {
+    "id": "miedo-grande",
+    "name": "El Gran Miedo",
+    "emoji": "😱",
+    "card": 15,
+    "kind": "normal",
+    "hp": 10,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack",
+        "value": 3
+      }
+    ],
+    "types": [
+      "ecrit",
+      "qcm"
+    ],
+    "taunt": "No puedes volver.",
+    "phrase": "Muchas familias no pudieron volver a España."
+  },
+  {
+    "id": "silencio-grande",
+    "name": "El Silencio Largo",
+    "emoji": "🔇",
+    "card": 16,
+    "kind": "normal",
+    "hp": 10,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "listen"
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "fog"
+      }
+    ],
+    "types": [
+      "ecoute",
+      "vrai-faux"
+    ],
+    "taunt": "…",
+    "phrase": "Durante muchos años, nadie habló."
+  },
+  {
+    "id": "frontera",
+    "name": "La Frontera",
+    "emoji": "🚧",
+    "card": 17,
+    "kind": "elite",
+    "hp": 13,
+    "attack": 3,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "modifier": "soloEscrito",
+    "taunt": "No pasarás sin escribir.",
+    "phrase": "Mi tío cruzó la frontera con Francia."
+  },
+  {
+    "id": "olvido",
+    "name": "El Olvido",
+    "emoji": "🌫️",
+    "card": 18,
+    "kind": "final",
+    "hp": 23,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "Todo se borra. Todo se olvida.",
+    "phrase": "Nunca olvidé esos años.",
+    "phases": [
+      {
+        "name": "El Olvido borra",
+        "from": 1,
+        "traits": [
+          "abanico"
+        ],
+        "abanico": 4,
+        "themes": [
+          "regulares",
+          "irregulares",
+          "ser-ir"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 3
+          }
+        ],
+        "message": "El Olvido efface les mots : seules les réponses écrites le traversent."
+      },
+      {
+        "name": "El Olvido mezcla",
+        "from": 0.66,
+        "types": [
+          "ordre",
+          "scene",
+          "vrai-faux"
+        ],
+        "themes": [
+          "historia",
+          "memoria",
+          "regulares"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 3
+          }
+        ],
+        "message": "El Olvido mélange tout : remets les phrases et les dates dans l’ordre !"
+      },
+      {
+        "name": "La última palabra",
+        "from": 0.33,
+        "attackBonus": 1,
+        "levels": [
+          "jefe"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 4
+          }
+        ],
+        "message": "Dernier effort : écris au passé. « Nunca olvidé esos años. »"
+      }
+    ]
+  }
+]

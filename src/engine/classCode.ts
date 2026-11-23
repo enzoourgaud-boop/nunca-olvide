@@ -32,7 +32,7 @@ function check(v: number): number {
 export function encodeClass(s: Settings, seq: Sequence): string {
   const themes = seq.themes.map(t => t.id).slice(0, 8);
   const types = QUESTION_TYPES.map(t => t.id);
-  let v = 1; // version (2 bits)
+  let v = s.short ? 2 : 1; // version (2 bits) : 2 = partie courte imposée
   v |= mask(themes, s.themes) << 2;
   v |= mask(types, s.types as string[] | null) << 10;
   v |= (s.chrono ? 1 : 0) << 17;
@@ -56,7 +56,7 @@ export function decodeClass(code: string, seq: Sequence): Partial<Settings> | nu
   }
   v >>>= 0;
   const data = v & ((1 << 26) - 1);
-  if ((v >>> 26) !== check(data) || (data & 3) !== 1) return null;
+  if ((v >>> 26) !== check(data) || ((data & 3) !== 1 && (data & 3) !== 2)) return null;
   const themes = seq.themes.map(t => t.id).slice(0, 8);
   const types = QUESTION_TYPES.map(t => t.id);
   return {
@@ -66,6 +66,7 @@ export function decodeClass(code: string, seq: Sequence): Partial<Settings> | nu
     chronoFactor: CHRONO_FACTORS[(data >>> 18) & 7] ?? 1,
     writeFactor: WRITE_FACTORS[(data >>> 21) & 7] ?? 1,
     accents: ACCENTS[(data >>> 24) & 3] ?? 'casi',
+    short: (data & 3) === 2,
   };
 }
 
@@ -80,11 +81,12 @@ export function describeSettings(s: Partial<Settings>, seq: Sequence): string[] 
   const out: string[] = [];
   if (s.themes) out.push(`Thèmes : ${s.themes.map(t => seq.themes.find(x => x.id === t)?.label ?? t).join(', ')}`);
   if (s.types) out.push(`Types : ${s.types.map(t => QUESTION_TYPES.find(x => x.id === t)?.label ?? t).join(', ')}`);
-  if (s.chrono === false) out.push('Sans chrono');
-  else if (s.chronoFactor && s.chronoFactor !== 1) out.push(`Chrono ×${s.chronoFactor}`);
+  // sans chrono par défaut : on ne signale que le chrono allumé
+  if (s.chrono) out.push(s.chronoFactor && s.chronoFactor !== 1 ? `Chrono ×${s.chronoFactor}` : 'Chrono');
   if (s.writeFactor === 0) out.push('Pas de réponse écrite');
   else if (s.writeFactor && s.writeFactor !== 1) out.push(`Réponses écrites ×${s.writeFactor}`);
   if (s.accents === 'accept') out.push('Accents oubliés acceptés');
   if (s.accents === 'strict') out.push('Accents exigés');
+  if (s.short) out.push('Partie courte (un acte)');
   return out.length ? out : ['Réglages par défaut'];
 }

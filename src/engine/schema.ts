@@ -15,6 +15,8 @@ export const CheckSchema = z
     ignoreArticles: z.boolean().optional(),
     /** Le pronom sujet (yo, tú, nosotros…) est facultatif. */
     optionalSubject: z.boolean().optional(),
+    /** Pretérito : un accent final oublié (habló → hablo) ou ajouté (tuvo → tuvó) change la forme : compté faux. */
+    accentChangesForm: z.boolean().optional(),
   })
   .strict();
 
@@ -181,6 +183,8 @@ export const PhaseSchema = z
     intents: z.array(IntentSchema).min(1),
     themes: z.array(z.string()).optional(),
     levels: z.array(LevelSchema).optional(),
+    /** Types de questions posés pendant cette phase (tous par défaut). */
+    types: z.array(z.enum(['qcm', 'ecrit', 'ecoute', 'vrai-faux', 'ordre', 'association', 'scene'])).optional(),
     attackBonus: z.number().int().default(0),
     abanico: z.number().int().optional(),
     message: z.string(),
@@ -203,6 +207,8 @@ export const EnemySchema = z
     traits: z.array(TraitSchema).default([]),
     modifier: ModifierSchema.optional(),
     phases: z.array(PhaseSchema).optional(),
+    /** Types de questions que cet ennemi pose (tous par défaut) : las Sirenas → écoute, la Leyenda → vrai/faux… */
+    types: z.array(z.enum(['qcm', 'ecrit', 'ecoute', 'vrai-faux', 'ordre', 'association', 'scene'])).optional(),
     /** Thème imposé par le trait « juicio » (une question sur trois). */
     focusTheme: z.string().optional(),
     /** Phrase d'exemple en espagnol, au dos de la carte de lotería. */

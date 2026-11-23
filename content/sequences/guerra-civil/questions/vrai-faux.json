@@ -1,0 +1,542 @@
+[
+  {
+    "id": "vf-serir-1",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Franco fue el jefe de los militares sublevados.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « Franco fut le chef des militaires soulevés. », le verbe est IR (aller).",
+    "explanation": "Falso : ici, on dit ce qu'est quelqu'un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-serir-2",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Muchos españoles fueron a Francia.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Beaucoup d’Espagnols allèrent en France. », le verbe est IR (aller).",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-serir-3",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «La guerra fue fratricida.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « La guerre fut fratricide. », le verbe est IR (aller).",
+    "explanation": "Falso : ici, on dit ce qu'est quelqu'un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-serir-4",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «El año pasado, fui al museo de la Guerra Civil.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « L’année dernière, je suis allé au musée de la Guerre civile. », le verbe est IR (aller).",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-serir-5",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «La guerra fue muy sangrienta.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « La guerre fut très sanglante. », le verbe est IR (aller).",
+    "explanation": "Falso : ici, on dit ce qu'est quelqu'un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-serir-6",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Muchos republicanos fueron al exilio en Francia.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Beaucoup de républicains partirent en exil en France. », le verbe est IR (aller).",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-serir-7",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Para mis padres, la guerra fue su pesadilla cotidiana.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « Pour mes parents, la guerre fut leur cauchemar quotidien. », le verbe est IR (aller).",
+    "explanation": "Falso : ici, on dit ce qu'est quelqu'un ou quelque chose (être) → SER.",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "vf-serir-8",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Carmen y su madre fueron al refugio.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Carmen et sa mère allèrent à l’abri. », le verbe est IR (aller).",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-serir-9",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Fue una guerra entre los habitantes de un mismo país.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « Ce fut une guerre entre les habitants d’un même pays. », le verbe est IR (aller).",
+    "explanation": "Falso : ici, on dit ce qu'est quelqu'un ou quelque chose (être) → SER.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-serir-10",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Fuimos al refugio cuando sonaron las sirenas.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Nous allâmes à l’abri quand les sirènes sonnèrent. », le verbe est IR (aller).",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-republica",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "El gobierno de la República fue elegido democráticamente.",
+    "answer": "verdadero",
+    "translation": "Le gouvernement de la République fut élu démocratiquement.",
+    "explanation": "Verdadero : les généraux se sont soulevés contre un gouvernement élu (à vérifier : ce n'est pas écrit dans les documents).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-militares",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Los militares estuvieron a favor de la República.",
+    "answer": "falso",
+    "translation": "Les militaires furent favorables à la République.",
+    "explanation": "Falso : « unos generales se sublevaron contra la República ».",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-ganaron",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Los republicanos ganaron la guerra.",
+    "answer": "falso",
+    "translation": "Les républicains gagnèrent la guerre.",
+    "explanation": "Falso : ce sont los militares sublevados de Franco qui l'ont gagnée ; beaucoup de républicains sont partis en exil en France.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-ayuda",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Franco tuvo la ayuda de la Alemania nazi y de la Italia fascista.",
+    "answer": "verdadero",
+    "translation": "Franco eut l’aide de l’Allemagne nazie et de l’Italie fasciste.",
+    "explanation": "Verdadero (évaluation ex. 3b).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-dospaises",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Una guerra civil es una guerra entre dos países.",
+    "answer": "falso",
+    "translation": "Une guerre civile est une guerre entre deux pays.",
+    "explanation": "Falso : c'est une guerre entre les habitants d'un même pays.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-1936",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La guerra civil española empezó en 1936.",
+    "answer": "verdadero",
+    "translation": "La guerre civile espagnole commença en 1936.",
+    "explanation": "Verdadero : en julio de 1936.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-1945",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La guerra civil española terminó en 1945.",
+    "answer": "falso",
+    "translation": "La guerre civile espagnole se termina en 1945.",
+    "explanation": "Falso : terminó en 1939.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-exilio",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Muchos republicanos fueron al exilio en Francia.",
+    "answer": "verdadero",
+    "translation": "Beaucoup de républicains partirent en exil en France.",
+    "explanation": "Verdadero (évaluation ex. 3d).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-volvieron",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Después de la guerra, todas las familias pudieron volver a España.",
+    "answer": "falso",
+    "translation": "Après la guerre, toutes les familles purent revenir en Espagne.",
+    "explanation": "Falso : « muchas familias no pudieron volver a España ».",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-sangrienta",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La guerra fue muy sangrienta.",
+    "answer": "verdadero",
+    "translation": "La guerre fut très sanglante.",
+    "explanation": "Verdadero (évaluation ex. 3c).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "vf-carmen-nina",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-carmen"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En 1936, Carmen era una niña.",
+    "answer": "verdadero",
+    "translation": "En 1936, Carmen était une petite fille.",
+    "explanation": "Verdadero : nació en 1928, tenía ocho años.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-carmen-padre",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-carmen"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "El padre de Carmen volvió a casa en 1936.",
+    "answer": "falso",
+    "translation": "Le père de Carmen revint à la maison en 1936.",
+    "explanation": "Falso : volvió a casa en 1939.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-carmen-olvido",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-carmen"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Carmen olvidó esos años.",
+    "answer": "falso",
+    "translation": "Carmen oublia ces années.",
+    "explanation": "Falso : « Nunca olvidé esos años ».",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-carmen-miedo",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-carmen"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Carmen vivió tres años con miedo.",
+    "answer": "verdadero",
+    "translation": "Carmen vécut trois ans dans la peur.",
+    "explanation": "Verdadero : « Viví tres años con miedo ».",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-carmen-tio",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-carmen"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "El tío de Carmen cruzó la frontera con Italia.",
+    "answer": "falso",
+    "translation": "L’oncle de Carmen traversa la frontière avec l’Italie.",
+    "explanation": "Falso : cruzó la frontera con Francia.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-tebeo-batallas",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-tebeo"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Según el tebeo, la guerra de los padres fue como las de los tebeos, con hazañas heroicas.",
+    "answer": "falso",
+    "translation": "D’après la BD, la guerre des parents fut comme celles des BD, avec des exploits héroïques.",
+    "explanation": "Falso : « No era una guerra como las de los tebeos. No había grandes batallas ni hazañas heroicas ».",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "vf-tebeo-hambre",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-tebeo"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Los padres del narrador sabían lo que era el hambre.",
+    "answer": "verdadero",
+    "translation": "Les parents du narrateur savaient ce qu’était la faim.",
+    "explanation": "Verdadero : « Y hablando de hambre, ellos sabían muy bien lo que decían ».",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "vf-tebeo-frecuencia",
+    "type": "vrai-faux",
+    "theme": "memoria",
+    "notions": [
+      "memoria-tebeo"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Los padres del narrador nunca hablaban de la guerra.",
+    "answer": "falso",
+    "translation": "Les parents du narrateur ne parlaient jamais de la guerre.",
+    "explanation": "Falso : « hablaban con frecuencia de una guerra que habían vivido en su infancia ».",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "vf-bielsa",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La Bolsa de Bielsa ocurrió entre abril y junio de 1938.",
+    "answer": "verdadero",
+    "translation": "La poche de Bielsa eut lieu entre avril et juin 1938.",
+    "explanation": "Verdadero : la División 43 estuvo sitiada en el Valle de Bielsa (Huesca).",
+    "source": "tio-pepe-2"
+  },
+  {
+    "id": "vf-acento-1",
+    "type": "vrai-faux",
+    "theme": "regulares",
+    "notions": [
+      "acentos"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Luchó» y «lucho» significan lo mismo.",
+    "answer": "falso",
+    "translation": "« Luchó » et « lucho » veulent dire la même chose.",
+    "explanation": "Falso : luchó = il lutta (passé) ; lucho = je lutte (présent). L'accent change tout.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "vf-acento-2",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Los pretéritos fuertes (tuve, estuvo, hizo…) no llevan acento.",
+    "answer": "verdadero",
+    "translation": "Les prétérits forts (tuve, estuvo, hizo…) ne portent pas d’accent.",
+    "explanation": "Verdadero : « ces irréguliers ne prennent aucun accent » (fiche de grammaire).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "vf-acento-3",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La forma correcta es «dijieron».",
+    "answer": "falso",
+    "translation": "La forme correcte est « dijieron ».",
+    "explanation": "Falso : après le j, la 3e personne du pluriel se termine en -eron : dijeron, trajeron, condujeron, produjeron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "vf-acento-4",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En pretérito, «dormir» es irregular solo en la tercera persona: durmió, durmieron.",
+    "answer": "verdadero",
+    "translation": "Au passé simple, « dormir » n’est irrégulier qu’à la 3e personne : durmió, durmieron.",
+    "explanation": "Verdadero : dormí, dormiste, durmió, dormimos, dormisteis, durmieron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "vf-acento-5",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Pedí» es la forma de «yo» del verbo pedir.",
+    "answer": "verdadero",
+    "translation": "« Pedí » est la forme « yo » du verbe pedir.",
+    "explanation": "Verdadero : à la 1re personne, pas d'irrégularité (pedí). Seules les 3es personnes changent : pidió, pidieron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "vf-acento-6",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En pretérito, «producir» cambia la c por j en todas las personas.",
+    "answer": "verdadero",
+    "translation": "Au passé simple, « producir » change le c en j à toutes les personnes.",
+    "explanation": "Verdadero : produje, produjiste, produjo, produjimos, produjisteis, produjeron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "vf-acento-7",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Ser» e «ir» tienen formas diferentes en pretérito indefinido.",
+    "answer": "falso",
+    "translation": "« Ser » et « ir » ont des formes différentes au passé simple.",
+    "explanation": "Falso : « SER et IR ont les mêmes formes ! » fui, fuiste, fue, fuimos, fuisteis, fueron.",
+    "source": "mision-secreta"
+  }
+]

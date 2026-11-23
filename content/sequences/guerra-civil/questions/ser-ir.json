@@ -1,0 +1,460 @@
+[
+  {
+    "id": "serir-conj-yo",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Conjugue SER / IR au pretérito indefinido",
+    "prompt": "ser / ir — yo …",
+    "answer": "fui",
+    "accept": [],
+    "distractors": [
+      "fué",
+      "fue",
+      "fuisteis"
+    ],
+    "writable": true,
+    "translation": "ser = être · ir = aller · yo = je",
+    "explanation": "SER et IR ont les mêmes formes au pretérito indefinido : fui, fuiste, fue, fuimos, fuisteis, fueron. Aucun accent (fue, pas « fué »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "serir-conj-tu",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue SER / IR au pretérito indefinido",
+    "prompt": "ser / ir — tú …",
+    "answer": "fuiste",
+    "accept": [],
+    "distractors": [
+      "fui",
+      "fue",
+      "fuimos"
+    ],
+    "writable": true,
+    "translation": "ser = être · ir = aller · tú = tu",
+    "explanation": "SER et IR ont les mêmes formes au pretérito indefinido : fui, fuiste, fue, fuimos, fuisteis, fueron. Aucun accent (fue, pas « fué »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "serir-conj-el",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Conjugue SER / IR au pretérito indefinido",
+    "prompt": "ser / ir — él / ella …",
+    "answer": "fue",
+    "accept": [],
+    "distractors": [
+      "fué",
+      "fuiste",
+      "fuisteis"
+    ],
+    "writable": true,
+    "translation": "ser = être · ir = aller · él = il",
+    "explanation": "SER et IR ont les mêmes formes au pretérito indefinido : fui, fuiste, fue, fuimos, fuisteis, fueron. Aucun accent (fue, pas « fué »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "serir-conj-nos",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue SER / IR au pretérito indefinido",
+    "prompt": "ser / ir — nosotros …",
+    "answer": "fuimos",
+    "accept": [],
+    "distractors": [
+      "fui",
+      "fuiste",
+      "fue"
+    ],
+    "writable": true,
+    "translation": "ser = être · ir = aller · nosotros = nous",
+    "explanation": "SER et IR ont les mêmes formes au pretérito indefinido : fui, fuiste, fue, fuimos, fuisteis, fueron. Aucun accent (fue, pas « fué »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "serir-conj-vos",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue SER / IR au pretérito indefinido",
+    "prompt": "ser / ir — vosotros …",
+    "answer": "fuisteis",
+    "accept": [],
+    "distractors": [
+      "fui",
+      "fuiste",
+      "fue"
+    ],
+    "writable": true,
+    "translation": "ser = être · ir = aller · vosotros = vous",
+    "explanation": "SER et IR ont les mêmes formes au pretérito indefinido : fui, fuiste, fue, fuimos, fuisteis, fueron. Aucun accent (fue, pas « fué »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "serir-conj-ellos",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Conjugue SER / IR au pretérito indefinido",
+    "prompt": "ser / ir — ellos / ellas …",
+    "answer": "fueron",
+    "accept": [],
+    "distractors": [
+      "fui",
+      "fuiste",
+      "fue"
+    ],
+    "writable": true,
+    "translation": "ser = être · ir = aller · ellos = ils",
+    "explanation": "SER et IR ont les mêmes formes au pretérito indefinido : fui, fuiste, fue, fuimos, fuisteis, fueron. Aucun accent (fue, pas « fué »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "frase-eva-c",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "La guerra ___ muy sangrienta. (ser)",
+    "answer": "fue",
+    "accept": [],
+    "distractors": [
+      "fué",
+      "fui",
+      "fueron"
+    ],
+    "writable": true,
+    "translation": "La guerre fut très sanglante.",
+    "explanation": "ser, ella → fue. Pas d'accent sur « fue ».",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-eva-d",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchos republicanos ___ al exilio en Francia. (ir)",
+    "answer": "fueron",
+    "accept": [],
+    "distractors": [
+      "fue",
+      "fuimos",
+      "iban"
+    ],
+    "writable": true,
+    "translation": "Beaucoup de républicains partirent en exil en France.",
+    "explanation": "ir, ellos → fueron (mêmes formes que SER).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-tbo-3",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "La guerra ___ su pesadilla cotidiana. (ser)",
+    "answer": "fue",
+    "accept": [],
+    "distractors": [
+      "fui",
+      "fueron",
+      "fué"
+    ],
+    "writable": true,
+    "translation": "La guerre fut leur cauchemar quotidien.",
+    "explanation": "ser, ella → fue (ici « être » : on définit la guerre).",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "frase-irr-6",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi tío ___ a Francia. (ir)",
+    "answer": "fue",
+    "accept": [],
+    "distractors": [
+      "vino",
+      "fui",
+      "iba"
+    ],
+    "writable": true,
+    "translation": "Mon oncle alla en France.",
+    "explanation": "ir, él → fue. « Ir a Francia » = aller en France.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "serir-1",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Franco fue el jefe de los militares sublevados.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Franco fut le chef des militaires soulevés.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit ce qu'est quelqu'un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "serir-2",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Muchos españoles fueron a Francia.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Beaucoup d’Espagnols allèrent en France.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "serir-3",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«La guerra fue fratricida.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "La guerre fut fratricide.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit ce qu'est quelqu'un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "serir-4",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«El año pasado, fui al museo de la Guerra Civil.» — «fui» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "L’année dernière, je suis allé au musée de la Guerre civile.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "serir-5",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«La guerra fue muy sangrienta.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "La guerre fut très sanglante.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit ce qu'est quelqu'un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "serir-6",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Muchos republicanos fueron al exilio en Francia.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Beaucoup de républicains partirent en exil en France.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "serir-7",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Para mis padres, la guerra fue su pesadilla cotidiana.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Pour mes parents, la guerre fut leur cauchemar quotidien.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit ce qu'est quelqu'un ou quelque chose (être). → SER.",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "serir-8",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Carmen y su madre fueron al refugio.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Carmen et sa mère allèrent à l’abri.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "serir-9",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Fue una guerra entre los habitantes de un mismo país.» — «Fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Ce fut une guerre entre les habitants d’un même pays.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit ce qu'est quelqu'un ou quelque chose (être). → SER.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "serir-10",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Fuimos al refugio cuando sonaron las sirenas.» — «Fuimos» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "huir (fuir)"
+    ],
+    "writable": false,
+    "translation": "Nous allâmes à l’abri quand les sirènes sonnèrent.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "mision-secreta"
+  }
+]

@@ -70,7 +70,7 @@ export function intentInfo(game: Game, it: Intent): { ico: string; text: string;
   const c = game.state.combat!, e = game.enemy!;
   const base = e.attack + c.attackBonus;
   const mult = c.juicio ? 2 : 1;
-  const hit = (n: number) => `si tu te trompes : −${n * mult} PV`;
+  const hit = (n: number) => `après ta réponse : −${n * mult} PV`;
   switch (it.kind) {
     case 'attack': {
       const d = (it.value ?? e.attack) + c.attackBonus;
@@ -78,11 +78,11 @@ export function intentInfo(game: Game, it: Intent): { ico: string; text: string;
     }
     case 'shield': return { ico: '🛡️', text: `Bouclier +${it.value ?? 2}`, sub: `absorbe tes prochains dégâts · ${hit(base)}` };
     case 'heal': return { ico: '💚', text: `Soin +${it.value ?? 2}`, sub: `à la fin du tour · ${hit(base)}` };
-    case 'steal': return { ico: '🪙', text: `Vol de ${it.value ?? 2} monedas`, sub: `si tu te trompes · −${base * mult} PV` };
+    case 'steal': return { ico: '🪙', text: `Vol de ${it.value ?? 2} monedas`, sub: `après ta réponse · −${base * mult} PV` };
     case 'rush': return { ico: '⏱️', text: `Chrono −${it.value ?? 5} s`, sub: `cette question est plus courte · ${hit(base)}` };
-    case 'poison': return { ico: '☠️', text: `Poison ${it.value ?? 3}`, sub: `si tu te trompes : −1 PV par question · −${base * mult} PV` };
+    case 'poison': return { ico: '☠️', text: `Poison ${it.value ?? 3}`, sub: `−1 PV par question · −${base * mult} PV` };
     case 'fog': return { ico: '🌫️', text: 'Brouillard', sub: `pouvoirs bloqués pour cette question · ${hit(base)}` };
-    case 'stealItem': return { ico: '🎒', text: 'Vol de pouvoir', sub: `si tu te trompes, il te prend une aide · −${base * mult} PV` };
+    case 'stealItem': return { ico: '🎒', text: 'Vol de pouvoir', sub: `il te prend une aide · −${base * mult} PV` };
     case 'listen': return { ico: '🔊', text: 'Canto', sub: `la question est à écouter · ${hit(base)}` };
   }
 }

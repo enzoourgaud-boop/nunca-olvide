@@ -1,0 +1,344 @@
+[
+  {
+    "id": "aso-eva-1",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "la guerra",
+        "la guerre"
+      ],
+      [
+        "un bando",
+        "un camp"
+      ],
+      [
+        "huir",
+        "fuir"
+      ],
+      [
+        "el gobierno",
+        "le gouvernement"
+      ]
+    ],
+    "explanation": "la guerra = la guerre · un bando = un camp · huir = fuir · el gobierno = le gouvernement",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "aso-eva-2",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 3,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "fusilar",
+        "fusiller"
+      ],
+      [
+        "enterrar",
+        "enterrer"
+      ],
+      [
+        "sublevarse",
+        "se soulever"
+      ],
+      [
+        "el exilio",
+        "l'exil"
+      ]
+    ],
+    "explanation": "fusilar = fusiller · enterrar = enterrer · sublevarse = se soulever · el exilio = l'exil",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "aso-ce-1",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "ausente",
+        "absent"
+      ],
+      [
+        "con frecuencia",
+        "souvent"
+      ],
+      [
+        "la leyenda",
+        "la légende"
+      ],
+      [
+        "la esperanza",
+        "l'espoir"
+      ],
+      [
+        "el recuerdo",
+        "le souvenir"
+      ]
+    ],
+    "explanation": "ausente = absent · con frecuencia = souvent · la leyenda = la légende · la esperanza = l'espoir · el recuerdo = le souvenir",
+    "source": "ce-mi-tio",
+    "translation": ""
+  },
+  {
+    "id": "aso-mis-1",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "la frontera",
+        "la frontière"
+      ],
+      [
+        "el refugio",
+        "l'abri"
+      ],
+      [
+        "el miedo",
+        "la peur"
+      ],
+      [
+        "las cartas",
+        "les lettres"
+      ]
+    ],
+    "explanation": "la frontera = la frontière · el refugio = l'abri · el miedo = la peur · las cartas = les lettres",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "aso-mis-2",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "las sirenas",
+        "les sirènes"
+      ],
+      [
+        "los aviones",
+        "les avions"
+      ],
+      [
+        "el pueblo",
+        "le village"
+      ],
+      [
+        "la abuela",
+        "la grand-mère"
+      ],
+      [
+        "la nieta",
+        "la petite-fille"
+      ]
+    ],
+    "explanation": "las sirenas = les sirènes · los aviones = les avions · el pueblo = le village · la abuela = la grand-mère · la nieta = la petite-fille",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "aso-tbo-1",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "la pesadilla",
+        "le cauchemar"
+      ],
+      [
+        "el hambre",
+        "la faim"
+      ],
+      [
+        "el tebeo",
+        "la bande dessinée"
+      ],
+      [
+        "el campo de refugiados",
+        "le camp de réfugiés"
+      ]
+    ],
+    "explanation": "la pesadilla = le cauchemar · el hambre = la faim · el tebeo = la bande dessinée · el campo de refugiados = le camp de réfugiés",
+    "source": "tio-pepe-1",
+    "translation": ""
+  },
+  {
+    "id": "aso-img-1",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Associe chaque mot à son image",
+    "prompt": "Relie chaque mot espagnol à la bonne image.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "las sirenas",
+        "🚨"
+      ],
+      [
+        "los aviones",
+        "✈️"
+      ],
+      [
+        "el refugio",
+        "🏚️"
+      ],
+      [
+        "las cartas",
+        "✉️"
+      ]
+    ],
+    "explanation": "las sirenas = les sirènes · los aviones = les avions · el refugio = l'abri · las cartas = les lettres",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "aso-img-2",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Associe chaque mot à son image",
+    "prompt": "Relie chaque mot espagnol à la bonne image.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "la frontera",
+        "🚧"
+      ],
+      [
+        "el exilio",
+        "🧳"
+      ],
+      [
+        "el campo de refugiados",
+        "⛺"
+      ],
+      [
+        "huir",
+        "🏃"
+      ]
+    ],
+    "explanation": "la frontera = la frontière · el exilio = l'exil · el campo de refugiados = le camp de réfugiés · huir = fuir",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "aso-img-3",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Associe chaque mot à son image",
+    "prompt": "Relie chaque mot espagnol à la bonne image.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "la abuela",
+        "👵"
+      ],
+      [
+        "la nieta",
+        "👧"
+      ],
+      [
+        "el pueblo",
+        "🏘️"
+      ],
+      [
+        "el miedo",
+        "😨"
+      ]
+    ],
+    "explanation": "la abuela = la grand-mère · la nieta = la petite-fille · el pueblo = le village · el miedo = la peur",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "aso-img-4",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-memoria"
+    ],
+    "level": 1,
+    "label": "Associe chaque mot à son image",
+    "prompt": "Relie chaque mot espagnol à la bonne image.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "el tebeo",
+        "📰"
+      ],
+      [
+        "el hambre",
+        "🥣"
+      ],
+      [
+        "la pesadilla",
+        "😱"
+      ],
+      [
+        "el recuerdo",
+        "📷"
+      ],
+      [
+        "la esperanza",
+        "🌱"
+      ]
+    ],
+    "explanation": "el tebeo = la bande dessinée · el hambre = la faim · la pesadilla = le cauchemar · el recuerdo = le souvenir · la esperanza = l'espoir",
+    "source": "tio-pepe-1",
+    "translation": ""
+  }
+]

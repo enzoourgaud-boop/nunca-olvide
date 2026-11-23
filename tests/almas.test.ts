@@ -3,15 +3,15 @@ import { describe, expect, it } from 'vitest';
 import { CARRY_MAX, DEFAULT_SETTINGS, Game, RETRY_GAP, WARMUP_MAX } from '../src/engine/game';
 import { type Leitner, leitnerUpdate, pendingAlmas } from '../src/engine/meta';
 import { canonicalValue, wrongValue } from '../src/engine/questions';
-import { content } from './helpers';
+import { content, contentWithDisabled } from './helpers';
 import { simulate } from './sim';
 
-const S = { ...DEFAULT_SETTINGS };
+const S = { ...DEFAULT_SETTINGS, chrono: true };
 type Internals = { startFight(id: string): void };
 const good = (g: Game, id: string) => canonicalValue(g.getQuestion(id)!);
 const bad = (g: Game, id: string, options: string[]) => wrongValue(g.getQuestion(id)!, options);
 
-function fight(seed: string, settings = S, enemy = 'pan-de-muerto', pending: string[] = []): Game {
+function fight(seed: string, settings = S, enemy = 'hambre', pending: string[] = []): Game {
   const g = Game.newRun(content(), settings, seed, 0, { pending });
   if (g.state.screen === 'warmup') g.warmupSkip();
   (g as unknown as Internals).startFight(enemy);
@@ -44,8 +44,11 @@ describe('bugs corrigés', () => {
     c.hp = 50;
     g.state.hp = 10;
     g.state.poison = 2;
-    g.answer(good(g, c.q.id));
-    expect(g.state.hp).toBe(9);
+    const fb = g.answer(good(g, c.q.id))!;
+    // le poison (−1) s'ajoute à l'attaque de l'ennemi, qui frappe à chaque tour
+    expect(fb.lines.join(' ')).toMatch(/poison/);
+    expect(g.state.hp).toBe(10 - fb.dmgToPlayer);
+    expect(g.state.poison).toBe(1);
   });
   it('couper le chrono en cours de partie arrête le chrono de la question en cours', () => {
     const g = fight('CHRONO');
@@ -98,7 +101,7 @@ describe('bugs corrigés', () => {
     const sans = content().questions.find(q => !q.disabled && !q.translation && (q.type === 'qcm' || q.type === 'ecrit'))!;
     g.state.combat!.q = { id: sans.id, mode: 'qcm', options: [] };
     expect(g.translationText()).toMatch(/commence par/);
-    expect(g.powerBlock('traductor')).toBeNull();
+    expect(g.powerBlock('abuela')).toBeNull();
     const avec = content().questions.find(q => !q.disabled && !!q.translation)!;
     g.state.combat!.q = { id: avec.id, mode: 'qcm', options: [] };
     expect(g.translationText()).toBe(avec.translation);
@@ -142,13 +145,13 @@ describe('almas pendientes : les erreurs reviennent', () => {
     const fb = g.answer(good(g, missed))!;
     expect(g.state.retry).not.toContain(missed);
     expect(g.state.stats.freed).toBe(1);
-    expect(g.state.hp).toBe(6);
+    expect(g.state.hp).toBe(6 - fb.dmgToPlayer); // +1 PV, puis l'ennemi riposte
     expect(fb.fx).toContain('alma');
     expect(fb.lines.join(' ')).toMatch(/Alma liberada/);
   });
   it('une question en attente n’est jamais reposée si elle ne convient pas à l’ennemi (écrit obligatoire)', () => {
     const notWritable = ids(3, q => q.type === 'vrai-faux');
-    const g = fight('ALMA-2', S, 'pinata-furiosa', []);
+    const g = fight('ALMA-2', S, 'frontera', []);
     g.state.retry = [...notWritable];
     const c = () => g.state.combat!;
     c().hp = 999;
@@ -177,10 +180,10 @@ describe('échauffement de début de partie', () => {
     expect(g.state.retry).toEqual(pend.slice(WARMUP_MAX, CARRY_MAX));
   });
   it('questions inconnues, désactivées ou hors réglages : ignorées', () => {
-    const off = content().questions.find(q => q.disabled)!;
-    const voc = ids(1, q => q.theme === 'vocabulario')[0];
-    const conj = ids(1, q => q.theme === 'conjugacion')[0];
-    const g = Game.newRun(content(), { ...S, themes: ['conjugacion'] }, 'W2', 0, { pending: ['inconnue', off.id, voc, conj, conj] });
+    const off = contentWithDisabled().questions.find(q => q.disabled)!;
+    const voc = ids(1, q => q.theme === 'lexico')[0];
+    const conj = ids(1, q => q.theme === 'regulares')[0];
+    const g = Game.newRun(contentWithDisabled(), { ...S, themes: ['regulares'] }, 'W2', 0, { pending: ['inconnue', off.id, voc, conj, conj] });
     expect(g.state.warmup!.ids).toEqual([conj]);
   });
   it('chaque âme libérée donne +1 PV ; une erreur renvoie la question dans la partie', () => {

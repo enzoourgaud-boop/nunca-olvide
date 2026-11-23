@@ -1,0 +1,392 @@
+[
+  {
+    "id": "hist-inicio",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "prompt": "¿Cuándo empezó la guerra civil española?",
+    "answer": "En julio de 1936",
+    "accept": [
+      "julio de 1936",
+      "en 1936",
+      "1936"
+    ],
+    "distractors": [
+      "En julio de 1939",
+      "En junio de 1938",
+      "En 1928"
+    ],
+    "writable": true,
+    "translation": "Quand la guerre civile espagnole a-t-elle commencé ?",
+    "explanation": "En julio de 1936, unos generales se sublevaron contra la República (évaluation ex. 3 ; Misión secreta, phrase 1).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-final",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "prompt": "¿En qué año terminó la guerra civil?",
+    "answer": "En 1939",
+    "accept": [
+      "1939"
+    ],
+    "distractors": [
+      "En 1936",
+      "En 1938",
+      "En 1945"
+    ],
+    "writable": true,
+    "translation": "En quelle année la guerre civile s’est-elle terminée ?",
+    "explanation": "Según la abuela Carmen, la guerra terminó en 1939 (« Mi padre volvió a casa en 1939 »).",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-duracion",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "prompt": "¿Cuántos años duró la guerra?",
+    "answer": "Tres años",
+    "accept": [
+      "3 años",
+      "tres",
+      "3"
+    ],
+    "distractors": [
+      "Un año",
+      "Diez años",
+      "Treinta años"
+    ],
+    "writable": true,
+    "translation": "Combien d’années la guerre a-t-elle duré ?",
+    "explanation": "De 1936 a 1939 : tres años. Carmen dice: « Viví tres años con miedo ».",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-civil",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "prompt": "¿Qué es una guerra civil?",
+    "answer": "Una guerra entre los habitantes de un mismo país",
+    "accept": [],
+    "distractors": [
+      "Una guerra entre dos países",
+      "Una guerra en el mar",
+      "Una guerra sin armas"
+    ],
+    "writable": false,
+    "translation": "Qu’est-ce qu’une guerre civile ?",
+    "explanation": "« Muchos españoles lucharon unos contra otros » : une guerre civile oppose les habitants d'un même pays.",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-jefe",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "prompt": "¿Quién fue el jefe de los militares sublevados?",
+    "answer": "Franco",
+    "accept": [
+      "Francisco Franco",
+      "el general Franco"
+    ],
+    "distractors": [
+      "Carmen",
+      "Bielsa",
+      "Pepita"
+    ],
+    "writable": true,
+    "translation": "Qui fut le chef des militaires soulevés ?",
+    "explanation": "Franco fue el jefe de los militares sublevados (évaluation ex. 4).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-contra",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "¿Contra qué se sublevaron los generales en 1936?",
+    "answer": "Contra la República",
+    "accept": [
+      "la República",
+      "contra el gobierno de la República"
+    ],
+    "distractors": [
+      "Contra Francia",
+      "Contra Alemania",
+      "Contra Italia"
+    ],
+    "writable": true,
+    "translation": "Contre quoi les généraux se sont-ils soulevés en 1936 ?",
+    "explanation": "Unos generales se sublevaron contra la República.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-ayuda",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "¿Qué ayuda tuvo Franco?",
+    "answer": "La ayuda de la Alemania nazi y de la Italia fascista",
+    "accept": [],
+    "distractors": [
+      "La ayuda de Francia",
+      "La ayuda de la República",
+      "Ninguna ayuda"
+    ],
+    "writable": false,
+    "translation": "Quelle aide Franco a-t-il eue ?",
+    "explanation": "Franco tuvo la ayuda de la Alemania nazi y de la Italia fascista (évaluation ex. 3b).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-bandos",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "¿Cuáles fueron los dos bandos de la guerra?",
+    "answer": "Los republicanos y los militares sublevados",
+    "accept": [],
+    "distractors": [
+      "Los españoles y los franceses",
+      "Los alemanes y los italianos",
+      "Los niños y los abuelos"
+    ],
+    "writable": false,
+    "translation": "Quels furent les deux camps de la guerre ?",
+    "explanation": "D'un côté, les républicains (le gouvernement de la République) ; de l'autre, los militares sublevados, dirigés par Franco.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-exilio",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 1,
+    "prompt": "¿Adónde fueron al exilio muchos republicanos?",
+    "answer": "A Francia",
+    "accept": [
+      "Francia",
+      "en Francia"
+    ],
+    "distractors": [
+      "A Alemania",
+      "A Italia",
+      "A Barcelona"
+    ],
+    "writable": true,
+    "translation": "Où beaucoup de républicains sont-ils partis en exil ?",
+    "explanation": "Muchos republicanos fueron al exilio en Francia.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-campo",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 2,
+    "prompt": "¿Dónde estuvo el bisabuelo del documento?",
+    "answer": "En un campo de refugiados en Francia",
+    "accept": [],
+    "distractors": [
+      "En el frente de Bielsa",
+      "En un refugio en Madrid",
+      "En un museo"
+    ],
+    "writable": false,
+    "translation": "Où était l’arrière-grand-père du document ?",
+    "explanation": "« Mi bisabuelo estuvo en un campo de refugiados en Francia » (évaluation ex. 3f).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-volver",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 2,
+    "prompt": "Después de la guerra, ¿muchas familias pudieron volver a España?",
+    "answer": "No, muchas familias no pudieron volver",
+    "accept": [],
+    "distractors": [
+      "Sí, todas volvieron en 1939",
+      "Sí, volvieron en 1936",
+      "No, porque no querían"
+    ],
+    "writable": false,
+    "translation": "Après la guerre, beaucoup de familles ont-elles pu revenir en Espagne ?",
+    "explanation": "« Muchas familias no pudieron volver a España » (évaluation ex. 3e).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-sangrienta",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 2,
+    "prompt": "¿Cómo fue la guerra, según el documento?",
+    "answer": "Muy sangrienta",
+    "accept": [
+      "sangrienta",
+      "fratricida"
+    ],
+    "distractors": [
+      "Muy corta",
+      "Muy divertida",
+      "Sin batallas"
+    ],
+    "writable": true,
+    "translation": "Comment fut la guerre, d’après le document ?",
+    "explanation": "La guerra fue muy sangrienta y fratricida (entre hermanos).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-tio",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "memoria-carmen",
+      "hist-exilio"
+    ],
+    "level": 1,
+    "prompt": "¿Adónde fue el tío de Carmen?",
+    "answer": "A Francia",
+    "accept": [
+      "Francia",
+      "en Francia"
+    ],
+    "distractors": [
+      "A Barcelona",
+      "A Italia",
+      "Al refugio"
+    ],
+    "writable": true,
+    "translation": "Où est allé l’oncle de Carmen ?",
+    "explanation": "« Mi tío cruzó la frontera con Francia. »",
+    "source": "mision-secreta",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-bielsa",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 3,
+    "prompt": "¿Dónde estuvo sitiada la División 43 en 1938?",
+    "answer": "En el Valle de Bielsa (Huesca)",
+    "accept": [
+      "en el Valle de Bielsa",
+      "en Bielsa",
+      "Bielsa"
+    ],
+    "distractors": [
+      "En Cádiz",
+      "En Francia",
+      "En Barcelona"
+    ],
+    "writable": false,
+    "translation": "Où la Division 43 a-t-elle été assiégée en 1938 ?",
+    "explanation": "« Entre abril y junio del 38, la División 43 estuvo sitiada en el Valle de Bielsa (Huesca). Es el episodio conocido como \"La Bolsa de Bielsa\". »",
+    "source": "tio-pepe-2",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "hist-bolsa",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 3,
+    "prompt": "¿Cómo se llama el episodio del Valle de Bielsa en 1938?",
+    "answer": "La Bolsa de Bielsa",
+    "accept": [],
+    "distractors": [
+      "La Batalla de Francia",
+      "El Valle de los Tebeos",
+      "La Bolsa de Huesca"
+    ],
+    "writable": true,
+    "translation": "Comment s’appelle l’épisode de la vallée de Bielsa en 1938 ?",
+    "explanation": "Es el episodio conocido como « La Bolsa de Bielsa » (abril-junio de 1938).",
+    "source": "tio-pepe-2",
+    "check": {
+      "ignoreArticles": true
+    }
+  }
+]

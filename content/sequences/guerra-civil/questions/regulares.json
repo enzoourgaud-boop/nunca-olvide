@@ -1,0 +1,2045 @@
+[
+  {
+    "id": "reg-bailar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bailar — yo …",
+    "answer": "bailé",
+    "accept": [],
+    "distractors": [
+      "bailó",
+      "bailo",
+      "bailasteis"
+    ],
+    "writable": true,
+    "translation": "bailar = danser · yo = je",
+    "explanation": "bailar au pretérito indefinido : bailé, bailaste, bailó, bailamos, bailasteis, bailaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « bailé ».",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bailar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bailar — él / ella …",
+    "answer": "bailó",
+    "accept": [],
+    "distractors": [
+      "bailé",
+      "baila",
+      "bailo"
+    ],
+    "writable": true,
+    "translation": "bailar = danser · él = il",
+    "explanation": "bailar au pretérito indefinido : bailé, bailaste, bailó, bailamos, bailasteis, bailaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « bailó » (il danser… au passé) ≠ « bailo » (présent, « je »).",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bailar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bailar — ellos / ellas …",
+    "answer": "bailaron",
+    "accept": [],
+    "distractors": [
+      "bailé",
+      "bailaste",
+      "bailamos"
+    ],
+    "writable": true,
+    "translation": "bailar = danser · ellos = ils",
+    "explanation": "bailar au pretérito indefinido : bailé, bailaste, bailó, bailamos, bailasteis, bailaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bailar-tu",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bailar — tú …",
+    "answer": "bailaste",
+    "accept": [],
+    "distractors": [
+      "bailé",
+      "bailamos",
+      "bailaron"
+    ],
+    "writable": true,
+    "translation": "bailar = danser · tú = tu",
+    "explanation": "bailar au pretérito indefinido : bailé, bailaste, bailó, bailamos, bailasteis, bailaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bailar-vos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bailar — vosotros …",
+    "answer": "bailasteis",
+    "accept": [],
+    "distractors": [
+      "bailé",
+      "bailó",
+      "bailaste"
+    ],
+    "writable": true,
+    "translation": "bailar = danser · vosotros = vous",
+    "explanation": "bailar au pretérito indefinido : bailé, bailaste, bailó, bailamos, bailasteis, bailaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-comer-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "comer — yo …",
+    "answer": "comí",
+    "accept": [],
+    "distractors": [
+      "comió",
+      "como",
+      "comisteis"
+    ],
+    "writable": true,
+    "translation": "comer = manger · yo = je",
+    "explanation": "comer au pretérito indefinido : comí, comiste, comió, comimos, comisteis, comieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-comer-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "comer — él / ella …",
+    "answer": "comió",
+    "accept": [],
+    "distractors": [
+      "comí",
+      "come",
+      "como"
+    ],
+    "writable": true,
+    "translation": "comer = manger · él = il",
+    "explanation": "comer au pretérito indefinido : comí, comiste, comió, comimos, comisteis, comieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « comió » (il manger… au passé) ≠ « comio » (présent, « je »).",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-comer-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "comer — ellos / ellas …",
+    "answer": "comieron",
+    "accept": [],
+    "distractors": [
+      "comí",
+      "comiste",
+      "comimos"
+    ],
+    "writable": true,
+    "translation": "comer = manger · ellos = ils",
+    "explanation": "comer au pretérito indefinido : comí, comiste, comió, comimos, comisteis, comieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-comer-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "comer — nosotros …",
+    "answer": "comimos",
+    "accept": [],
+    "distractors": [
+      "comí",
+      "comieron",
+      "comiste"
+    ],
+    "writable": true,
+    "translation": "comer = manger · nosotros = nous",
+    "explanation": "comer au pretérito indefinido : comí, comiste, comió, comimos, comisteis, comieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-comer-tu",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "comer — tú …",
+    "answer": "comiste",
+    "accept": [],
+    "distractors": [
+      "comí",
+      "comimos",
+      "comieron"
+    ],
+    "writable": true,
+    "translation": "comer = manger · tú = tu",
+    "explanation": "comer au pretérito indefinido : comí, comiste, comió, comimos, comisteis, comieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-comer-vos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "comer — vosotros …",
+    "answer": "comisteis",
+    "accept": [],
+    "distractors": [
+      "comí",
+      "comió",
+      "comiste"
+    ],
+    "writable": true,
+    "translation": "comer = manger · vosotros = vous",
+    "explanation": "comer au pretérito indefinido : comí, comiste, comió, comimos, comisteis, comieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vivir-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vivir — yo …",
+    "answer": "viví",
+    "accept": [],
+    "distractors": [
+      "vivió",
+      "vivo",
+      "vivisteis"
+    ],
+    "writable": true,
+    "translation": "vivir = vivre · yo = je",
+    "explanation": "vivir au pretérito indefinido : viví, viviste, vivió, vivimos, vivisteis, vivieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vivir-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vivir — él / ella …",
+    "answer": "vivió",
+    "accept": [],
+    "distractors": [
+      "viví",
+      "vive",
+      "vivo"
+    ],
+    "writable": true,
+    "translation": "vivir = vivre · él = il",
+    "explanation": "vivir au pretérito indefinido : viví, viviste, vivió, vivimos, vivisteis, vivieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « vivió » (il vivre… au passé) ≠ « vivio » (présent, « je »).",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vivir-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vivir — ellos / ellas …",
+    "answer": "vivieron",
+    "accept": [],
+    "distractors": [
+      "viví",
+      "viviste",
+      "vivimos"
+    ],
+    "writable": true,
+    "translation": "vivir = vivre · ellos = ils",
+    "explanation": "vivir au pretérito indefinido : viví, viviste, vivió, vivimos, vivisteis, vivieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vivir-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vivir — nosotros …",
+    "answer": "vivimos",
+    "accept": [],
+    "distractors": [
+      "viví",
+      "vivieron",
+      "viviste"
+    ],
+    "writable": true,
+    "translation": "vivir = vivre · nosotros = nous",
+    "explanation": "vivir au pretérito indefinido : viví, viviste, vivió, vivimos, vivisteis, vivieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vivir-tu",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vivir — tú …",
+    "answer": "viviste",
+    "accept": [],
+    "distractors": [
+      "viví",
+      "vivimos",
+      "vivieron"
+    ],
+    "writable": true,
+    "translation": "vivir = vivre · tú = tu",
+    "explanation": "vivir au pretérito indefinido : viví, viviste, vivió, vivimos, vivisteis, vivieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vivir-vos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vivir — vosotros …",
+    "answer": "vivisteis",
+    "accept": [],
+    "distractors": [
+      "viví",
+      "vivió",
+      "viviste"
+    ],
+    "writable": true,
+    "translation": "vivir = vivre · vosotros = vous",
+    "explanation": "vivir au pretérito indefinido : viví, viviste, vivió, vivimos, vivisteis, vivieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-hablar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hablar — yo …",
+    "answer": "hablé",
+    "accept": [],
+    "distractors": [
+      "habló",
+      "hablo",
+      "hablasteis"
+    ],
+    "writable": true,
+    "translation": "hablar = parler · yo = je",
+    "explanation": "hablar au pretérito indefinido : hablé, hablaste, habló, hablamos, hablasteis, hablaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « hablé ».",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-hablar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hablar — él / ella …",
+    "answer": "habló",
+    "accept": [],
+    "distractors": [
+      "hablé",
+      "habla",
+      "hablo"
+    ],
+    "writable": true,
+    "translation": "hablar = parler · él = il",
+    "explanation": "hablar au pretérito indefinido : hablé, hablaste, habló, hablamos, hablasteis, hablaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « habló » (il parler… au passé) ≠ « hablo » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-hablar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hablar — ellos / ellas …",
+    "answer": "hablaron",
+    "accept": [],
+    "distractors": [
+      "hablé",
+      "hablaste",
+      "hablamos"
+    ],
+    "writable": true,
+    "translation": "hablar = parler · ellos = ils",
+    "explanation": "hablar au pretérito indefinido : hablé, hablaste, habló, hablamos, hablasteis, hablaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-luchar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "luchar — yo …",
+    "answer": "luché",
+    "accept": [],
+    "distractors": [
+      "luchó",
+      "lucho",
+      "luchasteis"
+    ],
+    "writable": true,
+    "translation": "luchar = lutter · yo = je",
+    "explanation": "luchar au pretérito indefinido : luché, luchaste, luchó, luchamos, luchasteis, lucharon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « luché ».",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-luchar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "luchar — él / ella …",
+    "answer": "luchó",
+    "accept": [],
+    "distractors": [
+      "luché",
+      "lucha",
+      "lucho"
+    ],
+    "writable": true,
+    "translation": "luchar = lutter · él = il",
+    "explanation": "luchar au pretérito indefinido : luché, luchaste, luchó, luchamos, luchasteis, lucharon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « luchó » (il lutter… au passé) ≠ « lucho » (présent, « je »).",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-luchar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "luchar — ellos / ellas …",
+    "answer": "lucharon",
+    "accept": [],
+    "distractors": [
+      "luché",
+      "luchaste",
+      "luchamos"
+    ],
+    "writable": true,
+    "translation": "luchar = lutter · ellos = ils",
+    "explanation": "luchar au pretérito indefinido : luché, luchaste, luchó, luchamos, luchasteis, lucharon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-luchar-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "luchar — nosotros …",
+    "answer": "luchamos",
+    "accept": [],
+    "distractors": [
+      "luché",
+      "lucharon",
+      "luchaste"
+    ],
+    "writable": true,
+    "translation": "luchar = lutter · nosotros = nous",
+    "explanation": "luchar au pretérito indefinido : luché, luchaste, luchó, luchamos, luchasteis, lucharon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-luchar-tu",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "luchar — tú …",
+    "answer": "luchaste",
+    "accept": [],
+    "distractors": [
+      "luché",
+      "luchamos",
+      "lucharon"
+    ],
+    "writable": true,
+    "translation": "luchar = lutter · tú = tu",
+    "explanation": "luchar au pretérito indefinido : luché, luchaste, luchó, luchamos, luchasteis, lucharon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-luchar-vos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "luchar — vosotros …",
+    "answer": "luchasteis",
+    "accept": [],
+    "distractors": [
+      "luché",
+      "luchó",
+      "luchaste"
+    ],
+    "writable": true,
+    "translation": "luchar = lutter · vosotros = vous",
+    "explanation": "luchar au pretérito indefinido : luché, luchaste, luchó, luchamos, luchasteis, lucharon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vencer-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vencer — yo …",
+    "answer": "vencí",
+    "accept": [],
+    "distractors": [
+      "venció",
+      "venco",
+      "vencisteis"
+    ],
+    "writable": true,
+    "translation": "vencer = vaincre · yo = je",
+    "explanation": "vencer au pretérito indefinido : vencí, venciste, venció, vencimos, vencisteis, vencieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vencer-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vencer — él / ella …",
+    "answer": "venció",
+    "accept": [],
+    "distractors": [
+      "vencí",
+      "vence",
+      "venco"
+    ],
+    "writable": true,
+    "translation": "vencer = vaincre · él = il",
+    "explanation": "vencer au pretérito indefinido : vencí, venciste, venció, vencimos, vencisteis, vencieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « venció » (il vaincre… au passé) ≠ « vencio » (présent, « je »).",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-vencer-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "vencer — ellos / ellas …",
+    "answer": "vencieron",
+    "accept": [],
+    "distractors": [
+      "vencí",
+      "venciste",
+      "vencimos"
+    ],
+    "writable": true,
+    "translation": "vencer = vaincre · ellos = ils",
+    "explanation": "vencer au pretérito indefinido : vencí, venciste, venció, vencimos, vencisteis, vencieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-sufrir-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "sufrir — yo …",
+    "answer": "sufrí",
+    "accept": [],
+    "distractors": [
+      "sufrió",
+      "sufro",
+      "sufristeis"
+    ],
+    "writable": true,
+    "translation": "sufrir = souffrir · yo = je",
+    "explanation": "sufrir au pretérito indefinido : sufrí, sufriste, sufrió, sufrimos, sufristeis, sufrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-sufrir-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "sufrir — él / ella …",
+    "answer": "sufrió",
+    "accept": [],
+    "distractors": [
+      "sufrí",
+      "sufre",
+      "sufro"
+    ],
+    "writable": true,
+    "translation": "sufrir = souffrir · él = il",
+    "explanation": "sufrir au pretérito indefinido : sufrí, sufriste, sufrió, sufrimos, sufristeis, sufrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « sufrió » (il souffrir… au passé) ≠ « sufrio » (présent, « je »).",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-sufrir-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "sufrir — ellos / ellas …",
+    "answer": "sufrieron",
+    "accept": [],
+    "distractors": [
+      "sufrí",
+      "sufriste",
+      "sufrimos"
+    ],
+    "writable": true,
+    "translation": "sufrir = souffrir · ellos = ils",
+    "explanation": "sufrir au pretérito indefinido : sufrí, sufriste, sufrió, sufrimos, sufristeis, sufrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cambiar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cambiar — yo …",
+    "answer": "cambié",
+    "accept": [],
+    "distractors": [
+      "cambió",
+      "cambio",
+      "cambiasteis"
+    ],
+    "writable": true,
+    "translation": "cambiar = changer · yo = je",
+    "explanation": "cambiar au pretérito indefinido : cambié, cambiaste, cambió, cambiamos, cambiasteis, cambiaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « cambié ».",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cambiar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cambiar — él / ella …",
+    "answer": "cambió",
+    "accept": [],
+    "distractors": [
+      "cambié",
+      "cambia",
+      "cambio"
+    ],
+    "writable": true,
+    "translation": "cambiar = changer · él = il",
+    "explanation": "cambiar au pretérito indefinido : cambié, cambiaste, cambió, cambiamos, cambiasteis, cambiaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « cambió » (il changer… au passé) ≠ « cambio » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cambiar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cambiar — ellos / ellas …",
+    "answer": "cambiaron",
+    "accept": [],
+    "distractors": [
+      "cambié",
+      "cambiaste",
+      "cambiamos"
+    ],
+    "writable": true,
+    "translation": "cambiar = changer · ellos = ils",
+    "explanation": "cambiar au pretérito indefinido : cambié, cambiaste, cambió, cambiamos, cambiasteis, cambiaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cambiar-tu",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cambiar — tú …",
+    "answer": "cambiaste",
+    "accept": [],
+    "distractors": [
+      "cambié",
+      "cambiamos",
+      "cambiaron"
+    ],
+    "writable": true,
+    "translation": "cambiar = changer · tú = tu",
+    "explanation": "cambiar au pretérito indefinido : cambié, cambiaste, cambió, cambiamos, cambiasteis, cambiaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cambiar-vos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cambiar — vosotros …",
+    "answer": "cambiasteis",
+    "accept": [],
+    "distractors": [
+      "cambié",
+      "cambió",
+      "cambiaste"
+    ],
+    "writable": true,
+    "translation": "cambiar = changer · vosotros = vous",
+    "explanation": "cambiar au pretérito indefinido : cambié, cambiaste, cambió, cambiamos, cambiasteis, cambiaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-salir-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "salir — yo …",
+    "answer": "salí",
+    "accept": [],
+    "distractors": [
+      "salió",
+      "salo",
+      "salisteis"
+    ],
+    "writable": true,
+    "translation": "salir = sortir / partir · yo = je",
+    "explanation": "salir au pretérito indefinido : salí, saliste, salió, salimos, salisteis, salieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-salir-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "salir — él / ella …",
+    "answer": "salió",
+    "accept": [],
+    "distractors": [
+      "salí",
+      "sale",
+      "salo"
+    ],
+    "writable": true,
+    "translation": "salir = sortir / partir · él = il",
+    "explanation": "salir au pretérito indefinido : salí, saliste, salió, salimos, salisteis, salieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « salió » (il sortir… au passé) ≠ « salio » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-salir-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "salir — ellos / ellas …",
+    "answer": "salieron",
+    "accept": [],
+    "distractors": [
+      "salí",
+      "saliste",
+      "salimos"
+    ],
+    "writable": true,
+    "translation": "salir = sortir / partir · ellos = ils",
+    "explanation": "salir au pretérito indefinido : salí, saliste, salió, salimos, salisteis, salieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-salir-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "salir — nosotros …",
+    "answer": "salimos",
+    "accept": [],
+    "distractors": [
+      "salí",
+      "salieron",
+      "saliste"
+    ],
+    "writable": true,
+    "translation": "salir = sortir / partir · nosotros = nous",
+    "explanation": "salir au pretérito indefinido : salí, saliste, salió, salimos, salisteis, salieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-esperar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "esperar — yo …",
+    "answer": "esperé",
+    "accept": [],
+    "distractors": [
+      "esperó",
+      "espero",
+      "esperasteis"
+    ],
+    "writable": true,
+    "translation": "esperar = attendre · yo = je",
+    "explanation": "esperar au pretérito indefinido : esperé, esperaste, esperó, esperamos, esperasteis, esperaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « esperé ».",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-esperar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "esperar — él / ella …",
+    "answer": "esperó",
+    "accept": [],
+    "distractors": [
+      "esperé",
+      "espera",
+      "espero"
+    ],
+    "writable": true,
+    "translation": "esperar = attendre · él = il",
+    "explanation": "esperar au pretérito indefinido : esperé, esperaste, esperó, esperamos, esperasteis, esperaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « esperó » (il attendre… au passé) ≠ « espero » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-esperar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "esperar — ellos / ellas …",
+    "answer": "esperaron",
+    "accept": [],
+    "distractors": [
+      "esperé",
+      "esperaste",
+      "esperamos"
+    ],
+    "writable": true,
+    "translation": "esperar = attendre · ellos = ils",
+    "explanation": "esperar au pretérito indefinido : esperé, esperaste, esperó, esperamos, esperasteis, esperaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-esperar-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "esperar — nosotros …",
+    "answer": "esperamos",
+    "accept": [],
+    "distractors": [
+      "esperé",
+      "esperaron",
+      "esperaste"
+    ],
+    "writable": true,
+    "translation": "esperar = attendre · nosotros = nous",
+    "explanation": "esperar au pretérito indefinido : esperé, esperaste, esperó, esperamos, esperasteis, esperaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-correr-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "correr — yo …",
+    "answer": "corrí",
+    "accept": [],
+    "distractors": [
+      "corrió",
+      "corro",
+      "corristeis"
+    ],
+    "writable": true,
+    "translation": "correr = courir · yo = je",
+    "explanation": "correr au pretérito indefinido : corrí, corriste, corrió, corrimos, corristeis, corrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-correr-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "correr — él / ella …",
+    "answer": "corrió",
+    "accept": [],
+    "distractors": [
+      "corrí",
+      "corre",
+      "corro"
+    ],
+    "writable": true,
+    "translation": "correr = courir · él = il",
+    "explanation": "correr au pretérito indefinido : corrí, corriste, corrió, corrimos, corristeis, corrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « corrió » (il courir… au passé) ≠ « corrio » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-correr-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "correr — ellos / ellas …",
+    "answer": "corrieron",
+    "accept": [],
+    "distractors": [
+      "corrí",
+      "corriste",
+      "corrimos"
+    ],
+    "writable": true,
+    "translation": "correr = courir · ellos = ils",
+    "explanation": "correr au pretérito indefinido : corrí, corriste, corrió, corrimos, corristeis, corrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-correr-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "correr — nosotros …",
+    "answer": "corrimos",
+    "accept": [],
+    "distractors": [
+      "corrí",
+      "corrieron",
+      "corriste"
+    ],
+    "writable": true,
+    "translation": "correr = courir · nosotros = nous",
+    "explanation": "correr au pretérito indefinido : corrí, corriste, corrió, corrimos, corristeis, corrieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-abandonar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "abandonar — yo …",
+    "answer": "abandoné",
+    "accept": [],
+    "distractors": [
+      "abandonó",
+      "abandono",
+      "abandonasteis"
+    ],
+    "writable": true,
+    "translation": "abandonar = abandonner · yo = je",
+    "explanation": "abandonar au pretérito indefinido : abandoné, abandonaste, abandonó, abandonamos, abandonasteis, abandonaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « abandoné ».",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-abandonar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "abandonar — él / ella …",
+    "answer": "abandonó",
+    "accept": [],
+    "distractors": [
+      "abandoné",
+      "abandona",
+      "abandono"
+    ],
+    "writable": true,
+    "translation": "abandonar = abandonner · él = il",
+    "explanation": "abandonar au pretérito indefinido : abandoné, abandonaste, abandonó, abandonamos, abandonasteis, abandonaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « abandonó » (il abandonner… au passé) ≠ « abandono » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-abandonar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "abandonar — ellos / ellas …",
+    "answer": "abandonaron",
+    "accept": [],
+    "distractors": [
+      "abandoné",
+      "abandonaste",
+      "abandonamos"
+    ],
+    "writable": true,
+    "translation": "abandonar = abandonner · ellos = ils",
+    "explanation": "abandonar au pretérito indefinido : abandoné, abandonaste, abandonó, abandonamos, abandonasteis, abandonaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bombardear-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bombardear — yo …",
+    "answer": "bombardeé",
+    "accept": [],
+    "distractors": [
+      "bombardeó",
+      "bombardeo",
+      "bombardeasteis"
+    ],
+    "writable": true,
+    "translation": "bombardear = bombarder · yo = je",
+    "explanation": "bombardear au pretérito indefinido : bombardeé, bombardeaste, bombardeó, bombardeamos, bombardeasteis, bombardearon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « bombardeé ».",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bombardear-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bombardear — él / ella …",
+    "answer": "bombardeó",
+    "accept": [],
+    "distractors": [
+      "bombardeé",
+      "bombardea",
+      "bombardeo"
+    ],
+    "writable": true,
+    "translation": "bombardear = bombarder · él = il",
+    "explanation": "bombardear au pretérito indefinido : bombardeé, bombardeaste, bombardeó, bombardeamos, bombardeasteis, bombardearon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « bombardeó » (il bombarder… au passé) ≠ « bombardeo » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-bombardear-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "bombardear — ellos / ellas …",
+    "answer": "bombardearon",
+    "accept": [],
+    "distractors": [
+      "bombardeé",
+      "bombardeaste",
+      "bombardeamos"
+    ],
+    "writable": true,
+    "translation": "bombardear = bombarder · ellos = ils",
+    "explanation": "bombardear au pretérito indefinido : bombardeé, bombardeaste, bombardeó, bombardeamos, bombardeasteis, bombardearon. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-volver-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "volver — yo …",
+    "answer": "volví",
+    "accept": [],
+    "distractors": [
+      "volvió",
+      "volvo",
+      "volvisteis"
+    ],
+    "writable": true,
+    "translation": "volver = revenir · yo = je",
+    "explanation": "volver au pretérito indefinido : volví, volviste, volvió, volvimos, volvisteis, volvieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-volver-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "volver — él / ella …",
+    "answer": "volvió",
+    "accept": [],
+    "distractors": [
+      "volví",
+      "volve",
+      "volvo"
+    ],
+    "writable": true,
+    "translation": "volver = revenir · él = il",
+    "explanation": "volver au pretérito indefinido : volví, volviste, volvió, volvimos, volvisteis, volvieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron. Attention à l'accent : « volvió » (il revenir… au passé) ≠ « volvio » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-volver-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "volver — ellos / ellas …",
+    "answer": "volvieron",
+    "accept": [],
+    "distractors": [
+      "volví",
+      "volviste",
+      "volvimos"
+    ],
+    "writable": true,
+    "translation": "volver = revenir · ellos = ils",
+    "explanation": "volver au pretérito indefinido : volví, volviste, volvió, volvimos, volvisteis, volvieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-volver-nos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "volver — nosotros …",
+    "answer": "volvimos",
+    "accept": [],
+    "distractors": [
+      "volví",
+      "volvieron",
+      "volviste"
+    ],
+    "writable": true,
+    "translation": "volver = revenir · nosotros = nous",
+    "explanation": "volver au pretérito indefinido : volví, volviste, volvió, volvimos, volvisteis, volvieron. Verbe régulier en -ER / -IR : -í, -iste, -ió, -imos, -isteis, -ieron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-olvidar-yo",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "olvidar — yo …",
+    "answer": "olvidé",
+    "accept": [],
+    "distractors": [
+      "olvidó",
+      "olvido",
+      "olvidasteis"
+    ],
+    "writable": true,
+    "translation": "olvidar = oublier · yo = je",
+    "explanation": "olvidar au pretérito indefinido : olvidé, olvidaste, olvidó, olvidamos, olvidasteis, olvidaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent final : « olvidé ».",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-olvidar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "olvidar — él / ella …",
+    "answer": "olvidó",
+    "accept": [],
+    "distractors": [
+      "olvidé",
+      "olvida",
+      "olvido"
+    ],
+    "writable": true,
+    "translation": "olvidar = oublier · él = il",
+    "explanation": "olvidar au pretérito indefinido : olvidé, olvidaste, olvidó, olvidamos, olvidasteis, olvidaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « olvidó » (il oublier… au passé) ≠ « olvido » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-olvidar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "olvidar — ellos / ellas …",
+    "answer": "olvidaron",
+    "accept": [],
+    "distractors": [
+      "olvidé",
+      "olvidaste",
+      "olvidamos"
+    ],
+    "writable": true,
+    "translation": "olvidar = oublier · ellos = ils",
+    "explanation": "olvidar au pretérito indefinido : olvidé, olvidaste, olvidó, olvidamos, olvidasteis, olvidaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-llegar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "llegar — él / ella …",
+    "answer": "llegó",
+    "accept": [],
+    "distractors": [
+      "llegé",
+      "llega",
+      "llego"
+    ],
+    "writable": true,
+    "translation": "llegar = arriver · él = il",
+    "explanation": "llegar au pretérito indefinido : llegé, llegaste, llegó, llegamos, llegasteis, llegaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « llegó » (il arriver… au passé) ≠ « llego » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-llegar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "llegar — ellos / ellas …",
+    "answer": "llegaron",
+    "accept": [],
+    "distractors": [
+      "llegé",
+      "llegaste",
+      "llegamos"
+    ],
+    "writable": true,
+    "translation": "llegar = arriver · ellos = ils",
+    "explanation": "llegar au pretérito indefinido : llegé, llegaste, llegó, llegamos, llegasteis, llegaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cruzar-el",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cruzar — él / ella …",
+    "answer": "cruzó",
+    "accept": [],
+    "distractors": [
+      "cruzé",
+      "cruza",
+      "cruzo"
+    ],
+    "writable": true,
+    "translation": "cruzar = traverser · él = il",
+    "explanation": "cruzar au pretérito indefinido : cruzé, cruzaste, cruzó, cruzamos, cruzasteis, cruzaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron. Attention à l'accent : « cruzó » (il traverser… au passé) ≠ « cruzo » (présent, « je »).",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "reg-cruzar-ellos",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "cruzar — ellos / ellas …",
+    "answer": "cruzaron",
+    "accept": [],
+    "distractors": [
+      "cruzé",
+      "cruzaste",
+      "cruzamos"
+    ],
+    "writable": true,
+    "translation": "cruzar = traverser · ellos = ils",
+    "explanation": "cruzar au pretérito indefinido : cruzé, cruzaste, cruzó, cruzamos, cruzasteis, cruzaron. Verbe régulier en -AR : -é, -aste, -ó, -amos, -asteis, -aron.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "frase-mis-1",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "En julio de 1936, unos militares ___ a mi pueblo con sus armas. (llegar)",
+    "answer": "llegaron",
+    "accept": [],
+    "distractors": [
+      "llegaban",
+      "llegó",
+      "llegamos"
+    ],
+    "writable": true,
+    "translation": "En juillet 1936, des militaires arrivèrent dans mon village avec leurs armes.",
+    "explanation": "llegar, ellos → llegaron (-AR : -aron).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-2",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchos españoles ___ unos contra otros. (luchar)",
+    "answer": "lucharon",
+    "accept": [],
+    "distractors": [
+      "luchó",
+      "luchamos",
+      "luchan"
+    ],
+    "writable": true,
+    "translation": "Beaucoup d'Espagnols luttèrent les uns contre les autres.",
+    "explanation": "luchar, ellos → lucharon. C'est une guerre civile : des Espagnols contre d'autres Espagnols.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-4",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi madre y yo ___ sus cartas cada semana. (esperar)",
+    "answer": "esperamos",
+    "accept": [],
+    "distractors": [
+      "esperaron",
+      "esperé",
+      "esperó"
+    ],
+    "writable": true,
+    "translation": "Ma mère et moi attendîmes ses lettres chaque semaine.",
+    "explanation": "« Mi madre y yo » = nosotros → esperamos.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-5",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Cuando sonaron las sirenas, ___ con mi madre al refugio. (correr, yo)",
+    "answer": "corrí",
+    "accept": [],
+    "distractors": [
+      "corrió",
+      "corro",
+      "corrieron"
+    ],
+    "writable": true,
+    "translation": "Quand les sirènes sonnèrent, je courus avec ma mère jusqu'à l'abri.",
+    "explanation": "correr, yo → corrí (-ER : -í, avec accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-6",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los aviones ___ la ciudad. (bombardear)",
+    "answer": "bombardearon",
+    "accept": [],
+    "distractors": [
+      "bombardeó",
+      "bombardeamos",
+      "bombardean"
+    ],
+    "writable": true,
+    "translation": "Les avions bombardèrent la ville.",
+    "explanation": "bombardear, ellos → bombardearon.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-7",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchas familias ___ sus casas. (abandonar)",
+    "answer": "abandonaron",
+    "accept": [],
+    "distractors": [
+      "abandonó",
+      "abandonamos",
+      "abandonan"
+    ],
+    "writable": true,
+    "translation": "Beaucoup de familles abandonnèrent leurs maisons.",
+    "explanation": "abandonar, ellas → abandonaron.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-8",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi tío ___ la frontera con Francia. (cruzar)",
+    "answer": "cruzó",
+    "accept": [],
+    "distractors": [
+      "cruzo",
+      "crucé",
+      "cruzaron"
+    ],
+    "writable": true,
+    "translation": "Mon oncle traversa la frontière avec la France.",
+    "explanation": "cruzar, él → cruzó. Attention à l'accent : « cruzó » (il traversa) ≠ « cruzo » (je traverse).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-9",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "___ tres años con miedo. (vivir, yo)",
+    "answer": "viví",
+    "accept": [],
+    "distractors": [
+      "vivió",
+      "vivo",
+      "vivimos"
+    ],
+    "writable": true,
+    "translation": "Je vécus trois ans dans la peur.",
+    "explanation": "vivir, yo → viví (-IR : -í).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-10",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi padre ___ a casa en 1939. (volver)",
+    "answer": "volvió",
+    "accept": [],
+    "distractors": [
+      "volvio",
+      "volví",
+      "volvieron"
+    ],
+    "writable": true,
+    "translation": "Mon père revint à la maison en 1939.",
+    "explanation": "volver, él → volvió (-ER : -ió). Au pretérito, volver est régulier.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-11",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nunca ___ esos años. (olvidar, yo)",
+    "answer": "olvidé",
+    "accept": [],
+    "distractors": [
+      "olvido",
+      "olvidó",
+      "olvidamos"
+    ],
+    "writable": true,
+    "translation": "Je n'oubliai jamais ces années.",
+    "explanation": "olvidar, yo → olvidé. Attention : « olvidé » (j'oubliai) ≠ « olvidó » (il oublia) ≠ « olvido » (j'oublie).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-12",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Carmen ___ en 1928. (nacer)",
+    "answer": "nació",
+    "accept": [],
+    "distractors": [
+      "nace",
+      "nací",
+      "nacieron"
+    ],
+    "writable": true,
+    "translation": "Carmen naquit en 1928.",
+    "explanation": "nacer, ella → nació (-ER : -ió).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-13",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Según la abuela, la guerra ___ en 1936. (empezar)",
+    "answer": "empezó",
+    "accept": [],
+    "distractors": [
+      "empezaba",
+      "empiezo",
+      "empezaron"
+    ],
+    "writable": true,
+    "translation": "D'après la grand-mère, la guerre commença en 1936.",
+    "explanation": "empezar, ella → empezó.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-mis-14",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar",
+      "acentos"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "La guerra ___ en 1939. (terminar)",
+    "answer": "terminó",
+    "accept": [],
+    "distractors": [
+      "termino",
+      "terminé",
+      "terminaron"
+    ],
+    "writable": true,
+    "translation": "La guerre se termina en 1939.",
+    "explanation": "terminar, ella → terminó. Sans accent, « termino » = je termine (présent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-eva-a",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-ar"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "En julio de 1936, unos generales ___ contra la República. (sublevarse)",
+    "answer": "se sublevaron",
+    "accept": [],
+    "distractors": [
+      "se sublevó",
+      "nos sublevamos",
+      "se sublevan"
+    ],
+    "writable": true,
+    "translation": "En juillet 1936, des généraux se soulevèrent contre la République.",
+    "explanation": "sublevarse, ellos → se sublevaron (le pronom « se » reste devant le verbe).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-tbo-2",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mis padres ___ la guerra en su infancia. (vivir)",
+    "answer": "vivieron",
+    "accept": [],
+    "distractors": [
+      "vivimos",
+      "vivió",
+      "viven"
+    ],
+    "writable": true,
+    "translation": "Mes parents vécurent la guerre dans leur enfance.",
+    "explanation": "vivir, ellos → vivieron.",
+    "source": "tio-pepe-1"
+  },
+  {
+    "id": "frase-irr-8",
+    "type": "qcm",
+    "theme": "regulares",
+    "notions": [
+      "reg-er-ir",
+      "acentos"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi padre ___ una carta a mi madre. (escribir)",
+    "answer": "escribió",
+    "accept": [],
+    "distractors": [
+      "escribio",
+      "escribí",
+      "escribieron"
+    ],
+    "writable": true,
+    "translation": "Mon père écrivit une lettre à ma mère.",
+    "explanation": "escribir, él → escribió (-IR : -ió).",
+    "source": "mision-secreta"
+  }
+]

@@ -3,42 +3,42 @@ import { canonicalValue, isWritable, wrongValue } from '../src/engine/questions'
 import { DEFAULT_SETTINGS, Game } from '../src/engine/game';
 import { content } from './helpers';
 
-const S = { ...DEFAULT_SETTINGS };
+const S = { ...DEFAULT_SETTINGS, chrono: true };
 type Internal = { enterRoom(t: string): void; startFight(id: string): void; state: Game['state'] };
 const room = (g: Game, t: string) => (g as unknown as Internal).enterRoom(t);
 
 describe('salles hors combat', () => {
-  it('Ofrenda : se reposer soigne selon le personnage (30 % par défaut, 40 % pour Valentina)', () => {
+  it('Refugio : se reposer soigne selon le personnage (30 % par défaut, 40 % pour Alba)', () => {
     const g = Game.newRun(content(), S, 'REST-1');
     g.state.hp = 3;
     room(g, 'rest');
     g.restHeal();
     expect(g.state.hp).toBe(3 + Math.ceil(g.state.maxHp * 0.4));
-    const m = Game.newRun(content(), S, 'REST-1b', 0, { character: 'mateo' });
+    const m = Game.newRun(content(), S, 'REST-1b', 0, { character: 'nieto' });
     expect(m.restHealAmount()).toBe(Math.ceil(m.state.maxHp * 0.3));
     g.roomContinue();
     expect(g.state.screen).toBe('map');
   });
 
-  it('Ofrenda : améliorer une aide la rend plus puissante', () => {
+  it('Refugio : améliorer une aide la rend plus puissante', () => {
     const g = Game.newRun(content(), S, 'REST-2');
     room(g, 'rest');
-    expect(g.upgradable()).toContain('tijeras');
-    g.restUpgrade('tijeras');
-    expect(g.isUpgraded('tijeras')).toBe(true);
-    expect(g.upgradable()).not.toContain('tijeras');
+    expect(g.upgradable()).toContain('lapiz');
+    g.restUpgrade('lapiz');
+    expect(g.isUpgraded('lapiz')).toBe(true);
+    expect(g.upgradable()).not.toContain('lapiz');
   });
 
-  it('Chocolate+ soigne davantage', () => {
+  it('Pan y sopa+ soigne davantage', () => {
     const g = Game.newRun(content(), S, 'UP-1');
-    g.state.inv.chocolate = 2;
-    g.state.upgrades.chocolate = true;
+    g.state.inv.sopa = 2;
+    g.state.upgrades.sopa = true;
     g.state.hp = 1;
-    g.usePower('chocolate');
-    expect(g.state.hp).toBe(9);
+    g.usePower('sopa');
+    expect(g.state.hp).toBe(1 + 9);
   });
 
-  it('Tianguis : on achète avec ses monedas, le repas soigne', () => {
+  it('Rastro : on achète avec ses monedas, le repas soigne', () => {
     const g = Game.newRun(content(), S, 'SHOP-1');
     g.state.gold = 100;
     room(g, 'shop');
@@ -115,29 +115,30 @@ describe('salles hors combat', () => {
 });
 
 describe('reliques et synergies', () => {
-  const fightWith = (relics: Record<string, number>, seed: string, enemy = 'calaverita') => {
+  const fightWith = (relics: Record<string, number>, seed: string, enemy = 'sombra') => {
     const g = Game.newRun(content(), S, seed);
     g.state.relics = { ...relics };
     (g as unknown as Internal).startFight(enemy);
     return g;
   };
 
-  it('Ofrenda completa : +1 PV à chaque bonne réponse', () => {
-    const g = fightWith({ vela: 1, cempasuchil: 1, pan: 1 }, 'SYN-1');
-    expect(g.activeSynergies().map(s => s.id)).toContain('ofrenda-completa');
+  it('La caja de los recuerdos : +1 PV à chaque bonne réponse', () => {
+    const g = fightWith({ foto: 1, cartas: 1, recuerdo: 1 }, 'SYN-1');
+    expect(g.activeSynergies().map(s => s.id)).toContain('caja-recuerdos');
+    g.state.combat!.hp = 50;
     g.state.hp = 5;
-    g.answer(canonicalValue(g.question!));
-    expect(g.state.hp).toBe(6);
+    const fb = g.answer(canonicalValue(g.question!))!;
+    expect(g.state.hp).toBe(6 - fb.dmgToPlayer); // +1 PV, puis l'ennemi riposte
   });
 
   it('une synergie incomplète ne fait rien mais s’affiche en progression', () => {
-    const g = fightWith({ vela: 1 }, 'SYN-2');
+    const g = fightWith({ foto: 1 }, 'SYN-2');
     expect(g.activeSynergies()).toHaveLength(0);
-    expect(g.synergyProgress().find(x => x.synergy.id === 'ofrenda-completa')?.owned).toBe(1);
+    expect(g.synergyProgress().find(x => x.synergy.id === 'caja-recuerdos')?.owned).toBe(1);
   });
 
-  it('Pluma de colibrí : toutes les questions possibles passent à l’écrit', () => {
-    const g = fightWith({ colibri: 1 }, 'COL-1');
+  it('Cuaderno de Carmen : toutes les questions possibles passent à l’écrit', () => {
+    const g = fightWith({ cuaderno: 1 }, 'COL-1');
     for (let i = 0; i < 12 && g.state.screen === 'combat'; i++) {
       const c = g.state.combat!;
       if (c.fb) {
@@ -150,16 +151,8 @@ describe('reliques et synergies', () => {
     }
   });
 
-  it('Máscara : la première erreur du combat ne blesse pas', () => {
-    const g = fightWith({ mascara: 1 }, 'MAS-1');
-    const hp = g.state.hp;
-    const c = g.state.combat!;
-    g.answer(c.q.mode === 'qcm' ? c.q.options.find(o => o !== canonicalValue(g.question!))! : 'zzz');
-    expect(g.state.hp).toBe(hp);
-  });
-
-  it('Calavera de la suerte : on revient une fois à 0 PV', () => {
-    const g = fightWith({ 'calavera-suerte': 1 }, 'REV-1');
+  it('El recuerdo : on revient une fois à 0 PV', () => {
+    const g = fightWith({ 'recuerdo': 1 }, 'REV-1');
     g.state.hp = 1;
     const c = g.state.combat!;
     g.answer(c.q.mode === 'qcm' ? c.q.options.find(o => o !== canonicalValue(g.question!))! : 'zzz');
@@ -167,22 +160,12 @@ describe('reliques et synergies', () => {
     expect(g.state.reviveUsed).toBe(true);
   });
 
-  it('Incienso : annule l’attaque de l’ennemi', () => {
-    const g = fightWith({}, 'INC-1');
-    g.state.inv.incienso = 1;
-    expect(g.usePower('incienso')).toBe(true);
-    const hp = g.state.hp;
-    const c = g.state.combat!;
-    g.answer(c.q.mode === 'qcm' ? c.q.options.find(o => o !== canonicalValue(g.question!))! : 'zzz');
-    expect(g.state.hp).toBe(hp);
-  });
-
   it('Diccionario : un Traductor gratuit par combat', () => {
     for (let i = 0; i < 30; i++) {
       const g = fightWith({ diccionario: 1 }, `DIC-${i}`);
-      g.state.inv.traductor = 0;
+      g.state.inv.abuela = 0;
       if (!g.question!.translation) continue;
-      expect(g.usePower('traductor')).toBe(true);
+      expect(g.usePower('abuela')).toBe(true);
       expect(g.state.combat!.used.translate).toBe(true);
       expect(g.freeTranslateAvailable()).toBe(false);
       return;
@@ -191,7 +174,7 @@ describe('reliques et synergies', () => {
   });
 
   it('après le jefe, on choisit une relique puis on passe à l’acte suivant', () => {
-    const g = fightWith({}, 'BOSS-1', 'alebrije');
+    const g = fightWith({}, 'BOSS-1', 'sirenas');
     for (let i = 0; i < 60 && g.state.screen === 'combat'; i++) {
       if (g.state.combat!.fb) g.proceed();
       else g.answer(canonicalValue(g.question!));

@@ -16,11 +16,14 @@ describe('nouveaux types de questions', () => {
   });
 
   it('la bonne réponse est acceptée et une mauvaise refusée, pour chaque question', () => {
+    const themes = content().sequence.themes;
     for (const q of content().questions) {
       const m = modeOf(q);
-      expect(judgeQuestion(q, m, canonicalValue(q), DEFAULT_CHECK), q.id).toBe('ok');
+      // options de correction du thème (pretérito : un accent qui change la forme est faux)
+      const o = { ...DEFAULT_CHECK, ...themes.find(t => t.id === q.theme)?.check };
+      expect(judgeQuestion(q, m, canonicalValue(q), o), q.id).toBe('ok');
       const opts = 'distractors' in q ? [q.answer, ...q.distractors] : [];
-      expect(judgeQuestion(q, m, wrongValue(q, opts), DEFAULT_CHECK), q.id).toBe('ko');
+      expect(judgeQuestion(q, m, wrongValue(q, opts), o), q.id).toBe('ko');
     }
   });
 
@@ -100,7 +103,7 @@ describe('moteur et nouveaux types', () => {
 
   it('l’intention « Canto » de la Lechuza impose une question orale', () => {
     const g = Game.newRun(content(), S, 'LECHUZA');
-    (g as unknown as { startFight(id: string): void }).startFight('lechuza');
+    (g as unknown as { startFight(id: string): void }).startFight('eco');
     let listened = 0;
     for (let i = 0; i < 30 && g.state.screen === 'combat'; i++) {
       const c = g.state.combat!;
@@ -121,8 +124,8 @@ describe('moteur et nouveaux types', () => {
     for (const t of ['vrai-faux', 'ordre', 'association', 'scene'] as const) {
       const g = Game.newRun(content(), { ...S, types: [t] }, `ORA-${t}`);
       g.choose(g.reachable()[0].id);
-      g.state.inv.oraculo = 1;
-      g.usePower('oraculo');
+      g.state.inv.memoria = 1;
+      g.usePower('memoria');
       expect(g.state.combat!.fb!.outcome, t).toBe('oracle');
     }
   });
@@ -130,7 +133,7 @@ describe('moteur et nouveaux types', () => {
   it('Tijeras donne un indice sur les types sans QCM', () => {
     const g = Game.newRun(content(), { ...S, types: ['ordre'] }, 'TIJ-ORD');
     g.choose(g.reachable()[0].id);
-    expect(g.usePower('tijeras')).toBe(true);
+    expect(g.usePower('lapiz')).toBe(true);
     expect(g.state.combat!.mask).toMatch(/commence par/);
   });
 });

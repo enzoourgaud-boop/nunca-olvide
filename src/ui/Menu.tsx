@@ -119,7 +119,7 @@ export function ProfileScreen({ list, current, onPick, onCreate, onDelete, onBac
 
 export function Title({ content, profile, meta, saved, settings, onSettings, onStart, onResume, onNav, initialSeed, pending = 0, classe, onClassCode, onClearClass }: {
   content: Content; profile: Profile; meta: Meta; saved: RunState | null; settings: Settings;
-  onSettings: (s: Settings) => void; onStart: (o: { seed: string; character: string; ascension: number }) => void; onResume: () => void;
+  onSettings: (s: Settings) => void; onStart: (o: { seed: string; character: string; ascension: number; short?: boolean }) => void; onResume: () => void;
   onNav: (screen: 'profiles' | 'collection' | 'achievements' | 'carnet' | 'prof') => void; initialSeed: string; pending?: number;
   classe: { code: string; seed: string } | null; onClassCode: (code: string) => string | null; onClearClass: () => void;
 }) {
@@ -252,8 +252,13 @@ export function Title({ content, profile, meta, saved, settings, onSettings, onS
         </p>
       )}
       <div class="fila">
-        <button class={`btn ${saved ? 'sec' : ''}`} onClick={() => onStart({ seed: cleanSeed(seed), character, ascension: asc })}>
-          {saved ? 'Nouvelle partie' : 'Commencer le chemin'}
+        {!settings.short && (
+          <button class={`btn ${saved ? 'sec' : ''}`} onClick={() => onStart({ seed: cleanSeed(seed), character, ascension: asc })}>
+            {saved ? 'Nouvelle partie' : 'Partie complète'} <small>(15 à 25 min)</small>
+          </button>
+        )}
+        <button class="btn sec" onClick={() => onStart({ seed: cleanSeed(seed), character, ascension: asc, short: true })}>
+          Partie courte <small>(8 à 10 min)</small>
         </button>
         {meta.runs > 0 && (
           <span class="muted">
@@ -442,7 +447,7 @@ export function Over({ game, unlocks, onMenu, onReplay }: { game: Game; unlocks:
       </p>
       <div class="stats">
         <div><b>{s.stats.won}</b>combats gagnés</div>
-        <div><b>{win ? seq.acts.length : s.act + 1}/{seq.acts.length}</b>{win ? 'actes terminés' : 'acte atteint'}</div>
+        {s.short ? <div><b>{win ? 1 : 0}/1</b>partie courte</div> : <div><b>{win ? seq.acts.length : s.act + 1}/{seq.acts.length}</b>{win ? 'actes terminés' : 'acte atteint'}</div>}
         <div><b>{s.stats.ok}</b>bonnes réponses</div>
         <div><b>{pct} %</b>de réussite</div>
         <div><b>{minutes} min</b>de partie</div>

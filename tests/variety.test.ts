@@ -41,10 +41,10 @@ function history(seed: string, wrongEvery = 3) {
 describe('variété des questions', () => {
   it('repère les questions qui se répondent l’une l’autre', () => {
     const g = Game.newRun(content(), S, 'X');
-    expect(g.closeTo('cult-catrina-disfraz', 'vf-disfraz-hoy')).toBe(true); // « la Catrina … disfraz »
-    expect(g.closeTo('conj-ger-bailar', 'conj-frase-nosotros-bailando')).toBe(true); // la réponse « bailando » est dans l'autre énoncé
-    expect(g.closeTo('voc-vela-es', 'gram-velas-estan')).toBe(true); // vela / velas
-    expect(g.closeTo('cult-pais', 'gram-catrina-es')).toBe(false);
+    expect(g.closeTo('frase-mis-8', 'hist-tio')).toBe(true); // « tío … frontera … Francia »
+    expect(g.closeTo('reg-olvidar-yo', 'ord-olvide')).toBe(true); // la réponse « olvidé » est dans l'autre
+    expect(g.closeTo('frase-mis-10', 'hist-final')).toBe(true); // 1939
+    expect(g.closeTo('hist-jefe', 'lex-pesadilla-es')).toBe(false);
   });
 
   it('presque jamais deux questions proches à moins de 4 questions d’écart', () => {

@@ -1,0 +1,2204 @@
+[
+  {
+    "id": "irr-pedir-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "pedir — yo …",
+    "answer": "pedí",
+    "accept": [],
+    "distractors": [
+      "pidió",
+      "pedisteis",
+      "pediste"
+    ],
+    "writable": true,
+    "translation": "pedir = demander · yo = je",
+    "explanation": "pedir au pretérito indefinido : pedí, pediste, pidió, pedimos, pedisteis, pidieron. E → i à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-pedir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "pedir — él / ella …",
+    "answer": "pidió",
+    "accept": [],
+    "distractors": [
+      "pedió",
+      "pedisteis",
+      "pedí"
+    ],
+    "writable": true,
+    "translation": "pedir = demander · él = il",
+    "explanation": "pedir au pretérito indefinido : pedí, pediste, pidió, pedimos, pedisteis, pidieron. E → i à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-pedir-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "pedir — nosotros …",
+    "answer": "pedimos",
+    "accept": [],
+    "distractors": [
+      "pidieron",
+      "pediste",
+      "pedí"
+    ],
+    "writable": true,
+    "translation": "pedir = demander · nosotros = nous",
+    "explanation": "pedir au pretérito indefinido : pedí, pediste, pidió, pedimos, pedisteis, pidieron. E → i à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-pedir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "pedir — ellos / ellas …",
+    "answer": "pidieron",
+    "accept": [],
+    "distractors": [
+      "pedieron",
+      "pediste",
+      "pedimos"
+    ],
+    "writable": true,
+    "translation": "pedir = demander · ellos = ils",
+    "explanation": "pedir au pretérito indefinido : pedí, pediste, pidió, pedimos, pedisteis, pidieron. E → i à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-dormir-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "dormir — yo …",
+    "answer": "dormí",
+    "accept": [],
+    "distractors": [
+      "durmió",
+      "dormisteis",
+      "dormiste"
+    ],
+    "writable": true,
+    "translation": "dormir = dormir · yo = je",
+    "explanation": "dormir au pretérito indefinido : dormí, dormiste, durmió, dormimos, dormisteis, durmieron. O → u à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-dormir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "dormir — él / ella …",
+    "answer": "durmió",
+    "accept": [],
+    "distractors": [
+      "dormió",
+      "dormisteis",
+      "dormí"
+    ],
+    "writable": true,
+    "translation": "dormir = dormir · él = il",
+    "explanation": "dormir au pretérito indefinido : dormí, dormiste, durmió, dormimos, dormisteis, durmieron. O → u à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-dormir-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "dormir — nosotros …",
+    "answer": "dormimos",
+    "accept": [],
+    "distractors": [
+      "durmieron",
+      "dormiste",
+      "dormí"
+    ],
+    "writable": true,
+    "translation": "dormir = dormir · nosotros = nous",
+    "explanation": "dormir au pretérito indefinido : dormí, dormiste, durmió, dormimos, dormisteis, durmieron. O → u à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-dormir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "dormir — ellos / ellas …",
+    "answer": "durmieron",
+    "accept": [],
+    "distractors": [
+      "dormieron",
+      "dormiste",
+      "dormimos"
+    ],
+    "writable": true,
+    "translation": "dormir = dormir · ellos = ils",
+    "explanation": "dormir au pretérito indefinido : dormí, dormiste, durmió, dormimos, dormisteis, durmieron. O → u à la 3e personne seulement.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-producir-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "producir — yo …",
+    "answer": "produje",
+    "accept": [],
+    "distractors": [
+      "producí",
+      "produjo",
+      "produjisteis"
+    ],
+    "writable": true,
+    "translation": "producir = produire · yo = je",
+    "explanation": "producir au pretérito indefinido : produje, produjiste, produjo, produjimos, produjisteis, produjeron. C → j à toutes les personnes, et -eron (pas -ieron) à la 3e du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-producir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "producir — él / ella …",
+    "answer": "produjo",
+    "accept": [],
+    "distractors": [
+      "produció",
+      "produjisteis",
+      "produje"
+    ],
+    "writable": true,
+    "translation": "producir = produire · él = il",
+    "explanation": "producir au pretérito indefinido : produje, produjiste, produjo, produjimos, produjisteis, produjeron. C → j à toutes les personnes, et -eron (pas -ieron) à la 3e du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-producir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "producir — ellos / ellas …",
+    "answer": "produjeron",
+    "accept": [],
+    "distractors": [
+      "produjieron",
+      "produjiste",
+      "produjimos"
+    ],
+    "writable": true,
+    "translation": "producir = produire · ellos = ils",
+    "explanation": "producir au pretérito indefinido : produje, produjiste, produjo, produjimos, produjisteis, produjeron. C → j à toutes les personnes, et -eron (pas -ieron) à la 3e du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-producir-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "producir — nosotros …",
+    "answer": "produjimos",
+    "accept": [],
+    "distractors": [
+      "produjeron",
+      "produjiste",
+      "produje"
+    ],
+    "writable": true,
+    "translation": "producir = produire · nosotros = nous",
+    "explanation": "producir au pretérito indefinido : produje, produjiste, produjo, produjimos, produjisteis, produjeron. C → j à toutes les personnes, et -eron (pas -ieron) à la 3e du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-andar-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "andar — yo …",
+    "answer": "anduve",
+    "accept": [],
+    "distractors": [
+      "andé",
+      "anduvo",
+      "anduvisteis"
+    ],
+    "writable": true,
+    "translation": "andar = marcher · yo = je",
+    "explanation": "andar au pretérito indefinido : anduve, anduviste, anduvo, anduvimos, anduvisteis, anduvieron. Prétérit fort : radical anduv-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-andar-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "andar — él / ella …",
+    "answer": "anduvo",
+    "accept": [],
+    "distractors": [
+      "anduvó",
+      "anduvisteis",
+      "anduve"
+    ],
+    "writable": true,
+    "translation": "andar = marcher · él = il",
+    "explanation": "andar au pretérito indefinido : anduve, anduviste, anduvo, anduvimos, anduvisteis, anduvieron. Prétérit fort : radical anduv-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-andar-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "andar — ellos / ellas …",
+    "answer": "anduvieron",
+    "accept": [],
+    "distractors": [
+      "anduviste",
+      "anduvimos",
+      "anduve"
+    ],
+    "writable": true,
+    "translation": "andar = marcher · ellos = ils",
+    "explanation": "andar au pretérito indefinido : anduve, anduviste, anduvo, anduvimos, anduvisteis, anduvieron. Prétérit fort : radical anduv-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-andar-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "andar — nosotros …",
+    "answer": "anduvimos",
+    "accept": [],
+    "distractors": [
+      "anduvieron",
+      "anduviste",
+      "anduve"
+    ],
+    "writable": true,
+    "translation": "andar = marcher · nosotros = nous",
+    "explanation": "andar au pretérito indefinido : anduve, anduviste, anduvo, anduvimos, anduvisteis, anduvieron. Prétérit fort : radical anduv-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-conducir-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "conducir — yo …",
+    "answer": "conduje",
+    "accept": [],
+    "distractors": [
+      "conducí",
+      "condujo",
+      "condujisteis"
+    ],
+    "writable": true,
+    "translation": "conducir = conduire · yo = je",
+    "explanation": "conducir au pretérito indefinido : conduje, condujiste, condujo, condujimos, condujisteis, condujeron. Prétérit fort : radical conduj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-conducir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "conducir — él / ella …",
+    "answer": "condujo",
+    "accept": [],
+    "distractors": [
+      "condujó",
+      "condujisteis",
+      "conduje"
+    ],
+    "writable": true,
+    "translation": "conducir = conduire · él = il",
+    "explanation": "conducir au pretérito indefinido : conduje, condujiste, condujo, condujimos, condujisteis, condujeron. Prétérit fort : radical conduj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-conducir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "conducir — ellos / ellas …",
+    "answer": "condujeron",
+    "accept": [],
+    "distractors": [
+      "condujieron",
+      "condujiste",
+      "condujimos"
+    ],
+    "writable": true,
+    "translation": "conducir = conduire · ellos = ils",
+    "explanation": "conducir au pretérito indefinido : conduje, condujiste, condujo, condujimos, condujisteis, condujeron. Prétérit fort : radical conduj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-conducir-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "conducir — nosotros …",
+    "answer": "condujimos",
+    "accept": [],
+    "distractors": [
+      "condujeron",
+      "condujiste",
+      "conduje"
+    ],
+    "writable": true,
+    "translation": "conducir = conduire · nosotros = nous",
+    "explanation": "conducir au pretérito indefinido : conduje, condujiste, condujo, condujimos, condujisteis, condujeron. Prétérit fort : radical conduj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-decir-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "decir — yo …",
+    "answer": "dije",
+    "accept": [],
+    "distractors": [
+      "decí",
+      "dijo",
+      "dijisteis"
+    ],
+    "writable": true,
+    "translation": "decir = dire · yo = je",
+    "explanation": "decir au pretérito indefinido : dije, dijiste, dijo, dijimos, dijisteis, dijeron. Prétérit fort : radical dij-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-decir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "decir — él / ella …",
+    "answer": "dijo",
+    "accept": [],
+    "distractors": [
+      "dijó",
+      "dijisteis",
+      "dije"
+    ],
+    "writable": true,
+    "translation": "decir = dire · él = il",
+    "explanation": "decir au pretérito indefinido : dije, dijiste, dijo, dijimos, dijisteis, dijeron. Prétérit fort : radical dij-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-decir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "decir — ellos / ellas …",
+    "answer": "dijeron",
+    "accept": [],
+    "distractors": [
+      "dijieron",
+      "dijiste",
+      "dijimos"
+    ],
+    "writable": true,
+    "translation": "decir = dire · ellos = ils",
+    "explanation": "decir au pretérito indefinido : dije, dijiste, dijo, dijimos, dijisteis, dijeron. Prétérit fort : radical dij-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-decir-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "decir — nosotros …",
+    "answer": "dijimos",
+    "accept": [],
+    "distractors": [
+      "dijeron",
+      "dijiste",
+      "dije"
+    ],
+    "writable": true,
+    "translation": "decir = dire · nosotros = nous",
+    "explanation": "decir au pretérito indefinido : dije, dijiste, dijo, dijimos, dijisteis, dijeron. Prétérit fort : radical dij-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-estar-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "estar — yo …",
+    "answer": "estuve",
+    "accept": [],
+    "distractors": [
+      "esté",
+      "estuvo",
+      "estuvisteis"
+    ],
+    "writable": true,
+    "translation": "estar = être · yo = je",
+    "explanation": "estar au pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-estar-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "estar — tú …",
+    "answer": "estuviste",
+    "accept": [],
+    "distractors": [
+      "estuvimos",
+      "estuvieron",
+      "estuve"
+    ],
+    "writable": true,
+    "translation": "estar = être · tú = tu",
+    "explanation": "estar au pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-estar-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "estar — él / ella …",
+    "answer": "estuvo",
+    "accept": [],
+    "distractors": [
+      "estuvó",
+      "estuvisteis",
+      "estuve"
+    ],
+    "writable": true,
+    "translation": "estar = être · él = il",
+    "explanation": "estar au pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-estar-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "estar — nosotros …",
+    "answer": "estuvimos",
+    "accept": [],
+    "distractors": [
+      "estuvieron",
+      "estuviste",
+      "estuve"
+    ],
+    "writable": true,
+    "translation": "estar = être · nosotros = nous",
+    "explanation": "estar au pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-estar-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "estar — vosotros …",
+    "answer": "estuvisteis",
+    "accept": [],
+    "distractors": [
+      "estuve",
+      "estuvo",
+      "estuviste"
+    ],
+    "writable": true,
+    "translation": "estar = être · vosotros = vous",
+    "explanation": "estar au pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-estar-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "estar — ellos / ellas …",
+    "answer": "estuvieron",
+    "accept": [],
+    "distractors": [
+      "estuviste",
+      "estuvimos",
+      "estuve"
+    ],
+    "writable": true,
+    "translation": "estar = être · ellos = ils",
+    "explanation": "estar au pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-hacer-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hacer — yo …",
+    "answer": "hice",
+    "accept": [],
+    "distractors": [
+      "hací",
+      "hizo",
+      "hicisteis"
+    ],
+    "writable": true,
+    "translation": "hacer = faire · yo = je",
+    "explanation": "hacer au pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron. Prétérit fort : radical hic-, et hizo (avec z) à la 3e personne, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-hacer-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hacer — él / ella …",
+    "answer": "hizo",
+    "accept": [],
+    "distractors": [
+      "hizó",
+      "hicisteis",
+      "hice"
+    ],
+    "writable": true,
+    "translation": "hacer = faire · él = il",
+    "explanation": "hacer au pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron. Prétérit fort : radical hic-, et hizo (avec z) à la 3e personne, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-hacer-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hacer — ellos / ellas …",
+    "answer": "hicieron",
+    "accept": [],
+    "distractors": [
+      "hiciste",
+      "hicimos",
+      "hice"
+    ],
+    "writable": true,
+    "translation": "hacer = faire · ellos = ils",
+    "explanation": "hacer au pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron. Prétérit fort : radical hic-, et hizo (avec z) à la 3e personne, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-hacer-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "hacer — nosotros …",
+    "answer": "hicimos",
+    "accept": [],
+    "distractors": [
+      "hicieron",
+      "hiciste",
+      "hice"
+    ],
+    "writable": true,
+    "translation": "hacer = faire · nosotros = nous",
+    "explanation": "hacer au pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron. Prétérit fort : radical hic-, et hizo (avec z) à la 3e personne, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poder-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poder — yo …",
+    "answer": "pude",
+    "accept": [],
+    "distractors": [
+      "podí",
+      "pudo",
+      "pudisteis"
+    ],
+    "writable": true,
+    "translation": "poder = pouvoir · yo = je",
+    "explanation": "poder au pretérito indefinido : pude, pudiste, pudo, pudimos, pudisteis, pudieron. Prétérit fort : radical pud-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poder-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poder — tú …",
+    "answer": "pudiste",
+    "accept": [],
+    "distractors": [
+      "pudimos",
+      "pudieron",
+      "pude"
+    ],
+    "writable": true,
+    "translation": "poder = pouvoir · tú = tu",
+    "explanation": "poder au pretérito indefinido : pude, pudiste, pudo, pudimos, pudisteis, pudieron. Prétérit fort : radical pud-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poder-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poder — él / ella …",
+    "answer": "pudo",
+    "accept": [],
+    "distractors": [
+      "pudó",
+      "pudisteis",
+      "pude"
+    ],
+    "writable": true,
+    "translation": "poder = pouvoir · él = il",
+    "explanation": "poder au pretérito indefinido : pude, pudiste, pudo, pudimos, pudisteis, pudieron. Prétérit fort : radical pud-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poder-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poder — nosotros …",
+    "answer": "pudimos",
+    "accept": [],
+    "distractors": [
+      "pudieron",
+      "pudiste",
+      "pude"
+    ],
+    "writable": true,
+    "translation": "poder = pouvoir · nosotros = nous",
+    "explanation": "poder au pretérito indefinido : pude, pudiste, pudo, pudimos, pudisteis, pudieron. Prétérit fort : radical pud-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poder-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poder — vosotros …",
+    "answer": "pudisteis",
+    "accept": [],
+    "distractors": [
+      "pude",
+      "pudo",
+      "pudiste"
+    ],
+    "writable": true,
+    "translation": "poder = pouvoir · vosotros = vous",
+    "explanation": "poder au pretérito indefinido : pude, pudiste, pudo, pudimos, pudisteis, pudieron. Prétérit fort : radical pud-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poder-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poder — ellos / ellas …",
+    "answer": "pudieron",
+    "accept": [],
+    "distractors": [
+      "pudiste",
+      "pudimos",
+      "pude"
+    ],
+    "writable": true,
+    "translation": "poder = pouvoir · ellos = ils",
+    "explanation": "poder au pretérito indefinido : pude, pudiste, pudo, pudimos, pudisteis, pudieron. Prétérit fort : radical pud-, aucun accent.",
+    "source": "evaluacion",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poner-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poner — yo …",
+    "answer": "puse",
+    "accept": [],
+    "distractors": [
+      "poní",
+      "puso",
+      "pusisteis"
+    ],
+    "writable": true,
+    "translation": "poner = mettre · yo = je",
+    "explanation": "poner au pretérito indefinido : puse, pusiste, puso, pusimos, pusisteis, pusieron. Prétérit fort : radical pus-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poner-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poner — él / ella …",
+    "answer": "puso",
+    "accept": [],
+    "distractors": [
+      "pusó",
+      "pusisteis",
+      "puse"
+    ],
+    "writable": true,
+    "translation": "poner = mettre · él = il",
+    "explanation": "poner au pretérito indefinido : puse, pusiste, puso, pusimos, pusisteis, pusieron. Prétérit fort : radical pus-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poner-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poner — ellos / ellas …",
+    "answer": "pusieron",
+    "accept": [],
+    "distractors": [
+      "pusiste",
+      "pusimos",
+      "puse"
+    ],
+    "writable": true,
+    "translation": "poner = mettre · ellos = ils",
+    "explanation": "poner au pretérito indefinido : puse, pusiste, puso, pusimos, pusisteis, pusieron. Prétérit fort : radical pus-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-poner-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "poner — nosotros …",
+    "answer": "pusimos",
+    "accept": [],
+    "distractors": [
+      "pusieron",
+      "pusiste",
+      "puse"
+    ],
+    "writable": true,
+    "translation": "poner = mettre · nosotros = nous",
+    "explanation": "poner au pretérito indefinido : puse, pusiste, puso, pusimos, pusisteis, pusieron. Prétérit fort : radical pus-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-querer-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "querer — yo …",
+    "answer": "quise",
+    "accept": [],
+    "distractors": [
+      "querí",
+      "quiso",
+      "quisisteis"
+    ],
+    "writable": true,
+    "translation": "querer = vouloir · yo = je",
+    "explanation": "querer au pretérito indefinido : quise, quisiste, quiso, quisimos, quisisteis, quisieron. Prétérit fort : radical quis-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-querer-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "querer — él / ella …",
+    "answer": "quiso",
+    "accept": [],
+    "distractors": [
+      "quisó",
+      "quisisteis",
+      "quise"
+    ],
+    "writable": true,
+    "translation": "querer = vouloir · él = il",
+    "explanation": "querer au pretérito indefinido : quise, quisiste, quiso, quisimos, quisisteis, quisieron. Prétérit fort : radical quis-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-querer-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "querer — ellos / ellas …",
+    "answer": "quisieron",
+    "accept": [],
+    "distractors": [
+      "quisiste",
+      "quisimos",
+      "quise"
+    ],
+    "writable": true,
+    "translation": "querer = vouloir · ellos = ils",
+    "explanation": "querer au pretérito indefinido : quise, quisiste, quiso, quisimos, quisisteis, quisieron. Prétérit fort : radical quis-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-querer-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "querer — nosotros …",
+    "answer": "quisimos",
+    "accept": [],
+    "distractors": [
+      "quisieron",
+      "quisiste",
+      "quise"
+    ],
+    "writable": true,
+    "translation": "querer = vouloir · nosotros = nous",
+    "explanation": "querer au pretérito indefinido : quise, quisiste, quiso, quisimos, quisisteis, quisieron. Prétérit fort : radical quis-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-saber-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "saber — yo …",
+    "answer": "supe",
+    "accept": [],
+    "distractors": [
+      "sabí",
+      "supo",
+      "supisteis"
+    ],
+    "writable": true,
+    "translation": "saber = savoir · yo = je",
+    "explanation": "saber au pretérito indefinido : supe, supiste, supo, supimos, supisteis, supieron. Prétérit fort : radical sup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-saber-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "saber — él / ella …",
+    "answer": "supo",
+    "accept": [],
+    "distractors": [
+      "supó",
+      "supisteis",
+      "supe"
+    ],
+    "writable": true,
+    "translation": "saber = savoir · él = il",
+    "explanation": "saber au pretérito indefinido : supe, supiste, supo, supimos, supisteis, supieron. Prétérit fort : radical sup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-saber-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "saber — ellos / ellas …",
+    "answer": "supieron",
+    "accept": [],
+    "distractors": [
+      "supiste",
+      "supimos",
+      "supe"
+    ],
+    "writable": true,
+    "translation": "saber = savoir · ellos = ils",
+    "explanation": "saber au pretérito indefinido : supe, supiste, supo, supimos, supisteis, supieron. Prétérit fort : radical sup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-saber-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "saber — nosotros …",
+    "answer": "supimos",
+    "accept": [],
+    "distractors": [
+      "supieron",
+      "supiste",
+      "supe"
+    ],
+    "writable": true,
+    "translation": "saber = savoir · nosotros = nous",
+    "explanation": "saber au pretérito indefinido : supe, supiste, supo, supimos, supisteis, supieron. Prétérit fort : radical sup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-tener-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "tener — yo …",
+    "answer": "tuve",
+    "accept": [],
+    "distractors": [
+      "tení",
+      "tuvo",
+      "tuvisteis"
+    ],
+    "writable": true,
+    "translation": "tener = avoir · yo = je",
+    "explanation": "tener au pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-tener-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "tener — tú …",
+    "answer": "tuviste",
+    "accept": [],
+    "distractors": [
+      "tuvimos",
+      "tuvieron",
+      "tuve"
+    ],
+    "writable": true,
+    "translation": "tener = avoir · tú = tu",
+    "explanation": "tener au pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-tener-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "tener — él / ella …",
+    "answer": "tuvo",
+    "accept": [],
+    "distractors": [
+      "tuvó",
+      "tuvisteis",
+      "tuve"
+    ],
+    "writable": true,
+    "translation": "tener = avoir · él = il",
+    "explanation": "tener au pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-tener-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "tener — nosotros …",
+    "answer": "tuvimos",
+    "accept": [],
+    "distractors": [
+      "tuvieron",
+      "tuviste",
+      "tuve"
+    ],
+    "writable": true,
+    "translation": "tener = avoir · nosotros = nous",
+    "explanation": "tener au pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-tener-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "tener — vosotros …",
+    "answer": "tuvisteis",
+    "accept": [],
+    "distractors": [
+      "tuve",
+      "tuvo",
+      "tuviste"
+    ],
+    "writable": true,
+    "translation": "tener = avoir · vosotros = vous",
+    "explanation": "tener au pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-tener-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "tener — ellos / ellas …",
+    "answer": "tuvieron",
+    "accept": [],
+    "distractors": [
+      "tuviste",
+      "tuvimos",
+      "tuve"
+    ],
+    "writable": true,
+    "translation": "tener = avoir · ellos = ils",
+    "explanation": "tener au pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "mision-secreta",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-venir-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "venir — yo …",
+    "answer": "vine",
+    "accept": [],
+    "distractors": [
+      "vení",
+      "vino",
+      "vinisteis"
+    ],
+    "writable": true,
+    "translation": "venir = venir · yo = je",
+    "explanation": "venir au pretérito indefinido : vine, viniste, vino, vinimos, vinisteis, vinieron. Prétérit fort : radical vin-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-venir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "venir — él / ella …",
+    "answer": "vino",
+    "accept": [],
+    "distractors": [
+      "vinó",
+      "vinisteis",
+      "vine"
+    ],
+    "writable": true,
+    "translation": "venir = venir · él = il",
+    "explanation": "venir au pretérito indefinido : vine, viniste, vino, vinimos, vinisteis, vinieron. Prétérit fort : radical vin-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-venir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "venir — ellos / ellas …",
+    "answer": "vinieron",
+    "accept": [],
+    "distractors": [
+      "viniste",
+      "vinimos",
+      "vine"
+    ],
+    "writable": true,
+    "translation": "venir = venir · ellos = ils",
+    "explanation": "venir au pretérito indefinido : vine, viniste, vino, vinimos, vinisteis, vinieron. Prétérit fort : radical vin-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-venir-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "venir — nosotros …",
+    "answer": "vinimos",
+    "accept": [],
+    "distractors": [
+      "vinieron",
+      "viniste",
+      "vine"
+    ],
+    "writable": true,
+    "translation": "venir = venir · nosotros = nous",
+    "explanation": "venir au pretérito indefinido : vine, viniste, vino, vinimos, vinisteis, vinieron. Prétérit fort : radical vin-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-traer-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "traer — yo …",
+    "answer": "traje",
+    "accept": [],
+    "distractors": [
+      "traí",
+      "trajo",
+      "trajisteis"
+    ],
+    "writable": true,
+    "translation": "traer = apporter · yo = je",
+    "explanation": "traer au pretérito indefinido : traje, trajiste, trajo, trajimos, trajisteis, trajeron. Prétérit fort : radical traj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-traer-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "traer — él / ella …",
+    "answer": "trajo",
+    "accept": [],
+    "distractors": [
+      "trajó",
+      "trajisteis",
+      "traje"
+    ],
+    "writable": true,
+    "translation": "traer = apporter · él = il",
+    "explanation": "traer au pretérito indefinido : traje, trajiste, trajo, trajimos, trajisteis, trajeron. Prétérit fort : radical traj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-traer-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "traer — ellos / ellas …",
+    "answer": "trajeron",
+    "accept": [],
+    "distractors": [
+      "trajieron",
+      "trajiste",
+      "trajimos"
+    ],
+    "writable": true,
+    "translation": "traer = apporter · ellos = ils",
+    "explanation": "traer au pretérito indefinido : traje, trajiste, trajo, trajimos, trajisteis, trajeron. Prétérit fort : radical traj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-traer-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "traer — nosotros …",
+    "answer": "trajimos",
+    "accept": [],
+    "distractors": [
+      "trajeron",
+      "trajiste",
+      "traje"
+    ],
+    "writable": true,
+    "translation": "traer = apporter · nosotros = nous",
+    "explanation": "traer au pretérito indefinido : traje, trajiste, trajo, trajimos, trajisteis, trajeron. Prétérit fort : radical traj-, -eron à la 3e du pluriel, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-caber-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "caber — yo …",
+    "answer": "cupe",
+    "accept": [],
+    "distractors": [
+      "cabí",
+      "cupo",
+      "cupisteis"
+    ],
+    "writable": true,
+    "translation": "caber = tenir (dans) · yo = je",
+    "explanation": "caber au pretérito indefinido : cupe, cupiste, cupo, cupimos, cupisteis, cupieron. Prétérit fort : radical cup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-caber-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "caber — él / ella …",
+    "answer": "cupo",
+    "accept": [],
+    "distractors": [
+      "cupó",
+      "cupisteis",
+      "cupe"
+    ],
+    "writable": true,
+    "translation": "caber = tenir (dans) · él = il",
+    "explanation": "caber au pretérito indefinido : cupe, cupiste, cupo, cupimos, cupisteis, cupieron. Prétérit fort : radical cup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-caber-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "caber — ellos / ellas …",
+    "answer": "cupieron",
+    "accept": [],
+    "distractors": [
+      "cupiste",
+      "cupimos",
+      "cupe"
+    ],
+    "writable": true,
+    "translation": "caber = tenir (dans) · ellos = ils",
+    "explanation": "caber au pretérito indefinido : cupe, cupiste, cupo, cupimos, cupisteis, cupieron. Prétérit fort : radical cup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-caber-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "caber — nosotros …",
+    "answer": "cupimos",
+    "accept": [],
+    "distractors": [
+      "cupieron",
+      "cupiste",
+      "cupe"
+    ],
+    "writable": true,
+    "translation": "caber = tenir (dans) · nosotros = nous",
+    "explanation": "caber au pretérito indefinido : cupe, cupiste, cupo, cupimos, cupisteis, cupieron. Prétérit fort : radical cup-, aucun accent.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-grunir-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "gruñir — él / ella …",
+    "answer": "gruñó",
+    "accept": [],
+    "distractors": [
+      "gruñió",
+      "gruñeron",
+      "gruño"
+    ],
+    "writable": true,
+    "translation": "gruñir = grogner · él = il",
+    "explanation": "Gruñir : absorption du i : gruñó, gruñeron (le i disparaît après ñ). L'irrégularité ne concerne que la 3e personne du singulier et du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-grunir-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "gruñir — ellos / ellas …",
+    "answer": "gruñeron",
+    "accept": [],
+    "distractors": [
+      "gruñieron",
+      "gruñó",
+      "gruñimos"
+    ],
+    "writable": true,
+    "translation": "gruñir = grogner · ellos = ils",
+    "explanation": "Gruñir : absorption du i : gruñó, gruñeron (le i disparaît après ñ). L'irrégularité ne concerne que la 3e personne du singulier et du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-creer-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "creer — él / ella …",
+    "answer": "creyó",
+    "accept": [],
+    "distractors": [
+      "creió",
+      "creyeron",
+      "creo"
+    ],
+    "writable": true,
+    "translation": "creer = croire · él = il",
+    "explanation": "Creer : transformation du i en y : creyó, creyeron (pour éviter trois voyelles de suite). L'irrégularité ne concerne que la 3e personne du singulier et du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "irr-creer-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Conjugue au pretérito indefinido",
+    "prompt": "creer — ellos / ellas …",
+    "answer": "creyeron",
+    "accept": [],
+    "distractors": [
+      "creieron",
+      "creyó",
+      "creímos"
+    ],
+    "writable": true,
+    "translation": "creer = croire · ellos = ils",
+    "explanation": "Creer : transformation du i en y : creyó, creyeron (pour éviter trois voyelles de suite). L'irrégularité ne concerne que la 3e personne du singulier et du pluriel.",
+    "source": "gramatica-preterito",
+    "check": {
+      "optionalSubject": true
+    }
+  },
+  {
+    "id": "frase-mis-3",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi padre ___ que irse lejos. (tener)",
+    "answer": "tuvo",
+    "accept": [],
+    "distractors": [
+      "tenió",
+      "tuvó",
+      "tuve"
+    ],
+    "writable": true,
+    "translation": "Mon père dut partir loin.",
+    "explanation": "tener → tuve, tuviste, tuvo… Prétérit fort : aucun accent (tuvo, pas « tuvó »).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-eva-b",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Franco ___ la ayuda de la Alemania nazi y de la Italia fascista. (tener)",
+    "answer": "tuvo",
+    "accept": [],
+    "distractors": [
+      "tenió",
+      "tuvó",
+      "tuvieron"
+    ],
+    "writable": true,
+    "translation": "Franco eut l'aide de l'Allemagne nazie et de l'Italie fasciste.",
+    "explanation": "tener, él → tuvo (prétérit fort, sans accent).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-eva-e",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchas familias no ___ volver a España. (poder)",
+    "answer": "pudieron",
+    "accept": [],
+    "distractors": [
+      "podieron",
+      "pudo",
+      "pudimos"
+    ],
+    "writable": true,
+    "translation": "Beaucoup de familles ne purent pas revenir en Espagne.",
+    "explanation": "poder, ellas → pudieron (radical pud-).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-eva-f",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi bisabuelo ___ en un campo de refugiados en Francia. (estar)",
+    "answer": "estuvo",
+    "accept": [],
+    "distractors": [
+      "estuvó",
+      "estó",
+      "estuvieron"
+    ],
+    "writable": true,
+    "translation": "Mon arrière-grand-père fut dans un camp de réfugiés en France.",
+    "explanation": "estar, él → estuvo (prétérit fort : aucun accent).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-tbo-1",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Entre abril y junio de 1938, la División 43 ___ sitiada en el Valle de Bielsa. (estar)",
+    "answer": "estuvo",
+    "accept": [],
+    "distractors": [
+      "estuvó",
+      "estuve",
+      "estuvieron"
+    ],
+    "writable": true,
+    "translation": "Entre avril et juin 1938, la Division 43 fut assiégée dans la vallée de Bielsa.",
+    "explanation": "estar, ella → estuvo.",
+    "source": "tio-pepe-2"
+  },
+  {
+    "id": "frase-irr-1",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "La abuela ___ : «Nunca olvidé esos años». (decir)",
+    "answer": "dijo",
+    "accept": [],
+    "distractors": [
+      "decí",
+      "dijó",
+      "dijeron"
+    ],
+    "writable": true,
+    "translation": "La grand-mère dit : « Je n'ai jamais oublié ces années ».",
+    "explanation": "decir, ella → dijo (prétérit fort en j, aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "frase-irr-2",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchas familias ___ las maletas para huir. (hacer)",
+    "answer": "hicieron",
+    "accept": [],
+    "distractors": [
+      "hacieron",
+      "hizo",
+      "hicimos"
+    ],
+    "writable": true,
+    "translation": "Beaucoup de familles firent leurs valises pour fuir.",
+    "explanation": "hacer, ellas → hicieron (radical hic-).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-3",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Cuando sonaron las sirenas, Carmen ___ en el refugio. (dormir)",
+    "answer": "durmió",
+    "accept": [],
+    "distractors": [
+      "dormió",
+      "durmí",
+      "dormimos"
+    ],
+    "writable": true,
+    "translation": "Quand les sirènes sonnèrent, Carmen dormit dans l'abri.",
+    "explanation": "dormir, ella → durmió (o → u à la 3e personne seulement).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-4",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los refugiados ___ ayuda. (pedir)",
+    "answer": "pidieron",
+    "accept": [],
+    "distractors": [
+      "pedieron",
+      "pidió",
+      "pedimos"
+    ],
+    "writable": true,
+    "translation": "Les réfugiés demandèrent de l'aide.",
+    "explanation": "pedir, ellas → pidieron (e → i à la 3e personne seulement).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-5",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-vocal"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los niños no ___ la leyenda. (creer)",
+    "answer": "creyeron",
+    "accept": [],
+    "distractors": [
+      "creieron",
+      "creyó",
+      "creemos"
+    ],
+    "writable": true,
+    "translation": "Les enfants ne crurent pas la légende.",
+    "explanation": "creer, ellos → creyeron (le i devient y entre deux voyelles).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-7",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los aviones ___ a la ciudad. (venir)",
+    "answer": "vinieron",
+    "accept": [],
+    "distractors": [
+      "venieron",
+      "vino",
+      "vinimos"
+    ],
+    "writable": true,
+    "translation": "Les avions vinrent sur la ville.",
+    "explanation": "venir, ellos → vinieron (radical vin-).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-10",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nosotros no ___ volver a casa. (poder)",
+    "answer": "pudimos",
+    "accept": [],
+    "distractors": [
+      "podimos",
+      "pudieron",
+      "pude"
+    ],
+    "writable": true,
+    "translation": "Nous ne pûmes pas revenir à la maison.",
+    "explanation": "poder, nosotros → pudimos.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "frase-irr-11",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mi abuela ___ sus recuerdos en una caja. (poner)",
+    "answer": "puso",
+    "accept": [],
+    "distractors": [
+      "ponió",
+      "pusó",
+      "pusieron"
+    ],
+    "writable": true,
+    "translation": "Ma grand-mère mit ses souvenirs dans une boîte.",
+    "explanation": "poner, ella → puso (radical pus-, aucun accent).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-12",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Mis abuelos me ___ sus fotos de la guerra. (traer)",
+    "answer": "trajeron",
+    "accept": [],
+    "distractors": [
+      "trajieron",
+      "traeron",
+      "trajo"
+    ],
+    "writable": true,
+    "translation": "Mes grands-parents m'apportèrent leurs photos de la guerre.",
+    "explanation": "traer, ellos → trajeron (-eron après j, pas -ieron).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-13",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Carmen nunca ___ dónde estaba su padre. (saber)",
+    "answer": "supo",
+    "accept": [],
+    "distractors": [
+      "sabió",
+      "supó",
+      "supe"
+    ],
+    "writable": true,
+    "translation": "Carmen ne sut jamais où était son père.",
+    "explanation": "saber, él → supo (radical sup-).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "frase-irr-14",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los republicanos ___ ganar la guerra. (querer)",
+    "answer": "quisieron",
+    "accept": [],
+    "distractors": [
+      "querieron",
+      "quiso",
+      "quisimos"
+    ],
+    "writable": true,
+    "translation": "Les républicains voulurent gagner la guerre.",
+    "explanation": "querer, ellos → quisieron (radical quis-).",
+    "source": "gramatica-preterito"
+  }
+]

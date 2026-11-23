@@ -1,0 +1,38 @@
+[
+  {
+    "id": "caja-recuerdos",
+    "name": "La caja de los recuerdos",
+    "emoji": "📦",
+    "items": [
+      "foto",
+      "cartas",
+      "recuerdo"
+    ],
+    "effect": "healOnCorrect",
+    "value": 1,
+    "description": "La foto + Las cartas + El recuerdo : +1 PV à chaque bonne réponse."
+  },
+  {
+    "id": "tebeo-leyenda",
+    "name": "El tebeo y la leyenda",
+    "emoji": "📰",
+    "items": [
+      "tebeo",
+      "leyenda"
+    ],
+    "effect": "streakDouble",
+    "description": "El tebeo + La leyenda familiar : le bonus de série est doublé."
+  },
+  {
+    "id": "papel-y-tinta",
+    "name": "Papel y tinta",
+    "emoji": "✒️",
+    "items": [
+      "cartas",
+      "diccionario"
+    ],
+    "effect": "goldOnWrite",
+    "value": 1,
+    "description": "Las cartas + El diccionario : +1 moneda par réponse écrite juste."
+  }
+]
