@@ -242,7 +242,6 @@
         "labelFr": "J’ai demandé à la grand-mère comment fut la guerre.",
         "quiz": {
           "themes": [
-            "memoria",
             "historia"
           ]
         },
@@ -468,8 +467,7 @@
         "labelFr": "J’ai cherché la vérité.",
         "quiz": {
           "themes": [
-            "historia",
-            "memoria"
+            "historia"
           ]
         },
         "success": {
@@ -578,12 +576,8 @@
         "labelFr": "Oui, je les situe sur la carte.",
         "quiz": {
           "ids": [
-            "esc-mapa-1",
             "esc-mapa-2",
-            "esc-mapa-3",
-            "esc-mapa-4",
-            "esc-mapa-5",
-            "esc-mapa-6"
+            "esc-mapa-3"
           ]
         },
         "success": {

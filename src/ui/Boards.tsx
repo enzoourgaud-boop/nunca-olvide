@@ -4,7 +4,6 @@ import type { Asked } from '../engine/game';
 import type { Question, SceneRef, Scenes } from '../engine/schema';
 import { pointerDrag } from './drag';
 import { canSpeak, speak, stopSpeaking, voicesReady } from './speech';
-import { audioReady, playAudio, stopAudio } from './audio';
 
 const FR_POS: Record<string, string> = {
   linea: 'sur la frise', arriba: 'en haut', abajo: 'en bas', fondo: 'au fond', segundo: 'au second plan', primero: 'au premier plan',
@@ -343,52 +342,39 @@ export function PlaceBoard({ q, asked, scenes, done, onSubmit }: {
 /* ======================= Écoute ======================= */
 
 /** Lecture à voix haute ; à défaut de voix espagnole, la phrase s'affiche quelques secondes. */
-export function ListenBar({ id, text, voices, auto }: { id: string; text: string; voices: string[]; auto: boolean }) {
-  // audio : fichier mp3 de la question · voice : voix espagnole de l'appareil · flash : le texte s'affiche 5 secondes
-  const [state, setState] = useState<'wait' | 'audio' | 'voice' | 'flash' | 'hidden'>('wait');
+export function ListenBar({ text, voices, auto }: { text: string; voices: string[]; auto: boolean }) {
+  const [state, setState] = useState<'wait' | 'voice' | 'flash' | 'hidden'>('wait');
   const [shown, setShown] = useState(0);
   useEffect(() => {
     let alive = true;
     setState('wait');
     setShown(0);
-    (async () => {
-      if (await audioReady(id)) {
-        if (!alive) return;
-        setState('audio');
-        if (auto) void playAudio(id);
-        return;
-      }
-      await voicesReady();
+    voicesReady().then(() => {
       if (!alive) return;
       if (canSpeak(voices)) {
         setState('voice');
         if (auto) speak(text, voices);
       } else setState('flash');
-    })();
+    });
     return () => {
       alive = false;
       stopSpeaking();
-      stopAudio();
     };
-  }, [id, text]);
+  }, [text]);
   useEffect(() => {
     if (state !== 'flash') return;
     const t = setTimeout(() => setState('hidden'), 5000);
     return () => clearTimeout(t);
   }, [state, shown]);
-  const play = (slow: boolean) => {
-    if (state === 'audio') void playAudio(id, slow).then(ok => !ok && speak(text, voices, slow ? 0.6 : 0.9));
-    else speak(text, voices, slow ? 0.6 : 0.9);
-  };
 
   if (state === 'wait') return <div class="escucha"><span class="muted">Préparation de la voix…</span></div>;
-  if (state === 'voice' || state === 'audio')
+  if (state === 'voice')
     return (
       <div class="escucha" role="group" aria-label="Écoute">
-        <button class="btn altavoz" onClick={() => play(false)}>
+        <button class="btn altavoz" onClick={() => speak(text, voices)}>
           🔊 Écouter
         </button>
-        <button class="btn sec" onClick={() => play(true)}>
+        <button class="btn sec" onClick={() => speak(text, voices, 0.6)}>
           🐢 Plus lentement
         </button>
       </div>

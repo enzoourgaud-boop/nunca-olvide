@@ -66,43 +66,6 @@
     "translation": ""
   },
   {
-    "id": "aso-ce-1",
-    "type": "association",
-    "theme": "lexico",
-    "notions": [
-      "lex-memoria"
-    ],
-    "level": 1,
-    "label": "Relie chaque mot à sa traduction",
-    "prompt": "Relie chaque mot espagnol à sa traduction.",
-    "promptLang": "fr",
-    "pairs": [
-      [
-        "ausente",
-        "absent"
-      ],
-      [
-        "con frecuencia",
-        "souvent"
-      ],
-      [
-        "la leyenda",
-        "la légende"
-      ],
-      [
-        "la esperanza",
-        "l'espoir"
-      ],
-      [
-        "el recuerdo",
-        "le souvenir"
-      ]
-    ],
-    "explanation": "ausente = absent · con frecuencia = souvent · la leyenda = la légende · la esperanza = l'espoir · el recuerdo = le souvenir",
-    "source": "ce-mi-tio",
-    "translation": ""
-  },
-  {
     "id": "aso-mis-1",
     "type": "association",
     "theme": "lexico",
@@ -170,39 +133,6 @@
     ],
     "explanation": "las sirenas = les sirènes · los aviones = les avions · el pueblo = le village · la abuela = la grand-mère · la nieta = la petite-fille",
     "source": "mision-secreta",
-    "translation": ""
-  },
-  {
-    "id": "aso-tbo-1",
-    "type": "association",
-    "theme": "lexico",
-    "notions": [
-      "lex-memoria"
-    ],
-    "level": 1,
-    "label": "Relie chaque mot à sa traduction",
-    "prompt": "Relie chaque mot espagnol à sa traduction.",
-    "promptLang": "fr",
-    "pairs": [
-      [
-        "la pesadilla",
-        "le cauchemar"
-      ],
-      [
-        "el hambre",
-        "la faim"
-      ],
-      [
-        "el tebeo",
-        "la bande dessinée"
-      ],
-      [
-        "el campo de refugiados",
-        "le camp de réfugiés"
-      ]
-    ],
-    "explanation": "la pesadilla = le cauchemar · el hambre = la faim · el tebeo = la bande dessinée · el campo de refugiados = le camp de réfugiés",
-    "source": "tio-pepe-1",
     "translation": ""
   },
   {
@@ -302,43 +232,6 @@
     ],
     "explanation": "la abuela = la grand-mère · la nieta = la petite-fille · el pueblo = le village · el miedo = la peur",
     "source": "mision-secreta",
-    "translation": ""
-  },
-  {
-    "id": "aso-img-4",
-    "type": "association",
-    "theme": "lexico",
-    "notions": [
-      "lex-memoria"
-    ],
-    "level": 1,
-    "label": "Associe chaque mot à son image",
-    "prompt": "Relie chaque mot espagnol à la bonne image.",
-    "promptLang": "fr",
-    "pairs": [
-      [
-        "el tebeo",
-        "📰"
-      ],
-      [
-        "el hambre",
-        "🥣"
-      ],
-      [
-        "la pesadilla",
-        "😱"
-      ],
-      [
-        "el recuerdo",
-        "📷"
-      ],
-      [
-        "la esperanza",
-        "🌱"
-      ]
-    ],
-    "explanation": "el tebeo = la bande dessinée · el hambre = la faim · la pesadilla = le cauchemar · el recuerdo = le souvenir · la esperanza = l'espoir",
-    "source": "tio-pepe-1",
     "translation": ""
   }
 ]

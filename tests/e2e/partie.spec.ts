@@ -237,16 +237,16 @@ test('la caja de los recuerdos : une mauvaise année fait perdre le souvenir, la
   await page.evaluate(() => {
     const key = Object.keys(localStorage).find(k => k.includes(':run'))!;
     const run = JSON.parse(localStorage.getItem(key)!);
-    run.caja = { pending: ['foto-carmen', 'llave-casa'], placed: {}, last: null };
+    run.caja = { pending: ['cartas', 'llave-casa'], placed: {}, last: null };
     localStorage.setItem(key, JSON.stringify(run));
   });
   await page.reload();
   await page.getByRole('button', { name: /Reprendre|Continuer/ }).first().click();
   const modal = page.getByRole('dialog');
   await expect(modal).toContainText('¿De qué año es este recuerdo?');
-  await expect(modal).toContainText('La foto de Carmen bebé');
-  // 1 = 1928 (bonne année pour la photo de Carmen bébé) : au clavier
-  await page.keyboard.press('1');
+  await expect(modal).toContainText('Las cartas de cada semana');
+  // 2 = 1936 (bonne année pour les lettres) : au clavier
+  await page.keyboard.press('2');
   await expect(modal).toContainText('¡Recuerdo guardado!');
   await page.keyboard.press('Enter');
   // la clé de casa date de 1939 : touche 2 = 1936 (mauvaise)
@@ -353,39 +353,7 @@ test('une réponse corrigée porte un symbole ✓ / ✗, pas seulement une coule
   await expect(page.locator('.combate .fb')).toContainText('Bonne réponse');
 });
 
-/* ======================= Étape 5 : audio et animations ======================= */
-
-test('compréhension orale : les fichiers audio sont chargés (même sans voix espagnole sur l’appareil)', async ({ page }) => {
-  // le professeur ne garde que l'écoute : la première question est une question d'écoute
-  await page.evaluate(() => localStorage.setItem('nunca:settings', JSON.stringify({ types: ['ecoute'] })));
-  await page.reload();
-  const audio: string[] = [];
-  page.on('response', r => r.url().includes('/audio/') && audio.push(`${r.status()} ${r.url().split('/audio/')[1]}`));
-  await startRun(page, 'ECOUTE-5');
-  await page.locator('.sala.puede').first().click();
-  const bar = page.locator('.combate .escucha');
-  await expect(bar.getByRole('button', { name: /Écouter/ })).toBeVisible();
-  await expect(page.locator('.combate .sin-voz')).toHaveCount(0); // plus de « pas de voix espagnole »
-  const id = (await page.locator('.combate .qa').getAttribute('data-qid'))!;
-  expect(audio).toContain(`200 ${id}.mp3`);
-  await bar.getByRole('button', { name: /lentement/ }).click();
-  await expect.poll(() => audio.includes(`200 ${id}-lento.mp3`)).toBe(true);
-  // la phrase écrite n'est pas affichée avant la réponse
-  await expect(page.locator('.combate .flash-texto')).toHaveCount(0);
-});
-
-test('les fichiers audio sont dans le cache hors ligne', async ({ page, browserName }) => {
-  test.skip(browserName !== 'chromium', 'service worker testé sous Chromium');
-  await page.goto('./');
-  await page.evaluate(() => navigator.serviceWorker.ready);
-  await page.reload();
-  const n = await page.evaluate(async () => {
-    let total = 0;
-    for (const k of await caches.keys()) total += (await (await caches.open(k)).keys()).filter(r => r.url.includes('.mp3')).length;
-    return total;
-  });
-  expect(n).toBeGreaterThanOrEqual(60);
-});
+/* ======================= Étape 5 : animations ======================= */
 
 test('chacun attaque à son tour : mon coup, puis la riposte de l’ombre (animations)', async ({ page }) => {
   // animations normales (pas « réduites ») : les classes d'animation sont posées par la scène de combat

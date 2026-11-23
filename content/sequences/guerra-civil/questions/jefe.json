@@ -1,26 +1,5 @@
 [
   {
-    "id": "jefe-olvide",
-    "type": "ecrit",
-    "theme": "regulares",
-    "notions": [
-      "reg-ar"
-    ],
-    "level": "jefe",
-    "label": "Écris au pretérito indefinido",
-    "prompt": "Escribe la frase de Carmen : «Nunca ___ esos años.» (olvidar, yo)",
-    "answer": "olvidé",
-    "accept": [],
-    "distractors": [
-      "olvido",
-      "olvidó",
-      "olvidaron"
-    ],
-    "translation": "Je n'ai jamais oublié ces années.",
-    "explanation": "olvidar, yo → olvidé.",
-    "source": "mision-secreta"
-  },
-  {
     "id": "jefe-volvio",
     "type": "ecrit",
     "theme": "regulares",
@@ -166,29 +145,5 @@
     "translation": "Mes grands-parents me dirent : « Nous n’avons jamais oublié ».",
     "explanation": "decir, ellos → dijeron (-eron après j).",
     "source": "gramatica-preterito"
-  },
-  {
-    "id": "jefe-frase",
-    "type": "ecrit",
-    "theme": "regulares",
-    "notions": [
-      "reg-er-ir"
-    ],
-    "level": "jefe",
-    "label": "Écris au pretérito indefinido",
-    "prompt": "Traduis la phrase de Carmen : « Je n’ai jamais oublié ces années. »",
-    "promptLang": "fr",
-    "answer": "Nunca olvidé esos años",
-    "accept": [
-      "No olvidé nunca esos años"
-    ],
-    "distractors": [
-      "Nunca olvido esos años",
-      "Nunca olvidó esos años",
-      "Siempre olvidé esos años"
-    ],
-    "translation": "",
-    "explanation": "Nunca olvidé esos años : olvidar, yo → olvidé (avec l’accent).",
-    "source": "mision-secreta"
   }
 ]

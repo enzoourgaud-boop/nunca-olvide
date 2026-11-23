@@ -70,30 +70,6 @@
     "phrase": "Y hablando de hambre, ellos sabían muy bien lo que decían."
   },
   {
-    "id": "eco",
-    "name": "El Eco",
-    "emoji": "🔉",
-    "card": 4,
-    "kind": "normal",
-    "hp": 6,
-    "attack": 1,
-    "pattern": "cycle",
-    "intents": [
-      {
-        "kind": "attack"
-      },
-      {
-        "kind": "listen"
-      }
-    ],
-    "types": [
-      "ecoute",
-      "qcm"
-    ],
-    "taunt": "…eco… eco…",
-    "phrase": "¿Habló o hablo?"
-  },
-  {
     "id": "remolino",
     "name": "El Remolino de Fechas",
     "emoji": "🌀",
@@ -137,25 +113,31 @@
       {
         "name": "Las sirenas suenan",
         "from": 1,
+        "themes": [
+          "regulares"
+        ],
         "types": [
-          "ecoute"
+          "qcm",
+          "ordre",
+          "vrai-faux"
         ],
         "intents": [
           {
-            "kind": "listen"
+            "kind": "rush",
+            "value": 6
           },
           {
             "kind": "attack"
           }
         ],
-        "message": "Les sirènes hurlent : écoute bien, les questions sont à l'oral."
+        "message": "Les sirènes hurlent : conjugue vite, au passé simple !"
       },
       {
         "name": "Los aviones",
         "from": 0.5,
         "themes": [
-          "memoria",
-          "regulares"
+          "regulares",
+          "historia"
         ],
         "attackBonus": 1,
         "intents": [
@@ -253,8 +235,8 @@
       }
     ],
     "types": [
-      "ecoute",
-      "qcm"
+      "qcm",
+      "ordre"
     ],
     "taunt": "…",
     "phrase": "Nadie habló de la guerra."
@@ -287,7 +269,7 @@
         "from": 1,
         "themes": [
           "ser-ir",
-          "memoria"
+          "historia"
         ],
         "intents": [
           {
@@ -325,8 +307,8 @@
         "name": "Cotidiana",
         "from": 1,
         "themes": [
-          "memoria",
-          "historia"
+          "historia",
+          "lexico"
         ],
         "intents": [
           {
@@ -443,18 +425,18 @@
     "pattern": "cycle",
     "intents": [
       {
-        "kind": "listen"
-      },
-      {
         "kind": "attack"
       },
       {
         "kind": "fog"
+      },
+      {
+        "kind": "attack"
       }
     ],
     "types": [
-      "ecoute",
-      "vrai-faux"
+      "vrai-faux",
+      "qcm"
     ],
     "taunt": "…",
     "phrase": "Durante muchos años, nadie habló."
@@ -530,8 +512,8 @@
         ],
         "themes": [
           "historia",
-          "memoria",
-          "regulares"
+          "regulares",
+          "lexico"
         ],
         "intents": [
           {

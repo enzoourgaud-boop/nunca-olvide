@@ -1,5 +1,7 @@
 # Étape 5 : ce que tu dois tester
 
+> **Mise à jour (étape 6)** : la partie « Audio de la compréhension orale » a été **retirée** à la demande du professeur (voix de synthèse jugée inacceptable). Les animations, elles, sont conservées.
+
 Branche `etape-5-animations-audio`. Les étapes 1 à 4 sont sur `main`.
 
 ## Ce qui a été fait

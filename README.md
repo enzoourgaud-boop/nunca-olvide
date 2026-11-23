@@ -11,7 +11,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 - Il n'y a **ni serveur, ni compte élève, ni publicité**. Aucune donnée ne quitte l'appareil.
 - Une fois chargé, il fonctionne **sans connexion**.
 
-> **Où en est le projet ?** Les étapes 1 à 4 sont sur `main`. L'étape 5 (animations d'attaque et de riposte, **fichiers audio** pour la compréhension orale) est sur la branche `etape-5-animations-audio` : ce qu'il te reste à tester est dans [`docs/etape-5/A_TESTER.md`](docs/etape-5/A_TESTER.md), avec les captures dans `docs/etape-5/`. La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
+> **Où en est le projet ?** Les étapes 1 à 5 sont sur `main`. L'étape 6 (retrait de l'audio, des questions d'écoute, et des questions sur Carmen et sur la BD) est sur la branche `etape-6-retrait` : ce qu'il te reste à vérifier est dans [`docs/etape-6/A_TESTER.md`](docs/etape-6/A_TESTER.md). La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
 
 ---
 
@@ -20,7 +20,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 1. [Comment on joue](#1-comment-on-joue)
 2. [Utiliser le jeu en classe](#2-utiliser-le-jeu-en-classe) (dont une séance type de 15 minutes)
 3. [L'espace professeur](#3-lespace-professeur)
-4. [Modifier ou ajouter des questions](#4-modifier-ou-ajouter-des-questions) (et [l'audio de l'écoute](#4-bis-laudio-de-la-compréhension-orale))
+4. [Modifier ou ajouter des questions](#4-modifier-ou-ajouter-des-questions)
 5. [Ajouter un nouveau document de la séquence](#5-ajouter-un-nouveau-document-de-la-séquence)
 6. [Mettre le jeu en ligne](#6-mettre-le-jeu-en-ligne)
 7. [Confidentialité et RGPD](#7-confidentialité-et-rgpd)
@@ -44,7 +44,7 @@ Le coup de l'élève part d'abord (étincelle, l'ombre clignote et recule, « �
 
 | Ombre | Ce qu'elle demande |
 |---|---|
-| Las Sirenas (jefe de l'acte 1), El Eco | écouter : un **fichier audio** lit la phrase (boutons « Écouter » et « Plus lentement ») |
+| Las Sirenas (jefe de l'acte 1) | conjugaison au passé simple (le chrono est plus court si tu l'actives), puis l'histoire de la guerre |
 | La Leyenda | vrai ou faux sur tes documents |
 | El Remolino de Fechas | remettre les phrases et les dates dans l'ordre, placer les événements sur la frise 1928-1939 |
 | El Héroe de Tebeo | ¿ser o ir? |
@@ -53,7 +53,7 @@ Le coup de l'élève part d'abord (étincelle, l'ombre clignote et recule, « �
 
 **Dans la partie, l'espagnol sert aussi à décider :**
 
-- **La caja de los recuerdos** : certains souvenirs sont *datés* (la photo de Carmen bébé, les lettres, le Valle de Bielsa, la clé de la maison). Quand l'élève en reçoit un, il lit un indice en espagnol et le range sur la **frise 1928 · 1936 · 1938 · 1939**. Bonne année : il garde le souvenir et son pouvoir. Mauvaise année : l'Olvido l'emporte. (Touches 1 à 4 au clavier.)
+- **La caja de los recuerdos** : certains souvenirs sont *datés* (les lettres des années de guerre, la clé de la maison). Quand l'élève en reçoit un, il lit un indice en espagnol et le range sur la **frise 1928 · 1936 · 1938 · 1939**. Bonne année : il garde le souvenir et son pouvoir. Mauvaise année : l'Olvido l'emporte. (Touches 1 à 4 au clavier.)
 - **Le mot mystère** (en haut de l'écran) : chaque acte cache un mot (GUERRA CIVIL, ESPERANZA, EXILIO). Une lettre apparaît à chaque bonne réponse, deux à l'écrit. Mot complet : le jefe est affaibli.
 - **La carte de l'Espagne** : un événement demande de situer Huesca, la frontière avec la France et Madrid (*en el norte, en el este, en el centro…*).
 - **La ficha de identidad** : à la fin d'une victoire, la fiche de la guerre (date de début, durée, année de fin, les deux camps, chef des militaires) s'affiche, remplie.
@@ -97,7 +97,7 @@ Pour y accéder : en bas de l'écran d'accueil, clique sur **« Espace professeu
 
 | Onglet | Ce qu'on y fait |
 |---|---|
-| **Réglages de classe** | Thèmes (verbes réguliers, irréguliers, ser/ir, histoire, souvenirs, lexique), types de questions, **partie courte imposée et acte joué** (au hasard, ou acte 1, 2 ou 3), chrono (désactivé par défaut), **part de réponses écrites**, accents. Le jeu donne un **code de classe**, un lien et un **QR code**. |
+| **Réglages de classe** | Thèmes (verbes réguliers, irréguliers, ser/ir, histoire, lexique), types de questions, **partie courte imposée et acte joué** (au hasard, ou acte 1, 2 ou 3), chrono (désactivé par défaut), **part de réponses écrites**, accents. Le jeu donne un **code de classe**, un lien et un **QR code**. |
 | **Questions** | Rechercher, filtrer, activer ou désactiver une question d'un clic, la modifier ou en créer une. |
 | **Import / export** | Exporter la banque en CSV (Excel, LibreOffice) ou en JSON, la réimporter. |
 | **Codes élèves** | Coller les codes de fin de partie (un par ligne, un prénom devant si tu veux). Le jeu affiche le résultat de chacun (victoire, acte, partie courte, durée, date) et les notions les plus ratées de la classe. Un code mal recopié est signalé sans bloquer les autres. |
@@ -109,7 +109,7 @@ Pour y accéder : en bas de l'écran d'accueil, clique sur **« Espace professeu
 
 ## 4. Modifier ou ajouter des questions
 
-Les questions sont dans `content/sequences/guerra-civil/questions/`, un fichier par thème ou par type : `regulares.json`, `irregulares.json`, `ser-ir.json`, `historia.json`, `memoria.json`, `lexico.json`, `vrai-faux.json`, `ordre.json`, `ecoute.json`, `escenas.json` (frise), `association.json`, `jefe.json`.
+Les questions sont dans `content/sequences/guerra-civil/questions/`, un fichier par thème ou par type : `regulares.json`, `irregulares.json`, `ser-ir.json`, `historia.json`, `lexico.json`, `vrai-faux.json`, `ordre.json`, `escenas.json` (frise), `association.json`, `jefe.json`.
 
 ### Méthode 1 : avec l'espace professeur (conseillée)
 
@@ -135,7 +135,7 @@ Ouvre un fichier `.json` sur github.com, clique sur le crayon ✏️, modifie, p
 |---|---|---|
 | `id` | identifiant unique (minuscules, chiffres, tirets) | `hist-jefe` |
 | `type` | `qcm`, `ecrit`, `ecoute`, `vrai-faux`, `ordre`, `association`, `scene` | `qcm` |
-| `theme` | `regulares`, `irregulares`, `ser-ir`, `historia`, `memoria`, `lexico` | `historia` |
+| `theme` | `regulares`, `irregulares`, `ser-ir`, `historia`, `lexico` | `historia` |
 | `level` | `1`, `2`, `3` ou `"jefe"` | `1` |
 | `notions` | notions travaillées (liste dans `sequence.json`) | `["hist-bandos"]` |
 | `prompt` | énoncé ; `___` pour un trou | `¿Quién fue el jefe de los militares sublevados?` |
@@ -154,16 +154,6 @@ Ouvre un fichier `.json` sur github.com, clique sur le crayon ✏️, modifie, p
 **Vérifier la banque** : `npm run valider` (partie 9) contrôle tout : champs manquants, doublons, bonne réponse parmi les mauvaises, références inconnues. GitHub la lance automatiquement à chaque envoi.
 
 Tout ce qui ne vient pas directement de tes documents est listé dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
-
----
-
-## 4 bis. L'audio de la compréhension orale
-
-Chaque question d'écoute (`"type": "ecoute"`) a deux fichiers dans `public/audio/` : `<identifiant>.mp3` (débit normal) et `<identifiant>-lento.mp3` (bouton « Plus lentement »). Exemple : `eco-sirenas.mp3`.
-
-- **Remplacer une voix de synthèse par ta voix** : enregistre la phrase (téléphone, Audacity…), exporte en **mp3**, nomme le fichier avec l'identifiant de la question et dépose-le dans `public/audio/` sur GitHub (**Add file → Upload files**). Le jeu lit toujours ce fichier en premier. Sans fichier `-lento`, « Plus lentement » ralentit simplement le fichier normal.
-- **Ajouter une question d'écoute** : écris-la dans un fichier de `questions/` (champ `say` = la phrase lue), puis demande-moi de générer l'audio (ou lance `scripts/generar-audio.py`, expliqué dans le fichier). `npm run valider` signale (⚠️) toute question d'écoute sans fichier audio.
-- **Hors ligne** : les fichiers sont mis en cache avec le jeu.
 
 ---
 
@@ -211,7 +201,7 @@ Le jeu et *El Camino de Cempasúchil* peuvent être en ligne à la même adresse
 - La progression (profil, álbum, carnet) est enregistrée **uniquement dans le navigateur** de l'appareil. Un bouton permet de supprimer un profil.
 - Si le navigateur bloque le stockage (navigation privée…), le jeu fonctionne quand même et prévient que la progression ne sera pas gardée.
 - Le **code de fin de partie** ne contient que le résultat, la date et les notions ratées : ni pseudo, ni identifiant.
-- **L'audio de l'écoute** vient de fichiers `.mp3` livrés avec le jeu (`public/audio/`) : rien n'est envoyé, rien n'est demandé au navigateur. Si un fichier manque (une question créée dans l'espace professeur, par exemple), le jeu essaie la voix espagnole de l'appareil, puis affiche la phrase 5 secondes.
+- Il n'y a **plus de question d'écoute** dans la banque. Si tu en crées une (type `ecoute`), elle utilise la voix espagnole installée sur l'appareil (sans envoi de données) ; sans voix, la phrase s'affiche 5 secondes.
 
 ---
 
@@ -262,9 +252,8 @@ Puis ouvre l'adresse affichée (en général <http://localhost:5173>).
 ## 10. Licences et crédits
 
 - **Moteur** : repris du jeu *El Camino de Cempasúchil* (même auteur).
-- **Contenu** : tiré des documents de la séquence du professeur (fiche de grammaire, Misión secreta, évaluation, et de courtes citations de la bande dessinée *Mi tío que estuvo en el infierno*, auteur à préciser). Aucune image de la bande dessinée n'est reproduite.
+- **Contenu** : tiré des documents de la séquence du professeur (fiche de grammaire, Misión secreta, évaluation). La bande dessinée *Mi tío que estuvo en el infierno* et son questionnaire ne sont plus utilisés dans les questions.
 - **Polices** : Special Elite (Apache 2.0), Atkinson Hyperlegible, Pixelify Sans, Press Start 2P et OpenDyslexic (SIL OFL), intégrées au jeu.
 - **Bibliothèques** : Preact (MIT), zod (MIT), qrcode-generator (MIT), Workbox (MIT).
 - **Visuels** : originaux (pixel art, CSS, SVG) ou emoji du système. Aucun personnage, logo ou symbole politique existant.
 - **Sons et musique** : générés par le navigateur (Web Audio) ; mélodie originale composée pour le jeu.
-- **Voix de la compréhension orale** : voix de synthèse espagnole générée avec espeak-ng (logiciel libre, GPL ; les fichiers produits sont libres de droits). Elle est volontairement un peu lente. Tu peux la remplacer par ta voix (partie 4 bis).

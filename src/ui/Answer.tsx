@@ -131,7 +131,7 @@ export function AnswerArea({ q, asked, scenes, voices, done, given, hidden = [],
 }) {
   return (
     <>
-      {q.type === 'ecoute' && <ListenBar id={q.id} text={q.say ?? q.answer} voices={voices} auto={!done} />}
+      {q.type === 'ecoute' && <ListenBar text={q.say ?? q.answer} voices={voices} auto={!done} />}
       {q.type === 'qcm' && q.scene && <SceneView scenes={scenes} decorId={q.scene.decor} placed={sceneCells(q.scene)} />}
       {asked.mode === 'qcm' && <Options asked={asked} q={q} given={given} done={done} hidden={hidden} onPick={onAnswer} />}
       {asked.mode === 'write' && !done && <WriteInput onSubmit={onAnswer} resetKey={resetKey} />}

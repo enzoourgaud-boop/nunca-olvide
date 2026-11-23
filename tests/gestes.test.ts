@@ -10,21 +10,17 @@ type Internal = { gain(id: string): void; startFight(id: string): void; enterRoo
 describe('la caja de los recuerdos (frise)', () => {
   it('un souvenir daté attend d’être rangé : il ne donne rien tant qu’il n’est pas placé', () => {
     const g = Game.newRun(content(), S, 'CAJA-1');
-    const hp = g.state.maxHp;
-    (g as unknown as Internal).gain('foto-carmen');
-    expect(g.toPlace?.id).toBe('foto-carmen');
-    expect(g.state.relics['foto-carmen'] ?? 0).toBe(0);
-    expect(g.state.maxHp).toBe(hp);
+    (g as unknown as Internal).gain('cartas');
+    expect(g.toPlace?.id).toBe('cartas');
+    expect(g.state.relics.cartas ?? 0).toBe(0);
   });
 
   it('bonne année : on le garde et son effet s’applique', () => {
     const g = Game.newRun(content(), S, 'CAJA-2');
-    const hp = g.state.maxHp;
-    (g as unknown as Internal).gain('foto-carmen');
-    expect(g.placeRecuerdo('1928')).toBe(true);
-    expect(g.state.relics['foto-carmen']).toBe(1);
-    expect(g.state.maxHp).toBe(hp + 4);
-    expect(g.state.caja!.placed['foto-carmen']).toBe('1928');
+    (g as unknown as Internal).gain('cartas');
+    expect(g.placeRecuerdo('1936')).toBe(true);
+    expect(g.state.relics.cartas).toBe(1);
+    expect(g.state.caja!.placed.cartas).toBe('1936');
     expect(g.toPlace).toBeNull();
   });
 
@@ -41,15 +37,15 @@ describe('la caja de los recuerdos (frise)', () => {
 
   it('un souvenir en attente n’est pas proposé une seconde fois', () => {
     const g = Game.newRun(content(), S, 'CAJA-4');
-    (g as unknown as Internal).gain('bielsa');
-    expect(g.available('reliquia')).not.toContain('bielsa');
+    (g as unknown as Internal).gain('llave-casa');
+    expect(g.available('reliquia')).not.toContain('llave-casa');
   });
 
   it('chaque souvenir daté a une année de la frise et un indice en espagnol', () => {
     const c = content();
     const years = new Set(c.scenes.decors.find(d => d.id === 'frise')!.cols.map(x => x[0]));
     const dated = c.items.filter(i => i.year);
-    expect(dated.length).toBeGreaterThanOrEqual(4);
+    expect(dated.length).toBeGreaterThanOrEqual(2);
     for (const i of dated) {
       expect(years.has(i.year!), i.id).toBe(true);
       expect(i.clue, i.id).toContain(' ');
@@ -113,9 +109,8 @@ describe('le mot mystère', () => {
 describe('la carte de l’Espagne', () => {
   const maps = () => content().questions.filter(q => q.type === 'scene' && q.scene.decor === 'mapa');
 
-  it('au moins 6 questions, de trois niveaux, avec les mots de position', () => {
-    expect(maps().length).toBeGreaterThanOrEqual(6);
-    expect(new Set(maps().map(q => q.level)).size).toBe(3);
+  it('au moins 2 questions, avec les mots de position', () => {
+    expect(maps().length).toBeGreaterThanOrEqual(2);
     const d = content().scenes.decors.find(x => x.id === 'mapa')!;
     expect(d.rows.map(r => r[1])).toEqual(['en el norte', 'en el centro', 'en el sur']);
     expect(d.cols.map(r => r[1])).toEqual(['en el oeste', 'en el centro', 'en el este']);
@@ -135,7 +130,8 @@ describe('la carte de l’Espagne', () => {
   it('l’événement de la carte pose ces questions-là', () => {
     const ev = content().events.find(e => e.id === 'mapa')!;
     const ids = ev.choices[0].quiz!.ids!;
-    expect(ids.length).toBeGreaterThanOrEqual(6);
+    expect(ids.length).toBeGreaterThanOrEqual(2);
+    expect(ids.every(i => content().questions.some(q => q.id === i))).toBe(true);
     const g = Game.newRun(content(), S, 'MAPA-1');
     g.state.screen = 'event';
     g.state.event = { id: 'mapa', choice: null, quiz: null, result: null, pendingFight: null };

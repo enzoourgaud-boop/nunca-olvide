@@ -43,7 +43,7 @@ function history(seed: string, wrongEvery = 3) {
 describe('variété des questions', () => {
   it('repère les questions qui se répondent l’une l’autre', () => {
     const g = Game.newRun(content(), S, 'X');
-    expect(g.closeTo('frase-mis-8', 'hist-tio')).toBe(true); // « tío … frontera … Francia »
+    expect(g.closeTo('frase-mis-1', 'hist-inicio')).toBe(true); // « julio de 1936 »
     expect(g.closeTo('reg-olvidar-yo', 'ord-olvide')).toBe(true); // la réponse « olvidé » est dans l'autre
     expect(g.closeTo('frase-mis-10', 'hist-final')).toBe(true); // 1939
     expect(g.closeTo('hist-jefe', 'lex-pesadilla-es')).toBe(false);

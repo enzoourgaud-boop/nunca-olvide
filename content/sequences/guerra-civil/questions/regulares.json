@@ -1907,29 +1907,6 @@
     "source": "mision-secreta"
   },
   {
-    "id": "frase-mis-12",
-    "type": "qcm",
-    "theme": "regulares",
-    "notions": [
-      "reg-er-ir",
-      "acentos"
-    ],
-    "level": 2,
-    "label": "Complète au pretérito indefinido",
-    "prompt": "Carmen ___ en 1928. (nacer)",
-    "answer": "nació",
-    "accept": [],
-    "distractors": [
-      "nace",
-      "nací",
-      "nacieron"
-    ],
-    "writable": true,
-    "translation": "Carmen naquit en 1928.",
-    "explanation": "nacer, ella → nació (-ER : -ió).",
-    "source": "mision-secreta"
-  },
-  {
     "id": "frase-mis-13",
     "type": "qcm",
     "theme": "regulares",
@@ -1996,28 +1973,6 @@
     "translation": "En juillet 1936, des généraux se soulevèrent contre la République.",
     "explanation": "sublevarse, ellos → se sublevaron (le pronom « se » reste devant le verbe).",
     "source": "evaluacion"
-  },
-  {
-    "id": "frase-tbo-2",
-    "type": "qcm",
-    "theme": "regulares",
-    "notions": [
-      "reg-er-ir"
-    ],
-    "level": 2,
-    "label": "Complète au pretérito indefinido",
-    "prompt": "Mis padres ___ la guerra en su infancia. (vivir)",
-    "answer": "vivieron",
-    "accept": [],
-    "distractors": [
-      "vivimos",
-      "vivió",
-      "viven"
-    ],
-    "writable": true,
-    "translation": "Mes parents vécurent la guerre dans leur enfance.",
-    "explanation": "vivir, ellos → vivieron.",
-    "source": "tio-pepe-1"
   },
   {
     "id": "frase-irr-8",

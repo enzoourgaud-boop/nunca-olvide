@@ -322,34 +322,6 @@
     "translation": ""
   },
   {
-    "id": "ord-tebeos",
-    "type": "ordre",
-    "theme": "memoria",
-    "notions": [
-      "memoria-tebeo"
-    ],
-    "level": 2,
-    "label": "Remets la phrase dans l’ordre",
-    "prompt": "Ce n'était pas une guerre comme celles des BD.",
-    "promptLang": "fr",
-    "answer": "No era una guerra como las de los tebeos",
-    "tokens": [
-      "No",
-      "era",
-      "una",
-      "guerra",
-      "como",
-      "las",
-      "de",
-      "los",
-      "tebeos"
-    ],
-    "extra": [],
-    "explanation": "« No era una guerra como las de los tebeos. »",
-    "source": "tio-pepe-1",
-    "translation": ""
-  },
-  {
     "id": "ord-cartas",
     "type": "ordre",
     "theme": "regulares",
@@ -376,72 +348,5 @@
     "explanation": "« Mi madre y yo esperamos sus cartas. » Piège : « esperaron » n'est pas la bonne forme.",
     "source": "mision-secreta",
     "translation": ""
-  },
-  {
-    "id": "ord-crono-1",
-    "type": "ordre",
-    "theme": "historia",
-    "notions": [
-      "hist-fechas"
-    ],
-    "level": 1,
-    "label": "Remets les événements dans l’ordre chronologique",
-    "prompt": "Du plus ancien au plus récent (3 événements, série 1).",
-    "promptLang": "fr",
-    "answer": "Carmen nació unos militares llegaron el padre volvió",
-    "tokens": [
-      "Carmen nació",
-      "unos militares llegaron",
-      "el padre volvió"
-    ],
-    "extra": [],
-    "translation": "Carmen naquit (1928) · des militaires arrivèrent (1936) · le père revint (1939)",
-    "explanation": "Dans l’ordre : Carmen nació → unos militares llegaron → el padre volvió (Carmen naquit (1928) · des militaires arrivèrent (1936) · le père revint (1939)).",
-    "source": "mision-secreta"
-  },
-  {
-    "id": "ord-crono-2",
-    "type": "ordre",
-    "theme": "historia",
-    "notions": [
-      "hist-fechas"
-    ],
-    "level": 2,
-    "label": "Remets les événements dans l’ordre chronologique",
-    "prompt": "Du plus ancien au plus récent (3 événements, série 2).",
-    "promptLang": "fr",
-    "answer": "la guerra empezó la División 43 estuvo sitiada en Bielsa la guerra terminó",
-    "tokens": [
-      "la guerra empezó",
-      "la División 43 estuvo sitiada en Bielsa",
-      "la guerra terminó"
-    ],
-    "extra": [],
-    "translation": "la guerre commença (1936) · Bielsa (1938) · la guerre se termina (1939)",
-    "explanation": "Dans l’ordre : la guerra empezó → la División 43 estuvo sitiada en Bielsa → la guerra terminó (la guerre commença (1936) · Bielsa (1938) · la guerre se termina (1939)).",
-    "source": "tio-pepe-2"
-  },
-  {
-    "id": "ord-crono-3",
-    "type": "ordre",
-    "theme": "historia",
-    "notions": [
-      "hist-fechas"
-    ],
-    "level": 3,
-    "label": "Remets les événements dans l’ordre chronologique",
-    "prompt": "Du plus ancien au plus récent (4 événements, série 3).",
-    "promptLang": "fr",
-    "answer": "Carmen nació los generales se sublevaron la División 43 estuvo sitiada en Bielsa el padre volvió a casa",
-    "tokens": [
-      "Carmen nació",
-      "los generales se sublevaron",
-      "la División 43 estuvo sitiada en Bielsa",
-      "el padre volvió a casa"
-    ],
-    "extra": [],
-    "translation": "1928 · 1936 · 1938 · 1939",
-    "explanation": "Dans l’ordre : Carmen nació → los generales se sublevaron → la División 43 estuvo sitiada en Bielsa → el padre volvió a casa (1928 · 1936 · 1938 · 1939).",
-    "source": "mision-secreta"
   }
 ]

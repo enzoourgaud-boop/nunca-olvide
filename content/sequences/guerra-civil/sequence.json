@@ -47,14 +47,6 @@
       }
     },
     {
-      "id": "memoria",
-      "label": "Los recuerdos (Carmen, el tebeo)",
-      "color": "#8a5a9b",
-      "check": {
-        "ignoreArticles": true
-      }
-    },
-    {
       "id": "lexico",
       "label": "Léxico",
       "color": "#2f8f83",
@@ -106,14 +98,6 @@
       "label": "Histoire : l’exil et les réfugiés"
     },
     {
-      "id": "memoria-carmen",
-      "label": "Le souvenir de Carmen (Misión secreta)"
-    },
-    {
-      "id": "memoria-tebeo",
-      "label": "La guerre vécue (la BD)"
-    },
-    {
       "id": "lex-guerra",
       "label": "Lexique de la guerre"
     },
@@ -136,21 +120,6 @@
       "id": "mision-secreta",
       "title": "Misión secreta : el secreto de la abuela Carmen",
       "file": "sources/contenu-sequence.md#mision-secreta"
-    },
-    {
-      "id": "tio-pepe-1",
-      "title": "BD « Mi tío que estuvo en el infierno », planche 1",
-      "file": "sources/contenu-sequence.md#tio-pepe-1"
-    },
-    {
-      "id": "tio-pepe-2",
-      "title": "BD « Mi tío que estuvo en el infierno », planche 2",
-      "file": "sources/contenu-sequence.md#tio-pepe-2"
-    },
-    {
-      "id": "ce-mi-tio",
-      "title": "CE - Mi tío que estuvo en el infierno (questionnaire)",
-      "file": "sources/contenu-sequence.md#ce-mi-tio"
     },
     {
       "id": "evaluacion",
@@ -182,8 +151,7 @@
       "enemies": [
         "sombra",
         "miedo",
-        "hambre",
-        "eco"
+        "hambre"
       ],
       "elites": [
         "remolino"

@@ -63,13 +63,6 @@
   ],
   "objects": [
     {
-      "id": "nacimiento",
-      "es": "el nacimiento de Carmen",
-      "un": "el nacimiento de Carmen",
-      "fr": "la naissance de Carmen",
-      "emoji": "👶"
-    },
-    {
       "id": "militares",
       "es": "la llegada de los militares",
       "un": "la llegada de los militares",
@@ -84,32 +77,11 @@
       "emoji": "📢"
     },
     {
-      "id": "bielsa",
-      "es": "la Bolsa de Bielsa",
-      "un": "la Bolsa de Bielsa",
-      "fr": "la poche de Bielsa",
-      "emoji": "⛰️"
-    },
-    {
-      "id": "vuelta",
-      "es": "la vuelta del padre",
-      "un": "la vuelta del padre",
-      "fr": "le retour du père",
-      "emoji": "🏠"
-    },
-    {
       "id": "fin",
       "es": "el final de la guerra",
       "un": "el final de la guerra",
       "fr": "la fin de la guerre",
       "emoji": "🕊️"
-    },
-    {
-      "id": "huesca",
-      "es": "Huesca (Bielsa)",
-      "un": "Huesca",
-      "fr": "Huesca (Bielsa)",
-      "emoji": "⛰️"
     },
     {
       "id": "frontera",

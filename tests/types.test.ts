@@ -12,7 +12,7 @@ const modeOf = (q: Question) => ({ 'vrai-faux': 'tf', ordre: 'order', associatio
 
 describe('nouveaux types de questions', () => {
   it('chaque type est présent dans la banque', () => {
-    for (const t of ['vrai-faux', 'ordre', 'association', 'scene', 'ecoute'] as const) expect(byType(t).length).toBeGreaterThan(9);
+    for (const t of ['vrai-faux', 'ordre', 'association', 'scene'] as const) expect(byType(t).length, t).toBeGreaterThanOrEqual(3);
   });
 
   it('la bonne réponse est acceptée et une mauvaise refusée, pour chaque question', () => {
@@ -99,25 +99,6 @@ describe('moteur et nouveaux types', () => {
         g.answer(canonicalValue(g.question!));
       }
     }
-  });
-
-  it('l’intention « Canto » de la Lechuza impose une question orale', () => {
-    const g = Game.newRun(content(), S, 'LECHUZA');
-    (g as unknown as { startFight(id: string): void }).startFight('eco');
-    let listened = 0;
-    for (let i = 0; i < 30 && g.state.screen === 'combat'; i++) {
-      const c = g.state.combat!;
-      if (c.fb) {
-        g.proceed();
-        continue;
-      }
-      if (c.intent.kind === 'listen') {
-        expect(g.question!.type).toBe('ecoute');
-        listened++;
-      }
-      g.answer(canonicalValue(g.question!));
-    }
-    expect(listened).toBeGreaterThan(0);
   });
 
   it('l’Oráculo fonctionne sur tous les types', () => {

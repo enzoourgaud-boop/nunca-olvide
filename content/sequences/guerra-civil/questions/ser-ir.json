@@ -194,28 +194,6 @@
     "source": "evaluacion"
   },
   {
-    "id": "frase-tbo-3",
-    "type": "qcm",
-    "theme": "ser-ir",
-    "notions": [
-      "ser-ir"
-    ],
-    "level": 2,
-    "label": "Complète au pretérito indefinido",
-    "prompt": "La guerra ___ su pesadilla cotidiana. (ser)",
-    "answer": "fue",
-    "accept": [],
-    "distractors": [
-      "fui",
-      "fueron",
-      "fué"
-    ],
-    "writable": true,
-    "translation": "La guerre fut leur cauchemar quotidien.",
-    "explanation": "ser, ella → fue (ici « être » : on définit la guerre).",
-    "source": "tio-pepe-1"
-  },
-  {
     "id": "frase-irr-6",
     "type": "qcm",
     "theme": "ser-ir",
@@ -368,50 +346,6 @@
     "translation": "Beaucoup de républicains partirent en exil en France.",
     "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
     "source": "evaluacion"
-  },
-  {
-    "id": "serir-7",
-    "type": "qcm",
-    "theme": "ser-ir",
-    "notions": [
-      "ser-ir"
-    ],
-    "level": 2,
-    "label": "¿SER o IR ?",
-    "prompt": "«Para mis padres, la guerra fue su pesadilla cotidiana.» — «fue» viene del verbo…",
-    "answer": "ser (être)",
-    "accept": [],
-    "distractors": [
-      "ir (aller)",
-      "estar (être)",
-      "huir (fuir)"
-    ],
-    "writable": false,
-    "translation": "Pour mes parents, la guerre fut leur cauchemar quotidien.",
-    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit ce qu'est quelqu'un ou quelque chose (être). → SER.",
-    "source": "tio-pepe-1"
-  },
-  {
-    "id": "serir-8",
-    "type": "qcm",
-    "theme": "ser-ir",
-    "notions": [
-      "ser-ir"
-    ],
-    "level": 2,
-    "label": "¿SER o IR ?",
-    "prompt": "«Carmen y su madre fueron al refugio.» — «fueron» viene del verbo…",
-    "answer": "ir (aller)",
-    "accept": [],
-    "distractors": [
-      "ser (être)",
-      "estar (être)",
-      "huir (fuir)"
-    ],
-    "writable": false,
-    "translation": "Carmen et sa mère allèrent à l’abri.",
-    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
-    "source": "mision-secreta"
   },
   {
     "id": "serir-9",

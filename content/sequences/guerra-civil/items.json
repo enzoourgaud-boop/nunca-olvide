@@ -300,38 +300,6 @@
     "phrase": "¿Cuál es el tema? La guerra civil."
   },
   {
-    "id": "foto-carmen",
-    "kind": "reliquia",
-    "rarity": "comun",
-    "name": "La foto de Carmen bebé",
-    "emoji": "👶",
-    "price": 8,
-    "max": 1,
-    "effect": "maxHp",
-    "value": 4,
-    "year": "1928",
-    "clue": "En esta foto, Carmen acaba de nacer.",
-    "description": "+4 points de vie maximum. Souvenir daté : à ranger sur la frise.",
-    "card": 56,
-    "phrase": "Carmen nació en 1928."
-  },
-  {
-    "id": "bielsa",
-    "kind": "reliquia",
-    "rarity": "rara",
-    "name": "El mapa del Valle de Bielsa",
-    "emoji": "⛰️",
-    "price": 10,
-    "max": 1,
-    "effect": "healAfterFight",
-    "value": 2,
-    "year": "1938",
-    "clue": "Entre abril y junio, la División 43 estuvo sitiada en el Valle de Bielsa.",
-    "description": "+2 points de vie après chaque combat. Souvenir daté : à ranger sur la frise.",
-    "card": 57,
-    "phrase": "Es el episodio conocido como «la Bolsa de Bielsa»."
-  },
-  {
     "id": "llave-casa",
     "kind": "reliquia",
     "rarity": "rara",

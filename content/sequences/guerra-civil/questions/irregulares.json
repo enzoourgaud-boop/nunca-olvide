@@ -1938,28 +1938,6 @@
     "source": "evaluacion"
   },
   {
-    "id": "frase-tbo-1",
-    "type": "qcm",
-    "theme": "irregulares",
-    "notions": [
-      "irr-fuerte"
-    ],
-    "level": 3,
-    "label": "Complète au pretérito indefinido",
-    "prompt": "Entre abril y junio de 1938, la División 43 ___ sitiada en el Valle de Bielsa. (estar)",
-    "answer": "estuvo",
-    "accept": [],
-    "distractors": [
-      "estuvó",
-      "estuve",
-      "estuvieron"
-    ],
-    "writable": true,
-    "translation": "Entre avril et juin 1938, la Division 43 fut assiégée dans la vallée de Bielsa.",
-    "explanation": "estar, ella → estuvo.",
-    "source": "tio-pepe-2"
-  },
-  {
     "id": "frase-irr-1",
     "type": "qcm",
     "theme": "irregulares",
@@ -2001,28 +1979,6 @@
     "writable": true,
     "translation": "Beaucoup de familles firent leurs valises pour fuir.",
     "explanation": "hacer, ellas → hicieron (radical hic-).",
-    "source": "gramatica-preterito"
-  },
-  {
-    "id": "frase-irr-3",
-    "type": "qcm",
-    "theme": "irregulares",
-    "notions": [
-      "irr-vocal"
-    ],
-    "level": 2,
-    "label": "Complète au pretérito indefinido",
-    "prompt": "Cuando sonaron las sirenas, Carmen ___ en el refugio. (dormir)",
-    "answer": "durmió",
-    "accept": [],
-    "distractors": [
-      "dormió",
-      "durmí",
-      "dormimos"
-    ],
-    "writable": true,
-    "translation": "Quand les sirènes sonnèrent, Carmen dormit dans l'abri.",
-    "explanation": "dormir, ella → durmió (o → u à la 3e personne seulement).",
     "source": "gramatica-preterito"
   },
   {
@@ -2155,28 +2111,6 @@
     "writable": true,
     "translation": "Mes grands-parents m'apportèrent leurs photos de la guerre.",
     "explanation": "traer, ellos → trajeron (-eron après j, pas -ieron).",
-    "source": "gramatica-preterito"
-  },
-  {
-    "id": "frase-irr-13",
-    "type": "qcm",
-    "theme": "irregulares",
-    "notions": [
-      "irr-fuerte"
-    ],
-    "level": 3,
-    "label": "Complète au pretérito indefinido",
-    "prompt": "Carmen no ___ leer la carta de su padre. (saber)",
-    "answer": "supo",
-    "accept": [],
-    "distractors": [
-      "sabió",
-      "supó",
-      "supe"
-    ],
-    "writable": true,
-    "translation": "Carmen ne sut pas lire la lettre de son père.",
-    "explanation": "saber, él → supo (radical sup-).",
     "source": "gramatica-preterito"
   },
   {

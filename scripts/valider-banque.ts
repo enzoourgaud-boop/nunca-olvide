@@ -5,8 +5,6 @@
  */
 import { parseContent } from '../src/engine/content';
 import { levelNum } from '../src/engine/schema';
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
 import { listSequences, readSequence } from './read-content';
 
 let errors = 0;
@@ -25,12 +23,6 @@ for (const id of listSequences()) {
   errors += issues.filter(i => i.level === 'erreur').length;
   if (!content) continue;
 
-  // compréhension orale : chaque question a son fichier audio (sinon le jeu lit la voix de l'appareil, ou affiche le texte)
-  for (const q of content.questions) {
-    if (q.type !== 'ecoute' || q.disabled) continue;
-    if (!existsSync(join(import.meta.dirname, '..', 'public', 'audio', `${q.id}.mp3`)))
-      console.log(`  ⚠️  question ${q.id} : pas de fichier public/audio/${q.id}.mp3 (voir scripts/generar-audio.py)`);
-  }
   const off = content.questions.filter(q => q.disabled);
   const qs = content.questions.filter(q => !q.disabled);
   console.log(`\n  ${qs.length} questions actives${off.length ? ` (+ ${off.length} désactivée${off.length > 1 ? 's' : ''} : ${off.map(q => q.id).join(', ')})` : ''}`);

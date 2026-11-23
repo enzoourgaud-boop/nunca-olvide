@@ -123,13 +123,13 @@ describe('moteur de partie', () => {
     expect(g.state.combat!.timeMax).toBe(0);
   });
 
-  it('chaque ennemi pose ses types de questions (la Leyenda : vrai/faux, las Sirenas : écoute)', () => {
-    for (const [enemy, type] of [['leyenda', 'vrai-faux'], ['sirenas', 'ecoute']] as const) {
+  it('chaque ennemi pose ses types de questions (la Leyenda : vrai/faux, el Remolino : ordre ou frise)', () => {
+    for (const [enemy, type] of [['leyenda', ['vrai-faux']], ['remolino', ['ordre', 'scene']]] as const) {
       let n = 0, hits = 0;
       for (let i = 0; i < 20; i++) {
         const g = fight(`TYPE-${enemy}-${i}`, S, enemy);
         n++;
-        if (g.question!.type === type) hits++;
+        if ((type as readonly string[]).includes(g.question!.type)) hits++;
       }
       expect(hits / n, enemy).toBeGreaterThan(0.6);
     }

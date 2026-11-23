@@ -31,7 +31,7 @@ export default defineConfig({
       },
       workbox: {
         // tout le jeu est mis en cache au premier chargement : il marche ensuite sans connexion
-        globPatterns: ['**/*.{js,css,html,woff2,png,svg,webmanifest,mp3}'],
+        globPatterns: ['**/*.{js,css,html,woff2,png,svg,webmanifest}'],
         maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
         navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
