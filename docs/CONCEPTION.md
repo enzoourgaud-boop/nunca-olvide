@@ -1,6 +1,6 @@
 # « Nunca olvidé » : document de conception
 
-*Validé (étape 1) ; mis à jour à l'étape 2. Combat simplifié : chacun attaque à son tour. Pas de questions sur Pepe et sa famille. Séquence « La guerra civil española », 3e (A2 vers B1).*
+*Validé (étape 1) ; mis à jour à l'étape 2. Combat simplifié : chacun attaque à son tour. Pas de questions sur Pepe et sa famille. Temps du passé : uniquement passé simple et imparfait, jamais de plus-que-parfait. Séquence « La guerra civil española », 3e (A2 vers B1).*
 *Titre provisoire, tiré de la dernière phrase de la abuela Carmen : « Nunca olvidé esos años ».*
 
 ## En une page

@@ -7,7 +7,7 @@ Pour corriger ou retirer une question, tu as trois possibilités :
 - dans le fichier `content/sequences/guerra-civil/questions/…json`, corrige la question, ou ajoute `"disabled": true` pour qu'elle ne soit plus posée ;
 - ou dis-le-moi, je m'en occupe.
 
-*État : étape 2 (388 questions). Décisions déjà prises : pas de questions sur Pepe et sa famille (seulement ce qui concerne la guerre) ; les phrases de l'évaluation peuvent être reprises telles quelles (D3) ; les mots de position sont connus des élèves (D6, utilisés à l'étape 3).*
+*État : étape 2 (388 questions). Décisions déjà prises : pas de questions sur Pepe et sa famille (seulement ce qui concerne la guerre) ; les phrases de l'évaluation peuvent être reprises telles quelles (D3) ; les mots de position sont connus des élèves (D6, utilisés à l'étape 3) ; **aucun plus-que-parfait : uniquement passé simple et imparfait** (vérifié par un test automatique).*
 
 ## 1. Réponses déduites (non écrites dans les documents)
 
@@ -30,8 +30,8 @@ Ces phrases servent à conjuguer. Elles utilisent les mots et les faits de tes d
 |---|---|---|
 | ☐ | `frase-mis-12` | Carmen ___ en 1928. (nacer) |
 | ☐ | `frase-mis-13` | Según la abuela, la guerra ___ en 1936. (empezar) |
-| ☐ | `frase-tbo-2` | Mis padres ___ la guerra en su infancia. (vivir) — *la BD dit « habían vivido »* |
-| ☐ | `frase-tbo-3`, `serir-7` | La guerra ___ su pesadilla cotidiana. (ser) — *la BD dit « había sido »* |
+| ☐ | `frase-tbo-2` | Mis padres ___ la guerra en su infancia. (vivir) — *la BD dit « habían vivido » ; le jeu n'utilise jamais le plus-que-parfait* |
+| ☐ | `frase-tbo-3`, `serir-7` | La guerra ___ su pesadilla cotidiana. (ser) — *la BD dit « había sido » ; reformulé au passé simple* |
 | ☐ | `frase-irr-1` | La abuela ___ : «Nunca olvidé esos años». (decir) |
 | ☐ | `frase-irr-2` | Muchas familias ___ las maletas para huir. (hacer) |
 | ☐ | `frase-irr-3` | Cuando sonaron las sirenas, Carmen ___ en el refugio. (dormir) |

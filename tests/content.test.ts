@@ -38,4 +38,17 @@ describe('banque de questions', () => {
     const q = { ...(c.questions.find(x => x.type === 'qcm' && x.prompt.includes('___'))! as Extract<(typeof c.questions)[number], { type: 'qcm' }>), answer: 'a / b / c' };
     expect(checkCoherence({ ...c, questions: [q] }).some(i => i.message.includes('trou'))).toBe(true);
   });
+  it('pas de plus-que-parfait : uniquement passé simple et imparfait (consigne du professeur)', () => {
+    const c = content();
+    const PQP = /\bhab[ií]a(s|mos|is|n)?\s+\p{L}+(ado|ido|to|cho|sto)\b/iu;
+    const textes = [
+      ...c.questions.flatMap(q => [q.id, JSON.stringify(q)]),
+      ...c.enemies.flatMap(e => [e.id, JSON.stringify(e)]),
+      ...c.events.flatMap(e => [e.id, JSON.stringify(e)]),
+      ...c.items.flatMap(i => [i.id, JSON.stringify(i)]),
+    ];
+    for (let i = 0; i < textes.length; i += 2) expect(PQP.test(textes[i + 1]), textes[i]).toBe(false);
+    expect(PQP.test('una guerra que habían vivido')).toBe(true);
+    expect(PQP.test('No había grandes batallas')).toBe(false); // imparfait de haber : autorisé
+  });
 });

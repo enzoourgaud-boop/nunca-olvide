@@ -245,7 +245,7 @@
     ],
     "writable": true,
     "translation": "Pour les parents du narrateur, qu’a été la guerre ?",
-    "explanation": "« Para mis padres, la guerra había sido su pesadilla cotidiana », adherida para siempre a sus recuerdos.",
+    "explanation": "Para sus padres, la guerra fue su pesadilla cotidiana, adherida para siempre a sus recuerdos.",
     "source": "tio-pepe-1",
     "check": {
       "ignoreArticles": true
@@ -272,7 +272,7 @@
     ],
     "writable": true,
     "translation": "Quand les parents du narrateur ont-ils vécu la guerre ?",
-    "explanation": "« Mis padres hablaban con frecuencia de una guerra que habían vivido en su infancia. »",
+    "explanation": "Los padres del narrador hablaban con frecuencia de la guerra: la vivieron en su infancia.",
     "source": "tio-pepe-1",
     "check": {
       "ignoreArticles": true
