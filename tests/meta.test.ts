@@ -11,6 +11,8 @@ function playOut(g: Game, wrongEvery = 0) {
   let k = 0;
   for (let i = 0; i < 8000 && g.state.screen !== 'over'; i++) {
     const s = g.state;
+    if (g.toPlace) { g.placeRecuerdo(g.toPlace.year!); continue; }
+    if (s.caja?.last) g.ackRecuerdo();
     const reply = (id: string, opts: string[]) => {
       const q = g.getQuestion(id)!;
       return wrongEvery && ++k % wrongEvery === 0 ? wrongValue(q, opts) : canonicalValue(q);
@@ -112,7 +114,9 @@ describe('progression entre les parties', () => {
 
   it('une victoire débloque cartes, succès, personnage et niveau suivant', () => {
     const c = content();
-    const g = playOut(Game.newRun(c, S, 'META-1', 0, { character: 'nieta' }));
+    // un élève parfait gagne presque toujours : on prend la première graine gagnante (l'ennemi frappe à chaque tour)
+    const g = ['META-1', 'META-2', 'META-3', 'META-4', 'META-5'].map(seed => playOut(Game.newRun(c, S, seed, 0, { character: 'nieta' }))).find(x => x.state.result === 'win')!;
+    expect(g).toBeTruthy();
     expect(g.state.result).toBe('win');
     g.state.stats.endedAt = 20 * 60000;
     const { meta, unlocks } = applyRun(c, emptyMeta(), g.state, {}, 0);

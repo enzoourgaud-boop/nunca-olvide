@@ -286,5 +286,172 @@
         }
       ]
     }
+  },
+  {
+    "id": "esc-mapa-1",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-geografia"
+    ],
+    "level": 1,
+    "label": "Place les lieux sur la carte de l’Espagne",
+    "prompt": "Huesca está en el norte, en el este.",
+    "promptLang": "es",
+    "translation": "Huesca est au nord, à l’est.",
+    "explanation": "en el norte = au nord, en el sur = au sud, en el este = à l’est, en el oeste = à l’ouest, en el centro = au centre. huesca : norte, este",
+    "source": "tio-pepe-2",
+    "scene": {
+      "decor": "mapa",
+      "items": [
+        {
+          "object": "huesca",
+          "row": "norte",
+          "col": "este"
+        }
+      ]
+    }
+  },
+  {
+    "id": "esc-mapa-2",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-geografia"
+    ],
+    "level": 1,
+    "label": "Place les lieux sur la carte de l’Espagne",
+    "prompt": "La frontera con Francia está en el norte.",
+    "promptLang": "es",
+    "translation": "La frontière avec la France est au nord.",
+    "explanation": "en el norte = au nord, en el sur = au sud, en el este = à l’est, en el oeste = à l’ouest, en el centro = au centre. frontera : norte",
+    "source": "mision-secreta",
+    "scene": {
+      "decor": "mapa",
+      "items": [
+        {
+          "object": "frontera",
+          "row": "norte"
+        }
+      ]
+    }
+  },
+  {
+    "id": "esc-mapa-3",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-geografia"
+    ],
+    "level": 1,
+    "label": "Place les lieux sur la carte de l’Espagne",
+    "prompt": "Madrid está en el centro.",
+    "promptLang": "es",
+    "translation": "Madrid est au centre.",
+    "explanation": "en el norte = au nord, en el sur = au sud, en el este = à l’est, en el oeste = à l’ouest, en el centro = au centre. madrid : centro, centro",
+    "source": "a-verificar",
+    "scene": {
+      "decor": "mapa",
+      "items": [
+        {
+          "object": "madrid",
+          "row": "centro",
+          "col": "centro"
+        }
+      ]
+    }
+  },
+  {
+    "id": "esc-mapa-4",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-geografia"
+    ],
+    "level": 2,
+    "label": "Place les lieux sur la carte de l’Espagne",
+    "prompt": "El Valle de Bielsa está en Huesca, en el norte, en el este. Madrid está en el centro.",
+    "promptLang": "es",
+    "translation": "La vallée de Bielsa est dans la province de Huesca, au nord, à l’est. Madrid est au centre.",
+    "explanation": "en el norte = au nord, en el sur = au sud, en el este = à l’est, en el oeste = à l’ouest, en el centro = au centre. huesca : norte, este · madrid : centro, centro",
+    "source": "tio-pepe-2",
+    "scene": {
+      "decor": "mapa",
+      "items": [
+        {
+          "object": "huesca",
+          "row": "norte",
+          "col": "este"
+        },
+        {
+          "object": "madrid",
+          "row": "centro",
+          "col": "centro"
+        }
+      ]
+    }
+  },
+  {
+    "id": "esc-mapa-5",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-geografia"
+    ],
+    "level": 2,
+    "label": "Place les lieux sur la carte de l’Espagne",
+    "prompt": "Mi tío cruzó la frontera con Francia. La frontera está en el norte. Huesca también está en el norte, en el este.",
+    "promptLang": "es",
+    "translation": "Mon oncle traversa la frontière avec la France. La frontière est au nord. Huesca est aussi au nord, à l’est.",
+    "explanation": "en el norte = au nord, en el sur = au sud, en el este = à l’est, en el oeste = à l’ouest, en el centro = au centre. frontera : norte · huesca : norte, este",
+    "source": "mision-secreta",
+    "scene": {
+      "decor": "mapa",
+      "items": [
+        {
+          "object": "frontera",
+          "row": "norte"
+        },
+        {
+          "object": "huesca",
+          "row": "norte",
+          "col": "este"
+        }
+      ]
+    }
+  },
+  {
+    "id": "esc-mapa-6",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-geografia"
+    ],
+    "level": 3,
+    "label": "Place les lieux sur la carte de l’Espagne",
+    "prompt": "Madrid está en el centro. La frontera con Francia está en el norte. Huesca está en el este.",
+    "promptLang": "es",
+    "translation": "Madrid est au centre. La frontière avec la France est au nord. Huesca est à l’est.",
+    "explanation": "en el norte = au nord, en el sur = au sud, en el este = à l’est, en el oeste = à l’ouest, en el centro = au centre. madrid : centro, centro · frontera : norte · huesca : norte, este",
+    "source": "tio-pepe-2",
+    "scene": {
+      "decor": "mapa",
+      "items": [
+        {
+          "object": "madrid",
+          "row": "centro",
+          "col": "centro"
+        },
+        {
+          "object": "frontera",
+          "row": "norte"
+        },
+        {
+          "object": "huesca",
+          "row": "norte",
+          "col": "este"
+        }
+      ]
+    }
   }
 ]

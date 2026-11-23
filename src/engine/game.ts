@@ -153,8 +153,21 @@ export interface Offer {
 
 export type Screen = 'warmup' | 'map' | 'combat' | 'reward' | 'shop' | 'rest' | 'event' | 'chest' | 'over';
 
+/** La caja de los recuerdos : souvenirs datés à ranger sur la frise. */
+export interface Caja {
+  /** Souvenirs obtenus, en attente de rangement. */
+  pending: string[];
+  /** Souvenirs rangés : identifiant → année choisie. */
+  placed: Record<string, string>;
+  /** Dernier rangement, pour l'afficher. */
+  last: { id: string; year: string; ok: boolean } | null;
+}
+
 export interface RunState {
   v: 3;
+  caja?: Caja;
+  /** Lettres révélées du mot mystère de l'acte en cours. */
+  mystery?: number;
   /** Partie courte : un seul acte, finie au jefe de cet acte. */
   short?: boolean;
   /** Personnage choisi et niveau de difficulté (« Nivel de Calavera », 0 à 10). */
@@ -336,7 +349,7 @@ export class Game {
     };
     const g = new Game(content, settings, state);
     // partie courte dans un acte avancé : les souvenirs et la vie qu'on aurait gagnés aux actes précédents
-    for (let i = 0; i < act * SHORT_RELICS_PER_ACT; i++) g.gainRandom('reliquia');
+    for (let i = 0; i < act * SHORT_RELICS_PER_ACT; i++) g.gainRandom('reliquia', undefined, true);
     state.maxHp += act * SHORT_HP_PER_ACT;
     state.hp = state.maxHp;
     g.startWarmup(opts.pending ?? []);
@@ -584,6 +597,7 @@ export class Game {
     s.node = null;
     s.path = [];
     s.metEnemies = [];
+    s.mystery = 0;
     this.toMap();
   }
 
@@ -736,7 +750,12 @@ export class Game {
   }
 
   /** Question hors combat (événements, coffres). */
-  private makeQuiz(o: { themes?: string[]; write?: boolean; level?: 1 | 2 | 3 }): QuizState {
+  private makeQuiz(o: { themes?: string[]; write?: boolean; level?: 1 | 2 | 3; ids?: string[] }): QuizState {
+    const listed = (o.ids ?? []).map(id => this.qById.get(id)).filter((q): q is Question => !!q && this.isUsable(q));
+    if (listed.length) {
+      const q = this.rng.pick(listed);
+      return { q: this.makeAsked(q, this.chooseMode(q, 0, false)), fb: null };
+    }
     const active = this.activeThemes();
     const themes = o.themes?.filter(t => active.includes(t)) ?? [];
     const q = this.pick({ themes: themes.length ? themes : active, level: o.level ?? this.act.level, needWrite: !!o.write && this.settings.writeFactor > 0 });
@@ -951,6 +970,11 @@ export class Game {
           if (this.synergy('streakDouble')) bonus *= 2;
           dmg += bonus;
           fb.combo = s.streak;
+        }
+        if (how !== 'oracle') this.revealMystery(written ? 2 : 1);
+        if ((e.kind === 'jefe' || e.kind === 'final') && this.mysteryComplete) {
+          dmg += 1;
+          fb.lines.push(`Tu connais le mot mystère « ${this.mysteryWord} » : ${e.name} est affaibli (+1).`);
         }
         if (c.weakTheme === q.theme) {
           dmg += 2;
@@ -1203,7 +1227,7 @@ export class Game {
     // sans chrono, les objets qui ne servent qu'au chrono ne sont plus proposés
     const useless = (i: Item) => !this.settings.chrono && (i.effect === 'time' || i.effect === 'slowTime');
     return this.content.items
-      .filter(i => i.kind === kind && !useless(i) && (kind === 'aide' || (this.state.relics[i.id] ?? 0) < (i.max ?? 1)))
+      .filter(i => i.kind === kind && !useless(i) && !this.state.caja?.pending.includes(i.id) && (kind === 'aide' || (this.state.relics[i.id] ?? 0) < (i.max ?? 1)))
       .map(i => i.id);
   }
 
@@ -1229,9 +1253,14 @@ export class Game {
     return this.rng.shuffle([...mix, ...extra]).slice(0, n).map(id => ({ id }));
   }
 
-  private gain(id: string) {
+  private gain(id: string, placed = false) {
     const it = this.itemById.get(id)!;
     const s = this.state;
+    if (it.kind === 'reliquia' && it.year && !placed) {
+      s.caja ??= { pending: [], placed: {}, last: null };
+      if (!s.caja.pending.includes(id)) s.caja.pending.push(id);
+      return;
+    }
     if (!s.obtained.includes(id)) s.obtained.push(id);
     if (it.kind === 'reliquia') {
       s.relics[id] = (s.relics[id] ?? 0) + 1;
@@ -1242,7 +1271,7 @@ export class Game {
     } else s.inv[id] = (s.inv[id] ?? 0) + 1;
   }
 
-  private gainRandom(kind: Item['kind'], rarity?: Rarity): string | null {
+  private gainRandom(kind: Item['kind'], rarity?: Rarity, placed = false): string | null {
     let ids = this.available(kind);
     if (rarity) {
       const r = ids.filter(id => this.itemById.get(id)!.rarity === rarity);
@@ -1250,8 +1279,64 @@ export class Game {
     }
     if (!ids.length) return null;
     const id = this.rng.weighted(ids, x => RARITY_WEIGHT[this.itemById.get(x)!.rarity]);
-    this.gain(id);
+    this.gain(id, placed);
     return id;
+  }
+
+  /* ======================= La caja de los recuerdos (frise) ======================= */
+
+  /** Années de la frise où l'on range les souvenirs. */
+  get years(): string[] {
+    return this.content.scenes.decors.find(d => d.id === 'frise')?.cols.map(c => c[0]) ?? ['1928', '1936', '1938', '1939'];
+  }
+
+  /** Souvenir à ranger maintenant (ou null). */
+  get toPlace(): Item | null {
+    const id = this.state.caja?.pending[0];
+    return id ? this.itemById.get(id) ?? null : null;
+  }
+
+  /** Range le souvenir en attente sur une année : la bonne année le garde, sinon l'Olvido l'emporte. */
+  placeRecuerdo(year: string): boolean | null {
+    const s = this.state, it = this.toPlace;
+    if (!it || !s.caja) return null;
+    s.caja.pending.shift();
+    const ok = year === it.year;
+    s.caja.last = { id: it.id, year, ok };
+    if (ok) {
+      s.caja.placed[it.id] = year;
+      this.gain(it.id, true);
+    }
+    this.commit();
+    return ok;
+  }
+
+  /** Ferme le résultat du dernier rangement. */
+  ackRecuerdo() {
+    if (this.state.caja) this.state.caja.last = null;
+    this.commit();
+  }
+
+  /* ======================= Mot mystère ======================= */
+
+  get mysteryWord(): string {
+    return this.act?.mystery ?? '';
+  }
+
+  /** Le mot mystère, lettres trouvées visibles, les autres en « _ » (les espaces restent). */
+  mysteryShown(): string {
+    let n = this.state.mystery ?? 0;
+    return [...this.mysteryWord].map(ch => (ch === ' ' ? ' ' : n-- > 0 ? ch : '_')).join('');
+  }
+
+  get mysteryComplete(): boolean {
+    const w = this.mysteryWord.replace(/ /g, '');
+    return !!w && (this.state.mystery ?? 0) >= w.length;
+  }
+
+  private revealMystery(n: number) {
+    const len = this.mysteryWord.replace(/ /g, '').length;
+    if (len) this.state.mystery = Math.min(len, (this.state.mystery ?? 0) + n);
   }
 
   /** Récompense : prendre l'objet n°i (ou passer si i < 0). */
@@ -1375,7 +1460,7 @@ export class Game {
     if (s.screen !== 'event' || !st || !ev || st.choice !== null || this.choiceBlock(i)) return;
     st.choice = i;
     const ch = ev.choices[i];
-    if (ch.quiz) st.quiz = this.makeQuiz({ themes: ch.quiz.themes, write: ch.quiz.write });
+    if (ch.quiz) st.quiz = this.makeQuiz({ themes: ch.quiz.themes, write: ch.quiz.write, ids: ch.quiz.ids });
     else this.resolveEvent(ch.outcome!);
     this.commit();
   }
@@ -1484,6 +1569,12 @@ export class Game {
         }
         case 'fight':
           break;
+        case 'mystery': {
+          const before = s.mystery ?? 0;
+          this.revealMystery(e.value);
+          if ((s.mystery ?? 0) > before) out.push(`Mot mystère : ${this.mysteryShown()}`);
+          break;
+        }
         case 'random': {
           const o = this.rng.pick(e.outcomes);
           out.push(`§${o.text}¦${o.textFr ?? ''}`, ...this.applyEffects(o.effects));

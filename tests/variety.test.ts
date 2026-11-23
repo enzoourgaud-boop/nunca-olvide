@@ -22,6 +22,8 @@ function history(seed: string, wrongEvery = 3) {
   };
   for (let i = 0; i < 8000 && g.state.screen !== 'over'; i++) {
     const s = g.state;
+    if (g.toPlace) { g.placeRecuerdo(g.toPlace.year!); continue; }
+    if (s.caja?.last) g.ackRecuerdo();
     if (s.screen === 'map') g.choose(g.reachable()[0].id);
     else if (s.screen === 'combat') s.combat!.fb ? g.proceed() : g.answer(reply(s.combat!.q.id, s.combat!.q.options));
     else if (s.screen === 'reward') g.take(0);

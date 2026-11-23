@@ -11,7 +11,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 - Il n'y a **ni serveur, ni compte élève, ni publicité**. Aucune donnée ne quitte l'appareil.
 - Une fois chargé, il fonctionne **sans connexion**.
 
-> **Où en est le projet ?** L'étape 2 (première version jouable) est sur la branche `etape-2-contenu`. Ce qu'il te reste à tester est dans [`docs/etape-2/A_TESTER.md`](docs/etape-2/A_TESTER.md), les captures d'écran sont dans `docs/etape-2/`, la conception dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md), et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
+> **Où en est le projet ?** L'étape 2 (première version jouable) est en ligne sur `main`. L'étape 3 (frise des souvenirs, carte de l'Espagne, mot mystère, épilogue) est sur la branche `etape-3-gestes` : ce qu'il te reste à tester est dans [`docs/etape-3/A_TESTER.md`](docs/etape-3/A_TESTER.md), avec les captures d'écran dans `docs/etape-3/`. La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
 
 ---
 
@@ -50,6 +50,13 @@ Une réponse **écrite** frappe plus fort qu'un QCM, et une **série** de bonnes
 | El Héroe de Tebeo | ¿ser o ir? |
 | La Frontera | tout à l'écrit |
 | El Olvido (jefe final) | à l'écrit, puis la chronologie, puis la phrase de Carmen : *Nunca olvidé esos años* |
+
+**Dans la partie, l'espagnol sert aussi à décider :**
+
+- **La caja de los recuerdos** : certains souvenirs sont *datés* (la photo de Carmen bébé, les lettres, le Valle de Bielsa, la clé de la maison). Quand l'élève en reçoit un, il lit un indice en espagnol et le range sur la **frise 1928 · 1936 · 1938 · 1939**. Bonne année : il garde le souvenir et son pouvoir. Mauvaise année : l'Olvido l'emporte. (Touches 1 à 4 au clavier.)
+- **Le mot mystère** (en haut de l'écran) : chaque acte cache un mot (GUERRA CIVIL, ESPERANZA, EXILIO). Une lettre apparaît à chaque bonne réponse, deux à l'écrit. Mot complet : le jefe est affaibli.
+- **La carte de l'Espagne** : un événement demande de situer Huesca, la frontière avec la France et Madrid (*en el norte, en el este, en el centro…*).
+- **La ficha de identidad** : à la fin d'une victoire, la fiche de la guerre (date de début, durée, année de fin, les deux camps, chef des militaires) s'affiche, remplie.
 
 **Entre les combats** : des lettres et des scènes en espagnol où l'élève choisit sa réponse (*Una carta*), un marché d'objets d'occasion (*El rastro*), un abri pour se reposer (*El refugio*), des boîtes oubliées.
 
@@ -157,12 +164,12 @@ Tout ce qui est propre à la séquence est rangé dans `content/sequences/guerra
 
 | Fichier | Contenu |
 |---|---|
-| `sequence.json` | titre, textes, thèmes, notions, sources, actes, carte, personnages, noms des salles |
+| `sequence.json` | titre, textes, thèmes, notions, sources, actes (avec leur mot mystère `mystery`), carte, personnages, noms des salles, épilogue |
 | `questions/*.json` | les questions |
 | `enemies.json` | les ombres, leurs attaques et les questions qu'elles posent (`types`) |
-| `items.json`, `synergies.json` | aides, souvenirs et ensembles |
+| `items.json`, `synergies.json` | aides, souvenirs et ensembles (un souvenir avec `year` et `clue` est « daté » : à ranger sur la frise) |
 | `events.json` | les lettres et scènes en espagnol |
-| `scenes.json` | la frise chronologique et ses événements |
+| `scenes.json` | la frise chronologique, la carte de l'Espagne et leurs objets |
 
 ---
 

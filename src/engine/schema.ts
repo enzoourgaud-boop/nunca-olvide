@@ -244,6 +244,10 @@ export const ItemSchema = z
     description: z.string(),
     /** Texte de la version améliorée (aides seulement, via l'Ofrenda). */
     upgrade: z.string().optional(),
+    /** Souvenir daté : avant de le garder, l'élève le range sur la frise (bonne année = gardé). */
+    year: z.string().optional(),
+    /** Indice en espagnol pour trouver l'année (tiré des documents). */
+    clue: z.string().optional(),
     /** Numéro de carte de lotería et phrase d'exemple. */
     card: z.number().int().min(1).max(99).optional(),
     phrase: z.string().optional(),
@@ -279,6 +283,7 @@ const SimpleEffect = z.discriminatedUnion('type', [
   z.object({ type: z.literal('item'), id: z.string().optional(), kind: z.enum(['aide', 'reliquia']).optional(), rarity: z.enum(['comun', 'rara', 'legendaria']).optional() }).strict(),
   z.object({ type: z.literal('loseItem') }).strict(),
   z.object({ type: z.literal('upgrade') }).strict(),
+  z.object({ type: z.literal('mystery'), value: z.number().int().positive() }).strict(),
   z.object({ type: z.literal('fight'), kind: z.enum(['normal', 'elite']) }).strict(),
 ]);
 const SimpleOutcome = z.object({ ...OutcomeBase, effects: z.array(SimpleEffect) }).strict();
@@ -298,7 +303,7 @@ export const EventChoiceSchema = z
     /** Choix direct… */
     outcome: EventOutcomeSchema.optional(),
     /** …ou choix avec une question : success / failure selon la réponse. */
-    quiz: z.object({ themes: z.array(z.string()).optional(), write: z.boolean().optional() }).strict().optional(),
+    quiz: z.object({ themes: z.array(z.string()).optional(), write: z.boolean().optional(), ids: z.array(z.string()).optional() }).strict().optional(),
     success: EventOutcomeSchema.optional(),
     failure: EventOutcomeSchema.optional(),
   })
@@ -367,6 +372,8 @@ export const SequenceSchema = z
             enemies: z.array(z.string()).min(1),
             elites: z.array(z.string()).min(1),
             boss: z.string(),
+            /** Mot mystère de l'acte : chaque bonne réponse en révèle une lettre ; complet, il affaiblit le jefe. */
+            mystery: z.string().optional(),
           })
           .strict(),
       )
@@ -412,6 +419,8 @@ export const SequenceSchema = z
           .strict(),
       )
       .min(1),
+    /** Fin de partie gagnée : la ficha de identidad de la guerra (lignes [rubrique, réponse]). */
+    epilogue: z.object({ title: z.string(), intro: z.string(), rows: z.array(z.tuple([z.string(), z.string()])).min(1), outro: z.string() }).strict().optional(),
     meal: z.object({ name: z.string(), emoji: z.string(), price: z.number().int(), heal: z.number().int(), description: z.string() }).strict(),
     feedback: z
       .object({

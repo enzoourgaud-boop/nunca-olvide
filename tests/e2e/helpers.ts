@@ -20,6 +20,24 @@ export function loadBank() {
   return { bank, scenes };
 }
 
+const ITEMS = JSON.parse(readFileSync(join(SEQ, 'items.json'), 'utf8')) as { name: string; year?: string }[];
+
+/** Si la fenêtre « caja de los recuerdos » est ouverte : range le souvenir (bonne année, ou mauvaise si wrong) ou ferme le résultat. */
+export async function handleCaja(page: Page, wrong = false): Promise<boolean> {
+  if (!(await page.locator('.caja-panel').count())) return false;
+  const years = page.locator('.caja-frise .op');
+  if (!(await years.count())) {
+    await page.locator('.caja-panel .btn').click();
+    return true;
+  }
+  const name = ((await page.locator('.caja-obj').textContent()) ?? '').replace(/^\s*\S+\s/, '').trim();
+  const good = ITEMS.find(i => name.includes(i.name))?.year ?? '1936';
+  const labels = (await years.allTextContents()).map(x => x.replace(/\D/g, ''));
+  const pick = wrong ? labels.find(y => y !== good)! : good;
+  await years.nth(labels.indexOf(pick)).click();
+  return true;
+}
+
 const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 /** Répond à la question affichée. Renvoie le mode, ou null s'il n'y a pas de question à l'écran. */
@@ -62,11 +80,17 @@ export async function answerCurrent(page: Page, data: ReturnType<typeof loadBank
     const items = q.scene!.items;
     for (let i = 0; i < items.length; i++) {
       const it = items[i];
-      const target = wrong ? items[(i + 1) % items.length] : it;
+      const target = wrong && items.length > 1 ? items[(i + 1) % items.length] : it;
       let cell = target.row && target.col ? `${target.row}|${target.col}` : null;
       if (!cell) {
-        cell = [...free].find(c => c.endsWith(`|${target.col}`)) ?? [...free][0];
+        // un axe est libre : n'importe quelle case de la rangée ou de la colonne demandée
+        cell = [...free].find(c => (target.col ? c.endsWith(`|${target.col}`) : c.startsWith(`${target.row}|`))) ?? [...free][0];
         free.delete(cell);
+      }
+      // un seul objet : pour se tromper, on le pose dans une autre case que la bonne
+      if (wrong && items.length === 1) {
+        const all = decor.rows.flatMap(r => decor.cols.map(c => `${r[0]}|${c[0]}`));
+        cell = all.find(c => (target.row && target.col ? c !== cell : target.row ? !c.startsWith(`${target.row}|`) : !c.endsWith(`|${target.col}`))) ?? cell;
       }
       const es = data.scenes.objects.find(o => o.id === it.object)!.es;
       await scope.locator('.pieza', { hasText: es }).first().click();
@@ -83,6 +107,10 @@ export async function playToEnd(page: Page, data: ReturnType<typeof loadBank>, w
   let n = 0;
   for (let step = 0; step < 4000; step++) {
     if (await page.locator('.stats').count()) return modes;
+    if (await handleCaja(page)) {
+      modes.caja = (modes.caja ?? 0) + 1;
+      continue;
+    }
     if (await page.locator('.mapa').count()) {
       await page.locator('.sala.puede').first().click();
       continue;

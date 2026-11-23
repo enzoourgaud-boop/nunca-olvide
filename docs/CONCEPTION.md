@@ -257,7 +257,13 @@ Ensembles :
 - **El tebeo y la leyenda** : El tebeo + La leyenda familiar : le bonus de série est doublé.
 - **Papel y tinta** : Las cartas + El diccionario : +1 moneda par réponse écrite juste.
 
-*La frise des objets (ranger chaque souvenir sur son année) est prévue à l'étape 3.*
+**La caja de los recuerdos (étape 3).** Quatre souvenirs sont *datés* : la foto de Carmen bebé (1928), las cartas de cada semana (1936), el mapa del Valle de Bielsa (1938), la llave de casa (1939). Quand l'élève en reçoit un (récompense, boutique, boîte), une fenêtre s'ouvre : un indice en espagnol (*« Entre abril y junio, la División 43 estuvo sitiada en el Valle de Bielsa. »*) et la frise 1928 · 1936 · 1938 · 1939. **Bonne année : il garde le souvenir et son effet. Mauvaise année : l'Olvido l'emporte** (il pourra revenir plus tard). Touches 1 à 4 au clavier.
+
+**La carte de l'Espagne.** Un événement (*El mapa de España*) propose de situer Huesca (Bielsa), la frontière avec la France et Madrid avec les mots *en el norte, en el sur, en el este, en el oeste, en el centro*. Réussi : la carte de la abuela (un choix de plus dans les récompenses).
+
+**Le mot mystère.** Chaque acte a un mot (GUERRA CIVIL, ESPERANZA, EXILIO) affiché en haut de l'écran : une lettre par bonne réponse, deux à l'écrit. Mot complet : le jefe est affaibli (+1 dégât). L'événement *La misión secreta* révèle trois lettres d'un coup.
+
+**L'épilogue.** Après la victoire finale, la ficha de identidad de la guerre est affichée (cinq rubriques de l'évaluation).
 
 ### 5.5 Événements
 
@@ -375,7 +381,7 @@ Une branche par étape. **Rien n'est fusionné dans `main` sans ta validation.**
 |---|---|---|---|
 | 1 | `etape-1-conception` | ce document, la transcription, `A_VERIFIER.md` | valider |
 | 2 | `etape-2-contenu` | nouveau thème : banque de ~260 questions, ennemis, objets, événements, décors, sprites, musique, textes ; ancien contenu retiré ; l'ennemi attaque à chaque tour ; durées réglées par simulation ; README | **première version en ligne, jouable en classe** |
-| 3 | `etape-3-gestes` | règle des accents, frise des objets, carte de l'Espagne, mot mystère, jefes | la version complète |
+| 3 | `etape-3-gestes` | frise des souvenirs (caja de los recuerdos), carte de l'Espagne, mot mystère, épilogue (ficha de identidad) ; règle des accents faite à l'étape 2 | la version complète |
 | 4 | `etape-4-classe` | espace professeur adapté (partie courte imposée, acte), README final | utilisation en classe |
 
 ---

@@ -174,7 +174,7 @@
       "Cruzaron la frontera"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Qu’ont fait les avions ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Los aviones bombardearon la ciudad. »",
     "source": "mision-secreta",
     "check": {
@@ -200,7 +200,7 @@
       "Al pueblo"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Où Carmen a-t-elle couru ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Cuando sonaron las sirenas, corrí con mi madre al refugio. »",
     "source": "mision-secreta",
     "check": {
@@ -226,7 +226,7 @@
       "En 1938"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "En quelle année le père est-il revenu ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Mi padre volvió a casa en 1939. »",
     "source": "mision-secreta",
     "check": {
@@ -252,7 +252,7 @@
       "El refugio"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Qu’a traversé l’oncle ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Mi tío cruzó la frontera con Francia. »",
     "source": "mision-secreta",
     "check": {
@@ -278,7 +278,7 @@
       "Un año"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Combien d’années Carmen a-t-elle vécu dans la peur ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Viví tres años con miedo. »",
     "source": "mision-secreta",
     "check": {
@@ -304,7 +304,7 @@
       "El tren"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Qu’ont-elles attendu chaque semaine ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Mi madre y yo esperamos sus cartas cada semana. »",
     "source": "mision-secreta",
     "check": {
@@ -330,7 +330,7 @@
       "En enero de 1936"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Quand les militaires sont-ils arrivés ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « En julio de 1936, unos militares llegaron a mi pueblo. »",
     "source": "mision-secreta",
     "check": {
@@ -356,7 +356,7 @@
       "A Bielsa"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Où sont allés les républicains ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Muchos republicanos fueron al exilio en Francia. »",
     "source": "evaluacion",
     "check": {
@@ -382,7 +382,7 @@
       "Siempre olvidé esos años"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Que dit Carmen ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Nunca olvidé esos años. »",
     "source": "mision-secreta",
     "check": {
@@ -408,7 +408,7 @@
       "Nadie"
     ],
     "writable": false,
-    "translation": "",
+    "translation": "Qui a aidé Franco ? (la phrase entendue n’est pas traduite)",
     "explanation": "Tu as entendu : « Franco tuvo la ayuda de la Alemania nazi y de la Italia fascista. »",
     "source": "evaluacion",
     "check": {

@@ -45,6 +45,15 @@ export function simulate(content: Content, seed: string, accuracy: number, setti
   };
   while (g.state.screen !== 'over' && guard++ < 20000) {
     const s = g.state;
+    // la caja de los recuerdos : l'élève range le souvenir sur la frise (bonne année avec sa probabilité de réussite)
+    if (g.toPlace || s.caja?.last) {
+      if (g.toPlace) {
+        answers++;
+        sec += 8;
+        g.placeRecuerdo(bot.chance(accuracy) ? g.toPlace.year! : g.years.find(y => y !== g.toPlace!.year)!);
+      } else g.ackRecuerdo();
+      continue;
+    }
     switch (s.screen) {
       case 'warmup': {
         const w = s.warmup!;

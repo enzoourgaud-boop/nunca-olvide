@@ -27,6 +27,38 @@
           "en 1939"
         ]
       ]
+    },
+    {
+      "id": "mapa",
+      "name": "El mapa de España",
+      "rows": [
+        [
+          "norte",
+          "en el norte"
+        ],
+        [
+          "centro",
+          "en el centro"
+        ],
+        [
+          "sur",
+          "en el sur"
+        ]
+      ],
+      "cols": [
+        [
+          "oeste",
+          "en el oeste"
+        ],
+        [
+          "centro",
+          "en el centro"
+        ],
+        [
+          "este",
+          "en el este"
+        ]
+      ]
     }
   ],
   "objects": [
@@ -71,6 +103,27 @@
       "un": "el final de la guerra",
       "fr": "la fin de la guerre",
       "emoji": "🕊️"
+    },
+    {
+      "id": "huesca",
+      "es": "Huesca (Bielsa)",
+      "un": "Huesca",
+      "fr": "Huesca (Bielsa)",
+      "emoji": "⛰️"
+    },
+    {
+      "id": "frontera",
+      "es": "la frontera con Francia",
+      "un": "la frontera",
+      "fr": "la frontière avec la France",
+      "emoji": "🚧"
+    },
+    {
+      "id": "madrid",
+      "es": "Madrid",
+      "un": "Madrid",
+      "fr": "Madrid",
+      "emoji": "🏛️"
     }
   ]
 }

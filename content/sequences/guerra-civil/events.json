@@ -161,8 +161,8 @@
     "id": "mision",
     "emoji": "🔤",
     "title": "La misión secreta",
-    "text": "En la caja hay una hoja con casillas y una letra amarilla. —Si conjugas bien, descubres el secreto.",
-    "textFr": "Dans la boîte, il y a une feuille avec des cases et une lettre jaune. « Si tu conjugues bien, tu découvres le secret. »",
+    "text": "En la caja hay una hoja con casillas y letras amarillas. —Si conjugas bien, descubres el secreto.",
+    "textFr": "Dans la boîte, il y a une feuille avec des cases et des lettres jaunes. « Si tu conjugues bien, tu découvres le secret. »",
     "gloss": [
       [
         "casillas",
@@ -185,13 +185,16 @@
           "write": true
         },
         "success": {
-          "text": "¡La letra brilla! Encuentras un recuerdo en la caja.",
-          "textFr": "La lettre brille ! Tu trouves un souvenir dans la boîte.",
+          "text": "¡Las letras brillan! La palabra misteriosa aparece poco a poco.",
+          "textFr": "Les lettres brillent ! Le mot mystère apparaît peu à peu.",
           "effects": [
             {
-              "type": "item",
-              "kind": "reliquia",
-              "rarity": "comun"
+              "type": "mystery",
+              "value": 3
+            },
+            {
+              "type": "gold",
+              "value": 2
             }
           ]
         },
@@ -549,6 +552,68 @@
               "value": -3
             }
           ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "mapa",
+    "emoji": "🗺️",
+    "title": "El mapa de España",
+    "text": "La abuela abre un mapa viejo. —¿Sabes dónde están estos lugares?",
+    "textFr": "La grand-mère ouvre une vieille carte. « Tu sais où sont ces lieux ? »",
+    "gloss": [
+      [
+        "lugares",
+        "lieux"
+      ],
+      [
+        "¿Sabes…?",
+        "tu sais… ?"
+      ]
+    ],
+    "choices": [
+      {
+        "label": "Sí, los sitúo en el mapa.",
+        "labelFr": "Oui, je les situe sur la carte.",
+        "quiz": {
+          "ids": [
+            "esc-mapa-1",
+            "esc-mapa-2",
+            "esc-mapa-3",
+            "esc-mapa-4",
+            "esc-mapa-5",
+            "esc-mapa-6"
+          ]
+        },
+        "success": {
+          "text": "¡Exacto! La abuela te regala su mapa.",
+          "textFr": "Exact ! La grand-mère t’offre sa carte.",
+          "effects": [
+            {
+              "type": "item",
+              "id": "mapa"
+            }
+          ]
+        },
+        "failure": {
+          "text": "No es aquí… La abuela te enseña dónde están.",
+          "textFr": "Ce n’est pas là… La grand-mère te montre où ils sont.",
+          "effects": [
+            {
+              "type": "gold",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "label": "No, prefiero seguir.",
+        "labelFr": "Non, je préfère continuer.",
+        "outcome": {
+          "text": "Doblas el mapa y sigues tu camino.",
+          "textFr": "Tu plies la carte et tu continues ton chemin.",
+          "effects": []
         }
       }
     ]

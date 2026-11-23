@@ -83,3 +83,18 @@ button.celda:hover, .celda.sobre { border-color: var(--turquesa); background: rg
 }
 @media (prefers-reduced-motion: reduce) { .altavoz { animation: none; } }
 .decor-frise button.celda { border-color: rgba(36, 28, 21, .35); }
+
+/* La carte de l'Espagne : un contour stylisé dessiné pour le jeu (positions approximatives) */
+.decor-mapa { aspect-ratio: 16 / 10; }
+.decor-mapa .decor-fondo { background: linear-gradient(#8fb0c0, #7fa1b3); }
+.decor-mapa .decor-fondo::before {
+  content: ''; position: absolute; inset: 0; background: linear-gradient(#e6d6b0, #d9c595);
+  clip-path: polygon(14% 12%, 30% 8%, 50% 9%, 62% 11%, 74% 14%, 82% 24%, 78% 36%, 72% 44%, 70% 54%, 62% 66%, 56% 76%, 48% 84%, 36% 90%, 24% 88%, 20% 84%, 14% 76%, 16% 60%, 18% 46%, 14% 34%, 12% 22%);
+  filter: drop-shadow(0 2px 0 rgba(36, 28, 21, .45));
+}
+.decor-mapa .decor-fondo::after { content: 'FRANCIA'; position: absolute; left: 40%; top: 1%; font: .7rem var(--display); letter-spacing: .3em; color: #35505e; }
+.decor-mapa .celdas { inset: 6% 8% 8%; }
+.decor-mapa .celda { padding-bottom: 12%; }
+.decor-mapa .celda::after { content: attr(aria-label); display: none; }
+.decor-mapa button.celda { border-color: rgba(36, 28, 21, .3); }
+.decor-mapa .celda .obj { font-size: clamp(1.4rem, 4.5vw, 2.2rem); }

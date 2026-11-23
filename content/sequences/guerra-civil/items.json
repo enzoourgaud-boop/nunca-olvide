@@ -116,9 +116,11 @@
     "max": 1,
     "effect": "writeBonus",
     "value": 1,
-    "description": "Les réponses écrites font +1 dégât de plus.",
+    "description": "Les réponses écrites font +1 dégât de plus. Souvenir daté : à ranger sur la frise.",
     "card": 42,
-    "phrase": "Esperamos sus cartas cada semana."
+    "phrase": "Esperamos sus cartas cada semana.",
+    "year": "1936",
+    "clue": "Mi padre tuvo que irse lejos al empezar la guerra. Mi madre y yo esperamos sus cartas cada semana."
   },
   {
     "id": "tebeo",
@@ -296,5 +298,53 @@
     "description": "Toutes les 4 bonnes réponses, une aide gratuite au hasard.",
     "card": 55,
     "phrase": "¿Cuál es el tema? La guerra civil."
+  },
+  {
+    "id": "foto-carmen",
+    "kind": "reliquia",
+    "rarity": "comun",
+    "name": "La foto de Carmen bebé",
+    "emoji": "👶",
+    "price": 8,
+    "max": 1,
+    "effect": "maxHp",
+    "value": 4,
+    "year": "1928",
+    "clue": "En esta foto, Carmen acaba de nacer.",
+    "description": "+4 points de vie maximum. Souvenir daté : à ranger sur la frise.",
+    "card": 56,
+    "phrase": "Carmen nació en 1928."
+  },
+  {
+    "id": "bielsa",
+    "kind": "reliquia",
+    "rarity": "rara",
+    "name": "El mapa del Valle de Bielsa",
+    "emoji": "⛰️",
+    "price": 10,
+    "max": 1,
+    "effect": "healAfterFight",
+    "value": 2,
+    "year": "1938",
+    "clue": "Entre abril y junio, la División 43 estuvo sitiada en el Valle de Bielsa.",
+    "description": "+2 points de vie après chaque combat. Souvenir daté : à ranger sur la frise.",
+    "card": 57,
+    "phrase": "Es el episodio conocido como «la Bolsa de Bielsa»."
+  },
+  {
+    "id": "llave-casa",
+    "kind": "reliquia",
+    "rarity": "rara",
+    "name": "La llave de casa",
+    "emoji": "🗝️",
+    "price": 11,
+    "max": 1,
+    "effect": "damageBonus",
+    "value": 1,
+    "year": "1939",
+    "clue": "Con esta llave, mi padre volvió a casa al final de la guerra.",
+    "description": "+1 dégât à chaque bonne réponse. Souvenir daté : à ranger sur la frise.",
+    "card": 58,
+    "phrase": "Mi padre volvió a casa."
   }
 ]

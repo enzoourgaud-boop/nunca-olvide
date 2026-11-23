@@ -16,6 +16,7 @@ import { ChestScreen, EventScreen, MapScreen, RestScreen, WarmupScreen } from '.
 import { Reward, Shop } from './screens';
 import { Transition } from './Transition';
 import { OptionsPanel } from './Options';
+import { CajaModal } from './Caja';
 import { Petals } from './Petals';
 import { play, setMusic } from './sfx';
 import { loadPrefs, type Prefs, savePrefs } from '../prefs';
@@ -361,6 +362,7 @@ function Main({ content, fromPack, reload }: { content: Content; fromPack: boole
         {!game && menu === 'achievements' && <AchievementsScreen meta={meta} onBack={() => setMenu('title')} />}
         {!game && menu === 'carnet' && <CarnetScreen content={content} leitner={leitner.current} onBack={() => setMenu('title')} />}
         {game && game.state.screen === 'warmup' && <WarmupScreen game={game} />}
+        {game && game.state.screen !== 'over' && game.state.screen !== 'warmup' && <CajaModal game={game} />}
         {game && game.state.screen === 'map' && <MapScreen game={game} />}
         {game && game.state.screen === 'combat' && <Combat game={game} paused={optionsOpen} />}
         {game && game.state.screen === 'event' && <EventScreen game={game} />}

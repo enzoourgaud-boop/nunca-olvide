@@ -44,3 +44,12 @@ html.reduit .transicion, html.reduit .cortina, html.reduit .petalos { display: n
 .opciones-panel select { font: 1rem var(--body); padding: 6px 8px; border-radius: 8px; background: var(--papel); color: var(--tinta); }
 .opciones-panel input[type=range] { accent-color: var(--cempa); }
 .offline-ok { font-size: .9rem; color: var(--turquesa); }
+
+/* La caja de los recuerdos : ranger un souvenir sur la frise */
+.caja-panel { border-color: var(--papel); }
+.caja-obj { font-size: 1.25rem; font-weight: 700; }
+.caja-obj span { font-size: 2rem; vertical-align: middle; margin-right: 6px; }
+.caja-pista { font-size: 1.15rem; font-style: italic; }
+.caja-frise { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; position: relative; }
+.caja-frise .op { justify-content: center; font-family: var(--display); font-size: 1.2rem; }
+@media (max-width: 420px) { .caja-frise { grid-template-columns: repeat(2, 1fr); } }

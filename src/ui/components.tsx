@@ -179,6 +179,15 @@ export function Hud({ game, hit, noHp }: { game: Game; hit?: boolean; noHp?: boo
           💭 {game.pendingCount}
         </span>
       )}
+      {game.mysteryWord && (
+        <span
+          class={`chip misterio ${game.mysteryComplete ? 'on' : ''}`}
+          title={game.mysteryComplete ? 'Mot mystère trouvé : le jefe de l’acte est affaibli (+1 dégât).' : 'Mot mystère : chaque bonne réponse révèle une lettre (deux à l’écrit). Complet, il affaiblit le jefe.'}
+          aria-label={`Mot mystère : ${game.mysteryComplete ? game.mysteryWord : `${game.state.mystery ?? 0} lettres trouvées sur ${game.mysteryWord.replace(/ /g, '').length}`}`}
+        >
+          🔤 <span aria-hidden="true">{game.mysteryShown()}</span>
+        </span>
+      )}
       {act && (
         <div class="ruta" aria-label={`Acte ${s.act + 1} sur ${game.content.sequence.acts.length}, étage ${floor} sur ${s.map.floors}`}>
           <span>

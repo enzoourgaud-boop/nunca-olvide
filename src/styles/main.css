@@ -273,3 +273,4 @@ a { color: var(--turquesa); }
   .sala { width: 46px; height: 46px; font-size: 1.35rem; }
   .sala.boss { width: 64px; height: 64px; font-size: 2rem; }
 }
+.chip.misterio span { font-family: var(--display); letter-spacing: .18em; white-space: pre; }

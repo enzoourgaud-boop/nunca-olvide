@@ -19,6 +19,8 @@ function autoplay(g: Game, max = 5000, wrong: (k: number) => boolean = () => fal
   let k = 0;
   for (let i = 0; i < max && g.state.screen !== 'over'; i++) {
     const s = g.state;
+    if (g.toPlace) { g.placeRecuerdo(g.toPlace.year!); continue; }
+    if (s.caja?.last) g.ackRecuerdo();
     const reply = (id: string, _mode: string, options: string[]) => {
       const q = g.getQuestion(id)!;
       return wrong(k++) ? wrongValue(q, options) : canonicalValue(q);

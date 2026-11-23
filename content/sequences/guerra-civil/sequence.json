@@ -120,6 +120,10 @@
     {
       "id": "lex-memoria",
       "label": "Lexique du souvenir"
+    },
+    {
+      "id": "hist-geografia",
+      "label": "Histoire : situer les lieux sur la carte de l’Espagne"
     }
   ],
   "sources": [
@@ -152,6 +156,11 @@
       "id": "evaluacion",
       "title": "Evaluación – La guerra civil española (Etapa 1)",
       "file": "sources/contenu-sequence.md#evaluacion"
+    },
+    {
+      "id": "a-verificar",
+      "title": "Hors documents (à vérifier par le professeur)",
+      "file": "docs/A_VERIFIER.md"
     }
   ],
   "player": {
@@ -179,7 +188,8 @@
       "elites": [
         "remolino"
       ],
-      "boss": "sirenas"
+      "boss": "sirenas",
+      "mystery": "GUERRA CIVIL"
     },
     {
       "id": "recuerdos",
@@ -197,7 +207,8 @@
       "elites": [
         "heroe-tebeo"
       ],
-      "boss": "pesadilla"
+      "boss": "pesadilla",
+      "mystery": "ESPERANZA"
     },
     {
       "id": "frontera",
@@ -215,7 +226,8 @@
       "elites": [
         "frontera"
       ],
-      "boss": "olvido"
+      "boss": "olvido",
+      "mystery": "EXILIO"
     }
   ],
   "feedback": {
@@ -374,5 +386,32 @@
         "label": "Gagner une partie"
       }
     }
-  ]
+  ],
+  "epilogue": {
+    "title": "Ficha de identidad de la guerra",
+    "intro": "Los recuerdos de Carmen están a salvo. Gracias a ti, la ficha está completa:",
+    "rows": [
+      [
+        "Fecha de inicio",
+        "julio de 1936"
+      ],
+      [
+        "Duración",
+        "tres años"
+      ],
+      [
+        "Año del final",
+        "1939"
+      ],
+      [
+        "Los dos bandos",
+        "los republicanos y los militares sublevados"
+      ],
+      [
+        "Jefe de los militares",
+        "Franco"
+      ]
+    ],
+    "outro": "«Nunca olvidé esos años.» — la abuela Carmen"
+  }
 }

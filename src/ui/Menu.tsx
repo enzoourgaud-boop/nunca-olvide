@@ -445,6 +445,21 @@ export function Over({ game, unlocks, onMenu, onReplay }: { game: Game; unlocks:
       <p class="lead">
         {win ? seq.victory : `${enemy?.name ?? 'Le chemin'} t'a arrêté à l'acte ${s.act + 1}. Relis ton carnet d'erreurs, puis reprends le chemin.`}
       </p>
+      {win && seq.epilogue && !s.short && (
+        <div class="ficha" role="region" aria-label={seq.epilogue.title}>
+          <h2>{seq.epilogue.title}</h2>
+          <p lang="es">{seq.epilogue.intro}</p>
+          <dl>
+            {seq.epilogue.rows.map(([k, v]) => (
+              <div key={k}>
+                <dt lang="es">{k}</dt>
+                <dd lang="es">{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p class="ficha-cita" lang="es">{seq.epilogue.outro}</p>
+        </div>
+      )}
       <div class="stats">
         <div><b>{s.stats.won}</b>combats gagnés</div>
         {s.short ? <div><b>{win ? 1 : 0}/1</b>partie courte</div> : <div><b>{win ? seq.acts.length : s.act + 1}/{seq.acts.length}</b>{win ? 'actes terminés' : 'acte atteint'}</div>}

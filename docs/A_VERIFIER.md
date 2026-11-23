@@ -78,7 +78,18 @@ L'évaluation donne la traduction de *la guerra, un bando, huir, fusilar, enterr
 | ☐ | Phrases des cartes de l'álbum | Une phrase d'exemple par ennemi et par objet (champ `phrase`), souvent tirée de tes documents, parfois inventée (« La sombra borró una carta. », « Pasé la página. »…). |
 | ☐ | Frise | Objets « el nacimiento de Carmen (1928), la llegada de los militares / el principio de la guerra (1936), la Bolsa de Bielsa (1938), la vuelta del padre / el final de la guerra (1939) ». |
 
-## 5. Sources
+## 5. Étape 3 : frise, carte de l'Espagne, mot mystère, épilogue
+
+| ✔ | Identifiants | Ce que fait le jeu | Pourquoi c'est à vérifier |
+|---|---|---|---|
+| ☐ | `foto-carmen` (1928), `cartas` (1936), `bielsa` (1938), `llave-casa` (1939) | Souvenirs « datés » : l'élève les range sur la frise (1928 · 1936 · 1938 · 1939) à partir d'un indice en espagnol tiré de tes documents. Bonne année : il garde le souvenir. | Les années viennent de tes documents (naissance de Carmen, juillet 1936, Bielsa 1938, retour du père 1939). **« Las cartas » = 1936** est déduit de « esperamos sus cartas cada semana » (pendant la guerre) ; **« la llave de casa »** est un objet inventé. |
+| ☐ | `esc-mapa-1` à `esc-mapa-6` | Placer sur la carte : Huesca (Bielsa) au nord-est, la frontière avec la France au nord, **Madrid au centre**. | **Madrid** n'est dans aucun de tes documents (source « a-verificar ») : `esc-mapa-3`, `-4`, `-6`. Les positions sont celles d'une carte stylisée (contour dessiné pour le jeu, approximatif). |
+| ☐ | `esc-mapa-*` | Mots de position : *en el norte / en el sur / en el este / en el oeste / en el centro*. | Décision D6 : tes élèves les connaissent. Ils ne sont pas dans tes documents. |
+| ☐ | actes 1 à 3 | Mots mystères : **GUERRA CIVIL**, **ESPERANZA**, **EXILIO**. | Le premier est la réponse de ta Misión secreta (déduite : les cases jaunes ne sont pas lisibles). *Esperanza* vient de la BD, *exilio* de l'évaluation. |
+| ☐ | épilogue | La ficha de identidad : *julio de 1936 · tres años · 1939 · los republicanos y los militares sublevados · Franco*. | Mêmes réponses déduites que la partie 1 de ce fichier. |
+| ☐ | événements `mapa` et `mision` | Deux scènes de plus (la carte de la abuela ; la misión secreta avec des lettres jaunes). | Histoire inventée avec tes mots ; aucun fait nouveau. |
+
+## 6. Sources
 
 | ✔ | Point | À confirmer |
 |---|---|---|

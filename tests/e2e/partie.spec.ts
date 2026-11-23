@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { answerCurrent, loadBank, playToEnd } from './helpers';
+import { answerCurrent, handleCaja, loadBank, playToEnd } from './helpers';
 
 const data = loadBank();
 
@@ -20,13 +20,18 @@ test('une partie entière, du profil jusqu’au code de fin', async ({ page }) =
   await page.getByRole('button', { name: /Partie complète/ }).click();
   const modes = await playToEnd(page, data);
   await expect(page.locator('h1')).toHaveText('¡Nunca olvidé!');
+  // la ficha de identidad de la guerre (épilogue) est remplie
+  await expect(page.locator('.ficha')).toContainText('Franco');
+  await expect(page.locator('.ficha')).toContainText('Nunca olvidé esos años');
+  // au moins un souvenir daté a été rangé sur la frise
+  expect(modes.caja ?? 0).toBeGreaterThanOrEqual(1);
   // le code de fin est affiché, avec son QR
   await expect(page.locator('.codigo')).toHaveText(/^[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{5}-[0-9A-Z]{4}$/);
   await expect(page.locator('svg.qr')).toBeVisible();
   // nouveautés débloquées
   await expect(page.locator('.desbloqueos')).toContainText('Nivel de Olvido 1');
   // plusieurs façons de répondre ont été utilisées
-  expect(Object.keys(modes).length).toBeGreaterThanOrEqual(4);
+  expect(Object.keys(modes).filter(m => m !== 'caja').length).toBeGreaterThanOrEqual(4);
   expect(errors).toEqual([]);
   // la collection et le carnet sont remplis
   await page.getByRole('button', { name: 'Menu' }).click();
@@ -119,6 +124,7 @@ for (const [name, w, h] of [['PC de collège', 1366, 768], ['PC, fenêtre basse'
     let n = 0, simple = 0, simpleOk = 0;
     for (let step = 0; step < 400 && n < 24; step++) {
       if (await page.locator('.stats').count()) break;
+      if (await handleCaja(page)) continue;
       if (await page.locator('.mapa').count()) {
         // de préférence un combat
         const fights = page.locator('.sala.puede.combat, .sala.puede.elite, .sala.puede.boss');
@@ -218,4 +224,42 @@ test('palabras pendientes : les questions ratées attendent au début de la part
   await expect(page.locator('.mapa')).toBeVisible();
   await expect(page.locator('.hud')).toContainText('29/29');
   await expect(page.locator('.hud .chip.almas')).toContainText('1');
+});
+
+/* ======================= Étape 3 ======================= */
+
+test('la caja de los recuerdos : une mauvaise année fait perdre le souvenir, la bonne le garde (au clavier)', async ({ page }) => {
+  await startRun(page, 'CAJA-9');
+  // on donne un souvenir daté au joueur par la console du jeu de test : le moteur est exposé dans l'état sauvegardé
+  await page.evaluate(() => {
+    const key = Object.keys(localStorage).find(k => k.includes(':run'))!;
+    const run = JSON.parse(localStorage.getItem(key)!);
+    run.caja = { pending: ['foto-carmen', 'llave-casa'], placed: {}, last: null };
+    localStorage.setItem(key, JSON.stringify(run));
+  });
+  await page.reload();
+  await page.getByRole('button', { name: /Reprendre|Continuer/ }).first().click();
+  const modal = page.getByRole('dialog');
+  await expect(modal).toContainText('¿De qué año es este recuerdo?');
+  await expect(modal).toContainText('La foto de Carmen bebé');
+  // 1 = 1928 (bonne année pour la photo de Carmen bébé) : au clavier
+  await page.keyboard.press('1');
+  await expect(modal).toContainText('¡Recuerdo guardado!');
+  await page.keyboard.press('Enter');
+  // la clé de casa date de 1939 : touche 2 = 1936 (mauvaise)
+  await expect(modal).toContainText('La llave de casa');
+  await page.keyboard.press('2');
+  await expect(modal).toContainText('El Olvido se lo lleva');
+  await page.getByRole('button', { name: 'Continuer' }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+});
+
+test('le mot mystère se dévoile au fil des bonnes réponses', async ({ page }) => {
+  await startRun(page, 'MOT-5');
+  await page.locator('.sala.puede').first().click();
+  const chip = page.locator('.chip.misterio');
+  await expect(chip).toBeVisible();
+  await expect(chip).toHaveAttribute('aria-label', /0 lettres trouvées/);
+  await answerCurrent(page, data);
+  await expect(chip).toHaveAttribute('aria-label', /[12] lettres? trouvées?/);
 });
