@@ -1,0 +1,44 @@
+/* =========================================================
+   Espace professeur : sobre et lisible (c'est un outil)
+   ========================================================= */
+.prof h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+.pestanas { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 3px solid var(--noche-3); }
+.pestanas button { background: var(--noche-2); border: 2px solid var(--noche-3); border-bottom: 0; border-radius: 10px 10px 0 0; padding: 9px 14px; font-weight: 700; color: var(--texto-2); }
+.pestanas button.sel { background: var(--cempa); color: var(--tinta); border-color: var(--cempa); }
+.prof-panel { display: flex; flex-direction: column; gap: 14px; padding-top: 14px; }
+.prof-panel h3 { font-family: var(--display); color: var(--cempa); font-size: 1.3rem; margin-top: 8px; }
+.prof fieldset { border: 2px solid var(--noche-3); border-radius: var(--r); padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.prof legend { font-weight: 700; color: var(--cempa); padding: 0 6px; }
+.check { display: inline-flex; gap: 8px; align-items: center; }
+.check input[type=checkbox], .check input[type=radio] { width: 18px; height: 18px; accent-color: var(--cempa); }
+.prof input[type=text], .prof input[type=search], .prof input[type=password], .prof select, .prof textarea, .clase input {
+  font: 1rem var(--body); padding: 8px 10px; border-radius: 10px; border: 2px solid var(--noche-3); background: var(--papel); color: var(--tinta); min-width: 0;
+}
+.prof textarea { width: 100%; font-family: ui-monospace, Consolas, monospace; font-size: .92rem; }
+.error { color: var(--rosa); font-weight: 700; }
+.problemas { margin: 0; padding: 10px 10px 10px 30px; background: rgba(255, 61, 139, .12); border-left: 4px solid var(--rosa); border-radius: 8px; font-size: .92rem; }
+.informe { background: var(--noche-2); border-radius: var(--r); padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.copiar { display: flex; flex-direction: column; gap: 6px; }
+.file-btn { position: relative; cursor: pointer; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.filtros input[type=search] { flex: 1 1 200px; }
+.tabla-wrap { overflow-x: auto; border-radius: var(--r); border: 2px solid var(--noche-3); }
+.tabla { width: 100%; border-collapse: collapse; font-size: .93rem; }
+.tabla th { text-align: left; background: var(--noche-3); padding: 8px 10px; position: sticky; top: 0; }
+.tabla td { padding: 8px 10px; border-top: 1px solid var(--noche-3); vertical-align: top; }
+.tabla tr.off td { opacity: .5; }
+.tabla .qid { display: block; font-family: ui-monospace, Consolas, monospace; font-size: .78rem; color: var(--texto-2); }
+.editor { display: flex; flex-direction: column; gap: 10px; background: var(--noche-2); border-radius: var(--r); padding: 16px; margin-top: 14px; }
+.editor h3 { font-family: var(--display); color: var(--cempa); }
+.editor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.campo { display: flex; flex-direction: column; gap: 4px; }
+.campo > span { font-weight: 700; font-size: .92rem; }
+.campo input[readonly] { opacity: .7; }
+.nociones-check { font-size: .9rem; }
+.nociones-prof { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.nociones-prof li { display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: center; }
+.clase { justify-content: space-between; }
+.clase form { gap: 8px; }
+.pie-prof { text-align: right; }
+.pie-prof .link { font-size: .85rem; }
+.tabla td:nth-child(3), .tabla td:nth-child(5), .tabla td:nth-child(6) { white-space: nowrap; }

@@ -1,0 +1,488 @@
+[
+  {
+    "id": "vela-traviesa",
+    "name": "La Vela Traviesa",
+    "emoji": "🕯️",
+    "card": 5,
+    "kind": "normal",
+    "hp": 4,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "rush",
+        "value": 8
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "¡Mi mecha es muy corta!",
+    "phrase": "La vela está en el altar."
+  },
+  {
+    "id": "calaverita",
+    "name": "La Calaverita",
+    "emoji": "💀",
+    "card": 11,
+    "kind": "normal",
+    "hp": 4,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "shield",
+        "value": 2
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "¡Soy de azúcar, pero muy dura!",
+    "phrase": "La calavera es de azúcar."
+  },
+  {
+    "id": "pan-de-muerto",
+    "name": "El Pan de Muerto",
+    "emoji": "🍞",
+    "card": 17,
+    "kind": "normal",
+    "hp": 5,
+    "attack": 1,
+    "pattern": "random",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "heal",
+        "value": 2
+      }
+    ],
+    "taunt": "¡Estoy saliendo del horno!",
+    "phrase": "El pan de muerto está en la mesa."
+  },
+  {
+    "id": "papel-picado",
+    "name": "El Papel Picado",
+    "emoji": "svg:papel-picado",
+    "card": 8,
+    "kind": "normal",
+    "hp": 4,
+    "attack": 1,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "steal",
+        "value": 2
+      },
+      {
+        "kind": "attack",
+        "value": 2
+      }
+    ],
+    "taunt": "¡El viento me lleva tus monedas!",
+    "phrase": "El papel picado está arriba."
+  },
+  {
+    "id": "pinata-furiosa",
+    "name": "La Piñata Furiosa",
+    "emoji": "🪅",
+    "card": 20,
+    "kind": "elite",
+    "hp": 7,
+    "attack": 2,
+    "modifier": "soloEscrito",
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "shield",
+        "value": 2
+      },
+      {
+        "kind": "attack",
+        "value": 3
+      }
+    ],
+    "taunt": "¡Aquí solo se escribe!",
+    "phrase": "Los niños están bailando en la fiesta."
+  },
+  {
+    "id": "alebrije",
+    "name": "El Alebrije",
+    "emoji": "🐉",
+    "card": 23,
+    "kind": "jefe",
+    "hp": 9,
+    "attack": 2,
+    "traits": [
+      "colorShift"
+    ],
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "shield",
+        "value": 2
+      },
+      {
+        "kind": "attack",
+        "value": 4
+      }
+    ],
+    "taunt": "¡Cambio de color! ¿Qué tema me hace daño hoy?",
+    "phrase": "El alebrije está volando."
+  },
+  {
+    "id": "xoloitzcuintle",
+    "name": "El Xoloitzcuintle",
+    "emoji": "🐕",
+    "card": 29,
+    "kind": "normal",
+    "hp": 6,
+    "attack": 2,
+    "pattern": "random",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "stealItem"
+      }
+    ],
+    "taunt": "¡Grrr! Huelo tus poderes…",
+    "phrase": "El perro está durmiendo junto a la tumba."
+  },
+  {
+    "id": "lechuza",
+    "name": "La Lechuza",
+    "emoji": "🦉",
+    "card": 34,
+    "kind": "normal",
+    "hp": 6,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "rush",
+        "value": 8
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "listen"
+      }
+    ],
+    "taunt": "¡Uuuh! ¿Me oyes en la noche?",
+    "phrase": "La lechuza está en el cementerio."
+  },
+  {
+    "id": "esqueleto-musico",
+    "name": "El Esqueleto Músico",
+    "emoji": "🎺",
+    "card": 38,
+    "kind": "normal",
+    "hp": 7,
+    "attack": 1,
+    "traits": [
+      "crescendo"
+    ],
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "¡Más fuerte, más fuerte!",
+    "phrase": "El esqueleto está tocando la trompeta."
+  },
+  {
+    "id": "cruz-florida",
+    "name": "La Cruz Florida",
+    "emoji": "✝️",
+    "top": "🌼",
+    "card": 31,
+    "kind": "normal",
+    "hp": 6,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "shield",
+        "value": 2
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "heal",
+        "value": 2
+      }
+    ],
+    "taunt": "Mis flores me protegen.",
+    "phrase": "En la cruz hay flores de cempasúchil."
+  },
+  {
+    "id": "mariachi-de-huesos",
+    "name": "El Mariachi de Huesos",
+    "emoji": "💀",
+    "top": "🎻",
+    "card": 36,
+    "kind": "elite",
+    "hp": 9,
+    "attack": 2,
+    "modifier": "prisa",
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "steal",
+        "value": 3
+      },
+      {
+        "kind": "attack",
+        "value": 4
+      }
+    ],
+    "taunt": "¡Rápido, rápido, que la canción se acaba!",
+    "phrase": "Los esqueletos están cantando."
+  },
+  {
+    "id": "mictlantecuhtli",
+    "name": "Mictlantecuhtli",
+    "emoji": "💀",
+    "top": "👑",
+    "card": 42,
+    "kind": "jefe",
+    "hp": 12,
+    "attack": 2,
+    "traits": [
+      "juicio"
+    ],
+    "focusTheme": "cultura",
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "shield",
+        "value": 3
+      },
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "Cada tres preguntas, te juzgo.",
+    "phrase": "Lleva una corona en la cabeza."
+  },
+  {
+    "id": "alma-errante",
+    "name": "El Alma Errante",
+    "emoji": "👻",
+    "card": 46,
+    "kind": "normal",
+    "hp": 7,
+    "attack": 2,
+    "traits": [
+      "vanish"
+    ],
+    "pattern": "random",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "rush",
+        "value": 6
+      }
+    ],
+    "taunt": "¿Dónde estoy? ¡Aquí no!",
+    "phrase": "Las almas visitan a sus familiares."
+  },
+  {
+    "id": "mariposa-negra",
+    "name": "La Mariposa Negra",
+    "emoji": "🦋",
+    "card": 49,
+    "kind": "normal",
+    "hp": 7,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "steal",
+        "value": 3
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "fog"
+      }
+    ],
+    "taunt": "Mis alas brillan con tus monedas.",
+    "phrase": "La mariposa está volando."
+  },
+  {
+    "id": "serpiente",
+    "name": "La Serpiente",
+    "emoji": "🐍",
+    "card": 51,
+    "kind": "normal",
+    "hp": 8,
+    "attack": 2,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "poison",
+        "value": 3
+      },
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack",
+        "value": 3
+      }
+    ],
+    "taunt": "Sssss… mi veneno es lento.",
+    "phrase": "La serpiente está en el camino."
+  },
+  {
+    "id": "jaguar-obsidiana",
+    "name": "El Jaguar de Obsidiana",
+    "emoji": "🐆",
+    "card": 14,
+    "kind": "elite",
+    "hp": 10,
+    "attack": 3,
+    "modifier": "niebla",
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      },
+      {
+        "kind": "attack",
+        "value": 4
+      },
+      {
+        "kind": "shield",
+        "value": 3
+      }
+    ],
+    "taunt": "En la niebla, no hay chuleta.",
+    "phrase": "El jaguar está a la derecha."
+  },
+  {
+    "id": "catrina",
+    "name": "La Catrina",
+    "emoji": "💀",
+    "top": "👒",
+    "card": 54,
+    "kind": "final",
+    "hp": 20,
+    "attack": 3,
+    "pattern": "cycle",
+    "intents": [
+      {
+        "kind": "attack"
+      }
+    ],
+    "taunt": "Bienvenido a mi baile.",
+    "phases": [
+      {
+        "name": "La Elegante",
+        "from": 1,
+        "traits": [
+          "abanico"
+        ],
+        "abanico": 4,
+        "themes": [
+          "cultura",
+          "vocabulario"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "steal",
+            "value": 3
+          },
+          {
+            "kind": "attack",
+            "value": 4
+          }
+        ],
+        "message": "La Catrina ouvre son abanico : seules les réponses écrites le traversent."
+      },
+      {
+        "name": "El Retrato",
+        "from": 0.66,
+        "traits": [
+          "vanidad"
+        ],
+        "themes": [
+          "gramatica"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "fog"
+          },
+          {
+            "kind": "attack",
+            "value": 4
+          }
+        ],
+        "message": "La Catrina pose pour son portrait : décris la scène ! Chaque erreur lui rend 1 PV."
+      },
+      {
+        "name": "El Último Baile",
+        "from": 0.33,
+        "traits": [
+          "ultimoBaile"
+        ],
+        "attackBonus": 1,
+        "levels": [
+          "jefe"
+        ],
+        "intents": [
+          {
+            "kind": "attack"
+          },
+          {
+            "kind": "attack",
+            "value": 5
+          }
+        ],
+        "message": "Dernière danse ! Chrono fixe, coups plus forts. Une série de 3 la fait tituber (dégâts doublés)."
+      }
+    ],
+    "phrase": "La Catrina lleva un sombrero."
+  }
+]

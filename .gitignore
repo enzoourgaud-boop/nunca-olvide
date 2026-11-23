@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+
+# Documents de cours : gardés en local (un dépôt GitHub Pages gratuit est public)
+sources/*.pdf

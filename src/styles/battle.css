@@ -1,0 +1,190 @@
+/* =========================================================
+   Scène de combat façon RPG rétro sur console portable.
+   Palette du jeu, pixels nets, animations en pas (steps).
+   ========================================================= */
+:root {
+  --pixel: 'Press Start 2P', ui-monospace, monospace;
+  --retro: 'Pixelify Sans', 'Atkinson Hyperlegible', sans-serif;
+  --cadre: #1a0f2b;
+  --cadre-2: #6a5878;
+}
+.batalla { display: flex; flex-direction: column; gap: 0; }
+.escenario {
+  position: relative; overflow: hidden; width: 100%; aspect-ratio: 16 / 8; min-height: 230px; max-height: min(380px, 50vh);
+  border: 4px solid var(--cadre); border-bottom: 0; border-radius: 10px 10px 0 0;
+  background: linear-gradient(#170c27 0 30%, #2b1846 30% 55%, #3a2058 55% 62%, var(--sol, #4a2a5e) 62%);
+  image-rendering: pixelated;
+}
+.fondo-mercado { --sol: #5c3352; }
+.fondo-panteon { --sol: #234a52; background: linear-gradient(#0f1626 0 30%, #17283a 30% 55%, #1d3445 55% 62%, var(--sol) 62%); }
+.fondo-mictlan { --sol: #3b2366; background: linear-gradient(#12081f 0 30%, #24113f 30% 55%, #301a52 55% 62%, var(--sol) 62%); }
+.estrellas { position: absolute; inset: 0; pointer-events: none; }
+.estrellas::before {
+  content: ''; position: absolute; width: 3px; height: 3px; background: #fff1dc; top: 8%; left: 12%;
+  box-shadow: 120px 18px #fff1dc, 240px 6px #ffd23f, 330px 40px #fff1dc, 470px 14px #fff1dc, 560px 30px #ffd23f, 650px 8px #fff1dc, 60px 52px #ffd23f, 410px 60px #fff1dc, 720px 46px #fff1dc;
+  animation: titila 2.4s steps(2) infinite;
+}
+@keyframes titila { 50% { opacity: .4; } }
+.horizonte { position: absolute; left: 0; right: 0; top: 50%; height: 14%; pointer-events: none; }
+.fondo-mercado .horizonte { background: repeating-linear-gradient(90deg, transparent 0 18px, #ff3d8b55 18px 30px, transparent 30px 44px, #ff9f1c55 44px 56px, transparent 56px 70px, #22d1c655 70px 82px); clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%); top: 34%; }
+.fondo-panteon .horizonte { background: repeating-linear-gradient(90deg, transparent 0 26px, #0b1420 26px 44px, transparent 44px 70px, #0b1420 70px 80px, transparent 80px 110px); }
+.fondo-mictlan .horizonte { background: radial-gradient(ellipse at 30% 100%, #9b6cff44, transparent 60%), radial-gradient(ellipse at 80% 100%, #ff3d8b33, transparent 55%); }
+
+/* --- cadres (nom + PV) --- */
+.marco {
+  position: absolute; z-index: 3; width: min(46%, 300px); background: #fff1dc; color: var(--tinta);
+  border: 3px solid var(--cadre); box-shadow: inset 0 0 0 2px var(--cadre-2), 4px 4px 0 rgba(0, 0, 0, .35);
+  padding: 6px 10px 6px; border-radius: 4px; display: flex; flex-direction: column; gap: 3px;
+}
+.marco-enemigo { top: 6%; left: 3%; }
+.marco-jugador { bottom: 7%; right: 3%; }
+.marco-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.marco-titulo b { font-family: var(--retro); font-weight: 600; font-size: clamp(.95rem, 2.4vw, 1.2rem); line-height: 1.1; overflow-wrap: anywhere; }
+.marco .nv { font-family: var(--pixel); font-size: .55rem; white-space: nowrap; }
+.pv { display: flex; align-items: center; gap: 6px; }
+.pv-lbl { font-family: var(--pixel); font-size: .55rem; color: #ff9f1c; background: var(--cadre); padding: 2px 4px; border-radius: 2px; }
+.pv-barra { flex: 1; height: 10px; background: var(--cadre); border: 2px solid var(--cadre); border-radius: 2px; overflow: hidden; }
+.pv-barra i { display: block; height: 100%; background: var(--turquesa); transition: width .9s steps(18); }
+.pv-barra.medio i { background: var(--amarillo); }
+.pv-barra.bajo i { background: var(--rosa); animation: alerta .6s steps(2) infinite; }
+.pv-barra.tarde-ok i { transition-delay: .6s; }
+.pv-barra.tarde-ko i { transition-delay: .4s; }
+@keyframes alerta { 50% { opacity: .45; } }
+.marco-estado { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; font-size: .78rem; font-weight: 700; }
+.marco-estado .pv-num { margin-left: auto; font-family: var(--pixel); font-size: .6rem; }
+.marco-estado .fase { color: var(--rosa); }
+.marco-estado .modif { padding: 1px 6px; font-size: .7rem; }
+
+/* --- côtés et plateformes --- */
+.lado { position: absolute; z-index: 2; display: flex; align-items: flex-end; justify-content: center; }
+.lado-enemigo { right: 5%; top: 6%; width: 36%; height: 58%; }
+.lado-jugador { left: 5%; bottom: 0; width: 36%; height: 56%; }
+.plataforma { position: absolute; bottom: 4%; left: 8%; right: 8%; height: 22%; border-radius: 50%; background: radial-gradient(ellipse at 50% 40%, #ffffff22, transparent 70%), color-mix(in srgb, var(--c) 35%, #1a0f2b); box-shadow: inset 0 -6px 0 #00000055; }
+.lado-jugador .plataforma { bottom: -6%; height: 26%; }
+.spr-wrap, .capa, .flota, .respira, .entra-enemigo, .entra-jugador { position: relative; }
+.lado .entra-enemigo, .lado .entra-jugador { margin-bottom: 9%; }
+.lado-jugador .entra-jugador { margin-bottom: 0; }
+.sprite { display: block; image-rendering: pixelated; image-rendering: crisp-edges; width: clamp(88px, 17vw, 136px); height: clamp(88px, 17vw, 136px); }
+.sprite.jugador { width: clamp(96px, 18vw, 140px); height: auto; aspect-ratio: 20 / 22; }
+.flota { animation: flota 1.2s steps(2) infinite; }
+.respira { animation: respira 1.6s steps(2) infinite; transform-origin: bottom; }
+@keyframes flota { 50% { transform: translateY(-4px); } }
+@keyframes respira { 50% { transform: scaleY(.97); } }
+
+/* --- entrée en scène --- */
+.cortina { position: absolute; inset: 0; z-index: 8; background: repeating-linear-gradient(#1a0f2b 0 12px, #000 12px 24px); animation: cortina .7s steps(7) forwards; }
+@keyframes cortina { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 100% 0); } }
+.primera .entra-enemigo { animation: aparece .7s .35s cubic-bezier(.3, 1.6, .5, 1) both; }
+.primera .entra-jugador { animation: desliza .55s .45s steps(6) both; }
+.primera .marco-enemigo { animation: desliza-der .4s .8s steps(5) both; }
+.primera .marco-jugador { animation: desliza-izq .4s .9s steps(5) both; }
+@keyframes aparece { from { transform: translateY(-130%) scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes desliza { from { transform: translateX(-160%); } to { transform: none; } }
+@keyframes desliza-der { from { transform: translateX(-120%); } to { transform: none; } }
+@keyframes desliza-izq { from { transform: translateX(120%); } to { transform: none; } }
+
+/* --- bulle d'intention --- */
+.bocadillo {
+  position: absolute; z-index: 4; left: -18%; top: 0; max-width: 70%;
+  font-family: var(--retro); font-weight: 600; font-size: .9rem; line-height: 1.15;
+  background: #fff1dc; color: var(--tinta); border: 3px solid var(--cadre); border-radius: 4px; padding: 4px 8px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, .35); animation: pop .3s steps(3) .2s both;
+}
+.bocadillo::after { content: ''; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); border: 7px solid transparent; border-left-color: var(--cadre); }
+.primera .bocadillo { animation-delay: 1.2s; }
+
+/* --- animations de mouvement --- */
+.lanza { animation: lanza .4s steps(4); }
+@keyframes lanza { 40% { transform: translate(18%, -10%); } }
+.ataca { animation: embiste .45s steps(5); }
+@keyframes embiste { 45% { transform: translate(-38%, 22%) scale(1.08); } }
+.critico { animation: sacude .35s .55s steps(6); }
+@keyframes sacude { 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
+.esquiva { animation: esquiva .5s .5s steps(4); }
+@keyframes esquiva { 50% { transform: translateX(30%); opacity: .35; } }
+.duda { animation: duda .6s steps(4); }
+@keyframes duda { 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
+.salta { animation: salta .4s steps(4); }
+@keyframes salta { 50% { transform: translateY(-14%); } }
+.lado-enemigo .cae { animation: cae-e .7s 1.15s steps(7) forwards; }
+.lado-enemigo .critico.cae { animation: sacude .35s .55s steps(6), cae-e .7s 1.15s steps(7) forwards; }
+.lado-jugador .cae { animation: cae-e .7s .9s steps(7) forwards; }
+@keyframes cae-e { to { transform: translateY(70%); opacity: 0; clip-path: inset(0 0 70% 0); } }
+
+/* --- clignotements --- */
+.golpeado { animation: parpadeo .14s .6s steps(1) 4; }
+.herido { animation: parpadeo .14s .4s steps(1) 4; }
+@keyframes parpadeo { 0% { opacity: 0; } 50% { opacity: 1; } }
+.fase { animation: fase 1.2s steps(6); }
+@keyframes fase { 30% { filter: hue-rotate(160deg) brightness(1.6); } 60% { filter: invert(1); } }
+.revive { animation: revive 1s steps(5); }
+@keyframes revive { 50% { filter: brightness(2.2) sepia(1); } }
+
+/* --- secousses et flash de la scène --- */
+.temblor { animation: temblor .35s .35s steps(5); }
+@keyframes temblor { 25% { transform: translate(-6px, 2px); } 50% { transform: translate(5px, -2px); } 75% { transform: translate(-3px, 1px); } }
+.temblor-suave { animation: temblor .3s .55s steps(4); }
+.escenario::after { content: ''; position: absolute; inset: 0; z-index: 7; background: #fff; opacity: 0; pointer-events: none; }
+.flash::after { animation: flash .3s .3s steps(2); }
+.flash-fuerte::after { animation: flash .9s .2s steps(6); background: #ffd23f; }
+@keyframes flash { 0%, 100% { opacity: 0; } 30% { opacity: .85; } }
+
+/* --- nombres, étiquettes, effets --- */
+.numero { position: absolute; z-index: 6; top: 18%; left: 50%; font-family: var(--pixel); font-size: clamp(.9rem, 2.6vw, 1.3rem); color: #fff1dc; text-shadow: 3px 3px 0 var(--cadre), -2px -2px 0 var(--rosa); animation: numero 1s .6s steps(8) both; }
+.numero.contra { top: 10%; animation-delay: .4s; }
+.numero.cero { color: var(--texto-2); }
+@keyframes numero { 0% { opacity: 0; transform: translate(-50%, 10px) scale(1.6); } 15% { opacity: 1; transform: translate(-50%, 0) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -26px); } }
+.etiqueta { position: absolute; z-index: 6; font-family: var(--pixel); font-size: .7rem; color: var(--tinta); background: var(--amarillo); border: 3px solid var(--cadre); padding: 4px 6px; animation: pop .25s .6s steps(3) both; }
+.critico-txt { top: 4%; right: 0; }
+.casi-txt { top: 6%; right: 18%; font-size: 1rem; animation-delay: .1s; }
+.bloqueo { top: 26%; right: 4%; font-size: 1.4rem; background: transparent; border: 0; animation-delay: .35s; }
+@keyframes pop { from { transform: scale(0); } to { transform: none; } }
+.burbuja { position: absolute; inset: -8%; border: 3px dashed #ffd23f; border-radius: 50%; animation: gira 3s linear infinite; pointer-events: none; }
+@keyframes gira { to { transform: rotate(360deg); } }
+.proyectil { position: absolute; z-index: 5; font-size: 1.8rem; left: 22%; top: 60%; animation: proyectil .45s steps(9) both; pointer-events: none; }
+.proyectil.grande { font-size: 2.4rem; }
+@keyframes proyectil { 0% { left: 24%; top: 60%; opacity: 0; } 10% { opacity: 1; } 50% { top: 18%; } 85% { opacity: 1; } 100% { left: 70%; top: 30%; opacity: 0; transform: rotate(360deg) scale(1.6); } }
+.vuela-monedas { position: absolute; z-index: 5; font-size: 1.4rem; animation: monedas .6s .4s steps(8) both; pointer-events: none; }
+@keyframes monedas { 0% { left: 24%; top: 60%; opacity: 0; } 15% { opacity: 1; } 50% { top: 22%; } 100% { left: 72%; top: 34%; opacity: 0; } }
+.humo { position: absolute; z-index: 5; top: 20%; left: 40%; font-size: 2.4rem; animation: humo 1s .2s steps(6) both; }
+@keyframes humo { from { opacity: 0; transform: scale(.4); } 40% { opacity: 1; } to { opacity: 0; transform: scale(1.6) translateY(-20px); } }
+.destellos { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 5px; height: 5px; background: #3ddc84; animation: sube-brillo 1s 1s steps(6) both;
+  box-shadow: -30px 0 #3ddc84, 26px -8px #3ddc84, -14px -20px #b6ffd0, 18px -30px #3ddc84, -26px -38px #b6ffd0, 6px -46px #3ddc84; }
+.lado-jugador .destellos { animation-delay: .5s; }
+@keyframes sube-brillo { from { opacity: 0; transform: translateY(10px); } 30% { opacity: 1; } to { opacity: 0; transform: translateY(-40px); } }
+.burbujas-veneno { position: absolute; z-index: 5; left: 50%; bottom: 30%; width: 7px; height: 7px; border-radius: 50%; background: #9b6cff; animation: sube-brillo 1s .45s steps(6) both;
+  box-shadow: -24px -6px #9b6cff, 20px -14px #c9a8ff, -10px -28px #9b6cff, 14px -36px #c9a8ff; }
+.bruma { position: absolute; inset: 30% -20% 0; z-index: 4; pointer-events: none; background: repeating-radial-gradient(ellipse at 20% 60%, #e7ddf233 0 30px, transparent 30px 70px); animation: bruma 6s linear infinite; }
+@keyframes bruma { to { transform: translateX(14%); } }
+
+/* --- boîte de dialogue --- */
+.dialogo {
+  position: relative; min-height: 5.6em; background: #fff1dc; color: var(--tinta); cursor: pointer;
+  border: 4px solid var(--cadre); box-shadow: inset 0 0 0 3px var(--cadre-2); border-radius: 0 0 10px 10px;
+  padding: 10px 40px 10px 16px; font-family: var(--retro); font-size: clamp(1.02rem, 2.6vw, 1.2rem); line-height: 1.35;
+}
+.dialogo p { margin: 0; }
+.dialogo .flecha { position: absolute; right: 14px; bottom: 8px; font-size: .8rem; animation: alerta .7s steps(2) infinite; }
+.combate .qa { margin-top: 4px; }
+
+@media (max-width: 640px) {
+  .escenario { aspect-ratio: 4 / 3.4; min-height: 0; max-height: none; }
+  .marco { width: 54%; padding: 4px 7px; }
+  .marco-titulo b { font-size: .9rem; }
+  .marco-estado { font-size: .7rem; }
+  .lado-enemigo { right: 2%; top: 22%; width: 44%; height: 44%; }
+  .lado-jugador { left: 2%; width: 44%; height: 48%; }
+  .marco-jugador { bottom: 4%; }
+  .bocadillo { left: auto; right: 0; top: -14%; font-size: .78rem; max-width: 90%; }
+  .bocadillo::after { display: none; }
+  .sprite { width: 84px; height: 84px; }
+  .sprite.jugador { width: 92px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flota, .respira, .burbuja, .bruma, .estrellas::before, .pv-barra.bajo i { animation: none !important; }
+  .cortina { display: none; }
+  .pv-barra i { transition: none; }
+}
+
+/* la police pixel transforme « fi » en un glyphe illisible */
+.escenario, .dialogo, .marco, .bocadillo { font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; }

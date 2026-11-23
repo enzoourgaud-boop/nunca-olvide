@@ -1,0 +1,150 @@
+/* =========================================================
+   Écran de combat (version 1.1) : la scène et la zone de réponse sont visibles ensemble.
+   - Grand écran : deux colonnes, la scène à gauche reste collée à l'écran.
+   - Tablette et téléphone : la scène, compacte, reste collée en haut ; la question défile dessous.
+   La classe « en-combate » est posée sur <html> pendant un combat.
+   ========================================================= */
+
+/* --- guirlande réduite et page plus large pendant le combat --- */
+html.en-combate .picado { height: 26px; margin-bottom: 8px; padding-top: 2px; }
+html.en-combate .picado svg { width: 22px; height: 24px; }
+html.en-combate #app { max-width: min(1320px, 100%); gap: 10px; }
+html.en-combate body { padding-bottom: 14px; }
+.combate { gap: 12px; }
+.combate .hud { gap: 6px 12px; min-height: 34px; padding-right: 52px; }
+.combate .qa { gap: 10px; }
+
+/* --- almas pendientes --- */
+.alma-chip { display: inline-flex; gap: 5px; align-items: center; font-size: .78rem; font-weight: 700; border-radius: 99px; padding: 2px 10px; background: var(--amarillo); color: var(--tinta); }
+.chip.almas { background: var(--noche-3); cursor: help; }
+.almas-aviso { background: var(--noche-2); border-left: 5px solid var(--amarillo); border-radius: 8px; padding: 8px 12px; }
+.almas-aviso b { color: var(--amarillo); }
+.almas-dibujo { width: 150px; min-height: 110px; flex: none; display: flex; flex-wrap: wrap; gap: 6px; align-content: center; justify-content: center; background: var(--noche-2); border-radius: var(--r); padding: 12px; font-size: 2.4rem; line-height: 1; }
+.almas-dibujo span { opacity: .35; transition: opacity .3s, transform .3s; }
+.almas-dibujo .actual { opacity: 1; animation: flota 1.2s steps(2) infinite; }
+.almas-dibujo .queda { opacity: 1; filter: grayscale(1); }
+.almas-dibujo .libre { opacity: 1; transform: translateY(-10px) scale(1.15); filter: drop-shadow(0 0 8px var(--amarillo)); }
+.almas-dibujo .pasada { opacity: .6; }
+.crono.pausa { opacity: .6; }
+
+/* --- pouvoirs compacts : les aides gardent leur nom, les reliques passent en icônes --- */
+.poderes.compacto { gap: 6px; padding-top: 8px; border-top-width: 2px; }
+.poderes.compacto .lbl { display: none; }
+.poderes.compacto .pod { padding: 4px 9px; font-size: .9rem; gap: 6px; border-radius: 10px; }
+.poderes.compacto .pod span { font-size: 1.1rem; }
+.poderes.compacto .pod.rel, .poderes.compacto .pod.sinergia { cursor: pointer; padding: 4px 7px; }
+.poderes.compacto .pod.rel .nm, .poderes.compacto .pod.sinergia .nm, .poderes.compacto .pod.sinergia small { display: none; }
+.poderes.compacto .pod.abierto { background: var(--noche-3); border-style: solid; }
+.poderes.compacto .muted { font-size: .85rem; }
+.pod-info { flex-basis: 100%; font-size: .88rem; background: var(--noche-2); border-radius: 8px; padding: 5px 10px; }
+
+/* --- grand écran : deux colonnes --- */
+@media (min-width: 900px) and (min-aspect-ratio: 5/4) {
+  .combate { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); column-gap: 22px; align-items: start; }
+  .lado-escena { position: sticky; top: 8px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .combate .escenario { max-height: min(340px, calc(100vh - 290px)); min-height: 190px; }
+  .combate .dialogo { min-height: 4.4em; font-size: clamp(.95rem, 1.35vw, 1.1rem); padding: 8px 34px 8px 14px; }
+  .combate .sprite { width: clamp(84px, 9vw, 128px); height: clamp(84px, 9vw, 128px); }
+  .combate .sprite.jugador { width: clamp(88px, 9.5vw, 132px); height: auto; }
+  .combate .qa { margin-top: 0; padding-top: 2px; min-height: calc(100vh - 80px); }
+  .combate .enun { font-size: clamp(1.25rem, 2vw, 1.7rem); }
+  /* les plateaux ne dépassent pas la hauteur de l'écran */
+  .combate .decorado { max-width: min(560px, max(300px, calc((100vh - 345px) * 1.6))); }
+  .combate .fb { position: sticky; bottom: 8px; box-shadow: 0 -10px 24px 6px var(--noche); }
+  /* le bouton d'options, fixé en haut à droite, ne recouvre ni l'étiquette ni le chrono */
+  .combate .qa .tipo, .combate .qa .crono { margin-right: 56px; }
+}
+
+/* --- tablette et téléphone : scène compacte collée en haut --- */
+@media not ((min-width: 900px) and (min-aspect-ratio: 5/4)) {
+  .combate { display: flex; flex-direction: column; }
+  .lado-escena { display: contents; }
+  /* la barre du haut et la scène restent collées en haut de l'écran quand la question défile */
+  .combate .hud { order: 0; position: sticky; top: 0; z-index: 21; height: 46px; min-height: 0; flex-wrap: nowrap; overflow: hidden; background: var(--noche); margin: 0 -6px -12px; padding: 0 58px 0 6px; border-radius: 0; }
+  .combate .batalla { order: 1; position: sticky; top: 46px; z-index: 20; margin: 0 -6px; box-shadow: 0 10px 14px -6px var(--noche); }
+  .combate .qa { order: 2; }
+  .combate .poderes { order: 3; }
+  .combate { --escena-h: clamp(150px, 24vh, 280px); }
+  .combate .escenario { aspect-ratio: auto; height: var(--escena-h); min-height: 0; max-height: none; }
+  /* plateaux (ordre, association, scène) : la boîte de dialogue s'efface pour laisser la place à la consigne */
+  .combate[data-amplio] .dialogo { display: none; }
+  .combate[data-amplio] .escenario { border-bottom: 4px solid var(--cadre); border-radius: 10px; }
+  .combate .decorado { max-width: min(560px, max(250px, calc((100vh - var(--escena-h) - 330px) * 1.6))); }
+  .combate .tablero { gap: 8px; }
+  .combate .bandeja, .combate .linea, .combate .banco { padding: 7px; min-height: 52px; gap: 6px; }
+  .combate .tablero .pie .muted { font-size: .85rem; }
+  .combate .dialogo { min-height: 0; height: calc(3 * 1.22em + 14px); padding: 5px 30px 5px 10px; font-size: .95rem; line-height: 1.22; overflow: hidden; }
+  .combate .dialogo > div { height: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
+  .combate .dialogo .flecha { bottom: 4px; right: 10px; }
+  .combate .fb { scroll-margin-bottom: 10px; }
+}
+@media (max-width: 640px) {
+  html.en-combate .picado { display: none; }
+  html.en-combate body { padding-top: 0; }
+  .combate .hud { font-size: .9rem; gap: 6px; }
+  .combate .hud .chip { padding: 3px 9px; }
+  .combate .hud .ruta { display: none; }
+  html.en-combate .btn-opciones { top: calc(3px + env(safe-area-inset-top, 0px)); width: 40px; height: 40px; font-size: 1.2rem; }
+  .combate { --escena-h: clamp(140px, 24vh, 230px); }
+  .combate .escenario { border-width: 3px; }
+  .combate .emparejar { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 8px; }
+  .combate .columna { gap: 6px; }
+  .combate .palabra { padding: 7px 8px 7px 36px; font-size: .98rem; }
+  .combate .imagen { min-height: 58px; padding: 5px; }
+  .combate .imagen .emo { font-size: 1.9rem; }
+  .combate .ficha { padding: 7px 11px; font-size: 1rem; }
+  .combate .tipo .lbl { font-size: .66rem; }
+  .combate .marco { width: 52%; padding: 3px 6px; gap: 1px; border-width: 2px; }
+  .combate .marco-titulo b { font-size: .82rem; }
+  .combate .marco-estado { font-size: .66rem; }
+  .combate .marco-enemigo { top: 4%; left: 2%; }
+  .combate .marco-jugador { bottom: 4%; right: 2%; }
+  .combate .lado-enemigo { right: 1%; top: 8%; width: 44%; height: 52%; }
+  .combate .lado-jugador { left: 1%; width: 44%; height: 54%; }
+  .combate .sprite { width: clamp(52px, 10vh, 84px); height: clamp(52px, 10vh, 84px); }
+  .combate .sprite.jugador { width: clamp(54px, 10.5vh, 88px); height: auto; }
+  /* sur petit écran, l'intention de l'ennemi est écrite dans la boîte de dialogue, toujours visible */
+  .combate .bocadillo { display: none; }
+  .combate .dialogo { height: calc(2 * 1.22em + 12px); padding: 3px 26px 3px 8px; font-size: .88rem; border-width: 3px; }
+  .combate .tablero .pie { flex-wrap: nowrap; align-items: center; gap: 8px; }
+  .combate .tablero .pie .muted { font-size: .78rem; line-height: 1.2; }
+  .combate .tablero .pie .btn { flex: none; padding: 9px 18px; }
+  .combate .enun { font-size: clamp(1.1rem, 4.6vw, 1.4rem); line-height: 1.22; }
+  .combate .op { padding: 10px 12px; font-size: 1rem; }
+  .combate .ops { gap: 8px; }
+  .combate .vf .op { padding: 12px; }
+  .combate .tildes { flex-wrap: nowrap; gap: 4px; overflow-x: auto; }
+  .combate .tildes button { flex: 1 0 30px; min-width: 30px; height: 36px; }
+  /* plateaux : l'étiquette du thème et le chrono partagent une ligne, les pièces tiennent sur une rangée */
+  .combate[data-amplio] .qa { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; row-gap: 8px; align-items: center; }
+  .combate[data-amplio] .qa > * { grid-column: 1 / -1; min-width: 0; }
+  .combate[data-amplio] .qa > .tipo { grid-column: 1; }
+  .combate[data-amplio] .qa > .tipo .lbl { display: none; }
+  .combate[data-amplio] .qa > .crono { grid-column: 2; }
+  .combate[data-amplio] .enun { font-size: clamp(1rem, 4.2vw, 1.25rem); }
+  .combate .pieza { padding: 4px 7px; font-size: .86rem; gap: 5px; border-width: 2px; }
+  .combate .pieza .emo { font-size: 1.15rem; }
+  .combate .bandeja { min-height: 44px; padding: 6px; }
+  /* image à lire + QCM : les réponses passent sur deux colonnes */
+  .combate[data-escena] .ops { grid-template-columns: 1fr 1fr; }
+  .combate[data-escena] .op { font-size: .92rem; padding: 8px 9px; gap: 6px; }
+  .combate[data-escena] .op kbd { display: none; }
+  .combate[data-escena] .decorado { max-width: min(560px, max(210px, calc((100vh - var(--escena-h) - 385px) * 1.6))); }
+  .combate .escr input { padding: 9px 12px; font-size: 1.1rem; }
+  .combate .fb { padding: 10px 12px; gap: 6px; }
+  .combate .fb h3 { font-size: 1.2rem; }
+  /* une seule ligne de pouvoirs, qui défile sur le côté */
+  .poderes.compacto { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
+  .poderes.compacto .pod { flex: none; white-space: nowrap; }
+  .poderes.compacto .pod-info { position: sticky; left: 0; flex: none; flex-basis: auto; white-space: normal; min-width: 70vw; }
+}
+/* écrans très bas (PC de collège avec barres du navigateur) : la scène rétrécit avant tout le reste */
+@media (min-width: 900px) and (min-aspect-ratio: 5/4) and (max-height: 640px) {
+  .combate .dialogo { min-height: 3.6em; }
+  .combate .ops { gap: 8px; }
+  .combate .op { padding: 10px 12px; }
+}
+
+/* mode projecteur : la police est plus grande, la scène ne doit pas manger la question */
+html.taille-proj.en-combate #app { max-width: 100%; }
+html.taille-proj .combate .escenario { max-height: min(40vh, calc(100vh - 330px)); }

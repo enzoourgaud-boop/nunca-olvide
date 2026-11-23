@@ -1,0 +1,23 @@
+import { render } from 'preact';
+import '@fontsource/sancreek/400.css';
+import '@fontsource/atkinson-hyperlegible/400.css';
+import '@fontsource/atkinson-hyperlegible/700.css';
+import '@fontsource/pixelify-sans/400.css';
+import '@fontsource/pixelify-sans/600.css';
+import '@fontsource/press-start-2p/400.css';
+import '@fontsource/opendyslexic/400.css';
+import '@fontsource/opendyslexic/700.css';
+import './styles/main.css';
+import './styles/battle.css';
+import './styles/boards.css';
+import './styles/menu.css';
+import './styles/teacher.css';
+import './styles/a11y.css';
+import './styles/combat.css';
+import { applyPrefs, loadPrefs } from './prefs';
+import { registerOffline } from './pwa';
+import { App } from './ui/App';
+
+applyPrefs(loadPrefs());
+render(<App />, document.getElementById('root')!);
+registerOffline();

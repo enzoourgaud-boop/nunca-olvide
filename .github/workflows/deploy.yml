@@ -1,0 +1,51 @@
+# Mise en ligne automatique sur GitHub Pages.
+# À chaque modification envoyée sur la branche « main », GitHub :
+#   1. vérifie la banque de questions et lance les tests (si une erreur est trouvée, le site en ligne ne change pas) ;
+#   2. construit le jeu ;
+#   3. le publie sur https://<ton-pseudo>.github.io/<nom-du-depot>/
+name: Mettre le jeu en ligne
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Installer
+        run: npm ci
+      - name: Vérifier la banque de questions
+        run: npm run valider
+      - name: Tests
+        run: npm test
+      - name: Construire le jeu
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  publier:
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publication.outputs.page_url }}
+    steps:
+      - id: publication
+        uses: actions/deploy-pages@v4
