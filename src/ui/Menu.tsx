@@ -132,6 +132,13 @@ export function Title({ content, profile, meta, saved, settings, onSettings, onS
   const [asc, setAsc] = useState(Math.min(meta.maxAscension, Number(localAsc()) || 0));
   const bosses = seq.acts.map(a => ({ e: content.enemies.find(e => e.id === a.boss)!, c: a.color })).filter(x => x.e);
   const totalCards = allCards(content).length;
+  // domaine à travailler : le réglage « thèmes » (null = tout), choisi ici ou imposé par le code de classe du professeur
+  const domains = seq.domains;
+  const sameThemes = (a: string[] | null, b: string[] | undefined) => (a ?? []).length === (b ?? []).length && (a ?? []).every(t => (b ?? []).includes(t));
+  const domain = domains.find(d => sameThemes(settings.themes, d.themes));
+  const domainLocked = !!classe && !!settings.themes;
+  const countQuestions = (themes: string[] | undefined) =>
+    content.questions.filter(q => !q.disabled && (!themes || themes.includes(q.theme)) && (!settings.types || settings.types.includes(q.type))).length;
   return (
     <section class="screen portada">
       <div class="barra-perfil">
@@ -160,6 +167,33 @@ export function Title({ content, profile, meta, saved, settings, onSettings, onS
           </button>
           <span class="muted">ou commence une nouvelle partie ci-dessous.</span>
         </div>
+      )}
+
+      {domains.length > 1 && (
+        <>
+          <h2>Qu’est-ce que tu veux travailler ?</h2>
+          <div class="dominios" role="radiogroup" aria-label="Domaine à travailler">
+            {domains.map(d => (
+              <button
+                key={d.id}
+                type="button"
+                role="radio"
+                aria-checked={domain?.id === d.id}
+                class={`dominio ${domain?.id === d.id ? 'sel' : ''}`}
+                disabled={domainLocked}
+                onClick={() => onSettings({ ...settings, themes: d.themes ?? null })}
+              >
+                <span class="emo" aria-hidden="true">{d.emoji}</span>
+                <span class="nm">{d.label}</span>
+                <span class="ds">{d.description}</span>
+              </button>
+            ))}
+          </div>
+          <p class="muted dominio-nota" role="status">
+            {domain && !domainLocked && `${countQuestions(domain.themes)} questions dans ce domaine.`}
+            {domainLocked && 'Ton professeur a choisi les thèmes de la classe : pour les changer, retire le code de classe.'}
+          </p>
+        </>
       )}
 
       <h2>Choisis ton personnage</h2>
@@ -251,6 +285,7 @@ export function Title({ content, profile, meta, saved, settings, onSettings, onS
           début de la partie. Chaque mot sauvé donne +1 PV.
         </p>
       )}
+      {domain?.themes && <p class="muted">Tu travailles : <b>{domain.label}</b>.</p>}
       <div class="fila">
         {!settings.short && (
           <button class={`btn ${saved ? 'sec' : ''}`} onClick={() => onStart({ seed: cleanSeed(seed), character, ascension: asc })}>

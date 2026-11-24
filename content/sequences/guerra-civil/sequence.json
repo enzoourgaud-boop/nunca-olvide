@@ -381,5 +381,69 @@
       ]
     ],
     "outro": "«Nunca olvidé esos años.» — la abuela Carmen"
-  }
+  },
+  "domains": [
+    {
+      "id": "todo",
+      "label": "Tout mélangé",
+      "emoji": "🎲",
+      "description": "Tous les thèmes, comme une partie normale."
+    },
+    {
+      "id": "pasado",
+      "label": "Le passé simple",
+      "emoji": "⏳",
+      "description": "Pretérito indefinido : verbes réguliers, irréguliers, et ¿ser o ir ?",
+      "themes": [
+        "regulares",
+        "irregulares",
+        "ser-ir"
+      ]
+    },
+    {
+      "id": "regulares",
+      "label": "Verbes réguliers",
+      "emoji": "✒️",
+      "description": "-AR, -ER, -IR et les accents (luchó ≠ lucho).",
+      "themes": [
+        "regulares"
+      ]
+    },
+    {
+      "id": "irregulares",
+      "label": "Verbes irréguliers",
+      "emoji": "🔀",
+      "description": "pidió, durmió, tuvo, estuvo, dijeron, trajeron…",
+      "themes": [
+        "irregulares"
+      ]
+    },
+    {
+      "id": "ser-ir",
+      "label": "¿Ser o ir ?",
+      "emoji": "🧭",
+      "description": "fui, fue, fueron : être ou aller ?",
+      "themes": [
+        "ser-ir"
+      ]
+    },
+    {
+      "id": "historia",
+      "label": "L’histoire de la guerre",
+      "emoji": "📜",
+      "description": "Dates, camps, Franco, exil, frise et carte.",
+      "themes": [
+        "historia"
+      ]
+    },
+    {
+      "id": "lexico",
+      "label": "Le lexique",
+      "emoji": "📖",
+      "description": "Les mots de la guerre et du souvenir.",
+      "themes": [
+        "lexico"
+      ]
+    }
+  ]
 }

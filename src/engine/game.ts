@@ -616,7 +616,11 @@ export class Game {
 
   private pickEvent(): GameEvent | null {
     const s = this.state, actNo = s.act + 1;
-    const ok = this.content.events.filter(e => !e.acts || e.acts.includes(actNo));
+    // un événement qui pose des questions précises (la carte de l'Espagne) n'a pas de sens si le domaine travaillé les exclut
+    const active = this.activeThemes();
+    const playable = (e: GameEvent) =>
+      e.choices.every(c => !c.quiz?.ids || c.quiz.ids.some(id => { const q = this.qById.get(id); return !!q && this.isUsable(q) && active.includes(q.theme); }));
+    const ok = this.content.events.filter(e => (!e.acts || e.acts.includes(actNo)) && playable(e));
     const fresh = ok.filter(e => !s.seenEvents.includes(e.id));
     const pool = fresh.length ? fresh : ok;
     return pool.length ? this.rng.pick(pool) : null;
@@ -755,7 +759,7 @@ export class Game {
 
   /** Question hors combat (événements, coffres). */
   private makeQuiz(o: { themes?: string[]; write?: boolean; level?: 1 | 2 | 3; ids?: string[] }): QuizState {
-    const listed = (o.ids ?? []).map(id => this.qById.get(id)).filter((q): q is Question => !!q && this.isUsable(q));
+    const listed = (o.ids ?? []).map(id => this.qById.get(id)).filter((q): q is Question => !!q && this.isUsable(q) && this.activeThemes().includes(q.theme));
     if (listed.length) {
       const q = this.rng.pick(listed);
       return { q: this.makeAsked(q, this.chooseMode(q, 0, false)), fb: null };

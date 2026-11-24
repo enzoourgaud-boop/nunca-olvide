@@ -315,6 +315,10 @@ Le **code de fin de partie** existant (sans pseudo, sans identifiant) contient l
 
 ---
 
+### 6.5 Choisir un domaine à travailler (étape 7)
+
+Au menu principal, l'élève choisit ce qu'il veut réviser : **tout mélangé**, **le passé simple** (réguliers + irréguliers + ¿ser o ir?), les **verbes réguliers**, les **verbes irréguliers**, **¿ser o ir?**, **l'histoire de la guerre** ou **le lexique**. Le choix règle les thèmes de la partie et s'applique partout : combats, événements, coffres, échauffement des erreurs. Les événements qui posent des questions précises (la carte de l'Espagne) n'apparaissent pas si leur domaine est exclu. Un code de classe qui impose des thèmes verrouille le choix. Les domaines sont définis dans `sequence.json` (`domains`).
+
 ## 7. Espace professeur
 
 Repris tel quel, avec les thèmes de cette séquence :

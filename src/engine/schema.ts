@@ -419,6 +419,10 @@ export const SequenceSchema = z
           .strict(),
       )
       .min(1),
+    /** Domaines que l'élève peut choisir au menu principal (« je travaille le passé simple »). Sans `themes` : tout mélangé. */
+    domains: z
+      .array(z.object({ id: idSchema, label: z.string(), emoji: z.string(), description: z.string(), themes: z.array(z.string()).min(1).optional() }).strict())
+      .default([]),
     /** Fin de partie gagnée : la ficha de identidad de la guerra (lignes [rubrique, réponse]). */
     epilogue: z.object({ title: z.string(), intro: z.string(), rows: z.array(z.tuple([z.string(), z.string()])).min(1), outro: z.string() }).strict().optional(),
     meal: z.object({ name: z.string(), emoji: z.string(), price: z.number().int(), heal: z.number().int(), description: z.string() }).strict(),

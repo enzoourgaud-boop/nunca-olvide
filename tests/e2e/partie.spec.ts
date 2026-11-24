@@ -52,6 +52,9 @@ test('espace professeur : code de classe appliqué côté élève', async ({ pag
   await eleve.fill('#pseudo', 'Élève');
   await eleve.click('text=Créer et jouer');
   await expect(eleve.locator('.clase')).toContainText('Partie courte (acte 2');
+  // les thèmes choisis par le professeur ne se changent pas depuis le menu
+  await expect(eleve.getByRole('radio', { name: /Le passé simple/ })).toBeDisabled();
+  await expect(eleve.locator('.dominio-nota')).toContainText('Ton professeur a choisi les thèmes');
   // partie courte imposée : seul le bouton « Partie courte » est proposé
   await expect(eleve.getByRole('button', { name: /Partie complète/ })).toHaveCount(0);
   await eleve.getByRole('button', { name: /Partie courte/ }).click();
@@ -389,4 +392,44 @@ test('chacun attaque à son tour : mon coup, puis la riposte de l’ombre (anima
   await answerCurrent(page, data, true);
   await expect(page.locator('.combate .proyectil-enemigo')).toBeHidden();
   await expect(page.locator('.combate .impacto')).toBeHidden();
+});
+
+/* ======================= Étape 7 : domaine à travailler ======================= */
+
+test('menu principal : travailler le passé simple (au clavier), la question posée est toujours du domaine', async ({ page }) => {
+  await page.fill('#pseudo', 'Bot');
+  await page.keyboard.press('Enter');
+  const tout = page.getByRole('radio', { name: /Tout mélangé/ });
+  const pasado = page.getByRole('radio', { name: /Le passé simple/ });
+  await expect(tout).toHaveAttribute('aria-checked', 'true');
+  await pasado.focus();
+  await page.keyboard.press('Enter');
+  await expect(pasado).toHaveAttribute('aria-checked', 'true');
+  await expect(tout).toHaveAttribute('aria-checked', 'false');
+  await expect(page.locator('.dominio-nota')).toContainText(/\d+ questions dans ce domaine/);
+  // le choix est gardé sur l'appareil
+  await page.reload();
+  await expect(page.getByRole('radio', { name: /Le passé simple/ })).toHaveAttribute('aria-checked', 'true');
+  await page.getByRole('button', { name: /Partie courte/ }).click();
+  const themes = new Set<string>();
+  for (let step = 0; step < 500 && themes.size >= 0; step++) {
+    if (await handleCaja(page)) continue;
+    if (await page.locator('.stats').count()) break;
+    if (await page.locator('.mapa').count()) {
+      await page.locator('.sala.puede').first().click();
+      continue;
+    }
+    const qa = page.locator('.qa[data-qid]:not(:has(.fb))');
+    if (await qa.count()) {
+      themes.add(data.bank[(await qa.first().getAttribute('data-qid'))!].theme as string);
+      await answerCurrent(page, data);
+      continue;
+    }
+    const next = page.locator('.fb .btn, .resultado .btn, .elige .item:not([disabled]), .eleccion:not([disabled]), button:has-text("Ouvrir la boîte"), button:has-text("Essayer d’ouvrir"), button:has-text("Reprendre le chemin")');
+    if (await next.count()) await next.first().click();
+    else await page.waitForTimeout(40);
+    if (step > 120 && themes.size >= 2) break;
+  }
+  expect(themes.size).toBeGreaterThanOrEqual(2);
+  for (const t of themes) expect(['regulares', 'irregulares', 'ser-ir']).toContain(t);
 });

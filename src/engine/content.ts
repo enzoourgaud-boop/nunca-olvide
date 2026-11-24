@@ -152,6 +152,8 @@ export function checkCoherence(c: Content): Issue[] {
   for (const [id, n] of ids) if (n > 1) err(`question ${id}`, `identifiant utilisé ${n} fois`);
 
   // quantités minimales pour que le jeu tourne
+  for (const d of c.sequence.domains) for (const t of d.themes ?? []) if (!themes.has(t)) err(`domaine ${d.id}`, `thème inconnu « ${t} »`);
+  if (new Set(c.sequence.domains.map(d => d.id)).size !== c.sequence.domains.length) err('domaines', 'identifiant de domaine en double');
   for (const t of c.sequence.themes) {
     for (const l of [1, 2, 3] as const) {
       const n = c.questions.filter(q => q.theme === t.id && q.level === l && !q.disabled).length;

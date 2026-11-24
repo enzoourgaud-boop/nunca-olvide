@@ -11,7 +11,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 - Il n'y a **ni serveur, ni compte élève, ni publicité**. Aucune donnée ne quitte l'appareil.
 - Une fois chargé, il fonctionne **sans connexion**.
 
-> **Où en est le projet ?** Les étapes 1 à 5 sont sur `main`. L'étape 6 (retrait de l'audio, des questions d'écoute, et des questions sur Carmen et sur la BD) est sur la branche `etape-6-retrait` : ce qu'il te reste à vérifier est dans [`docs/etape-6/A_TESTER.md`](docs/etape-6/A_TESTER.md). La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
+> **Où en est le projet ?** Les étapes 1 à 6 sont sur `main`. L'étape 7 (choix d'un domaine à travailler au menu principal : le passé simple, les verbes irréguliers, l'histoire…) est sur la branche `etape-7-domaines` : ce qu'il te reste à tester est dans [`docs/etape-7/A_TESTER.md`](docs/etape-7/A_TESTER.md). La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
 
 ---
 
@@ -58,6 +58,8 @@ Le coup de l'élève part d'abord (étincelle, l'ombre clignote et recule, « �
 - **La carte de l'Espagne** : un événement demande de situer Huesca, la frontière avec la France et Madrid (*en el norte, en el este, en el centro…*).
 - **La ficha de identidad** : à la fin d'une victoire, la fiche de la guerre (date de début, durée, année de fin, les deux camps, chef des militaires) s'affiche, remplie.
 
+**Travailler un domaine en particulier.** Sur l'écran d'accueil, « *Qu'est-ce que tu veux travailler ?* » propose : **Tout mélangé** (par défaut), **Le passé simple** (verbes réguliers, irréguliers et ¿ser o ir ?), **Verbes réguliers**, **Verbes irréguliers**, **¿Ser o ir ?**, **L'histoire de la guerre**, **Le lexique**. Le choix est gardé sur l'appareil et ne pose ensuite que des questions de ce domaine (combats, événements, coffres, échauffement des erreurs). Si ton professeur a donné un **code de classe** qui impose des thèmes, le choix est verrouillé jusqu'à ce que tu retires le code.
+
 **Entre les combats** : des lettres et des scènes en espagnol où l'élève choisit sa réponse (*Una carta*), un marché d'objets d'occasion (*El rastro*), un abri pour se reposer (*El refugio*), des boîtes oubliées.
 
 **Les accents comptent** (comme sur ta fiche) : *luchó* (il lutta) n'est pas *lucho* (je lutte). Pour les verbes au pretérito :
@@ -97,7 +99,7 @@ Pour y accéder : en bas de l'écran d'accueil, clique sur **« Espace professeu
 
 | Onglet | Ce qu'on y fait |
 |---|---|
-| **Réglages de classe** | Thèmes (verbes réguliers, irréguliers, ser/ir, histoire, lexique), types de questions, **partie courte imposée et acte joué** (au hasard, ou acte 1, 2 ou 3), chrono (désactivé par défaut), **part de réponses écrites**, accents. Le jeu donne un **code de classe**, un lien et un **QR code**. |
+| **Réglages de classe** | Thèmes (verbes réguliers, irréguliers, ser/ir, histoire, lexique ; sans réglage, l'élève choisit son domaine au menu), types de questions, **partie courte imposée et acte joué** (au hasard, ou acte 1, 2 ou 3), chrono (désactivé par défaut), **part de réponses écrites**, accents. Le jeu donne un **code de classe**, un lien et un **QR code**. |
 | **Questions** | Rechercher, filtrer, activer ou désactiver une question d'un clic, la modifier ou en créer une. |
 | **Import / export** | Exporter la banque en CSV (Excel, LibreOffice) ou en JSON, la réimporter. |
 | **Codes élèves** | Coller les codes de fin de partie (un par ligne, un prénom devant si tu veux). Le jeu affiche le résultat de chacun (victoire, acte, partie courte, durée, date) et les notions les plus ratées de la classe. Un code mal recopié est signalé sans bloquer les autres. |
@@ -172,7 +174,7 @@ Tout ce qui est propre à la séquence est rangé dans `content/sequences/guerra
 
 | Fichier | Contenu |
 |---|---|
-| `sequence.json` | titre, textes, thèmes, notions, sources, actes (avec leur mot mystère `mystery`), carte, personnages, noms des salles, épilogue |
+| `sequence.json` | titre, textes, thèmes, notions, sources, actes (avec leur mot mystère `mystery`), carte, personnages, noms des salles, épilogue, **domaines** proposés au menu (`domains` : un nom, une icône, une description et la liste des thèmes) |
 | `questions/*.json` | les questions |
 | `enemies.json` | les ombres, leurs attaques et les questions qu'elles posent (`types`) |
 | `items.json`, `synergies.json` | aides, souvenirs et ensembles (un souvenir avec `year` et `clue` est « daté » : à ranger sur la frise) |
