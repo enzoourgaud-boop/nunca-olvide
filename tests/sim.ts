@@ -16,6 +16,8 @@ export interface SimResult {
   freed: number;
   warmup: number;
   maxHp: number;
+  /** Questions reposées alors que l'élève y avait déjà répondu juste dans la même partie. */
+  repeats: number;
 }
 
 export interface SimOptions {
@@ -35,12 +37,18 @@ export function simulate(content: Content, seed: string, accuracy: number, setti
   let sec = 0, answers = 0, guard = 0, warmup = 0;
   const rooms: Record<string, number> = {};
   const asked: string[] = [];
+  const right = new Set<string>();
+  let repeats = 0;
   const reply = (quiz: { q: QuizState['q'] }) => {
     const q = g.getQuestion(quiz.q.id)!;
     asked.push(q.id);
     answers++;
     sec += T[quiz.q.mode];
-    if (bot.chance(accuracy)) return canonicalValue(q);
+    if (right.has(q.id)) repeats++;
+    if (bot.chance(accuracy)) {
+      right.add(q.id);
+      return canonicalValue(q);
+    }
     return wrongValue(q, quiz.q.options);
   };
   while (g.state.screen !== 'over' && guard++ < 20000) {
@@ -128,5 +136,5 @@ export function simulate(content: Content, seed: string, accuracy: number, setti
       }
     }
   }
-  return { win: g.state.result === 'win', won: g.state.stats.won, minutes: sec / 60, answers, act: g.state.act, rooms, asked, freed: g.state.stats.freed ?? 0, warmup, maxHp: g.state.maxHp };
+  return { win: g.state.result === 'win', won: g.state.stats.won, minutes: sec / 60, answers, act: g.state.act, rooms, asked, freed: g.state.stats.freed ?? 0, warmup, maxHp: g.state.maxHp, repeats };
 }

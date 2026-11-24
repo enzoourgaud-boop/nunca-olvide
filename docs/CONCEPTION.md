@@ -291,6 +291,10 @@ On reprend le mécanisme qui existe et qui est testé (« almas pendientes » da
 3. si elle n'est pas réussie, elle ouvre **la partie suivante** dans un court échauffement (4 questions au plus, sans chrono) ;
 4. elle disparaît quand elle est réussie. Chaque mot sauvé donne +1 PV.
 
+### 6.1 bis Pas de répétition d'une question réussie (étape 8)
+
+Retour des élèves : « les questions réussies ne devraient pas revenir dans la même partie ». Le jeu retient les questions réussies (`right` dans l'état de la partie, sauvegardé avec elle) et cherche, dans l'ordre : du neuf au niveau visé, du neuf aux niveaux voisins, du neuf d'un autre type de question, et seulement en dernier recours une question déjà réussie (domaine trop petit pour la durée de la partie). Les questions **ratées** reviennent toujours (palabras pendientes). Les événements à questions précises (la carte) n'apparaissent plus s'il n'en reste aucune de neuve.
+
 ### 6.2 Une difficulté par notion
 
 Comme dans le jeu actuel : les questions deviennent plus difficiles d'acte en acte, avec de plus en plus de réponses écrites (part réglable par le professeur).

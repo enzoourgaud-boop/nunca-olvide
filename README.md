@@ -11,7 +11,7 @@ C'est un « roguelike » : on avance sur une carte à embranchements, chaque par
 - Il n'y a **ni serveur, ni compte élève, ni publicité**. Aucune donnée ne quitte l'appareil.
 - Une fois chargé, il fonctionne **sans connexion**.
 
-> **Où en est le projet ?** Les étapes 1 à 6 sont sur `main`. L'étape 7 (choix d'un domaine à travailler au menu principal : le passé simple, les verbes irréguliers, l'histoire…) est sur la branche `etape-7-domaines` : ce qu'il te reste à tester est dans [`docs/etape-7/A_TESTER.md`](docs/etape-7/A_TESTER.md). La conception est dans [`docs/CONCEPTION.md`](docs/CONCEPTION.md) et les points à valider dans [`docs/A_VERIFIER.md`](docs/A_VERIFIER.md).
+> **Où en est le projet ?** Les étapes 1 à 7 sont sur `main`. L'étape 8 (une question réussie ne revient plus dans la même partie, retour des élèves) est sur la branche `etape-8-sans-repetition` : ce qu'il te reste à tester est dans [`docs/etape-8/A_TESTER.md`](docs/etape-8/A_TESTER.md).
 
 ---
 
@@ -76,6 +76,7 @@ Le coup de l'élève part d'abord (étincelle, l'ombre clignote et recule, « �
 - **Code de classe** : donne aux élèves le code de 6 caractères de l'espace professeur, ou fais-leur scanner le QR code projeté. Ils le tapent dans « Code de classe » sur l'écran d'accueil. Tes réglages s'appliquent : thèmes, types de questions, chrono, part d'écrit, partie courte.
 - **Défi de classe** : avec une **graine** (ex. `CARTA-12`), toute la classe joue la même carte.
 - **Fin de partie** : l'élève obtient un **code** (ex. `HC8BA-351GA-HMQ00-W9S0`) et son QR code, qui résument son résultat et les notions à revoir. Il te le montre ou le recopie, et tu le lis dans l'espace professeur.
+- **Une question réussie ne revient pas dans la même partie.** Le jeu pose d'abord des questions neuves, d'un autre niveau si besoin, et ne reprend une question déjà réussie qu'en dernier recours. En « Tout mélangé » et dans les gros domaines (passé simple, verbes réguliers, verbes irréguliers), il n'y en a jamais. Dans les deux plus petits domaines (¿Ser o ir ?, 29 questions ; l'histoire, 27), une partie complète pose plus de questions qu'il n'y en a : des répétitions apparaissent vers la fin. La partie courte n'en a presque plus.
 - **Les erreurs reviennent (« palabras pendientes »)** : une question ratée revient plus tard dans la même partie, puis **au début de la partie suivante** dans un court échauffement sans chrono, jusqu'à ce qu'elle soit réussie. Le compteur 💭 en haut de l'écran indique combien attendent. L'écran **« Mon carnet »** montre à chaque élève ses notions fragiles.
 - **Chrono** : il est **désactivé par défaut**. On peut l'activer (options ⚙️ ou espace professeur) et le couper à tout moment.
 - **Sans connexion** : une fois le jeu ouvert avec Internet, il fonctionne hors ligne. Il peut s'installer comme une application (icône ⊕ dans la barre d'adresse de Chrome ou Edge ; « Sur l'écran d'accueil » sur iPad).

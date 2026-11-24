@@ -206,6 +206,8 @@ export interface RunState {
     freed?: number;
   };
   seen: Record<string, number>;
+  /** Questions réussies dans cette partie : elles ne sont plus posées tant qu'il reste autre chose à demander. */
+  right?: Record<string, true>;
   /** Dernières questions posées (les plus récentes à la fin), pour éviter les enchaînements trop proches. */
   recent?: string[];
   /** Questions ratées à reposer (« almas pendientes ») : celles des parties précédentes, puis celles de cette partie. */
@@ -616,10 +618,11 @@ export class Game {
 
   private pickEvent(): GameEvent | null {
     const s = this.state, actNo = s.act + 1;
-    // un événement qui pose des questions précises (la carte de l'Espagne) n'a pas de sens si le domaine travaillé les exclut
+    // un événement qui pose des questions précises (la carte de l'Espagne) n'a pas de sens si le domaine travaillé les exclut,
+    // ni si l'élève a déjà réussi toutes ces questions
     const active = this.activeThemes();
     const playable = (e: GameEvent) =>
-      e.choices.every(c => !c.quiz?.ids || c.quiz.ids.some(id => { const q = this.qById.get(id); return !!q && this.isUsable(q) && active.includes(q.theme); }));
+      e.choices.every(c => !c.quiz?.ids || c.quiz.ids.some(id => { const q = this.qById.get(id); return !!q && this.isUsable(q) && active.includes(q.theme) && !s.right?.[id]; }));
     const ok = this.content.events.filter(e => (!e.acts || e.acts.includes(actNo)) && playable(e));
     const fresh = ok.filter(e => !s.seenEvents.includes(e.id));
     const pool = fresh.length ? fresh : ok;
@@ -641,9 +644,15 @@ export class Game {
     return true;
   }
 
-  private pick(o: PickOpts): Question {
+  /**
+   * Choisit une question. Une question déjà réussie dans la partie n'est reposée qu'en dernier recours :
+   * on cherche d'abord (1) du neuf au niveau visé, (2) du neuf aux niveaux voisins, (3) du neuf d'un autre type,
+   * et seulement ensuite (4) une question déjà réussie (domaine trop petit pour la durée de la partie).
+   */
+  private pick(o: PickOpts, allowDone = false): Question {
     const s = this.state;
-    const ok = (q: Question) => this.isUsable(q) && (!o.needWrite || isWritable(q)) && (!o.onlyType || q.type === o.onlyType);
+    const ok = (q: Question) =>
+      this.isUsable(q) && (!o.needWrite || isWritable(q)) && (!o.onlyType || q.type === o.onlyType) && (allowDone || !s.right?.[q.id]);
     const order = [o.level, ...[4, 3, 2, 1].filter(l => l < o.level), ...[1, 2, 3, 4].filter(l => l > o.level)];
     const candidatesFor = (theme: string): Question[] => {
       for (const l of order) {
@@ -653,7 +662,8 @@ export class Game {
       return [];
     };
     const withPool = o.themes.map(t => ({ t, pool: candidatesFor(t) })).filter(x => x.pool.length);
-    if (!withPool.length && o.onlyType) return this.pick({ ...o, onlyType: undefined });
+    if (!withPool.length && o.onlyType) return this.pick({ ...o, onlyType: undefined }, allowDone);
+    if (!withPool.length && !allowDone) return this.pick(o, true); // plus rien de neuf dans ces thèmes
     if (!withPool.length) {
       const any = this.content.questions.filter(q => this.isUsable(q));
       return this.rng.pick(any.length ? any : this.content.questions);
@@ -673,7 +683,7 @@ export class Game {
       if (other) ({ base, far } = other);
     }
     // le type imposé par l'ennemi n'offre que des questions trop proches des dernières : la variété passe avant
-    if (!far.length && o.onlyType) return this.pick({ ...o, onlyType: undefined });
+    if (!far.length && o.onlyType) return this.pick({ ...o, onlyType: undefined }, allowDone);
     const pool = far.length ? far : base;
     return this.rng.weighted(pool, q => this.weightOf(q) * (TYPE_WEIGHT[q.type] ?? 1));
   }
@@ -723,6 +733,7 @@ export class Game {
     this.onRecord?.(q, v);
     if (v !== 'ok' && s.screen === 'combat' && s.combat) s.combat.errors++;
     if (v === 'ok') {
+      (s.right ??= {})[q.id] = true;
       s.stats.ok++;
       if (mode === 'write') s.stats.written++;
       const w = s.screen === 'warmup' ? s.warmup : null;
@@ -759,7 +770,8 @@ export class Game {
 
   /** Question hors combat (événements, coffres). */
   private makeQuiz(o: { themes?: string[]; write?: boolean; level?: 1 | 2 | 3; ids?: string[] }): QuizState {
-    const listed = (o.ids ?? []).map(id => this.qById.get(id)).filter((q): q is Question => !!q && this.isUsable(q) && this.activeThemes().includes(q.theme));
+    const all = (o.ids ?? []).map(id => this.qById.get(id)).filter((q): q is Question => !!q && this.isUsable(q) && this.activeThemes().includes(q.theme));
+    const listed = all.filter(q => !this.state.right?.[q.id]).length ? all.filter(q => !this.state.right?.[q.id]) : all;
     if (listed.length) {
       const q = this.rng.pick(listed);
       return { q: this.makeAsked(q, this.chooseMode(q, 0, false)), fb: null };
