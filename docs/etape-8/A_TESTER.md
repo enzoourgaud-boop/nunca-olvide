@@ -37,7 +37,7 @@ Dans les **deux plus petits domaines** (« ¿Ser o ir ? » : 29 questions ; « L
 
 ## Tests automatiques (tous passent)
 
-- **164 tests unitaires** (6 nouveaux) : sur 160 parties simulées en « Tout mélangé » (complètes et courtes, élèves à 75 % et à 90 %), **aucune** question réussie n'est reposée ; idem pour le passé simple, les verbes réguliers et irréguliers ; dans un petit domaine, toutes les questions sont posées une fois avant la première répétition (et le jeu ne se bloque pas) ; une question ratée revient mais jamais une question réussie ; la sauvegarde garde la liste.
+- **165 tests unitaires** (6 nouveaux) : sur 160 parties simulées en « Tout mélangé » (complètes et courtes, élèves à 75 % et à 90 %), **aucune** question réussie n'est reposée ; idem pour le passé simple, les verbes réguliers et irréguliers ; dans un petit domaine, toutes les questions sont posées une fois avant la première répétition (et le jeu ne se bloque pas) ; une question ratée revient mais jamais une question réussie ; la sauvegarde garde la liste.
 - **22 tests Playwright** passent.
 - Équilibrage inchangé (à 90 % : 98 % de victoires en 15,6 min ; à 75 % : 81 % en 18,6 min).
 
