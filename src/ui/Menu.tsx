@@ -303,10 +303,10 @@ export function Title({ content, profile, meta, saved, settings, onSettings, onS
       </div>
       <div class="reglas">
         <div>
-          <b>Réponds pour attaquer</b>Vocabulaire, conjugaison (estar + gérondif), grammaire (ser, estar, hay, décrire une image) et culture.
+          <b>Réponds pour attaquer</b>Une bonne réponse, et c'est toi qui frappes. Passé simple, ¿ser o ir ?, histoire de la guerre et lexique.
         </div>
         <div>
-          <b>Lis l'intention</b>La bulle de l'ennemi annonce ce qu'il fera si tu te trompes.
+          <b>Chacun son tour</b>L'ombre annonce son attaque dans une bulle, puis elle frappe à chaque tour, que tu aies juste ou non.
         </div>
         <div>
           <b>Tes erreurs reviennent</b>Une question ratée devient une « palabra pendiente » : elle revient plus tard, puis au début de la partie suivante. La réussir te rend 1 PV.
