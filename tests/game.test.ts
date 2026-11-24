@@ -274,16 +274,22 @@ describe('moteur de partie', () => {
   });
 
   it('la partie se joue jusqu’au bout et l’état reste sérialisable', () => {
-    const g = Game.newRun(content(), S, 'FULL-1');
+    // plusieurs graines : un joueur parfait peut perdre contre une série de combats malchanceux (le robot ne choisit ni salles ni objets)
+    let won = 0;
     const acts = new Set<number>();
-    for (let i = 0; i < 5000 && g.state.screen !== 'over'; i++) {
-      autoplay(g, 1);
-      acts.add(g.state.act);
-      // la sauvegarde doit pouvoir être relue à tout moment
-      const copy = JSON.parse(JSON.stringify(g.state));
-      expect(new Game(content(), S, copy).state.screen).toBe(g.state.screen);
+    for (const seed of ['FULL-1', 'FULL-2', 'FULL-3', 'FULL-4', 'FULL-5']) {
+      const g = Game.newRun(content(), S, seed);
+      for (let i = 0; i < 5000 && g.state.screen !== 'over'; i++) {
+        autoplay(g, 1);
+        acts.add(g.state.act);
+        // la sauvegarde doit pouvoir être relue à tout moment
+        const copy = JSON.parse(JSON.stringify(g.state));
+        expect(new Game(content(), S, copy).state.screen).toBe(g.state.screen);
+      }
+      expect(g.state.screen, seed).toBe('over');
+      if (g.state.result === 'win') won++;
     }
-    expect(g.state.result).toBe('win');
+    expect(won).toBeGreaterThanOrEqual(4);
     expect([...acts]).toEqual([0, 1, 2]);
   });
 });

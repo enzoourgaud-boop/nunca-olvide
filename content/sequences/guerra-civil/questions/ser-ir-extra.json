@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "nv-serir-1",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Tú fuiste al refugio con tu familia.» — «fuiste» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Tu allas à l’abri avec ta famille.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-2",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Nosotros fuimos a la frontera.» — «fuimos» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Nous allâmes à la frontière.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-3",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Vosotros fuisteis al exilio en Francia.» — «fuisteis» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Vous partîtes en exil en France.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-4",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Yo fui a la plaza del pueblo.» — «fui» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "J’allai sur la place du village.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-5",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Los niños fueron a la escuela por la mañana.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Les enfants allèrent à l’école le matin.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-6",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Muchas familias fueron a un campo de refugiados.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Beaucoup de familles allèrent dans un camp de réfugiés.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-7",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Él fue a Francia.» — «fue» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Il alla en France.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-8",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Los años de guerra fueron muy difíciles.» — «fueron» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Les années de guerre furent très difficiles.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-9",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«El exilio fue muy duro para muchas familias.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "L’exil fut très dur pour beaucoup de familles.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-10",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Tú fuiste muy valiente.» — «fuiste» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Tu fus très courageux.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-11",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Vosotros fuisteis muy pacientes.» — «fuisteis» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Vous fûtes très patients.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-12",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Nosotros fuimos muy jóvenes en aquella época.» — «fuimos» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Nous fûmes très jeunes à cette époque.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-13",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«La Guerra Civil fue un conflicto muy duro.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "La guerre civile fut un conflit très dur.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-14",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "¿SER o IR ?",
+    "prompt": "«Yo fui muy feliz de volver a casa.» — «fui» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Je fus très heureux de rentrer à la maison.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-1",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Mis padres fueron a Francia.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Mes parents allèrent en France. », le verbe est IR.",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-2",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «La vida en el campo de refugiados fue muy dura.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « La vie dans le camp de réfugiés fut très dure. », le verbe est IR.",
+    "explanation": "Falso : ici, on dit comment est quelqu’un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-3",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Ayer fuimos al museo de la Guerra Civil.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Hier, nous sommes allés au musée de la Guerre civile. », le verbe est IR.",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-4",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Los militares fueron muy numerosos.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « Les militaires furent très nombreux. », le verbe est IR.",
+    "explanation": "Falso : ici, on dit comment est quelqu’un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-5",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Tú fuiste a la frontera.», el verbo es IR.",
+    "answer": "verdadero",
+    "translation": "Dans « Tu allas à la frontière. », le verbe est IR.",
+    "explanation": "Verdadero : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-6",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «El viaje fue muy largo.», el verbo es IR.",
+    "answer": "falso",
+    "translation": "Dans « Le voyage fut très long. », le verbe est IR.",
+    "explanation": "Falso : ici, on dit comment est quelqu’un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b1",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Mis abuelos fueron muy valientes.» — «fueron» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Mes grands-parents furent très courageux.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b2",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Los refugiados fueron a la frontera a pie.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Les réfugiés allèrent à la frontière à pied.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b3",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Ayer fuimos a la escuela en autobús.» — «fuimos» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Hier, nous sommes allés à l’école en bus.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b4",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Aquellos años fueron muy tristes.» — «fueron» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Ces années furent très tristes.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b5",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Tú fuiste a casa de tu abuela.» — «fuiste» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Tu allas chez ta grand-mère.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b6",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Fue un día muy largo.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Ce fut un très long jour.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b7",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "¿SER o IR ?",
+    "prompt": "«Vosotros fuisteis al museo con la clase.» — «fuisteis» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Vous allâtes au musée avec la classe.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b8",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Los soldados fueron a la ciudad.» — «fueron» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Les soldats allèrent à la ville.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b9",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Ellos fueron muy pobres.» — «fueron» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Ils furent très pauvres.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b10",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«El camino fue muy largo.» — «fue» viene del verbo…",
+    "answer": "ser (être)",
+    "accept": [],
+    "distractors": [
+      "ir (aller)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Le chemin fut très long.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on dit comment est quelqu’un ou quelque chose (être). → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b11",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«Fuimos a Madrid en tren.» — «fuimos» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "Nous allâmes à Madrid en train.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-serir-b12",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«Yo fui a la escuela con mi hermano.» — «fui» viene del verbo…",
+    "answer": "ir (aller)",
+    "accept": [],
+    "distractors": [
+      "ser (être)",
+      "estar (être)",
+      "hacer (faire)"
+    ],
+    "writable": false,
+    "translation": "J’allai à l’école avec mon frère.",
+    "explanation": "SER et IR ont les mêmes formes au pretérito : ici, on va quelque part : « a » + un lieu (aller). → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-b1",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Fuimos a la plaza.», el verbo es SER.",
+    "answer": "falso",
+    "translation": "Dans « Nous allâmes sur la place. », le verbe est SER.",
+    "explanation": "Falso : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-b2",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «El día fue muy frío.», el verbo es SER.",
+    "answer": "verdadero",
+    "translation": "Dans « Le jour fut très froid. », le verbe est SER.",
+    "explanation": "Verdadero : ici, on dit comment est quelqu’un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-b3",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Tú fuiste a Francia.», el verbo es SER.",
+    "answer": "falso",
+    "translation": "Dans « Tu allas en France. », le verbe est SER.",
+    "explanation": "Falso : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-b4",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Las noches fueron muy largas.», el verbo es SER.",
+    "answer": "verdadero",
+    "translation": "Dans « Les nuits furent très longues. », le verbe est SER.",
+    "explanation": "Verdadero : ici, on dit comment est quelqu’un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-b5",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «Mis amigos fueron al refugio.», el verbo es SER.",
+    "answer": "falso",
+    "translation": "Dans « Mes amis allèrent à l’abri. », le verbe est SER.",
+    "explanation": "Falso : ici, on va quelque part : « a » + un lieu (aller) → IR.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfserir-b6",
+    "type": "vrai-faux",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En «La carta fue muy corta.», el verbo es SER.",
+    "answer": "verdadero",
+    "translation": "Dans « La lettre fut très courte. », le verbe est SER.",
+    "explanation": "Verdadero : ici, on dit comment est quelqu’un ou quelque chose (être) → SER.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-ordserir-1",
+    "type": "ordre",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Les enfants allèrent à l’abri.",
+    "promptLang": "fr",
+    "answer": "Los niños fueron al refugio",
+    "tokens": [
+      "Los",
+      "niños",
+      "fueron",
+      "al",
+      "refugio"
+    ],
+    "extra": [
+      "fue"
+    ],
+    "explanation": "« Los niños fueron al refugio. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordserir-2",
+    "type": "ordre",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "La guerre fut très dure.",
+    "promptLang": "fr",
+    "answer": "La guerra fue muy dura",
+    "tokens": [
+      "La",
+      "guerra",
+      "fue",
+      "muy",
+      "dura"
+    ],
+    "extra": [
+      "fueron"
+    ],
+    "explanation": "« La guerra fue muy dura. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordserir-3",
+    "type": "ordre",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Nous allâmes au village.",
+    "promptLang": "fr",
+    "answer": "Nosotros fuimos al pueblo",
+    "tokens": [
+      "Nosotros",
+      "fuimos",
+      "al",
+      "pueblo"
+    ],
+    "extra": [
+      "fui"
+    ],
+    "explanation": "« Nosotros fuimos al pueblo. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordserir-4",
+    "type": "ordre",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Mes parents furent très jeunes.",
+    "promptLang": "fr",
+    "answer": "Mis padres fueron muy jóvenes",
+    "tokens": [
+      "Mis",
+      "padres",
+      "fueron",
+      "muy",
+      "jóvenes"
+    ],
+    "extra": [
+      "fue"
+    ],
+    "explanation": "« Mis padres fueron muy jóvenes. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-serir-formas",
+    "type": "association",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque forme à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "fui",
+        "je fus / j’allai"
+      ],
+      [
+        "fuiste",
+        "tu fus / tu allas"
+      ],
+      [
+        "fuimos",
+        "nous fûmes / nous allâmes"
+      ],
+      [
+        "fueron",
+        "ils furent / ils allèrent"
+      ]
+    ],
+    "explanation": "fui = je fus / j’allai · fuiste = tu fus / tu allas · fuimos = nous fûmes / nous allâmes · fueron = ils furent / ils allèrent",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-serir-frases",
+    "type": "association",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque phrase à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "Fui al refugio.",
+        "J’allai à l’abri."
+      ],
+      [
+        "Fue muy difícil.",
+        "Ce fut très difficile."
+      ],
+      [
+        "Fuimos a Francia.",
+        "Nous allâmes en France."
+      ],
+      [
+        "Fueron valientes.",
+        "Ils furent courageux."
+      ]
+    ],
+    "explanation": "Fui al refugio. = J’allai à l’abri. · Fue muy difícil. = Ce fut très difficile. · Fuimos a Francia. = Nous allâmes en France. · Fueron valientes. = Ils furent courageux.",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-jefe-serir-1",
+    "type": "ecrit",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Los años de guerra ___ muy duros. (ser)",
+    "answer": "fueron",
+    "accept": [],
+    "distractors": [
+      "fue",
+      "fuimos",
+      "eran"
+    ],
+    "translation": "Les années de guerre furent très dures.",
+    "explanation": "ser, ellos → fueron.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-jefe-serir-2",
+    "type": "ecrit",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Vosotros ___ al pueblo. (ir)",
+    "answer": "fuisteis",
+    "accept": [],
+    "distractors": [
+      "fuiste",
+      "fuistes",
+      "fueron"
+    ],
+    "translation": "Vous allâtes au village.",
+    "explanation": "ir, vosotros → fuisteis.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-jefe-serir-3",
+    "type": "ecrit",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Yo ___ a casa de mi abuela. (ir)",
+    "answer": "fui",
+    "accept": [],
+    "distractors": [
+      "fue",
+      "fuí",
+      "fuimos"
+    ],
+    "translation": "J’allai chez ma grand-mère.",
+    "explanation": "ir, yo → fui (sans accent).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-ambos-1",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«fui» (pretérito indefinido) puede venir de…",
+    "answer": "ser y también ir",
+    "accept": [],
+    "distractors": [
+      "solo ser",
+      "solo ir",
+      "estar y también hacer"
+    ],
+    "writable": false,
+    "translation": "« fui » (passé simple) peut venir de…",
+    "explanation": "« SER et IR ont les mêmes formes ! » : fui peut être « je fus / j’allai ». C’est le contexte qui décide.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-ambos-2",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«fuiste» (pretérito indefinido) puede venir de…",
+    "answer": "ser y también ir",
+    "accept": [],
+    "distractors": [
+      "solo ser",
+      "solo ir",
+      "estar y también hacer"
+    ],
+    "writable": false,
+    "translation": "« fuiste » (passé simple) peut venir de…",
+    "explanation": "« SER et IR ont les mêmes formes ! » : fuiste peut être « tu fus / tu allas ». C’est le contexte qui décide.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-ambos-3",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«fue» (pretérito indefinido) puede venir de…",
+    "answer": "ser y también ir",
+    "accept": [],
+    "distractors": [
+      "solo ser",
+      "solo ir",
+      "estar y también hacer"
+    ],
+    "writable": false,
+    "translation": "« fue » (passé simple) peut venir de…",
+    "explanation": "« SER et IR ont les mêmes formes ! » : fue peut être « il fut / il alla ». C’est le contexte qui décide.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-ambos-4",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«fuimos» (pretérito indefinido) puede venir de…",
+    "answer": "ser y también ir",
+    "accept": [],
+    "distractors": [
+      "solo ser",
+      "solo ir",
+      "estar y también hacer"
+    ],
+    "writable": false,
+    "translation": "« fuimos » (passé simple) peut venir de…",
+    "explanation": "« SER et IR ont les mêmes formes ! » : fuimos peut être « nous fûmes / nous allâmes ». C’est le contexte qui décide.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-ambos-5",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "¿SER o IR ?",
+    "prompt": "«fuisteis» (pretérito indefinido) puede venir de…",
+    "answer": "ser y también ir",
+    "accept": [],
+    "distractors": [
+      "solo ser",
+      "solo ir",
+      "estar y también hacer"
+    ],
+    "writable": false,
+    "translation": "« fuisteis » (passé simple) peut venir de…",
+    "explanation": "« SER et IR ont les mêmes formes ! » : fuisteis peut être « vous fûtes / vous allâtes ». C’est le contexte qui décide.",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-ambos-6",
+    "type": "qcm",
+    "theme": "ser-ir",
+    "notions": [
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "¿SER o IR ?",
+    "prompt": "«fueron» (pretérito indefinido) puede venir de…",
+    "answer": "ser y también ir",
+    "accept": [],
+    "distractors": [
+      "solo ser",
+      "solo ir",
+      "estar y también hacer"
+    ],
+    "writable": false,
+    "translation": "« fueron » (passé simple) peut venir de…",
+    "explanation": "« SER et IR ont les mêmes formes ! » : fueron peut être « ils furent / ils allèrent ». C’est le contexte qui décide.",
+    "source": "mision-secreta"
+  }
+]

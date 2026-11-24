@@ -1,0 +1,2185 @@
+[
+  {
+    "id": "nv-verbo-tener-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«tuve» viene del verbo…",
+    "answer": "tener",
+    "accept": [],
+    "distractors": [
+      "estar",
+      "hacer",
+      "ser"
+    ],
+    "writable": true,
+    "translation": "« tuve » vient du verbe… (tener = avoir)",
+    "explanation": "tuve = tener, yo (pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-tener-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«tuvo» viene del verbo…",
+    "answer": "tener",
+    "accept": [],
+    "distractors": [
+      "ser",
+      "ir",
+      "poder"
+    ],
+    "writable": true,
+    "translation": "« tuvo » vient du verbe… (tener = avoir)",
+    "explanation": "tuvo = tener, él (pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-tener-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«tuvimos» viene del verbo…",
+    "answer": "tener",
+    "accept": [],
+    "distractors": [
+      "ir",
+      "poder",
+      "estar"
+    ],
+    "writable": true,
+    "translation": "« tuvimos » vient du verbe… (tener = avoir)",
+    "explanation": "tuvimos = tener, nosotros (pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-tener-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«tuvieron» viene del verbo…",
+    "answer": "tener",
+    "accept": [],
+    "distractors": [
+      "estar",
+      "hacer",
+      "ser"
+    ],
+    "writable": true,
+    "translation": "« tuvieron » vient du verbe… (tener = avoir)",
+    "explanation": "tuvieron = tener, ellos (pretérito indefinido : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-estar-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«estuve» viene del verbo…",
+    "answer": "estar",
+    "accept": [],
+    "distractors": [
+      "tener",
+      "hacer",
+      "ser"
+    ],
+    "writable": true,
+    "translation": "« estuve » vient du verbe… (estar = être (se trouver))",
+    "explanation": "estuve = estar, yo (pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-estar-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«estuvo» viene del verbo…",
+    "answer": "estar",
+    "accept": [],
+    "distractors": [
+      "ser",
+      "ir",
+      "poder"
+    ],
+    "writable": true,
+    "translation": "« estuvo » vient du verbe… (estar = être (se trouver))",
+    "explanation": "estuvo = estar, él (pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-estar-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«estuvimos» viene del verbo…",
+    "answer": "estar",
+    "accept": [],
+    "distractors": [
+      "ir",
+      "poder",
+      "tener"
+    ],
+    "writable": true,
+    "translation": "« estuvimos » vient du verbe… (estar = être (se trouver))",
+    "explanation": "estuvimos = estar, nosotros (pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-estar-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«estuvieron» viene del verbo…",
+    "answer": "estar",
+    "accept": [],
+    "distractors": [
+      "tener",
+      "hacer",
+      "ser"
+    ],
+    "writable": true,
+    "translation": "« estuvieron » vient du verbe… (estar = être (se trouver))",
+    "explanation": "estuvieron = estar, ellos (pretérito indefinido : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-hacer-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«hice» viene del verbo…",
+    "answer": "hacer",
+    "accept": [],
+    "distractors": [
+      "tener",
+      "estar",
+      "ser"
+    ],
+    "writable": true,
+    "translation": "« hice » vient du verbe… (hacer = faire)",
+    "explanation": "hice = hacer, yo (pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-hacer-el",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«hizo» viene del verbo…",
+    "answer": "hacer",
+    "accept": [],
+    "distractors": [
+      "ser",
+      "ir",
+      "poder"
+    ],
+    "writable": true,
+    "translation": "« hizo » vient du verbe… (hacer = faire)",
+    "explanation": "hizo = hacer, él (pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-hacer-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«hicimos» viene del verbo…",
+    "answer": "hacer",
+    "accept": [],
+    "distractors": [
+      "ir",
+      "poder",
+      "tener"
+    ],
+    "writable": true,
+    "translation": "« hicimos » vient du verbe… (hacer = faire)",
+    "explanation": "hicimos = hacer, nosotros (pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-verbo-hacer-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "De quel verbe vient cette forme ?",
+    "prompt": "«hicieron» viene del verbo…",
+    "answer": "hacer",
+    "accept": [],
+    "distractors": [
+      "tener",
+      "estar",
+      "ser"
+    ],
+    "writable": true,
+    "translation": "« hicieron » vient du verbe… (hacer = faire)",
+    "explanation": "hicieron = hacer, ellos (pretérito indefinido : hice, hiciste, hizo, hicimos, hicisteis, hicieron). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-tener-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«tuve» (tener) corresponde a…",
+    "answer": "yo",
+    "accept": [],
+    "distractors": [
+      "tú",
+      "él / ella / usted",
+      "nosotros / nosotras"
+    ],
+    "writable": false,
+    "translation": "« tuve » (tener) correspond à… (je)",
+    "explanation": "tuve : yo (tener au pretérito indefinido). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-tener-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«tuviste» (tener) corresponde a…",
+    "answer": "tú",
+    "accept": [],
+    "distractors": [
+      "él / ella / usted",
+      "nosotros / nosotras",
+      "vosotros / vosotras"
+    ],
+    "writable": false,
+    "translation": "« tuviste » (tener) correspond à… (tu)",
+    "explanation": "tuviste : tú (tener au pretérito indefinido). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-tener-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«tuvimos» (tener) corresponde a…",
+    "answer": "nosotros / nosotras",
+    "accept": [],
+    "distractors": [
+      "vosotros / vosotras",
+      "ellos / ellas / ustedes",
+      "yo"
+    ],
+    "writable": false,
+    "translation": "« tuvimos » (tener) correspond à… (nous)",
+    "explanation": "tuvimos : nosotros / nosotras (tener au pretérito indefinido). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-tener-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«tuvisteis» (tener) corresponde a…",
+    "answer": "vosotros / vosotras",
+    "accept": [],
+    "distractors": [
+      "ellos / ellas / ustedes",
+      "yo",
+      "tú"
+    ],
+    "writable": false,
+    "translation": "« tuvisteis » (tener) correspond à… (vous)",
+    "explanation": "tuvisteis : vosotros / vosotras (tener au pretérito indefinido). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-tener-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«tuvieron» (tener) corresponde a…",
+    "answer": "ellos / ellas / ustedes",
+    "accept": [],
+    "distractors": [
+      "yo",
+      "tú",
+      "él / ella / usted"
+    ],
+    "writable": false,
+    "translation": "« tuvieron » (tener) correspond à… (ils / elles)",
+    "explanation": "tuvieron : ellos / ellas / ustedes (tener au pretérito indefinido). Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-estar-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«estuve» (estar) corresponde a…",
+    "answer": "yo",
+    "accept": [],
+    "distractors": [
+      "tú",
+      "él / ella / usted",
+      "nosotros / nosotras"
+    ],
+    "writable": false,
+    "translation": "« estuve » (estar) correspond à… (je)",
+    "explanation": "estuve : yo (estar au pretérito indefinido). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-estar-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«estuviste» (estar) corresponde a…",
+    "answer": "tú",
+    "accept": [],
+    "distractors": [
+      "él / ella / usted",
+      "nosotros / nosotras",
+      "vosotros / vosotras"
+    ],
+    "writable": false,
+    "translation": "« estuviste » (estar) correspond à… (tu)",
+    "explanation": "estuviste : tú (estar au pretérito indefinido). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-estar-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«estuvimos» (estar) corresponde a…",
+    "answer": "nosotros / nosotras",
+    "accept": [],
+    "distractors": [
+      "vosotros / vosotras",
+      "ellos / ellas / ustedes",
+      "yo"
+    ],
+    "writable": false,
+    "translation": "« estuvimos » (estar) correspond à… (nous)",
+    "explanation": "estuvimos : nosotros / nosotras (estar au pretérito indefinido). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-estar-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«estuvisteis» (estar) corresponde a…",
+    "answer": "vosotros / vosotras",
+    "accept": [],
+    "distractors": [
+      "ellos / ellas / ustedes",
+      "yo",
+      "tú"
+    ],
+    "writable": false,
+    "translation": "« estuvisteis » (estar) correspond à… (vous)",
+    "explanation": "estuvisteis : vosotros / vosotras (estar au pretérito indefinido). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-estar-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«estuvieron» (estar) corresponde a…",
+    "answer": "ellos / ellas / ustedes",
+    "accept": [],
+    "distractors": [
+      "yo",
+      "tú",
+      "él / ella / usted"
+    ],
+    "writable": false,
+    "translation": "« estuvieron » (estar) correspond à… (ils / elles)",
+    "explanation": "estuvieron : ellos / ellas / ustedes (estar au pretérito indefinido). Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-hacer-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«hice» (hacer) corresponde a…",
+    "answer": "yo",
+    "accept": [],
+    "distractors": [
+      "tú",
+      "él / ella / usted",
+      "nosotros / nosotras"
+    ],
+    "writable": false,
+    "translation": "« hice » (hacer) correspond à… (je)",
+    "explanation": "hice : yo (hacer au pretérito indefinido). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-hacer-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«hiciste» (hacer) corresponde a…",
+    "answer": "tú",
+    "accept": [],
+    "distractors": [
+      "él / ella / usted",
+      "nosotros / nosotras",
+      "vosotros / vosotras"
+    ],
+    "writable": false,
+    "translation": "« hiciste » (hacer) correspond à… (tu)",
+    "explanation": "hiciste : tú (hacer au pretérito indefinido). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-hacer-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«hicimos» (hacer) corresponde a…",
+    "answer": "nosotros / nosotras",
+    "accept": [],
+    "distractors": [
+      "vosotros / vosotras",
+      "ellos / ellas / ustedes",
+      "yo"
+    ],
+    "writable": false,
+    "translation": "« hicimos » (hacer) correspond à… (nous)",
+    "explanation": "hicimos : nosotros / nosotras (hacer au pretérito indefinido). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-hacer-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«hicisteis» (hacer) corresponde a…",
+    "answer": "vosotros / vosotras",
+    "accept": [],
+    "distractors": [
+      "ellos / ellas / ustedes",
+      "yo",
+      "tú"
+    ],
+    "writable": false,
+    "translation": "« hicisteis » (hacer) correspond à… (vous)",
+    "explanation": "hicisteis : vosotros / vosotras (hacer au pretérito indefinido). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-hacer-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«hicieron» (hacer) corresponde a…",
+    "answer": "ellos / ellas / ustedes",
+    "accept": [],
+    "distractors": [
+      "yo",
+      "tú",
+      "él / ella / usted"
+    ],
+    "writable": false,
+    "translation": "« hicieron » (hacer) correspond à… (ils / elles)",
+    "explanation": "hicieron : ellos / ellas / ustedes (hacer au pretérito indefinido). Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-quien-ser-yo",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«fui» (ser / ir) corresponde a…",
+    "answer": "yo",
+    "accept": [],
+    "distractors": [
+      "tú",
+      "él / ella / usted",
+      "nosotros / nosotras"
+    ],
+    "writable": false,
+    "translation": "« fui » (ser / ir) correspond à… (je)",
+    "explanation": "fui : yo (ser / ir au pretérito indefinido). SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-quien-ser-tu",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«fuiste» (ser / ir) corresponde a…",
+    "answer": "tú",
+    "accept": [],
+    "distractors": [
+      "él / ella / usted",
+      "nosotros / nosotras",
+      "vosotros / vosotras"
+    ],
+    "writable": false,
+    "translation": "« fuiste » (ser / ir) correspond à… (tu)",
+    "explanation": "fuiste : tú (ser / ir au pretérito indefinido). SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-quien-ser-nos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«fuimos» (ser / ir) corresponde a…",
+    "answer": "nosotros / nosotras",
+    "accept": [],
+    "distractors": [
+      "vosotros / vosotras",
+      "ellos / ellas / ustedes",
+      "yo"
+    ],
+    "writable": false,
+    "translation": "« fuimos » (ser / ir) correspond à… (nous)",
+    "explanation": "fuimos : nosotros / nosotras (ser / ir au pretérito indefinido). SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-quien-ser-vos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«fuisteis» (ser / ir) corresponde a…",
+    "answer": "vosotros / vosotras",
+    "accept": [],
+    "distractors": [
+      "ellos / ellas / ustedes",
+      "yo",
+      "tú"
+    ],
+    "writable": false,
+    "translation": "« fuisteis » (ser / ir) correspond à… (vous)",
+    "explanation": "fuisteis : vosotros / vosotras (ser / ir au pretérito indefinido). SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-quien-ser-ellos",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "À quelle personne correspond cette forme ?",
+    "prompt": "«fueron» (ser / ir) corresponde a…",
+    "answer": "ellos / ellas / ustedes",
+    "accept": [],
+    "distractors": [
+      "yo",
+      "tú",
+      "él / ella / usted"
+    ],
+    "writable": false,
+    "translation": "« fueron » (ser / ir) correspond à… (ils / elles)",
+    "explanation": "fueron : ellos / ellas / ustedes (ser / ir au pretérito indefinido). SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-tener-1",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nosotros ___ mucho miedo durante la guerra. (tener)",
+    "answer": "tuvimos",
+    "accept": [],
+    "distractors": [
+      "tenimos",
+      "tuvisteis",
+      "tuve"
+    ],
+    "writable": true,
+    "translation": "Nous eûmes très peur pendant la guerre.",
+    "explanation": "tener, nosotros → tuvimos. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-tener-2",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Tú ___ mucha suerte. (tener)",
+    "answer": "tuviste",
+    "accept": [],
+    "distractors": [
+      "teniste",
+      "tuvo",
+      "tuvisteis"
+    ],
+    "writable": true,
+    "translation": "Tu eus beaucoup de chance.",
+    "explanation": "tener, tú → tuviste. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-tener-3",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchas familias ___ que abandonar sus casas. (tener)",
+    "answer": "tuvieron",
+    "accept": [],
+    "distractors": [
+      "tenieron",
+      "tuve",
+      "tuvo"
+    ],
+    "writable": true,
+    "translation": "Beaucoup de familles durent abandonner leurs maisons.",
+    "explanation": "tener, ellos → tuvieron. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-tener-4",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Yo ___ que irme lejos. (tener)",
+    "answer": "tuve",
+    "accept": [],
+    "distractors": [
+      "tení",
+      "tuviste",
+      "tuvimos"
+    ],
+    "writable": true,
+    "translation": "Je dus partir loin.",
+    "explanation": "tener, yo → tuve. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-tener-5",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Vosotros ___ miedo de los aviones. (tener)",
+    "answer": "tuvisteis",
+    "accept": [],
+    "distractors": [
+      "tenisteis",
+      "tuvieron",
+      "tuviste"
+    ],
+    "writable": true,
+    "translation": "Vous eûtes peur des avions.",
+    "explanation": "tener, vosotros → tuvisteis. Prétérit fort : radical tuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-estar-6",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Yo ___ en el museo de la Guerra Civil el año pasado. (estar)",
+    "answer": "estuve",
+    "accept": [],
+    "distractors": [
+      "esté",
+      "estuviste",
+      "estuvimos"
+    ],
+    "writable": true,
+    "translation": "Je fus au musée de la Guerre civile l’année dernière.",
+    "explanation": "estar, yo → estuve. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-estar-7",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Tú ___ en el refugio cuando sonaron las sirenas. (estar)",
+    "answer": "estuviste",
+    "accept": [],
+    "distractors": [
+      "estaste",
+      "estuvo",
+      "estuvisteis"
+    ],
+    "writable": true,
+    "translation": "Tu fus à l’abri quand les sirènes sonnèrent.",
+    "explanation": "estar, tú → estuviste. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-estar-8",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nosotros ___ en la frontera con Francia. (estar)",
+    "answer": "estuvimos",
+    "accept": [],
+    "distractors": [
+      "estamos",
+      "estuvisteis",
+      "estuve"
+    ],
+    "writable": true,
+    "translation": "Nous fûmes à la frontière avec la France.",
+    "explanation": "estar, nosotros → estuvimos. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-estar-9",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Vosotros ___ en un campo de refugiados. (estar)",
+    "answer": "estuvisteis",
+    "accept": [],
+    "distractors": [
+      "estasteis",
+      "estuvieron",
+      "estuviste"
+    ],
+    "writable": true,
+    "translation": "Vous fûtes dans un camp de réfugiés.",
+    "explanation": "estar, vosotros → estuvisteis. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-estar-10",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Muchos republicanos ___ en campos de refugiados en Francia. (estar)",
+    "answer": "estuvieron",
+    "accept": [],
+    "distractors": [
+      "estaron",
+      "estuve",
+      "estuvo"
+    ],
+    "writable": true,
+    "translation": "Beaucoup de républicains furent dans des camps de réfugiés en France.",
+    "explanation": "estar, ellos → estuvieron. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-estar-11",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Ella ___ en su casa durante los bombardeos. (estar)",
+    "answer": "estuvo",
+    "accept": [],
+    "distractors": [
+      "estuvó",
+      "estuvimos",
+      "estuvieron"
+    ],
+    "writable": true,
+    "translation": "Elle fut chez elle pendant les bombardements.",
+    "explanation": "estar, él → estuvo. Prétérit fort : radical estuv-, aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-hacer-12",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Yo ___ las maletas para huir. (hacer)",
+    "answer": "hice",
+    "accept": [],
+    "distractors": [
+      "hací",
+      "hiciste",
+      "hicimos"
+    ],
+    "writable": true,
+    "translation": "Je fis mes valises pour fuir.",
+    "explanation": "hacer, yo → hice. Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-hacer-13",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Tú ___ un viaje muy largo hasta la frontera. (hacer)",
+    "answer": "hiciste",
+    "accept": [],
+    "distractors": [
+      "haciste",
+      "hizo",
+      "hicisteis"
+    ],
+    "writable": true,
+    "translation": "Tu fis un très long voyage jusqu’à la frontière.",
+    "explanation": "hacer, tú → hiciste. Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-hacer-14",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Ella ___ la comida para todos. (hacer)",
+    "answer": "hizo",
+    "accept": [],
+    "distractors": [
+      "hizó",
+      "hicimos",
+      "hicieron"
+    ],
+    "writable": true,
+    "translation": "Elle fit à manger pour tout le monde.",
+    "explanation": "hacer, él → hizo. Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-hacer-15",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nosotros ___ el viaje a pie. (hacer)",
+    "answer": "hicimos",
+    "accept": [],
+    "distractors": [
+      "hacimos",
+      "hicisteis",
+      "hice"
+    ],
+    "writable": true,
+    "translation": "Nous fîmes le voyage à pied.",
+    "explanation": "hacer, nosotros → hicimos. Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-hacer-16",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Vosotros ___ un buen trabajo. (hacer)",
+    "answer": "hicisteis",
+    "accept": [],
+    "distractors": [
+      "hacisteis",
+      "hicieron",
+      "hiciste"
+    ],
+    "writable": true,
+    "translation": "Vous fîtes du bon travail.",
+    "explanation": "hacer, vosotros → hicisteis. Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-hacer-17",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los aviones ___ mucho daño a la ciudad. (hacer)",
+    "answer": "hicieron",
+    "accept": [],
+    "distractors": [
+      "hacieron",
+      "hice",
+      "hizo"
+    ],
+    "writable": true,
+    "translation": "Les avions firent beaucoup de dégâts à la ville.",
+    "explanation": "hacer, ellos → hicieron. Prétérit fort : radical hic- (hiz- à la 3e personne du singulier), aucun accent.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-frase-ser-18",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los años de guerra ___ muy difíciles. (ser)",
+    "answer": "fueron",
+    "accept": [],
+    "distractors": [
+      "son",
+      "fui",
+      "fue"
+    ],
+    "writable": true,
+    "translation": "Les années de guerre furent très difficiles.",
+    "explanation": "ser, ellos → fueron. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ser-19",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Tú ___ muy valiente. (ser)",
+    "answer": "fuiste",
+    "accept": [],
+    "distractors": [
+      "fuistes",
+      "fue",
+      "fuisteis"
+    ],
+    "writable": true,
+    "translation": "Tu fus très courageux.",
+    "explanation": "ser, tú → fuiste. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ser-20",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Vosotros ___ testigos de aquellos años. (ser)",
+    "answer": "fuisteis",
+    "accept": [],
+    "distractors": [
+      "sois",
+      "fueron",
+      "fuiste"
+    ],
+    "writable": true,
+    "translation": "Vous fûtes témoins de ces années.",
+    "explanation": "ser, vosotros → fuisteis. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ser-21",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nosotros ___ muy jóvenes en aquella época. (ser)",
+    "answer": "fuimos",
+    "accept": [],
+    "distractors": [
+      "fuemos",
+      "fuisteis",
+      "fui"
+    ],
+    "writable": true,
+    "translation": "Nous fûmes très jeunes à cette époque.",
+    "explanation": "ser, nosotros → fuimos. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ser-22",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "El exilio ___ muy duro para muchas familias. (ser)",
+    "answer": "fue",
+    "accept": [],
+    "distractors": [
+      "fué",
+      "fuimos",
+      "fueron"
+    ],
+    "writable": true,
+    "translation": "L’exil fut très dur pour beaucoup de familles.",
+    "explanation": "ser, él → fue. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ir-23",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Tú ___ al refugio con tu familia. (ir)",
+    "answer": "fuiste",
+    "accept": [],
+    "distractors": [
+      "fuistes",
+      "fue",
+      "fuisteis"
+    ],
+    "writable": true,
+    "translation": "Tu allas à l’abri avec ta famille.",
+    "explanation": "ir, tú → fuiste. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ir-24",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Nosotros ___ a la frontera. (ir)",
+    "answer": "fuimos",
+    "accept": [],
+    "distractors": [
+      "vamos",
+      "fuisteis",
+      "fui"
+    ],
+    "writable": true,
+    "translation": "Nous allâmes à la frontière.",
+    "explanation": "ir, nosotros → fuimos. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ir-25",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 3,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Vosotros ___ al exilio en Francia. (ir)",
+    "answer": "fuisteis",
+    "accept": [],
+    "distractors": [
+      "vais",
+      "fueron",
+      "fuiste"
+    ],
+    "writable": true,
+    "translation": "Vous partîtes en exil en France.",
+    "explanation": "ir, vosotros → fuisteis. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ir-26",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Yo ___ a la plaza del pueblo. (ir)",
+    "answer": "fui",
+    "accept": [],
+    "distractors": [
+      "fuí",
+      "fuiste",
+      "fuimos"
+    ],
+    "writable": true,
+    "translation": "J’allai sur la place du village.",
+    "explanation": "ir, yo → fui. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-frase-ir-27",
+    "type": "qcm",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Complète au pretérito indefinido",
+    "prompt": "Los niños ___ a la escuela por la mañana. (ir)",
+    "answer": "fueron",
+    "accept": [],
+    "distractors": [
+      "van",
+      "fui",
+      "fue"
+    ],
+    "writable": true,
+    "translation": "Les enfants allèrent à l’école le matin.",
+    "explanation": "ir, ellos → fueron. SER et IR ont les mêmes formes au pretérito : fui, fuiste, fue, fuimos, fuisteis, fueron (aucun accent).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-vf-1",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Tuvó» es una forma correcta de «tener» en pretérito indefinido.",
+    "answer": "falso",
+    "translation": "« Tuvó » est une forme correcte de « tener » au passé simple.",
+    "explanation": "Falso : les prétérits forts ne prennent aucun accent. Il faut « tuvo ».",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-2",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Estuvimos» es la forma de «nosotros» del verbo estar.",
+    "answer": "verdadero",
+    "translation": "« Estuvimos » est la forme de « nosotros » du verbe estar.",
+    "explanation": "Verdadero : estuve, estuviste, estuvo, estuvimos, estuvisteis, estuvieron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-3",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Hizo» se escribe con z.",
+    "answer": "verdadero",
+    "translation": "« Hizo » s’écrit avec un z.",
+    "explanation": "Verdadero : hice, hiciste, hizo (z devant o), hicimos…",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-4",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Hacieron» es la forma de «ellos» del verbo hacer.",
+    "answer": "falso",
+    "translation": "« Hacieron » est la forme de « ellos » du verbe hacer.",
+    "explanation": "Falso : la forme est « hicieron » (radical hic-).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-5",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Estuvieron» lleva tilde en la «o».",
+    "answer": "falso",
+    "translation": "« Estuvieron » porte un accent sur le « o ».",
+    "explanation": "Falso : « ces irréguliers ne prennent aucun accent » (fiche de grammaire).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-6",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Tuve» es la forma de «yo» del verbo tener.",
+    "answer": "verdadero",
+    "translation": "« Tuve » est la forme de « yo » du verbe tener.",
+    "explanation": "Verdadero : tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-7",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Hice» y «hizo» vienen del mismo verbo.",
+    "answer": "verdadero",
+    "translation": "« Hice » et « hizo » viennent du même verbe.",
+    "explanation": "Verdadero : las dos formas son de hacer (yo hice, él hizo).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-8",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Fue» puede venir del verbo ser y también del verbo ir.",
+    "answer": "verdadero",
+    "translation": "« Fue » peut venir du verbe ser et aussi du verbe ir.",
+    "explanation": "Verdadero : « SER et IR ont les mêmes formes ! » fui, fuiste, fue…",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-vf-9",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "El verbo «tener» es regular en pretérito indefinido.",
+    "answer": "falso",
+    "translation": "Le verbe « tener » est régulier au passé simple.",
+    "explanation": "Falso : tener est un prétérit fort (tuve, tuviste, tuvo…).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-10",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Estuvisteis» es la forma de «tú» del verbo estar.",
+    "answer": "falso",
+    "translation": "« Estuvisteis » est la forme de « tú » du verbe estar.",
+    "explanation": "Falso : estuvisteis = vosotros ; la forme de « tú » est estuviste.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-11",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Fuimos» solo viene del verbo ir.",
+    "answer": "falso",
+    "translation": "« Fuimos » vient seulement du verbe ir.",
+    "explanation": "Falso : fuimos peut venir de ser (nous fûmes) ou de ir (nous allâmes).",
+    "source": "mision-secreta"
+  },
+  {
+    "id": "nv-vf-12",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Tuvieron» es la forma de «ellos» del verbo tener.",
+    "answer": "verdadero",
+    "translation": "« Tuvieron » est la forme de « ellos » du verbe tener.",
+    "explanation": "Verdadero : tuvieron (radical tuv- + ieron).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-13",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "«Fué» se escribe con tilde porque es pretérito.",
+    "answer": "falso",
+    "translation": "« Fué » s’écrit avec un accent parce que c’est un passé simple.",
+    "explanation": "Falso : on écrit « fue », sans accent, comme tous les prétérits forts.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-vf-14",
+    "type": "vrai-faux",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Con el verbo «estar», «tú» hace «estuviste».",
+    "answer": "verdadero",
+    "translation": "Avec le verbe « estar », « tú » fait « estuviste ».",
+    "explanation": "Verdadero : estuviste (radical estuv- + iste).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-ord-1",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Nous fûmes à l’abri.",
+    "promptLang": "fr",
+    "answer": "Nosotros estuvimos en el refugio",
+    "tokens": [
+      "Nosotros",
+      "estuvimos",
+      "en",
+      "el",
+      "refugio"
+    ],
+    "extra": [
+      "estuvieron"
+    ],
+    "explanation": "« Nosotros estuvimos en el refugio. » Piège : « estuvieron » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-2",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Tu fis le voyage jusqu’à la frontière.",
+    "promptLang": "fr",
+    "answer": "Tú hiciste el viaje hasta la frontera",
+    "tokens": [
+      "Tú",
+      "hiciste",
+      "el",
+      "viaje",
+      "hasta",
+      "la",
+      "frontera"
+    ],
+    "extra": [
+      "hizo"
+    ],
+    "explanation": "« Tú hiciste el viaje hasta la frontera. » Piège : « hizo » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-3",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Ils allèrent à la frontière.",
+    "promptLang": "fr",
+    "answer": "Ellos fueron a la frontera",
+    "tokens": [
+      "Ellos",
+      "fueron",
+      "a",
+      "la",
+      "frontera"
+    ],
+    "extra": [
+      "iban"
+    ],
+    "explanation": "« Ellos fueron a la frontera. » Piège : « iban » n’est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-4",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "J’eus très peur.",
+    "promptLang": "fr",
+    "answer": "Yo tuve mucho miedo",
+    "tokens": [
+      "Yo",
+      "tuve",
+      "mucho",
+      "miedo"
+    ],
+    "extra": [
+      "tení"
+    ],
+    "explanation": "« Yo tuve mucho miedo. » Piège : « tení » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-5",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Vous fûtes en France.",
+    "promptLang": "fr",
+    "answer": "Vosotros estuvisteis en Francia",
+    "tokens": [
+      "Vosotros",
+      "estuvisteis",
+      "en",
+      "Francia"
+    ],
+    "extra": [
+      "estuvieron"
+    ],
+    "explanation": "« Vosotros estuvisteis en Francia. » Piège : « estuvieron » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-6",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Elle fit les valises.",
+    "promptLang": "fr",
+    "answer": "Ella hizo las maletas",
+    "tokens": [
+      "Ella",
+      "hizo",
+      "las",
+      "maletas"
+    ],
+    "extra": [
+      "hizó"
+    ],
+    "explanation": "« Ella hizo las maletas. » Piège : « hizó » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-7",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Nous allâmes à l’abri.",
+    "promptLang": "fr",
+    "answer": "Nosotros fuimos al refugio",
+    "tokens": [
+      "Nosotros",
+      "fuimos",
+      "al",
+      "refugio"
+    ],
+    "extra": [
+      "fueron"
+    ],
+    "explanation": "« Nosotros fuimos al refugio. » Piège : « fueron » n’est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-8",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte",
+      "ser-ir"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Les années de guerre furent très difficiles.",
+    "promptLang": "fr",
+    "answer": "Los años de guerra fueron muy difíciles",
+    "tokens": [
+      "Los",
+      "años",
+      "de",
+      "guerra",
+      "fueron",
+      "muy",
+      "difíciles"
+    ],
+    "extra": [
+      "fue"
+    ],
+    "explanation": "« Los años de guerra fueron muy difíciles. » Piège : « fue » n’est pas la bonne forme.",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-9",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Beaucoup de réfugiés durent fuir.",
+    "promptLang": "fr",
+    "answer": "Muchos refugiados tuvieron que huir",
+    "tokens": [
+      "Muchos",
+      "refugiados",
+      "tuvieron",
+      "que",
+      "huir"
+    ],
+    "extra": [
+      "tuvó"
+    ],
+    "explanation": "« Muchos refugiados tuvieron que huir. » Piège : « tuvó » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-ord-10",
+    "type": "ordre",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Mes amis furent dans un camp de réfugiés.",
+    "promptLang": "fr",
+    "answer": "Mis amigos estuvieron en un campo de refugiados",
+    "tokens": [
+      "Mis",
+      "amigos",
+      "estuvieron",
+      "en",
+      "un",
+      "campo",
+      "de",
+      "refugiados"
+    ],
+    "extra": [
+      "estuvó"
+    ],
+    "explanation": "« Mis amigos estuvieron en un campo de refugiados. » Piège : « estuvó » n’est pas la bonne forme.",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-pronombres-tener",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque pronom à la forme du verbe TENER.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "yo",
+        "tuve"
+      ],
+      [
+        "tú",
+        "tuviste"
+      ],
+      [
+        "nosotros",
+        "tuvimos"
+      ],
+      [
+        "ellos",
+        "tuvieron"
+      ]
+    ],
+    "explanation": "yo = tuve · tú = tuviste · nosotros = tuvimos · ellos = tuvieron",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-pronombres-estar",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque pronom à la forme du verbe ESTAR.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "yo",
+        "estuve"
+      ],
+      [
+        "tú",
+        "estuviste"
+      ],
+      [
+        "nosotros",
+        "estuvimos"
+      ],
+      [
+        "ellos",
+        "estuvieron"
+      ]
+    ],
+    "explanation": "yo = estuve · tú = estuviste · nosotros = estuvimos · ellos = estuvieron",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-pronombres-hacer",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque pronom à la forme du verbe HACER.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "yo",
+        "hice"
+      ],
+      [
+        "tú",
+        "hiciste"
+      ],
+      [
+        "nosotros",
+        "hicimos"
+      ],
+      [
+        "ellos",
+        "hicieron"
+      ]
+    ],
+    "explanation": "yo = hice · tú = hiciste · nosotros = hicimos · ellos = hicieron",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-pronombres-serir",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque pronom à la forme de SER / IR.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "yo",
+        "fui"
+      ],
+      [
+        "tú",
+        "fuiste"
+      ],
+      [
+        "nosotros",
+        "fuimos"
+      ],
+      [
+        "ellos",
+        "fueron"
+      ]
+    ],
+    "explanation": "yo = fui · tú = fuiste · nosotros = fuimos · ellos = fueron",
+    "source": "mision-secreta",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-infinitivos-1",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 3,
+    "label": "Relie",
+    "prompt": "Relie chaque forme à son infinitif.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "tuvieron",
+        "tener"
+      ],
+      [
+        "estuvieron",
+        "estar"
+      ],
+      [
+        "hicieron",
+        "hacer"
+      ],
+      [
+        "pudieron",
+        "poder"
+      ],
+      [
+        "dijeron",
+        "decir"
+      ]
+    ],
+    "explanation": "tuvieron = tener · estuvieron = estar · hicieron = hacer · pudieron = poder · dijeron = decir",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-infinitivos-2",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque forme à son infinitif.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "tuve",
+        "tener"
+      ],
+      [
+        "estuve",
+        "estar"
+      ],
+      [
+        "hice",
+        "hacer"
+      ],
+      [
+        "quise",
+        "querer"
+      ]
+    ],
+    "explanation": "tuve = tener · estuve = estar · hice = hacer · quise = querer",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-traducciones",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque forme à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "tuvo",
+        "il eut"
+      ],
+      [
+        "hizo",
+        "il fit"
+      ],
+      [
+        "dijo",
+        "il dit"
+      ],
+      [
+        "pudo",
+        "il put"
+      ]
+    ],
+    "explanation": "tuvo = il eut · hizo = il fit · dijo = il dit · pudo = il put",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-plural",
+    "type": "association",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": 1,
+    "label": "Relie",
+    "prompt": "Relie chaque forme du pluriel (« ellos ») à son verbe.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "fueron",
+        "ser / ir"
+      ],
+      [
+        "tuvieron",
+        "tener"
+      ],
+      [
+        "estuvieron",
+        "estar"
+      ],
+      [
+        "hicieron",
+        "hacer"
+      ]
+    ],
+    "explanation": "fueron = ser / ir · tuvieron = tener · estuvieron = estar · hicieron = hacer",
+    "source": "gramatica-preterito",
+    "translation": ""
+  },
+  {
+    "id": "nv-jefe-1",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Mis amigos y yo ___ en el refugio toda la noche. (estar)",
+    "answer": "estuvimos",
+    "accept": [],
+    "distractors": [
+      "estuvemos",
+      "estamos",
+      "estuvieron"
+    ],
+    "translation": "Mes amis et moi fûmes à l’abri toute la nuit.",
+    "explanation": "estar, nosotros → estuvimos.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-jefe-2",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Los niños ___ mucho miedo. (tener)",
+    "answer": "tuvieron",
+    "accept": [],
+    "distractors": [
+      "tenieron",
+      "tuvo",
+      "tuvimos"
+    ],
+    "translation": "Les enfants eurent très peur.",
+    "explanation": "tener, ellos → tuvieron.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-jefe-3",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Yo ___ el viaje a pie. (hacer)",
+    "answer": "hice",
+    "accept": [],
+    "distractors": [
+      "hací",
+      "hizo",
+      "hicieron"
+    ],
+    "translation": "Je fis le voyage à pied.",
+    "explanation": "hacer, yo → hice.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-jefe-4",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Vosotros ___ a la frontera. (ir)",
+    "answer": "fuisteis",
+    "accept": [],
+    "distractors": [
+      "fuistes",
+      "fuiste",
+      "vais"
+    ],
+    "translation": "Vous allâtes à la frontière.",
+    "explanation": "ir, vosotros → fuisteis.",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-jefe-5",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "La guerra ___ fratricida. (ser)",
+    "answer": "fue",
+    "accept": [],
+    "distractors": [
+      "fué",
+      "fuí",
+      "fueron"
+    ],
+    "translation": "La guerre fut fratricide.",
+    "explanation": "ser, ella → fue (sans accent).",
+    "source": "gramatica-preterito"
+  },
+  {
+    "id": "nv-jefe-6",
+    "type": "ecrit",
+    "theme": "irregulares",
+    "notions": [
+      "irr-fuerte"
+    ],
+    "level": "jefe",
+    "label": "Écris au pretérito indefinido",
+    "prompt": "Tú ___ en un campo de refugiados en Francia. (estar)",
+    "answer": "estuviste",
+    "accept": [],
+    "distractors": [
+      "estaste",
+      "estuvo",
+      "estuve"
+    ],
+    "translation": "Tu fus dans un camp de réfugiés en France.",
+    "explanation": "estar, tú → estuviste.",
+    "source": "gramatica-preterito"
+  }
+]

@@ -663,6 +663,8 @@ export class Game {
     };
     const withPool = o.themes.map(t => ({ t, pool: candidatesFor(t) })).filter(x => x.pool.length);
     if (!withPool.length && o.onlyType) return this.pick({ ...o, onlyType: undefined }, allowDone);
+    // plus de question neuve à écrire dans ce domaine : mieux vaut une question neuve en choix multiple qu'une question déjà réussie
+    if (!withPool.length && o.needWrite) return this.pick({ ...o, needWrite: false }, allowDone);
     if (!withPool.length && !allowDone) return this.pick(o, true); // plus rien de neuf dans ces thèmes
     if (!withPool.length) {
       const any = this.content.questions.filter(q => this.isUsable(q));

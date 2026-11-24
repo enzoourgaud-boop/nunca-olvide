@@ -53,6 +53,32 @@ describe('banque de questions', () => {
   });
 });
 
+describe('verbes irréguliers prioritaires', () => {
+  it('ser, ir, tener, estar et hacer ont chacun au moins 12 questions (énoncé ou réponse avec leurs formes)', () => {
+    const c = content();
+    const forms: Record<string, RegExp> = {
+      ser: /\bfu(i|iste|e|imos|isteis|eron)\b|\bser\b/i,
+      ir: /\bfu(i|iste|e|imos|isteis|eron)\b|\bir\b/i,
+      tener: /\btuv(e|iste|o|imos|isteis|ieron)\b|\btener\b/i,
+      estar: /\bestuv(e|iste|o|imos|isteis|ieron)\b|\bestar\b/i,
+      hacer: /\b(hice|hiciste|hizo|hicimos|hicisteis|hicieron)\b|\bhacer\b/i,
+    };
+    const text = (q: (typeof c.questions)[number]) => JSON.stringify([q.prompt, 'answer' in q ? q.answer : '', 'pairs' in q ? q.pairs : '']);
+    for (const [v, re] of Object.entries(forms)) {
+      const n = c.questions.filter(q => !q.disabled && re.test(text(q))).length;
+      expect(n, v).toBeGreaterThanOrEqual(12);
+    }
+  });
+  it('¿Ser o ir ? et Histoire ont au moins 50 questions chacun, et au moins 5 types de questions différents', () => {
+    const c = content();
+    for (const t of ['ser-ir', 'historia']) {
+      const qs = c.questions.filter(q => !q.disabled && q.theme === t);
+      expect(qs.length, t).toBeGreaterThanOrEqual(50);
+      expect(new Set(qs.map(q => q.type)).size, t).toBeGreaterThanOrEqual(5);
+    }
+  });
+});
+
 describe('retraits demandés par le professeur', () => {
   it('aucune question ne parle de Carmen, de Pepe ni de la BD (énoncé, réponses, explication)', () => {
     const interdit = /Carmen|Pepe|tebeo|Bielsa|Huesca|División 43/i;

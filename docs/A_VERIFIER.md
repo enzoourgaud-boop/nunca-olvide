@@ -7,7 +7,7 @@ Pour corriger ou retirer une question, tu as trois possibilités :
 - dans le fichier `content/sequences/guerra-civil/questions/…json`, corrige la question, ou ajoute `"disabled": true` pour qu'elle ne soit plus posée ;
 - ou dis-le-moi, je m'en occupe.
 
-*État : étape 2 (388 questions). Décisions déjà prises : pas de questions sur Pepe et sa famille (seulement ce qui concerne la guerre) ; les phrases de l'évaluation peuvent être reprises telles quelles (D3) ; les mots de position sont connus des élèves (D6, utilisés à l'étape 3) ; **aucun plus-que-parfait : uniquement passé simple et imparfait** (vérifié par un test automatique).*
+*État : étape 9 (502 questions). Décisions déjà prises : pas de questions sur Pepe et sa famille (seulement ce qui concerne la guerre) ; les phrases de l'évaluation peuvent être reprises telles quelles (D3) ; les mots de position sont connus des élèves (D6, utilisés à l'étape 3) ; **aucun plus-que-parfait : uniquement passé simple et imparfait** (vérifié par un test automatique).*
 
 ## 0. Retraits demandés par le professeur (étape 6)
 
@@ -90,7 +90,20 @@ L'évaluation donne la traduction de *la guerra, un bando, huir, fusilar, enterr
 | ☐ | épilogue | La ficha de identidad : *julio de 1936 · tres años · 1939 · los republicanos y los militares sublevados · Franco*. | Mêmes réponses déduites que la partie 1 de ce fichier. |
 | ☐ | événements `mapa` et `mision` | Deux scènes de plus (la carte de la abuela ; la misión secreta avec des lettres jaunes). | Histoire inventée avec tes mots ; aucun fait nouveau. |
 
-## 6. Sources
+## 6. Étape 9 : questions ajoutées (214)
+
+Fichiers `irregulares-extra.json`, `ser-ir-extra.json`, `historia-extra.json`, `lexico-extra.json` (identifiants `nv-…`). Toutes les formes verbales viennent de tes fiches (*tener, estar, hacer, ser/ir, poder, decir, querer*).
+
+| ✔ | Identifiants | Ce qui n'est pas dans tes documents |
+|---|---|---|
+| ☐ | `nv-frase-*`, `nv-vfserir-*`, `nv-serir-*`, `nv-serir-b*`, `nv-ord-*`, `nv-ordserir-*`, `nv-jefe-*`, `nv-aso-serir-frases` | **Phrases d'entraînement inventées** (ex. « Nosotros estuvimos en el refugio », « Los refugiados fueron a la frontera a pie », « Ayer fuimos a la escuela en autobús »…) et leurs traductions françaises. Elles n'apportent aucun fait historique nouveau ; elles réutilisent le vocabulaire de la guerre. |
+| ☐ | `nv-frase-estar-*`, `nv-hist-refugiado-campo` | « Muchos republicanos estuvieron en campos de refugiados en Francia » **généralise** ta phrase de l'évaluation (« Mi bisabuelo estuvo en un campo de refugiados en Francia ») à plusieurs républicains. |
+| ☐ | `nv-hist-fratricida`, `nv-lex-fratricida-*`, `nv-lex-sangriento-*` | **Définition de *fratricida*** (« guerre entre gens d'un même pays, comme entre frères ») et traductions de *fratricida, sangriento* : le mot est dans ton évaluation (ex. 4c), mais sa définition ne l'est pas. |
+| ☐ | `nv-lex-jefe-*`, `nv-lex-ayuda-*`, `nv-lex-refugiados-*`, `nv-lex-militares-*`, `nv-lex-republica-*`, `nv-lex-volver-*` | Traductions *el jefe = le chef, la ayuda = l'aide, los refugiados = les réfugiés, los militares = les militaires, la República = la République, volver = revenir* (mots de tes documents, traductions de moi). |
+| ☐ | `nv-lex-luchar-*`, `nv-lex-vencer-*`, `nv-lex-sufrir-*`, `nv-aso-lex-2` | Traductions de ton évaluation (ex. 1) : *luchar = lutter, vencer = vaincre, sufrir = souffrir*. |
+| ☐ | `nv-vfh-*`, `nv-hist-*` | Faits historiques **déjà présents dans ton évaluation ou ta Misión secreta**, reformulés (qui s'est soulevé, deux camps, Allemagne nazie / Italie fasciste, exil en France, durée de la guerre…). Même réserve qu'en partie 1 pour *1939* et *trois ans* (déduits). `nv-vfh-12` (Franco, le chef des militaires sublevados) et `nv-frise-*` (frise 1936 / 1939) reprennent les mêmes déductions. |
+
+## 7. Sources
 
 | ✔ | Point | À confirmer |
 |---|---|---|

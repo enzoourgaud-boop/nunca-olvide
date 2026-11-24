@@ -1,0 +1,609 @@
+[
+  {
+    "id": "nv-lex-fratricida-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "fratricide",
+    "promptLang": "fr",
+    "answer": "fratricida",
+    "accept": [],
+    "distractors": [
+      "el exilio",
+      "huir",
+      "las sirenas"
+    ],
+    "writable": true,
+    "explanation": "fratricida = fratricide",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-fratricida-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "fratricida",
+    "answerLang": "fr",
+    "answer": "fratricide",
+    "accept": [],
+    "distractors": [
+      "fusiller",
+      "la peur",
+      "les réfugiés"
+    ],
+    "writable": false,
+    "explanation": "fratricida = fratricide",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-sangriento-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "sanglant",
+    "promptLang": "fr",
+    "answer": "sangriento",
+    "accept": [],
+    "distractors": [
+      "el refugio",
+      "la frontera",
+      "luchar"
+    ],
+    "writable": true,
+    "explanation": "sangriento = sanglant",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-sangriento-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "sangriento",
+    "answerLang": "fr",
+    "answer": "sanglant",
+    "accept": [],
+    "distractors": [
+      "la guerre",
+      "les lettres",
+      "souffrir"
+    ],
+    "writable": false,
+    "explanation": "sangriento = sanglant",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-jefe-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "le chef",
+    "promptLang": "fr",
+    "answer": "el jefe",
+    "accept": [],
+    "distractors": [
+      "la abuela",
+      "los militares",
+      "volver"
+    ],
+    "writable": true,
+    "explanation": "el jefe = le chef",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-jefe-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "el jefe",
+    "answerLang": "fr",
+    "answer": "le chef",
+    "accept": [],
+    "distractors": [
+      "les lettres",
+      "se soulever",
+      "l'abri"
+    ],
+    "writable": false,
+    "explanation": "el jefe = le chef",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-ayuda-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "l’aide",
+    "promptLang": "fr",
+    "answer": "la ayuda",
+    "accept": [],
+    "distractors": [
+      "las cartas",
+      "sufrir",
+      "el miedo"
+    ],
+    "writable": true,
+    "explanation": "la ayuda = l’aide",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-ayuda-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la ayuda",
+    "answerLang": "fr",
+    "answer": "l’aide",
+    "accept": [],
+    "distractors": [
+      "sanglant",
+      "fusiller",
+      "la peur"
+    ],
+    "writable": false,
+    "explanation": "la ayuda = l’aide",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-refugiados-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "les réfugiés",
+    "promptLang": "fr",
+    "emoji": "🧳",
+    "answer": "los refugiados",
+    "accept": [],
+    "distractors": [
+      "luchar",
+      "el exilio",
+      "fusilar"
+    ],
+    "writable": true,
+    "explanation": "los refugiados = les réfugiés",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-refugiados-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "los refugiados",
+    "answerLang": "fr",
+    "answer": "les réfugiés",
+    "accept": [],
+    "distractors": [
+      "fuir",
+      "la petite-fille",
+      "les militaires"
+    ],
+    "writable": false,
+    "explanation": "los refugiados = les réfugiés",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-militares-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "les militaires",
+    "promptLang": "fr",
+    "answer": "los militares",
+    "accept": [],
+    "distractors": [
+      "vencer",
+      "el refugio",
+      "la frontera"
+    ],
+    "writable": true,
+    "explanation": "los militares = les militaires",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-militares-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "los militares",
+    "answerLang": "fr",
+    "answer": "les militaires",
+    "accept": [],
+    "distractors": [
+      "la guerre",
+      "les lettres",
+      "souffrir"
+    ],
+    "writable": false,
+    "explanation": "los militares = les militaires",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-republica-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "la République",
+    "promptLang": "fr",
+    "answer": "la República",
+    "accept": [],
+    "distractors": [
+      "el jefe",
+      "la abuela",
+      "los militares"
+    ],
+    "writable": true,
+    "explanation": "la República = la République",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-republica-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "la República",
+    "answerLang": "fr",
+    "answer": "la République",
+    "accept": [],
+    "distractors": [
+      "les lettres",
+      "se soulever",
+      "l'abri"
+    ],
+    "writable": false,
+    "explanation": "la República = la République",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-volver-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "revenir",
+    "promptLang": "fr",
+    "emoji": "↩️",
+    "answer": "volver",
+    "accept": [],
+    "distractors": [
+      "fratricida",
+      "la nieta",
+      "sublevarse"
+    ],
+    "writable": true,
+    "explanation": "volver = revenir",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-volver-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "volver",
+    "answerLang": "fr",
+    "answer": "revenir",
+    "accept": [],
+    "distractors": [
+      "sanglant",
+      "fusiller",
+      "la peur"
+    ],
+    "writable": false,
+    "explanation": "volver = revenir",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-luchar-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "lutter",
+    "promptLang": "fr",
+    "answer": "luchar",
+    "accept": [],
+    "distractors": [
+      "la ayuda",
+      "los refugiados",
+      "el exilio"
+    ],
+    "writable": true,
+    "explanation": "luchar = lutter",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-luchar-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "luchar",
+    "answerLang": "fr",
+    "answer": "lutter",
+    "accept": [],
+    "distractors": [
+      "fuir",
+      "la petite-fille",
+      "les militaires"
+    ],
+    "writable": false,
+    "explanation": "luchar = lutter",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-vencer-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "vaincre",
+    "promptLang": "fr",
+    "answer": "vencer",
+    "accept": [],
+    "distractors": [
+      "las sirenas",
+      "un bando",
+      "el refugio"
+    ],
+    "writable": true,
+    "explanation": "vencer = vaincre",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-vencer-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "vencer",
+    "answerLang": "fr",
+    "answer": "vaincre",
+    "accept": [],
+    "distractors": [
+      "la guerre",
+      "les lettres",
+      "se soulever"
+    ],
+    "writable": false,
+    "explanation": "vencer = vaincre",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-sufrir-es",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Comment dit-on en espagnol ?",
+    "prompt": "souffrir",
+    "promptLang": "fr",
+    "answer": "sufrir",
+    "accept": [],
+    "distractors": [
+      "sangriento",
+      "el jefe",
+      "la República"
+    ],
+    "writable": true,
+    "explanation": "sufrir = souffrir",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    },
+    "translation": ""
+  },
+  {
+    "id": "nv-lex-sufrir-fr",
+    "type": "qcm",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Que veut dire ce mot ?",
+    "prompt": "sufrir",
+    "answerLang": "fr",
+    "answer": "souffrir",
+    "accept": [],
+    "distractors": [
+      "les avions",
+      "sanglant",
+      "l'abri"
+    ],
+    "writable": false,
+    "explanation": "sufrir = souffrir",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-lex-1",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 2,
+    "label": "Relie chaque mot à sa traduction",
+    "prompt": "Relie chaque mot espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "fratricida",
+        "fratricide"
+      ],
+      [
+        "sangriento",
+        "sanglant"
+      ],
+      [
+        "volver",
+        "revenir"
+      ],
+      [
+        "la ayuda",
+        "l’aide"
+      ]
+    ],
+    "explanation": "fratricida = fratricide · sangriento = sanglant · volver = revenir · la ayuda = l’aide",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-aso-lex-2",
+    "type": "association",
+    "theme": "lexico",
+    "notions": [
+      "lex-guerra"
+    ],
+    "level": 1,
+    "label": "Relie chaque verbe à sa traduction",
+    "prompt": "Relie chaque verbe espagnol à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "luchar",
+        "lutter"
+      ],
+      [
+        "vencer",
+        "vaincre"
+      ],
+      [
+        "sufrir",
+        "souffrir"
+      ],
+      [
+        "huir",
+        "fuir"
+      ]
+    ],
+    "explanation": "luchar = lutter · vencer = vaincre · sufrir = souffrir · huir = fuir",
+    "source": "evaluacion",
+    "translation": ""
+  }
+]

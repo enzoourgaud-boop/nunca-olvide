@@ -1,0 +1,905 @@
+[
+  {
+    "id": "nv-hist-quienes-se-sublevaron",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "prompt": "¿Quiénes se sublevaron en julio de 1936?",
+    "answer": "Unos generales",
+    "accept": [
+      "generales"
+    ],
+    "distractors": [
+      "Unos niños",
+      "Los refugiados",
+      "Un gobierno extranjero"
+    ],
+    "writable": true,
+    "translation": "Qui se souleva en juillet 1936 ?",
+    "explanation": "En julio de 1936, unos generales se sublevaron contra la República (évaluation ex. 3).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-paises-ayuda",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "¿Qué dos países ayudaron a Franco?",
+    "answer": "La Alemania nazi y la Italia fascista",
+    "accept": [],
+    "distractors": [
+      "Francia e Inglaterra",
+      "Portugal y Suiza",
+      "México y Rusia"
+    ],
+    "writable": false,
+    "translation": "Quels deux pays aidèrent Franco ?",
+    "explanation": "Franco tuvo la ayuda de la Alemania nazi y de la Italia fascista (évaluation ex. 3b).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-alemania-era",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "La Alemania que ayudó a Franco era…",
+    "answer": "nazi",
+    "accept": [],
+    "distractors": [
+      "republicana",
+      "fascista",
+      "militar"
+    ],
+    "writable": true,
+    "translation": "L’Allemagne qui aida Franco était…",
+    "explanation": "La Alemania nazi y la Italia fascista : nazi pour l’Allemagne, fascista pour l’Italie.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-italia-era",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "La Italia que ayudó a Franco era…",
+    "answer": "fascista",
+    "accept": [],
+    "distractors": [
+      "nazi",
+      "republicana",
+      "socialista"
+    ],
+    "writable": true,
+    "translation": "L’Italie qui aida Franco était…",
+    "explanation": "La Alemania nazi y la Italia fascista : nazi pour l’Allemagne, fascista pour l’Italie.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-guerra-civil-def",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "prompt": "¿Cómo se llama una guerra entre los habitantes de un mismo país?",
+    "answer": "Una guerra civil",
+    "accept": [
+      "guerra civil"
+    ],
+    "distractors": [
+      "Una guerra mundial",
+      "Una guerra fría",
+      "Una guerra aérea"
+    ],
+    "writable": true,
+    "translation": "Comment s’appelle une guerre entre les habitants d’un même pays ?",
+    "explanation": "Une guerre civile : « Muchos españoles lucharon unos contra otros » (Misión secreta).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-adonde-huyeron",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 1,
+    "prompt": "¿Adónde huyeron muchos republicanos?",
+    "answer": "A Francia",
+    "accept": [
+      "Francia"
+    ],
+    "distractors": [
+      "A Alemania",
+      "A Italia",
+      "A Portugal"
+    ],
+    "writable": true,
+    "translation": "Où beaucoup de républicains s’enfuirent-ils ?",
+    "explanation": "Muchos republicanos fueron al exilio en Francia (évaluation ex. 3d).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-no-pudieron",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 2,
+    "prompt": "¿Qué no pudieron hacer muchas familias después de la guerra?",
+    "answer": "Volver a España",
+    "accept": [
+      "volver"
+    ],
+    "distractors": [
+      "Hablar español",
+      "Cruzar la frontera",
+      "Comer pan"
+    ],
+    "writable": true,
+    "translation": "Que beaucoup de familles ne purent-elles pas faire après la guerre ?",
+    "explanation": "Muchas familias no pudieron volver a España (évaluation ex. 3e).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-quienes-exilio",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 1,
+    "prompt": "¿Quiénes fueron al exilio en Francia?",
+    "answer": "Muchos republicanos",
+    "accept": [
+      "republicanos"
+    ],
+    "distractors": [
+      "Los militares sublevados",
+      "Franco",
+      "Los alemanes"
+    ],
+    "writable": true,
+    "translation": "Qui partit en exil en France ?",
+    "explanation": "Muchos republicanos fueron al exilio en Francia (évaluation ex. 3d).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-generales-hicieron",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "En julio de 1936, ¿qué hicieron unos generales?",
+    "answer": "Se sublevaron contra la República",
+    "accept": [],
+    "distractors": [
+      "Ganaron las elecciones",
+      "Se fueron a Francia",
+      "Ayudaron a Franco en Italia"
+    ],
+    "writable": false,
+    "translation": "En juillet 1936, que firent des généraux ?",
+    "explanation": "En julio de 1936, unos generales se sublevaron contra la República.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-que-fue-franco",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "prompt": "¿Qué fue Franco?",
+    "answer": "El jefe de los militares sublevados",
+    "accept": [],
+    "distractors": [
+      "El jefe de los republicanos",
+      "Un refugiado en Francia",
+      "El gobierno de la República"
+    ],
+    "writable": false,
+    "translation": "Qu’était Franco ?",
+    "explanation": "Franco fue el jefe de los militares sublevados (évaluation ex. 4).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-otro-bando",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "prompt": "Un bando fue el de los militares sublevados. ¿Cuál fue el otro?",
+    "answer": "Los republicanos",
+    "accept": [
+      "republicanos"
+    ],
+    "distractors": [
+      "Los alemanes",
+      "Los refugiados",
+      "Los italianos"
+    ],
+    "writable": true,
+    "translation": "Un camp fut celui des militaires soulevés. Quel fut l’autre ?",
+    "explanation": "Les deux camps : los republicanos y los militares sublevados.",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-cuantos-bandos",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "prompt": "¿Cuántos bandos hubo en la guerra civil española?",
+    "answer": "Dos",
+    "accept": [
+      "2"
+    ],
+    "distractors": [
+      "Uno",
+      "Tres",
+      "Cinco"
+    ],
+    "writable": true,
+    "translation": "Combien de camps y eut-il dans la guerre civile espagnole ?",
+    "explanation": "Los dos bandos : los republicanos y los militares sublevados (évaluation ex. 5).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-guerra-como",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "prompt": "La guerra civil española fue muy…",
+    "answer": "sangrienta",
+    "accept": [
+      "sangrienta y fratricida"
+    ],
+    "distractors": [
+      "corta",
+      "tranquila",
+      "alegre"
+    ],
+    "writable": true,
+    "translation": "La guerre civile espagnole fut très…",
+    "explanation": "La guerra fue muy sangrienta (évaluation ex. 3c).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-fratricida",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 3,
+    "prompt": "La guerra fue «fratricida». Eso quiere decir que…",
+    "answer": "se mataron personas de un mismo país, como hermanos",
+    "accept": [],
+    "distractors": [
+      "solo lucharon dos hermanos",
+      "duró solo un año",
+      "fue una guerra contra Francia"
+    ],
+    "writable": false,
+    "translation": "La guerre fut « fratricide ». Cela veut dire que…",
+    "explanation": "Fratricida (de « hermano ») : une guerre entre gens d’un même pays, comme entre frères. (Sens déduit : à vérifier.)",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-republica-gobierno",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "prompt": "En 1936, los generales se sublevaron contra…",
+    "answer": "el gobierno de la República",
+    "accept": [
+      "la República"
+    ],
+    "distractors": [
+      "el gobierno de Francia",
+      "el gobierno de Italia",
+      "el gobierno de Alemania"
+    ],
+    "writable": false,
+    "translation": "En 1936, les généraux se soulevèrent contre…",
+    "explanation": "Unos generales se sublevaron contra la República (évaluation ex. 3a).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-hist-refugiado-campo",
+    "type": "qcm",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 2,
+    "prompt": "¿Dónde estuvieron muchos republicanos después de huir a Francia?",
+    "answer": "En un campo de refugiados",
+    "accept": [
+      "campo de refugiados"
+    ],
+    "distractors": [
+      "En un campo de fútbol",
+      "En un museo",
+      "En un refugio en Alemania"
+    ],
+    "writable": false,
+    "translation": "Où beaucoup de républicains furent-ils après avoir fui en France ?",
+    "explanation": "Evaluación ex. 3f : « estuvo en un campo de refugiados en Francia » (généralisé à beaucoup de républicains : à vérifier).",
+    "source": "evaluacion",
+    "check": {
+      "ignoreArticles": true
+    }
+  },
+  {
+    "id": "nv-vfh-1",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Los militares sublevados fueron el único bando de la guerra.",
+    "answer": "falso",
+    "translation": "Les militaires soulevés furent le seul camp de la guerre.",
+    "explanation": "Falso : hubo dos bandos, los republicanos y los militares sublevados.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-2",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Franco fue el jefe de los republicanos.",
+    "answer": "falso",
+    "translation": "Franco fut le chef des républicains.",
+    "explanation": "Falso : Franco fue el jefe de los militares sublevados.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-3",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La Alemania nazi ayudó a los republicanos.",
+    "answer": "falso",
+    "translation": "L’Allemagne nazie aida les républicains.",
+    "explanation": "Falso : la Alemania nazi y la Italia fascista ayudaron a Franco.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-4",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Muchos republicanos fueron al exilio en Italia.",
+    "answer": "falso",
+    "translation": "Beaucoup de républicains partirent en exil en Italie.",
+    "explanation": "Falso : muchos republicanos fueron al exilio en Francia.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-5",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La guerra empezó en 1939.",
+    "answer": "falso",
+    "translation": "La guerre commença en 1939.",
+    "explanation": "Falso : la guerra empezó en julio de 1936 y terminó en 1939.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-6",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La guerra duró seis años.",
+    "answer": "falso",
+    "translation": "La guerre dura six ans.",
+    "explanation": "Falso : de 1936 a 1939, la guerra duró tres años.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-7",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-guerra"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En una guerra civil, los habitantes de un mismo país luchan unos contra otros.",
+    "answer": "verdadero",
+    "translation": "Dans une guerre civile, les habitants d’un même pays luttent les uns contre les autres.",
+    "explanation": "Verdadero : « Muchos españoles lucharon unos contra otros » (Misión secreta).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-8",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-exilio"
+    ],
+    "level": 2,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Muchas familias pudieron volver a España enseguida.",
+    "answer": "falso",
+    "translation": "Beaucoup de familles purent revenir en Espagne tout de suite.",
+    "explanation": "Falso : « muchas familias no pudieron volver a España » (évaluation ex. 3e).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-9",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Unos generales se sublevaron en julio de 1936.",
+    "answer": "verdadero",
+    "translation": "Des généraux se soulevèrent en juillet 1936.",
+    "explanation": "Verdadero (évaluation ex. 3a).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-10",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La Italia fascista ayudó a Franco.",
+    "answer": "verdadero",
+    "translation": "L’Italie fasciste aida Franco.",
+    "explanation": "Verdadero (évaluation ex. 3b).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-11",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "En la guerra civil española hubo dos bandos.",
+    "answer": "verdadero",
+    "translation": "Dans la guerre civile espagnole, il y eut deux camps.",
+    "explanation": "Verdadero : los republicanos y los militares sublevados.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-12",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 3,
+    "label": "¿Verdadero o falso?",
+    "prompt": "Franco fue el jefe del gobierno de la República.",
+    "answer": "falso",
+    "translation": "Franco fut le chef du gouvernement de la République.",
+    "explanation": "Falso : Franco fue el jefe de los militares sublevados, no el del gobierno de la República.",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-vfh-13",
+    "type": "vrai-faux",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "¿Verdadero o falso?",
+    "prompt": "La guerra terminó en 1939.",
+    "answer": "verdadero",
+    "translation": "La guerre se termina en 1939.",
+    "explanation": "Verdadero (déduit des documents : à vérifier).",
+    "source": "evaluacion"
+  },
+  {
+    "id": "nv-ordh-1",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Franco fut le chef des militaires soulevés.",
+    "promptLang": "fr",
+    "answer": "Franco fue el jefe de los militares sublevados",
+    "tokens": [
+      "Franco",
+      "fue",
+      "el",
+      "jefe",
+      "de",
+      "los",
+      "militares",
+      "sublevados"
+    ],
+    "extra": [],
+    "explanation": "« Franco fue el jefe de los militares sublevados. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordh-2",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "La guerre civile fut très sanglante.",
+    "promptLang": "fr",
+    "answer": "La guerra civil fue muy sangrienta",
+    "tokens": [
+      "La",
+      "guerra",
+      "civil",
+      "fue",
+      "muy",
+      "sangrienta"
+    ],
+    "extra": [],
+    "explanation": "« La guerra civil fue muy sangrienta. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordh-3",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Il y eut deux camps dans la guerre.",
+    "promptLang": "fr",
+    "answer": "Hubo dos bandos en la guerra",
+    "tokens": [
+      "Hubo",
+      "dos",
+      "bandos",
+      "en",
+      "la",
+      "guerra"
+    ],
+    "extra": [],
+    "explanation": "« Hubo dos bandos en la guerra. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordh-4",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Les républicains et les militaires soulevés furent les deux camps.",
+    "promptLang": "fr",
+    "answer": "Los republicanos y los militares sublevados fueron los dos bandos",
+    "tokens": [
+      "Los",
+      "republicanos",
+      "y",
+      "los",
+      "militares",
+      "sublevados",
+      "fueron",
+      "los",
+      "dos",
+      "bandos"
+    ],
+    "extra": [],
+    "explanation": "« Los republicanos y los militares sublevados fueron los dos bandos. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordh-5",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 3,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Beaucoup de familles ne purent pas revenir en Espagne après la guerre.",
+    "promptLang": "fr",
+    "answer": "Muchas familias no pudieron volver a España después de la guerra",
+    "tokens": [
+      "Muchas",
+      "familias",
+      "no",
+      "pudieron",
+      "volver",
+      "a",
+      "España",
+      "después",
+      "de",
+      "la",
+      "guerra"
+    ],
+    "extra": [],
+    "explanation": "« Muchas familias no pudieron volver a España después de la guerra. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-ordh-6",
+    "type": "ordre",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "label": "Remets la phrase dans l’ordre",
+    "prompt": "Les républicains partirent en exil en France.",
+    "promptLang": "fr",
+    "answer": "Los republicanos fueron al exilio en Francia",
+    "tokens": [
+      "Los",
+      "republicanos",
+      "fueron",
+      "al",
+      "exilio",
+      "en",
+      "Francia"
+    ],
+    "extra": [],
+    "explanation": "« Los republicanos fueron al exilio en Francia. »",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-asoh-bandos",
+    "type": "association",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 1,
+    "label": "Relie",
+    "prompt": "Relie chaque mot à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "los republicanos",
+        "les républicains"
+      ],
+      [
+        "los militares sublevados",
+        "les militaires soulevés"
+      ],
+      [
+        "la República",
+        "la République"
+      ],
+      [
+        "el exilio",
+        "l’exil"
+      ]
+    ],
+    "explanation": "los republicanos = les républicains · los militares sublevados = les militaires soulevés · la República = la République · el exilio = l’exil",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-asoh-paises",
+    "type": "association",
+    "theme": "historia",
+    "notions": [
+      "hist-bandos"
+    ],
+    "level": 2,
+    "label": "Relie",
+    "prompt": "Relie chaque expression à sa traduction.",
+    "promptLang": "fr",
+    "pairs": [
+      [
+        "la Alemania nazi",
+        "l’Allemagne nazie"
+      ],
+      [
+        "la Italia fascista",
+        "l’Italie fasciste"
+      ],
+      [
+        "la ayuda",
+        "l’aide"
+      ],
+      [
+        "el jefe",
+        "le chef"
+      ]
+    ],
+    "explanation": "la Alemania nazi = l’Allemagne nazie · la Italia fascista = l’Italie fasciste · la ayuda = l’aide · el jefe = le chef",
+    "source": "evaluacion",
+    "translation": ""
+  },
+  {
+    "id": "nv-frise-1",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "Place chaque événement sur la frise",
+    "prompt": "Unos generales se sublevaron en 1936.",
+    "promptLang": "es",
+    "translation": "Des généraux se soulevèrent en 1936.",
+    "explanation": "Sur la frise : 1936 : sublevacion. Les dates viennent de tes documents.",
+    "source": "evaluacion",
+    "scene": {
+      "decor": "frise",
+      "items": [
+        {
+          "object": "sublevacion",
+          "col": "1936"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nv-frise-2",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 1,
+    "label": "Place chaque événement sur la frise",
+    "prompt": "La guerra terminó en 1939.",
+    "promptLang": "es",
+    "translation": "La guerre se termina en 1939.",
+    "explanation": "Sur la frise : 1939 : fin. Les dates viennent de tes documents.",
+    "source": "evaluacion",
+    "scene": {
+      "decor": "frise",
+      "items": [
+        {
+          "object": "fin",
+          "col": "1939"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nv-frise-3",
+    "type": "scene",
+    "theme": "historia",
+    "notions": [
+      "hist-fechas"
+    ],
+    "level": 2,
+    "label": "Place chaque événement sur la frise",
+    "prompt": "Primero, unos generales se sublevaron en 1936. Después, la guerra terminó en 1939.",
+    "promptLang": "es",
+    "translation": "D’abord, des généraux se soulevèrent en 1936. Ensuite, la guerre se termina en 1939.",
+    "explanation": "Sur la frise : 1936 : sublevacion · 1939 : fin. Les dates viennent de tes documents.",
+    "source": "evaluacion",
+    "scene": {
+      "decor": "frise",
+      "items": [
+        {
+          "object": "sublevacion",
+          "col": "1936"
+        },
+        {
+          "object": "fin",
+          "col": "1939"
+        }
+      ]
+    }
+  }
+]

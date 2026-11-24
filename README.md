@@ -112,7 +112,7 @@ Pour y accéder : en bas de l'écran d'accueil, clique sur **« Espace professeu
 
 ## 4. Modifier ou ajouter des questions
 
-Les questions sont dans `content/sequences/guerra-civil/questions/`, un fichier par thème ou par type : `regulares.json`, `irregulares.json`, `ser-ir.json`, `historia.json`, `lexico.json`, `vrai-faux.json`, `ordre.json`, `escenas.json` (frise), `association.json`, `jefe.json`.
+Les questions sont dans `content/sequences/guerra-civil/questions/`, un fichier par thème ou par type : `regulares.json`, `irregulares.json`, `ser-ir.json`, `historia.json`, `lexico.json`, `vrai-faux.json`, `ordre.json`, `escenas.json` (frise), `association.json`, `jefe.json`, et, depuis l'étape 9, les fichiers `irregulares-extra.json` (ser, ir, tener, estar, hacer), `ser-ir-extra.json`, `historia-extra.json` et `lexico-extra.json` (questions supplémentaires, identifiants commençant par `nv-`).
 
 ### Méthode 1 : avec l'espace professeur (conseillée)
 

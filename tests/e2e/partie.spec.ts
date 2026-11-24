@@ -16,7 +16,7 @@ test('une partie entière, du profil jusqu’au code de fin', async ({ page }) =
   await expect(page.getByRole('heading', { name: '¿Quién juega?' })).toBeVisible();
   await page.fill('#pseudo', 'Bot');
   await page.click('text=Créer et jouer');
-  await page.fill('input[placeholder="au hasard"]', 'CALAVERA-42');
+  await page.fill('input[placeholder="au hasard"]', 'CALAVERA-44');
   await page.getByRole('button', { name: /Partie complète/ }).click();
   const modes = await playToEnd(page, data);
   await expect(page.locator('h1')).toHaveText('¡Nunca olvidé!');

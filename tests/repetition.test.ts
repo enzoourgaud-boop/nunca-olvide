@@ -18,11 +18,14 @@ describe('pas de question réussie reposée', () => {
     }
   });
 
-  it('les domaines assez grands (passé simple, verbes réguliers, irréguliers) ne répètent rien non plus', () => {
-    for (const id of ['pasado', 'regulares', 'irregulares']) {
-      const d = c.sequence.domains.find(x => x.id === id)!;
-      const rs = Array.from({ length: 30 }, (_, i) => simulate(c, `GRAND-${id}-${i}`, 0.9, { ...DEFAULT_SETTINGS, themes: d.themes! }));
-      expect(rs.reduce((n, r) => n + r.repeats, 0), id).toBe(0);
+  it('chaque domaine du menu (même les plus petits : ¿Ser o ir ?, Histoire, Lexique) est assez fourni pour une partie sans répétition', () => {
+    for (const d of c.sequence.domains) {
+      for (const short of [false, true]) {
+        for (const acc of [0.6, 0.9, 1]) {
+          const rs = Array.from({ length: 12 }, (_, i) => simulate(c, `GRAND-${d.id}-${acc}-${i}`, acc, { ...DEFAULT_SETTINGS, themes: d.themes ?? DEFAULT_SETTINGS.themes, short }));
+          expect(rs.reduce((n, r) => n + r.repeats, 0), `${d.id}, précision ${acc}, courte : ${short}`).toBe(0);
+        }
+      }
     }
   });
 

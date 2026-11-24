@@ -301,17 +301,19 @@ Comme dans le jeu actuel : les questions deviennent plus difficiles d'acte en ac
 
 ### 6.3 Banque de questions
 
-**288 questions**, toutes avec une correction expliquée en français et le document source. Les questions d'écoute, les questions sur Carmen et celles sur la BD ont été retirées (étape 6).
+**502 questions** (288 après l'étape 6, puis 214 ajoutées à l'étape 9), toutes avec une correction expliquée en français et le document source. Les questions d'écoute, les questions sur Carmen et celles sur la BD ont été retirées (étape 6).
 
 | Thème | Notions | Nb | Types |
 |---|---|---|---|
 | **Pretérito : verbes réguliers** | -ar, -er/-ir, accents | 91 | QCM, écrit, ordre, vrai/faux |
-| **Pretérito : verbes irréguliers** | vocaliques (e→i, o→u, i→y, j), prétérits forts | 98 | QCM, écrit, ordre, vrai/faux (« *dijieron* est correct ») |
-| **¿Ser o ir?** | identifier, conjuguer | 29 | QCM, vrai/faux, ordre |
-| **Historia de la guerra** | dates, camps, Franco, aide étrangère, exil | 27 | QCM, écrit, vrai/faux, frise, carte |
-| **Léxico** | lexique de la guerre | 43 | QCM, association mot/traduction et mot/image |
+| **Pretérito : verbes irréguliers** | vocaliques (e→i, o→u, i→y, j), prétérits forts ; **priorité à ser, ir, tener, estar, hacer** (étape 9) | 195 | QCM, écrit, ordre, association, vrai/faux (« *dijieron* est correct ») |
+| **¿Ser o ir?** | identifier, conjuguer | 82 | QCM, écrit, vrai/faux, ordre, association |
+| **Historia de la guerra** | dates, camps, Franco, aide étrangère, exil | 67 | QCM, écrit, vrai/faux, ordre, association, frise, carte |
+| **Léxico** | lexique de la guerre | 67 | QCM, association mot/traduction et mot/image |
 
-Types : QCM (232), vrai/faux (25), phrase à remettre dans l'ordre (13), association (7), placement sur la frise ou la carte (4), réponse écrite (7 questions « écrit seulement » ; la plupart des QCM peuvent aussi être posés à l'écrit). Le type « écoute » existe toujours dans le moteur, mais la banque n'en contient plus.
+Types : QCM (361), vrai/faux (64), phrase à remettre dans l'ordre (33), association (21), placement sur la frise ou la carte (7), réponse écrite (16 questions « écrit seulement » ; la plupart des QCM peuvent aussi être posés à l'écrit). Le type « écoute » existe toujours dans le moteur, mais la banque n'en contient plus.
+
+**Étape 9 : assez de questions pour ne rien répéter.** Les domaines les plus petits (¿Ser o ir? 29 q, Histoire 27 q) répétaient des questions dans une partie complète (41 à 46 réponses). Ils ont été étoffés avec des questions nouvelles écrites dans les mêmes formats (fichiers `*-extra.json`, identifiants `nv-…`) : formes de **ser, ir, tener, estar, hacer** en priorité (de quel verbe vient la forme, à quelle personne elle correspond, phrases à compléter, vrai/faux sur les accents, phrases à remettre dans l'ordre, associations), nouvelles phrases ¿ser o ir ?, faits historiques **déjà présents dans l'évaluation** sous d'autres formes, et trois mots de plus au lexique (*luchar, vencer, sufrir*). Quand un domaine n'a plus de question neuve à *écrire*, le moteur donne une question neuve en choix multiple plutôt qu'une question déjà réussie. Un test automatique vérifie qu'aucun domaine ne répète quoi que ce soit (parties complètes et courtes, élèves à 60 %, 90 % et 100 %).
 
 ### 6.4 Bilan de fin de partie
 
