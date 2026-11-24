@@ -35,8 +35,8 @@ Ces phrases servent à conjuguer. Elles utilisent les mots et les faits de tes d
 
 | ✔ | Identifiant | Phrase |
 |---|---|---|
-| ☐ | `frase-mis-13` | Según la abuela, la guerra ___ en 1936. (empezar) |
-| ☐ | `frase-irr-1` | La abuela ___ : «Nunca olvidé esos años». (decir) |
+| ☐ | `frase-mis-13` | Según mi padre, la guerra ___ en 1936. (empezar) |
+| ☐ | `frase-irr-1` | Un anciano ___ : «Nunca olvidé esos años». (decir) |
 | ☐ | `frase-irr-2` | Muchas familias ___ las maletas para huir. (hacer) |
 | ☐ | `frase-irr-4` | Los refugiados ___ ayuda. (pedir) |
 | ☐ | `frase-irr-5` | Los niños no ___ la leyenda. (creer) |
@@ -44,7 +44,7 @@ Ces phrases servent à conjuguer. Elles utilisent les mots et les faits de tes d
 | ☐ | `frase-irr-7` | Los aviones ___ a la ciudad. (venir) |
 | ☐ | `frase-irr-8` | Mi padre ___ una carta a mi madre. (escribir) |
 | ☐ | `frase-irr-10` | Nosotros no ___ volver a casa. (poder) |
-| ☐ | `frase-irr-11` | Mi abuela ___ sus recuerdos en una caja. (poner) |
+| ☐ | `frase-irr-11` | Mi madre ___ sus recuerdos en una caja. (poner) |
 | ☐ | `frase-irr-12` | Mis abuelos me ___ sus fotos de la guerra. (traer) |
 | ☐ | `frase-irr-14` | Los republicanos ___ ganar la guerra. (querer) |
 | ☐ | `jefe-dijeron` | Mis abuelos me ___ : «Nunca olvidamos». (decir) |

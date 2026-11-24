@@ -1946,7 +1946,7 @@
     ],
     "level": 2,
     "label": "Complète au pretérito indefinido",
-    "prompt": "La abuela ___ : «Nunca olvidé esos años». (decir)",
+    "prompt": "Un anciano ___ : «Nunca olvidé esos años». (decir)",
     "answer": "dijo",
     "accept": [],
     "distractors": [
@@ -1955,8 +1955,8 @@
       "dijeron"
     ],
     "writable": true,
-    "translation": "La grand-mère dit : « Je n'ai jamais oublié ces années ».",
-    "explanation": "decir, ella → dijo (prétérit fort en j, aucun accent).",
+    "translation": "Un vieil homme dit : « Je n'ai jamais oublié ces années ».",
+    "explanation": "decir, él → dijo (prétérit fort en j, aucun accent).",
     "source": "mision-secreta"
   },
   {
@@ -2078,7 +2078,7 @@
     ],
     "level": 3,
     "label": "Complète au pretérito indefinido",
-    "prompt": "Mi abuela ___ sus recuerdos en una caja. (poner)",
+    "prompt": "Mi madre ___ sus recuerdos en una caja. (poner)",
     "answer": "puso",
     "accept": [],
     "distractors": [
@@ -2087,7 +2087,7 @@
       "pusieron"
     ],
     "writable": true,
-    "translation": "Ma grand-mère mit ses souvenirs dans une boîte.",
+    "translation": "Ma mère mit ses souvenirs dans une boîte.",
     "explanation": "poner, ella → puso (radical pus-, aucun accent).",
     "source": "gramatica-preterito"
   },

@@ -41,7 +41,7 @@
     "distractors": [
       "fuir",
       "les sirènes",
-      "absent"
+      "la petite-fille"
     ],
     "writable": false,
     "explanation": "la guerra = la guerre",
@@ -90,7 +90,7 @@
     "distractors": [
       "le gouvernement",
       "la grand-mère",
-      "le cauchemar"
+      "les avions"
     ],
     "writable": false,
     "explanation": "un bando = un camp",
@@ -114,7 +114,7 @@
     "distractors": [
       "el gobierno",
       "el pueblo",
-      "la leyenda"
+      "las cartas"
     ],
     "writable": true,
     "explanation": "huir = fuir",
@@ -139,8 +139,8 @@
     "accept": [],
     "distractors": [
       "la peur",
-      "la légende",
-      "fusiller"
+      "fusiller",
+      "les avions"
     ],
     "writable": false,
     "explanation": "huir = fuir",
@@ -163,7 +163,7 @@
     "distractors": [
       "las sirenas",
       "el campo de refugiados",
-      "la pesadilla"
+      "sublevarse"
     ],
     "writable": true,
     "explanation": "fusilar = fusiller",
@@ -188,8 +188,8 @@
     "accept": [],
     "distractors": [
       "le camp de réfugiés",
-      "la bande dessinée",
-      "la frontière"
+      "la frontière",
+      "se soulever"
     ],
     "writable": false,
     "explanation": "fusilar = fusiller",
@@ -211,8 +211,8 @@
     "accept": [],
     "distractors": [
       "las cartas",
-      "la leyenda",
-      "la guerra"
+      "la guerra",
+      "el gobierno"
     ],
     "writable": true,
     "explanation": "enterrar = enterrer",
@@ -236,9 +236,9 @@
     "answer": "enterrer",
     "accept": [],
     "distractors": [
-      "le souvenir",
       "se soulever",
-      "les lettres"
+      "les lettres",
+      "l'abri"
     ],
     "writable": false,
     "explanation": "enterrar = enterrer",
@@ -260,8 +260,8 @@
     "accept": [],
     "distractors": [
       "la nieta",
-      "la pesadilla",
-      "fusilar"
+      "fusilar",
+      "la frontera"
     ],
     "writable": true,
     "explanation": "sublevarse = se soulever",
@@ -287,7 +287,7 @@
     "distractors": [
       "un camp",
       "les sirènes",
-      "absent"
+      "la peur"
     ],
     "writable": false,
     "explanation": "sublevarse = se soulever",
@@ -309,9 +309,9 @@
     "answer": "el exilio",
     "accept": [],
     "distractors": [
-      "con frecuencia",
       "la guerra",
-      "el gobierno"
+      "el gobierno",
+      "las cartas"
     ],
     "writable": true,
     "explanation": "el exilio = l'exil",
@@ -337,7 +337,7 @@
     "distractors": [
       "le gouvernement",
       "la grand-mère",
-      "le cauchemar"
+      "les avions"
     ],
     "writable": false,
     "explanation": "el exilio = l'exil",
@@ -359,9 +359,9 @@
     "answer": "el gobierno",
     "accept": [],
     "distractors": [
-      "el recuerdo",
       "fusilar",
-      "las sirenas"
+      "las sirenas",
+      "el pueblo"
     ],
     "writable": true,
     "explanation": "el gobierno = le gouvernement",
@@ -386,8 +386,8 @@
     "accept": [],
     "distractors": [
       "la peur",
-      "la légende",
-      "fuir"
+      "fuir",
+      "l'exil"
     ],
     "writable": false,
     "explanation": "el gobierno = le gouvernement",
@@ -409,9 +409,9 @@
     "answer": "la frontera",
     "accept": [],
     "distractors": [
-      "el tebeo",
       "el exilio",
-      "las cartas"
+      "las cartas",
+      "el campo de refugiados"
     ],
     "writable": true,
     "explanation": "la frontera = la frontière",
@@ -436,8 +436,8 @@
     "accept": [],
     "distractors": [
       "le camp de réfugiés",
-      "la bande dessinée",
-      "le gouvernement"
+      "le gouvernement",
+      "enterrer"
     ],
     "writable": false,
     "explanation": "la frontera = la frontière",
@@ -485,9 +485,9 @@
     "answer": "l'abri",
     "accept": [],
     "distractors": [
-      "le souvenir",
       "enterrer",
-      "les lettres"
+      "les lettres",
+      "le camp de réfugiés"
     ],
     "writable": false,
     "explanation": "el refugio = l'abri",
@@ -511,7 +511,7 @@
     "distractors": [
       "sublevarse",
       "las cartas",
-      "con frecuencia"
+      "la nieta"
     ],
     "writable": true,
     "explanation": "las sirenas = les sirènes",
@@ -537,7 +537,7 @@
     "distractors": [
       "un camp",
       "l'abri",
-      "absent"
+      "les avions"
     ],
     "writable": false,
     "explanation": "las sirenas = les sirènes",
@@ -561,7 +561,7 @@
     "distractors": [
       "la frontera",
       "la nieta",
-      "el recuerdo"
+      "las sirenas"
     ],
     "writable": true,
     "explanation": "los aviones = les avions",
@@ -587,7 +587,7 @@
     "distractors": [
       "l'exil",
       "la grand-mère",
-      "le cauchemar"
+      "les sirènes"
     ],
     "writable": false,
     "explanation": "los aviones = les avions",
@@ -610,8 +610,8 @@
     "accept": [],
     "distractors": [
       "los aviones",
-      "con frecuencia",
-      "el tebeo"
+      "la frontera",
+      "el campo de refugiados"
     ],
     "writable": true,
     "explanation": "el miedo = la peur",
@@ -636,8 +636,8 @@
     "accept": [],
     "distractors": [
       "les avions",
-      "la légende",
-      "fuir"
+      "fuir",
+      "la guerre"
     ],
     "writable": false,
     "explanation": "el miedo = la peur",
@@ -660,8 +660,8 @@
     "accept": [],
     "distractors": [
       "la abuela",
-      "el recuerdo",
-      "huir"
+      "huir",
+      "sublevarse"
     ],
     "writable": true,
     "explanation": "las cartas = les lettres",
@@ -686,8 +686,8 @@
     "accept": [],
     "distractors": [
       "le camp de réfugiés",
-      "la bande dessinée",
-      "le gouvernement"
+      "le gouvernement",
+      "se soulever"
     ],
     "writable": false,
     "explanation": "las cartas = les lettres",
@@ -709,9 +709,9 @@
     "answer": "el pueblo",
     "accept": [],
     "distractors": [
-      "ausente",
-      "el tebeo",
-      "sublevarse"
+      "sublevarse",
+      "el gobierno",
+      "la frontera"
     ],
     "writable": true,
     "explanation": "el pueblo = le village",
@@ -735,9 +735,9 @@
     "answer": "le village",
     "accept": [],
     "distractors": [
-      "le souvenir",
       "enterrer",
-      "la peur"
+      "la peur",
+      "la petite-fille"
     ],
     "writable": false,
     "explanation": "el pueblo = le village",
@@ -759,9 +759,9 @@
     "answer": "la abuela",
     "accept": [],
     "distractors": [
-      "la esperanza",
       "huir",
-      "la frontera"
+      "la frontera",
+      "la guerra"
     ],
     "writable": true,
     "explanation": "la abuela = la grand-mère",
@@ -787,7 +787,7 @@
     "distractors": [
       "un camp",
       "l'abri",
-      "absent"
+      "le camp de réfugiés"
     ],
     "writable": false,
     "explanation": "la abuela = la grand-mère",
@@ -809,9 +809,9 @@
     "answer": "la nieta",
     "accept": [],
     "distractors": [
-      "el hambre",
       "sublevarse",
-      "los aviones"
+      "los aviones",
+      "la abuela"
     ],
     "writable": true,
     "explanation": "la nieta = la petite-fille",
@@ -837,7 +837,7 @@
     "distractors": [
       "l'exil",
       "le village",
-      "le cauchemar"
+      "le gouvernement"
     ],
     "writable": false,
     "explanation": "la nieta = la petite-fille",
@@ -886,8 +886,8 @@
     "accept": [],
     "distractors": [
       "les avions",
-      "la légende",
-      "fuir"
+      "fuir",
+      "la grand-mère"
     ],
     "writable": false,
     "explanation": "el campo de refugiados = le camp de réfugiés",

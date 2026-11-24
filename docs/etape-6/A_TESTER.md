@@ -19,6 +19,12 @@ Conséquences :
 - **La carte de l'Espagne** n'a plus que 2 questions (la frontière avec la France, Madrid) : celles qui parlaient de Huesca et de Bielsa venaient de la BD.
 - Il reste 4 questions de frise et de carte au total.
 
+## Nettoyage complémentaire (après ton retour : « il y a encore des questions sur Carmen »)
+
+- **Ce que tu voyais, c'est probablement le site en ligne** : `main` ne contient pas encore l'étape 6, donc les questions « qui est Carmen » y sont encore. Elles disparaissent dès que l'étape 6 est fusionnée.
+- Dans la branche, il restait seulement des **traces** : « Carmen » comme mauvaise réponse à « ¿Quién fue el jefe de los militares sublevados? », des explications qui citaient « la abuela Carmen » (dates de la guerre), trois phrases de conjugaison avec « la abuela » (maintenant « un anciano », « mi madre », « mi padre »), et surtout **33 questions de vocabulaire dont les mauvaises réponses reprenaient des mots retirés** (« el tebeo », « la pesadilla », « ausente »…). Tout est corrigé.
+- Un **test automatique** refuse désormais tout retour de « Carmen », « Pepe », « tebeo », « Bielsa », « Huesca » ou « División 43 » dans une question (énoncé, réponses proposées, explication).
+
 ## Ce que je n'ai PAS retiré (dis-moi si tu veux)
 
 Tu as parlé des *questions*. Je n'ai pas touché au décor du jeu :
@@ -29,7 +35,7 @@ Tu as parlé des *questions*. Je n'ai pas touché au décor du jeu :
 
 ## Tests automatiques
 
-- **152 tests unitaires** passent (les tests du contenu retiré ont été adaptés ou supprimés ; un test vérifie toujours qu'il n'y a aucun plus-que-parfait).
+- **154 tests unitaires** passent (les tests du contenu retiré ont été adaptés ou supprimés ; un test vérifie toujours qu'il n'y a aucun plus-que-parfait).
 - **20 tests Playwright** passent (partie entière sur PC et téléphone, espace professeur, hors-ligne, clavier, combat visible sans défiler, frise, mot mystère, animations).
 - Équilibrage (simulation, 200 parties par niveau) : à 90 % de bonnes réponses, 97 % de victoires en 16 min ; à 75 %, 82 % en 19 min ; à 60 %, 31 % ; à 50 %, 9 % ; partie courte : 8 à 10 min.
 

@@ -52,3 +52,14 @@ describe('banque de questions', () => {
     expect(PQP.test('No había grandes batallas')).toBe(false); // imparfait de haber : autorisé
   });
 });
+
+describe('retraits demandés par le professeur', () => {
+  it('aucune question ne parle de Carmen, de Pepe ni de la BD (énoncé, réponses, explication)', () => {
+    const interdit = /Carmen|Pepe|tebeo|Bielsa|Huesca|División 43/i;
+    for (const q of content().questions) expect(interdit.test(JSON.stringify(q)), q.id).toBe(false);
+    expect(interdit.test('¿Cuántos años tenía Carmen?')).toBe(true);
+  });
+  it('plus de question d’écoute dans la banque', () => {
+    expect(content().questions.filter(q => q.type === 'ecoute')).toHaveLength(0);
+  });
+});

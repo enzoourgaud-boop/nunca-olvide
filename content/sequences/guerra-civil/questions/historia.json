@@ -47,7 +47,7 @@
     ],
     "writable": true,
     "translation": "En quelle année la guerre civile s’est-elle terminée ?",
-    "explanation": "Según la abuela Carmen, la guerra terminó en 1939 (« Mi padre volvió a casa en 1939 »).",
+    "explanation": "La guerra terminó en 1939 (Misión secreta : « Mi padre volvió a casa en 1939 »).",
     "source": "mision-secreta",
     "check": {
       "ignoreArticles": true
@@ -75,7 +75,7 @@
     ],
     "writable": true,
     "translation": "Combien d’années la guerre a-t-elle duré ?",
-    "explanation": "De 1936 a 1939 : tres años. Carmen dice: « Viví tres años con miedo ».",
+    "explanation": "De 1936 a 1939 : tres años (Misión secreta : « Viví tres años con miedo »).",
     "source": "mision-secreta",
     "check": {
       "ignoreArticles": true
@@ -120,9 +120,9 @@
       "el general Franco"
     ],
     "distractors": [
-      "Carmen",
-      "Bielsa",
-      "Huesca"
+      "El gobierno de la República",
+      "Los republicanos",
+      "Un refugiado"
     ],
     "writable": true,
     "translation": "Qui fut le chef des militaires soulevés ?",
@@ -246,7 +246,7 @@
     "answer": "En un campo de refugiados en Francia",
     "accept": [],
     "distractors": [
-      "En el frente de Bielsa",
+      "En la frontera con Portugal",
       "En un refugio en Madrid",
       "En un museo"
     ],

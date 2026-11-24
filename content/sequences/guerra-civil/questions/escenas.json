@@ -11,7 +11,7 @@
     "prompt": "La guerra empezó en 1936 y terminó en 1939.",
     "promptLang": "es",
     "translation": "La guerre commença en 1936 et se termina en 1939.",
-    "explanation": "Sur la frise : 1936 : sublevacion · 1939 : fin. Les dates viennent des récits de Carmen et des documents.",
+    "explanation": "Sur la frise : 1936 : sublevacion · 1939 : fin. Les dates viennent de tes documents.",
     "source": "mision-secreta",
     "scene": {
       "decor": "frise",
@@ -39,7 +39,7 @@
     "prompt": "En julio de 1936, unos militares llegaron al pueblo. La guerra terminó tres años después.",
     "promptLang": "es",
     "translation": "En juillet 1936, des militaires arrivèrent au village. La guerre se termina trois ans plus tard.",
-    "explanation": "Sur la frise : 1936 : militares · 1939 : fin. Les dates viennent des récits de Carmen et des documents.",
+    "explanation": "Sur la frise : 1936 : militares · 1939 : fin. Les dates viennent de tes documents.",
     "source": "mision-secreta",
     "scene": {
       "decor": "frise",
